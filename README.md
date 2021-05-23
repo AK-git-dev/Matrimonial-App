@@ -49,11 +49,38 @@ A **Royal Blued** color with **Lightish Pink** as a accent color.
 
 - [Azure Serverless Computations](https://azure.microsoft.com/en-in/services/functions/) helps to develop more efficiently with Functions, an event-driven serverless compute platform that can also solve complex orchestration problems. Build and debug locally without additional setup, deploy and operate at scale in the cloud and integrate services using triggers and bindings.
 
+# Frontend - Ionic Framework Demo
+## Framework version
+
+* Node - v14.16.0
+* npm version -  v6.14.11
+* Angular CLI: 11.2.6
+* Ionic version - v6.13.1
+
+## Ionic Setup
+
+1. Install ionic cli globally (For the first time)
+  
+  * npm install -g @ionic/cli
+
+2. To run the application for the first time
+  
+  Run the below command inside project dirtectory
+    * npm install
+
+3. Serving the ionic project on localhost
+
+  * ionic serve
+
+## Learn About Ionic CLI
+
+https://ionicframework.com/docs/intro/cli
+
 
 ## Database Design (MYSQL)
 *From Eagle's Eye:* Database Schema Designed.
 
-![Database-Schema-Design](backend/database/matrimonialDB.png)
+![Database-Schema-Design](./backend/database/matrimonialDB.png)
 
 ### Database Schemas
 - User

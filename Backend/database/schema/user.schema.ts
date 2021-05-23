@@ -62,6 +62,9 @@ const User = db.schema.define(
     mothersName: {
       type: DataTypes.STRING,
     },
+    accountActive: {
+      type: DataTypes.BOOLEAN,
+    },
   },
   {
     freezeTableName: true,
