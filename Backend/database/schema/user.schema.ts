@@ -1,3 +1,4 @@
+import { genSaltSync, hashSync } from "bcrypt";
 import { DataTypes } from "sequelize";
 import { v4 } from "uuid";
 import { db } from "..";
@@ -29,7 +30,7 @@ const User = db.schema.define(
       allowNull: false,
     },
     phoneNumber: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
       unique: true,
     },
@@ -37,6 +38,10 @@ const User = db.schema.define(
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
     martialStatus: {
       type: DataTypes.ENUM(
@@ -55,6 +60,7 @@ const User = db.schema.define(
     isCasteBarrier: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
+      defaultValue: false
     },
     fathersName: {
       type: DataTypes.STRING,
@@ -64,6 +70,7 @@ const User = db.schema.define(
     },
     accountActive: {
       type: DataTypes.BOOLEAN,
+      defaultValue: true
     },
   },
   {
@@ -75,6 +82,11 @@ const User = db.schema.define(
       { fields: ["martialStatus"] },
     ],
     hooks: {
+      beforeCreate: function(user: any, options) {
+        const hashifiedPassword: string = hashSync(user.password, genSaltSync(10));
+        user.password = hashifiedPassword;
+      },
+
       beforeValidate: function (user: any, options) {
         user.id = uuid();
         const ageNow =

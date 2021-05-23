@@ -4,7 +4,7 @@ import morgan from "morgan";
 import { cpus } from "os";
 import { pid } from "process";
 import { APIController } from "./controllers";
-import { Next, Request, Response } from "./utils";
+import { Next, RequestInterface, ResponseInterface } from "./utils";
 
 export class Server {
   private readonly PORT = 5000 || process.env.PORT;
@@ -41,8 +41,8 @@ export class Server {
     this.app.use(
       (
         err: { status: any; message: any },
-        req: Request,
-        res: Response,
+        req: RequestInterface,
+        res: ResponseInterface,
         next: Next
       ) => {
         res.status(err.status || 500);

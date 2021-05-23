@@ -1,27 +1,30 @@
-import { Router, static as st } from "express";
+import { Router } from "express";
 import createHttpError from "http-errors";
-import { SUCCESS, Request, Response, Next } from "../utils";
-import { getAllUsersWithAllDetails } from "../utils/db-query";
+import { Next, RequestInterface, ResponseInterface, SUCCESS } from "../utils";
+import AuthController from "./auth.controller";
+import UserController from './users.controller';
 
 const router = Router();
 
-router.get("/data", async (req: Request, res: Response, next: Next) => {
-  try {
-    const allUsers = await getAllUsersWithAllDetails();
-
-    res.status(200).send({
-      ...SUCCESS,
-      msg: "server is running",
-      ip: req.ip,
-      allUsers,
-      timestamp: Date.now(),
-    });
-  } catch (error) {
-    next(createHttpError.InternalServerError);
+router.get(
+  "/data",
+  async (req: RequestInterface, res: ResponseInterface, next: Next) => {
+    try {
+      res.status(200).send({
+        ...SUCCESS,
+        msg: "server is running",
+        ip: req.ip,
+        timestamp: Date.now(),
+      });
+    } catch (error) {
+      next(new createHttpError.InternalServerError(`Something went bad!`));
+    }
+    next();
   }
-  next();
-});
+);
 
 // Controllers
+router.use("/auth", AuthController);
+router.use("/users", UserController);
 
 export default router;
