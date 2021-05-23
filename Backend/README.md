@@ -53,7 +53,7 @@ A **Royal Blued** color with **Lightish Pink** as a accent color.
 ## Database Design (MYSQL)
 *From Eagle's Eye:* Database Schema Designed.
 
-![Database-Schema-Design](backend/database/matrimonialDB.png)
+![Database-Schema-Design](database/matrimonialDB.png)
 
 ### Database Schemas
 - User
