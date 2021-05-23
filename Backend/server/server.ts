@@ -4,7 +4,7 @@ import morgan from "morgan";
 import { cpus } from "os";
 import { pid } from "process";
 import { APIController } from "./controllers";
-import { Next, Request, Response } from './utils';
+import { Next, Request, Response } from "./utils";
 
 export class Server {
   private readonly PORT = 5000 || process.env.PORT;
@@ -25,7 +25,7 @@ export class Server {
     // } else {
     //   this.internalServerStart();
     // }
-    this.internalServerStart();
+    this.start();
   }
 
   private async serverConfig() {
@@ -39,31 +39,30 @@ export class Server {
 
   private errorHandlers(): void {
     this.app.use(
-        (
-            err: { status: any; message: any },
-            req: Request,
-            res: Response,
-            next: Next
-        ) => {
-          res.status(err.status || 500);
-          res.send({
-            status: err.status || 500,
-            message: err.message,
-          });
-        }
+      (
+        err: { status: any; message: any },
+        req: Request,
+        res: Response,
+        next: Next
+      ) => {
+        res.status(err.status || 500);
+        res.send({
+          status: err.status || 500,
+          message: err.message,
+        });
+      }
     );
   }
 
-  private async internalServerStart() {
+  private async start() {
     try {
       await this.serverConfig();
-      this.app.use("/api", APIController);
-
       this.app.listen(this.PORT, () =>
-          console.log(
-              `[ PID:${pid} ] 🚀 Server already started on http://localhost:${this.PORT}`
-          )
+        console.log(
+          `[ PID:${pid} ] 🚀 Server already started on http://localhost:${this.PORT}`
+        )
       );
+      this.app.use("/api", APIController);
     } catch (error) {
       console.error({ error });
     }
