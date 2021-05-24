@@ -21,11 +21,11 @@ const Education = db.schema.define(
       allowNull: false,
     },
     institutionName: {
-      type: DataTypes.STRING(30),
+      type: DataTypes.STRING(120),
       allowNull: false,
     },
     specializationIn: {
-      type: DataTypes.STRING(30),
+      type: DataTypes.STRING(100),
       allowNull: false,
     },
     passoutYear: {

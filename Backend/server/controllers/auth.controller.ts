@@ -118,18 +118,10 @@ router.patch (
             }
 
             if (payload.educations) {
-                new Promise (async (resolve , reject) => {
-                    try {
-                        for (const education of payload.educations) {
-                            const educationPayload = {...education , UserId};
-                            await Schema.Education.create (educationPayload);
-                        }
-                        resolve (true);
-                    } catch (e) {
-                        reject (e);
-                        next (e);
-                    }
-                })
+                for (const education of payload.educations) {
+                    const educationPayload = {...education , UserId};
+                    await Schema.Education.create (educationPayload);
+                }
             }
 
             return res.status (200).send ({
