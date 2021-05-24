@@ -13,14 +13,14 @@ const Education = db.schema.define(
       primaryKey: true,
     },
     type: {
-      type: DataTypes.ENUM("Gradudate", "Postgraduate", "Doctorate"),
+      type: DataTypes.STRING,
       allowNull: false,
     },
     degree: {
-      type: DataTypes.ENUM("B.Tech", "M.Tech", "Masters", "Hons", "B.Par"),
+      type: DataTypes.STRING,
       allowNull: false,
     },
-    InstitutionName: {
+    institutionName: {
       type: DataTypes.STRING(30),
       allowNull: false,
     },
@@ -29,7 +29,7 @@ const Education = db.schema.define(
       allowNull: false,
     },
     passoutYear: {
-      type: DataTypes.DATEONLY,
+      type: DataTypes.STRING(4),
       allowNull: false,
     },
   },

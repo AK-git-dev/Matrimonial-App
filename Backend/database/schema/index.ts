@@ -39,6 +39,7 @@ function buildAssociationsBetweenSchemas() {
   User.hasMany(Message);
   User.hasMany(BlockedUsers);
   User.hasOne(UploadedDocument);
+  User.hasOne(Caste);
 
   LifeStyle.hasMany(Movie, { as: "favouriteMovies" });
   LifeStyle.hasMany(Books, { as: "favouriteBooks" });
@@ -49,7 +50,6 @@ function buildAssociationsBetweenSchemas() {
   LifeStyle.hasMany(Languages, { as: "languagesCanSpeak" });
 
   Education.belongsTo(User);
-  Caste.belongsTo(User);
 }
 
 /** Export Schema from index.ts file */

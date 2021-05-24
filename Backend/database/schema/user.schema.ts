@@ -76,14 +76,6 @@ const User = db.schema.define(
       { fields: ["fullname"] },
       { fields: ["martialStatus"] },
     ],
-    hooks: {
-      beforeUpdate: function (user: any, options) {
-        const ageNow =
-          new Date().getUTCFullYear() -
-          new Date(user.dateOfBirth).getUTCFullYear();
-        user.age = ageNow;
-      },
-    },
   }
 );
 

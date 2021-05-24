@@ -49,7 +49,6 @@ export class Server {
     );
     this.app.use(
       (err: any, req: RequestInterface, res: ResponseInterface, next: Next) => {
-        console.log(err);
         res.status(err.status || 500).send({
           error: {
             status: err.status || 500,

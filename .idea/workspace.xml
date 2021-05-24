@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c949d03d-b43f-4ad8-a88f-b22580d60f18" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Matrimonial-App.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/database/schema/preflight.schema.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/age-restrictor.middleware.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/otp-verify.middleware.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/requires-auth.middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1621829638968</updated>
       <workItem from="1621829669275" duration="5108000" />
-      <workItem from="1621851145792" duration="11733000" />
+      <workItem from="1621851145792" duration="22585000" />
     </task>
     <servers />
   </component>

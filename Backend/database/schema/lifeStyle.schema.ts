@@ -13,12 +13,12 @@ const LifeStyle = db.schema.define(
       primaryKey: true,
     },
     height: {
-      type: DataTypes.DECIMAL,
+      type: DataTypes.STRING(3),
     },
     weight: {
       type: DataTypes.INTEGER,
     },
-    bloogGroup: {
+    bloodGroup: {
       type: DataTypes.CHAR(3),
     },
     dressStyle: {
@@ -33,10 +33,10 @@ const LifeStyle = db.schema.define(
     diet: {
       type: DataTypes.STRING,
     },
-    drikingHabbits: {
+    drinkingHabits: {
       type: DataTypes.STRING,
     },
-    smokingHabbits: {
+    smokingHabits: {
       type: DataTypes.STRING,
     },
     sportsFitness: {
@@ -55,13 +55,13 @@ const LifeStyle = db.schema.define(
       type: DataTypes.BOOLEAN,
     },
     reasonForDivorced: {
-      type: DataTypes.STRING(80),
+      type: DataTypes.STRING(180),
     },
     haveAnyDieases: {
       type: DataTypes.BOOLEAN,
     },
-    descriptionOfDieases: {
-      type: DataTypes.STRING(80),
+    descriptionOfDieseases: {
+      type: DataTypes.STRING(180),
     },
   },
   {
