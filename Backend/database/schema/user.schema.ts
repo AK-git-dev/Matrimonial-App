@@ -15,19 +15,15 @@ const User = db.schema.define(
     },
     fullname: {
       type: DataTypes.STRING(25),
-      allowNull: false,
     },
     dateOfBirth: {
       type: DataTypes.DATEONLY,
-      allowNull: false,
     },
     age: {
       type: DataTypes.SMALLINT,
-      allowNull: false,
     },
     gender: {
       type: DataTypes.ENUM("Male", "Female", "Shemale"),
-      allowNull: false,
     },
     phoneNumber: {
       type: DataTypes.STRING,
@@ -41,26 +37,25 @@ const User = db.schema.define(
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     martialStatus: {
       type: DataTypes.ENUM(
         "Single",
         "Widowed",
-        "Marriaged",
+        "Marriage",
         "Divorced",
         "Separated"
       ),
-      allowNull: false,
+      defaultValue: "Single",
     },
     motherTongue: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     isCasteBarrier: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
-      defaultValue: false
+      defaultValue: false,
     },
     fathersName: {
       type: DataTypes.STRING,
@@ -70,7 +65,7 @@ const User = db.schema.define(
     },
     accountActive: {
       type: DataTypes.BOOLEAN,
-      defaultValue: true
+      defaultValue: true,
     },
   },
   {
@@ -82,16 +77,10 @@ const User = db.schema.define(
       { fields: ["martialStatus"] },
     ],
     hooks: {
-      beforeCreate: function(user: any, options) {
-        const hashifiedPassword: string = hashSync(user.password, genSaltSync(10));
-        user.password = hashifiedPassword;
-      },
-
-      beforeValidate: function (user: any, options) {
-        user.id = uuid();
+      beforeUpdate: function (user: any, options) {
         const ageNow =
           new Date().getUTCFullYear() -
-          new Date(user.dateOfBirth.getUTCFullYear).getUTCFullYear();
+          new Date(user.dateOfBirth).getUTCFullYear();
         user.age = ageNow;
       },
     },

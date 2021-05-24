@@ -39,4 +39,4 @@ const Message = db.schema.define(
   }
 );
 
-export default  Message;
+export default Message;

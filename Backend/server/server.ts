@@ -4,7 +4,12 @@ import morgan from "morgan";
 import { cpus } from "os";
 import { pid } from "process";
 import { APIController } from "./controllers";
-import { Next, RequestInterface, ResponseInterface } from "./utils";
+import {
+  createError,
+  Next,
+  RequestInterface,
+  ResponseInterface,
+} from "./utils";
 
 export class Server {
   private readonly PORT = 5000 || process.env.PORT;
@@ -34,21 +39,22 @@ export class Server {
     this.app.use(cors());
     this.app.use(morgan("dev"));
     this.app.use(urlencoded({ extended: false }));
-    this.errorHandlers();
   }
 
   private errorHandlers(): void {
     this.app.use(
-      (
-        err: { status: any; message: any },
-        req: RequestInterface,
-        res: ResponseInterface,
-        next: Next
-      ) => {
-        res.status(err.status || 500);
-        res.send({
-          status: err.status || 500,
-          message: err.message,
+      async (req: RequestInterface, res: ResponseInterface, next: Next) => {
+        next(createError(404, "Not Found!"));
+      }
+    );
+    this.app.use(
+      (err: any, req: RequestInterface, res: ResponseInterface, next: Next) => {
+        console.log(err);
+        res.status(err.status || 500).send({
+          error: {
+            status: err.status || 500,
+            message: err.message,
+          },
         });
       }
     );
@@ -63,6 +69,8 @@ export class Server {
         )
       );
       this.app.use("/api", APIController);
+
+      this.errorHandlers();
     } catch (error) {
       console.error({ error });
     }

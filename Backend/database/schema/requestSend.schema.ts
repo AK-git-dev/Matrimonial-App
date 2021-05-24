@@ -21,11 +21,11 @@ const RequestSend = db.schema.define(
     freezeTableName: true,
     tableName: "RequestSend",
     hooks: {
-      beforeValidate: function (payload:any, options) {
+      beforeValidate: function (payload: any, options) {
         payload.id = uuid();
       },
     },
   }
 );
 
-export default  RequestSend;
+export default RequestSend;

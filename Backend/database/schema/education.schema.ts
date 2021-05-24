@@ -2,7 +2,7 @@ import { DataTypes } from "sequelize";
 import { v4 } from "uuid";
 import { db } from "..";
 
-const uuid = v4 ;
+const uuid = v4;
 
 const Education = db.schema.define(
   "Educations",
@@ -44,6 +44,5 @@ const Education = db.schema.define(
     },
   }
 );
-
 
 export default Education;

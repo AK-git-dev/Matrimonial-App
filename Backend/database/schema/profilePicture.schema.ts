@@ -28,4 +28,4 @@ const ProfilPicture = db.schema.define(
   }
 );
 
-export default  ProfilPicture;
+export default ProfilPicture;

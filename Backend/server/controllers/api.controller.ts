@@ -2,7 +2,7 @@ import { Router } from "express";
 import createHttpError from "http-errors";
 import { Next, RequestInterface, ResponseInterface, SUCCESS } from "../utils";
 import AuthController from "./auth.controller";
-import UserController from './users.controller';
+import UserController from "./users.controller";
 
 const router = Router();
 

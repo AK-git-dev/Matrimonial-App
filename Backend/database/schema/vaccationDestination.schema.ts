@@ -1,7 +1,6 @@
 import { DataTypes } from "sequelize";
 import { db } from "..";
 
-
 const VaccationDestination = db.schema.define(
   "VaccationDestinations",
   {
@@ -15,10 +14,10 @@ const VaccationDestination = db.schema.define(
     freezeTableName: true,
     tableName: "VaccationDestinations",
     hooks: {
-      beforeValidate: function(payload: any, options) {
+      beforeValidate: function (payload: any, options) {
         payload.name = (payload.name as string).toLowerCase();
-      }
-    }
+      },
+    },
   }
 );
 
