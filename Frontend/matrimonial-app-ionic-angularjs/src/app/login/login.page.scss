@@ -1,0 +1,156 @@
+// ///////////////////////////////////////// Heading
+ion-label{
+position: absolute;
+width: 60px;
+height: 28px;
+left: 33px;
+top: 43px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+
+color: #FFFFFF;
+}
+
+// /////////////////////////////////////////////Image
+.image {
+position: absolute;
+width: 373px;
+height: 338px;
+left: 20px;
+top: 85px;
+background: url(../../assets/login.png);
+}
+
+// ////////////////////////////////////////////Container
+.container {
+    position: absolute;
+    width: 100%; 
+    height:515px; 
+    left: 0px;
+     top:381px; 
+     background: #FBF9F9;
+        border-radius: 30px 30px 0px 0px;
+}
+
+.number {
+   
+position: absolute;
+width: 124px;
+height: 21px;
+left: 50px;
+top: 60px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #000000;
+
+}
+.number1 {
+    position: absolute;
+    width: 325px;
+    height: 0px;
+    left: 45px;
+    top: 110px;
+    
+  
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: rotate(-0.13deg);
+    
+    }
+
+.OTP{
+position: absolute;
+width: 135px;
+height: 21px;
+left: 50px;
+top: 170px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #000000;
+}
+
+.number2 {
+    position: absolute;
+    width: 325px;
+    height: 0px;
+    left: 45px;
+    top: 220px;
+    
+   
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: rotate(-0.13deg);
+    
+    }
+
+.resend {
+  
+position: absolute;
+width: 250px;
+height: 21px;
+left: 48px;
+top: 280px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+/* identical to box height */
+
+
+color: #8E8E8E;
+
+}
+
+// /////////////////////////////////////////////// Buttons
+
+.loginbutton {
+    /* Rectangle 7 */
+
+position: absolute;
+width: 333px;
+height: 56px;
+left: 40px;
+top: 320px;
+
+background: #4C0890;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+}
+
+.emailbutton {
+    position: absolute;
+width: 160px;
+height: 56px;
+left: 40px;
+top: 400px;
+
+background: #4C0890;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+}
+
+.otpbutton {
+    position: absolute;
+    width: 160px;
+    height: 56px;
+    left: 214px;
+    top: 400px;
+    
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), rgba(76, 8, 144, 0.72);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    
+}
+

@@ -1,0 +1,37 @@
+<ion-content [fullscreen]="true">
+  <ion-label>Login</ion-label>
+ <div class="image">
+ </div>
+ 
+ <div class="container">
+  <form action="" method="post">
+    
+        <ion-label class="number">Mobile Number</ion-label> <br>
+        <ion-input id="Number1" type="number" class="number1" placeholder="Enter 10 digit number " > </ion-input>
+
+        <ion-label class="OTP">Enter OTP</ion-label><br>
+        <ion-input id="Number2" type="number" class="number2" placeholder="Enter 6 digit OTP" > </ion-input>
+
+        <ion-label class="resend">Did not get OTP?.<strong><u>Resend </u> </strong> </ion-label>
+
+        <ion-button (click)="onClick()" class="loginbutton">
+          Login
+        </ion-button>
+
+        <ion-button class="emailbutton">
+          Email
+          </ion-button>
+
+          <ion-button class="otpbutton">
+            OTP
+            </ion-button>
+
+  </form>
+ </div>
+
+</ion-content>
+
+
+<!--------------------------------------- Google Font Roboto ----------------------------------------------->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
