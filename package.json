@@ -1,0 +1,17 @@
+{
+  "name": "Matrimonial-App",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/aashrayjain/Matrimonial-App.git",
+  "author": "sounishnath003 <flock.sinasini@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently -p \"[{name}]\" -m=5 \"yarn dev:server\" \"yarn dev:client\"",
+    "start": "concurrently -p \"[{name}]\" -m=5 \"yarn dev:server\" \"yarn dev:client\"",
+    "dev:server": "cd Backend && yarn dev",
+    "dev:client": "cd Frontend/matrimonial-app-ionic-angularjs && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^6.1.0"
+  }
+}
