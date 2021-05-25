@@ -37,7 +37,7 @@ class Database {
                 * if Your Database is not syncing with SchemaChanges.
                 await this.schema.sync({force: true});
              */
-      await this.schema.sync({force: true});
+      await this.schema.sync({});
     } catch (error) {
       console.error("Unable to connect to the database:", error);
     }

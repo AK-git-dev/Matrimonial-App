@@ -1,12 +1,11 @@
-import {Router} from "express";
+import { Router } from "express";
 
-import SignupController from './signup.controller';
-import LoginController from './login.controller';
+import SignupController from "./signup.controller";
+import LoginController from "./login.controller";
 
-const router = Router ();
+const router = Router();
 
-router.use ('/signup' , SignupController);
-router.use ('/login' , LoginController);
-
+router.use("/signup", SignupController);
+router.use("/login", LoginController);
 
 export default router;
