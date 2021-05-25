@@ -5,7 +5,10 @@
       <change afterPath="$PROJECT_DIR$/Backend/database/schema/preflight.schema.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/formatter.bat" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/controllers/create-profile.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/server/controllers/login.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/server/controllers/signup.controller.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/age-restrictor.middleware.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/login-otp-verification.middleware.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/otp-verify.middleware.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/requires-auth.middleware.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -71,7 +74,9 @@
       <option name="presentableId" value="Default" />
       <updated>1621829638968</updated>
       <workItem from="1621829669275" duration="5108000" />
-      <workItem from="1621851145792" duration="26938000" />
+      <workItem from="1621851145792" duration="27897000" />
+      <workItem from="1621922338155" duration="806000" />
+      <workItem from="1621929023040" duration="6811000" />
     </task>
     <servers />
   </component>

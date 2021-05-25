@@ -77,3 +77,8 @@ export interface CreateProfileInterface {
   fathersName: string;
   mothersName: string;
 }
+
+// Login With OTP Interface
+export interface LoginOTPInterface {
+  phoneNumber: string;
+}

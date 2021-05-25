@@ -73,6 +73,7 @@ const User = db.schema.define(
     tableName: "Users",
     indexes: [
       { fields: ["age"] },
+        {fields: ['email', 'phoneNumber']},
       { fields: ["fullname"] },
       { fields: ["martialStatus"] },
     ],
