@@ -197,6 +197,142 @@ A **Royal Blued** color with **Lightish Pink** as a accent color.
         - False
 
 
+
+## API Endpoints And Requests
+
+<br />
+
+1. To Get All Users:
+
+    ```bash
+    GET /api/users/ HTTP/1.1
+    Host: localhost:5000
+    ```
+
+2. Sign up using One Time Password (OTP)
+
+    ```bash
+    POST /api/auth/signup HTTP/1.1
+    Content-Type: application/json
+    Host: localhost:5000
+    Content-Length: 35
+
+    {
+        "phoneNumber": "+918017204855"
+    }
+    ```
+
+3. Signup account verification (OTP)
+
+    ```bash
+    POST /api/auth/signup/account/verify/otp HTTP/1.1
+    Content-Type: application/json
+    X-Magic-Token: cc12d9bd1590e43e31f5c48c7f800603170d994863a1c1744d7283a796263a04.1622055493701
+    Host: localhost:5000
+    Content-Length: 57
+
+    {
+        "otpCode": "119203",
+        "phoneNumber": "+918017204855"
+    }
+
+    ```
+
+4. Login using One Time Password (OTP)
+
+    ```bash
+    POST /api/auth/login/with-otp HTTP/1.1
+    Content-Type: application/json
+    Host: localhost:5000
+    Content-Length: 35
+
+    {
+        "phoneNumber": "+918017204855"
+    }
+    ```
+
+5. Login OTP verification
+
+    ```bash
+    POST /api/auth/login/otp/verify HTTP/1.1
+    Content-Type: application/json
+    X-Magic-Token: eaf98dd2f0871f9a2748e7755bcb731f965437664cc25b769233e2e95a9ac1b4.1622055741311
+    Host: localhost:5000
+    Content-Length: 57
+
+    {
+        "otpCode": "227245",
+        "phoneNumber": "+918017204855"
+    }
+    ```
+
+6. Create Profile Info
+
+    ```bash
+    PATCH /api/create-profile/user-info HTTP/1.1
+    Content-Type: application/json
+    Host: localhost:5000
+    Content-Length: 299
+
+    {
+        "fullname": "Sounish Nath",
+        "dateOfBirth": "1999-02-17",
+        "gender": "Male",
+        "email": "a@a.com",
+        "password": "1234",
+        "phoneNumber": "+918017204855",
+        "martialStatus": "Single",
+        "motherTongue": "Bengali",
+        "isCasteBarrier": false,
+        "fathersName": "Sudip Nath",
+        "mothersName": "Manisha Nath"
+    }
+    ```
+
+7. Add Address Information to User
+
+    ```bash
+    POST /api/create-profile/add-address HTTP/1.1
+    Content-Type: application/json
+    Host: localhost:5000
+    Content-Length: 150
+
+    {
+        "address": "H/o - 91, Ward no - 11, Nischindipur",
+        "city": "Ghatal",
+        "district": "Paschim Medinipur",
+        "country": "India",
+        "zipCode": "721212"
+    }
+    ```
+
+
+8. Logout user session
+
+    ```bash
+    GET /api/auth/logout HTTP/1.1
+    Content-Type: application/json
+    Host: localhost:5000
+    Content-Length: 330
+
+    {
+        "otpCode": "d9fca3",
+        "fullname": "Sounish Nath",
+        "dateOfBirth": "1999-02-17",
+        "age": 23,
+        "gender": "Male",
+        "phoneNumber": "8017207851",
+        "email": "a@a.com",
+        "password": "1234",
+        "martialStatus": "Single",
+        "motherTongue": "Bengali",
+        "isCasteBarrier": false,
+        "fathersName": "Sudip Nath",
+        "mothersName": "Manisha Nath"
+    }
+    ```
+
+
 ## Systems Design
 
 

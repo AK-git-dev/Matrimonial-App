@@ -28,25 +28,10 @@ router.post (
 
         try {
             const payload: PhoneNumberSignupInterface = req.body as PhoneNumberSignupInterface;
+
             // If User already have verified account
-            const isUserVerified = await Schema.User.findOne ({
-                where :{phoneNumber :payload.phoneNumber} ,
-            });
-            if (isUserVerified)
-                throw new createError.Conflict (
-                    `you already have an account! Please log into your account`
-                );
-
             await checkPhoneNumberAlreadyExists (payload);
-
-            // if (status === undefined) {
-            //   // delete from preflight accounts
-            //   await Schema.Prefight.destroy({
-            //     where: { phoneNumber: payload.phoneNumber },
-            //   });
-            //   const resp = await Schema.Prefight.create(payload);
-            //   const magicToken = generateMagicToken(resp);
-
+            
             const ifTokenGenerated = await generateOtpAndTokenHash (payload.phoneNumber);
             if (typeof (ifTokenGenerated) === 'undefined') throw new createError.RequestTimeout (`Secure OTP could not be generated! Check your network connection`);
 
