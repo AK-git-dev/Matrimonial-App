@@ -47,7 +47,7 @@ router.post (
                 ...SUCCESS ,
                 otpCode :ifTokenGenerated.otp ,
                 message :`Your one time password for Matrimony-Match ${ifTokenGenerated.otp}. OTP valid for only 2 minutes!` ,
-                hash :ifTokenGenerated.fullHash ,
+                xMagicToken :ifTokenGenerated.xMagicToken ,
                 otpValidity :"2 minutes" ,
             });
         } catch
@@ -56,6 +56,33 @@ router.post (
         }
     }
 )
+
+// [POST] : Verify user account using OTP CODE generated
+router.post (
+    "/account/verify/otp" ,
+    requiresOtpVerification ,
+    async (req: RequestInterface , res: ResponseInterface , next: Next) => {
+        try {
+            const {phoneNumber} = req.body;
+            // OTP has been verified &&
+            // send the ACK to the client to proceed with profile building part
+
+            const resp = await Schema.User.create ({phoneNumber});
+            const token: string = generateAuthToken (resp);
+            setAuthorizationHeader (res , token);
+
+            return res.status (200).send ({
+                ...SUCCESS ,
+                token ,
+                userId :resp.getDataValue ('id') ,
+                phoneNumber ,
+                isLoggedIn :true ,
+            });
+        } catch (e) {
+            next (e);
+        }
+    }
+);
 
 
 // // [POST] : When User is going to create account for the first time. NOT SELF MADE
@@ -97,32 +124,32 @@ router.post (
 //   }
 // );
 
-// [POST] : Verify user account using OTP CODE generated
-router.post (
-    "/account/verify/otp" ,
-    requiresOtpVerification ,
-    async (req: RequestInterface , res: ResponseInterface , next: Next) => {
-        try {
-            const {userId , email , password , phoneNumber} = req as any;
-            // OTP has been verified &&
-            // send the ACK to the client to proceed with profile building part
-
-            const payload = {id :userId , email , password , phoneNumber};
-            const resp = await Schema.User.create (payload);
-            const token: string = generateAuthToken (resp);
-            setAuthorizationHeader (res , token);
-
-            return res.status (200).send ({
-                ...SUCCESS ,
-                token ,
-                userId :userId ,
-                email ,
-                isLoggedIn :true ,
-            });
-        } catch (e) {
-            next (e);
-        }
-    }
-);
+// // [POST] : Verify user account using OTP CODE generated
+// router.post (
+//     "/account/verify/otp" ,
+//     requiresOtpVerification ,
+//     async (req: RequestInterface , res: ResponseInterface , next: Next) => {
+//         try {
+//             const {userId , email , password , phoneNumber} = req as any;
+//             // OTP has been verified &&
+//             // send the ACK to the client to proceed with profile building part
+//
+//             const payload = {id :userId , email , password , phoneNumber};
+//             const resp = await Schema.User.create (payload);
+//             const token: string = generateAuthToken (resp);
+//             setAuthorizationHeader (res , token);
+//
+//             return res.status (200).send ({
+//                 ...SUCCESS ,
+//                 token ,
+//                 userId :userId ,
+//                 email ,
+//                 isLoggedIn :true ,
+//             });
+//         } catch (e) {
+//             next (e);
+//         }
+//     }
+// );
 
 export default router;

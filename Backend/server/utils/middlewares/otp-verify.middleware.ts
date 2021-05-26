@@ -1,70 +1,38 @@
-import {
-  Next,
-  RequestInterface,
-  ResponseInterface,
-  JWT_ACCESS_SECRET,
-} from "../index";
+import {Next , RequestInterface , ResponseInterface , SMS_SECRET_TOKEN ,} from "../index";
 import createHttpError from "http-errors";
-import { verify } from "jsonwebtoken";
-import { Schema } from "../../../database/schema";
-import { Model } from "sequelize";
-import { PreflightInterface } from "../../models";
+import {createHmac} from "crypto";
 
 export async function requiresOtpVerification(
-  req: RequestInterface,
-  res: ResponseInterface,
-  next: Next
+    req: RequestInterface ,
+    res: ResponseInterface ,
+    next: Next
 ) {
-  try {
-    const magicToken = req.headers["x-magic-token"];
-    if (magicToken === undefined) {
-      throw new createHttpError.UnavailableForLegalReasons(
-        "Please create and verify your account first!"
-      );
-    } else {
-      // verify magic token first
-      if (typeof magicToken === "string") {
-        const verifiedMagicToken: PreflightInterface = verify(
-          magicToken,
-          JWT_ACCESS_SECRET
-        ) as PreflightInterface;
-        const { otpCode } = req.body;
-
-        if (verifiedMagicToken.otpCode !== otpCode)
-          throw new createHttpError.BadRequest(
-            `Invalid Otp!! please try again!!`
-          );
-
-        // check if OTP entered by user is correct
-        const preflightResp: Model<
-          any,
-          any
-        > | null = await Schema.Prefight.findOne({
-          where: {
-            id: verifiedMagicToken.id,
-            otpCode: verifiedMagicToken.otpCode,
-          },
-        });
-
-        if (preflightResp === null) {
-          throw new createHttpError.Unauthorized(
-            `Your Otp is incorrect! Please try again!`
-          );
+    try {
+        const magicToken = req.headers["x-magic-token"];
+        if (magicToken === undefined) {
+            throw new createHttpError.UnavailableForLegalReasons (
+                "Please register using OTP! You are not authorized!"
+            );
         } else {
-          (req as any).userId = preflightResp.getDataValue("id");
-          (req as any).email = preflightResp.getDataValue("email");
-          (req as any).password = preflightResp.getDataValue("password");
-          (req as any).phoneNumber = preflightResp.getDataValue("phoneNumber");
+            // verify magic token first
+            if (typeof magicToken === "string") {
+                const [hashCode , expiresIn] = magicToken.split ('.'); // getting from headers
+                const payload = req.body as { otpCode: string, phoneNumber: string }; // payload
 
-          // delete from un verified account list
-          await Schema.Prefight.destroy({
-            where: { id: preflightResp.getDataValue("id") },
-          });
-          return next();
+                // check if OTP still works in valid time
+                const nowTime: number = Date.now ();
+                if (nowTime > parseInt (expiresIn)) throw new createHttpError.GatewayTimeout ('OTP has been expired! Please try again!');
+
+                // regenerate HASH for equality check
+                const data: string = `${payload.phoneNumber}.${payload.otpCode}.${expiresIn}`;
+                const newCalculatedHash: string = createHmac ('sha256' , SMS_SECRET_TOKEN).update (data).digest ('hex');
+
+                if (newCalculatedHash === hashCode)
+                    next ();
+                else throw new createHttpError.BadRequest ('Incorrect OTP entered!!')
+            }
         }
-      }
+    } catch (e) {
+        next (e);
     }
-  } catch (e) {
-    next(e);
-  }
 }

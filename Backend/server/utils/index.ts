@@ -68,11 +68,10 @@ export function generateAuthToken(resp: Model<any , any>): string {
     return sign (
         {
             userId :resp.getDataValue ("id") ,
-            email :resp.getDataValue ("email") ,
             phoneNumber :resp.getDataValue ("phoneNumber") ,
         } as TokenInterface ,
         JWT_ACCESS_SECRET ,
-        {expiresIn :"2h"}
+        {expiresIn :"1d"}
     );
 }
 
@@ -139,7 +138,7 @@ const generateOtpCode = (): string =>
 
 export async function generateOtpAndTokenHash(
     phoneNumber: string
-): Promise<{ otp: string, fullHash: string, twilioResp: any } | undefined> {
+): Promise<{ otp: string, xMagicToken: string } | undefined> {
     try {
 
         const otp: string = generateOtpCode ();
@@ -148,18 +147,16 @@ export async function generateOtpAndTokenHash(
 
         const data: string = `${phoneNumber}.${otp}.${expiresIn}`; // create a payload to encrypt in HASH
         const crytoHash256: string = createHmac ('sha256' , SMS_SECRET_TOKEN).update (data).digest ('hex');
-        const fullHash: string = `${crytoHash256}.${expiresIn}`;
+        const xMagicToken: string = `${crytoHash256}.${expiresIn}`;
 
-        const twilioResp = await twilioClient.messages.create ({
-            from :String (+12312411416) ,
-            to :phoneNumber ,
-            body :`Your one time password for Matrimony-Match ${otp}. OTP valid for only 2 minutes!`
-        })
+        const twilioResp = 0; // await twilioClient.messages.create ({
+        //     from :String (+12312411416) ,
+        //     to :phoneNumber ,
+        //     body :`Your one time password for Matrimony-Match ${otp}. OTP valid for only 2 minutes!`
+        // })
 
-        return {otp , fullHash , twilioResp};
+        return {otp , xMagicToken};
     } catch (e) {
         return undefined;
     }
-
-
 }
