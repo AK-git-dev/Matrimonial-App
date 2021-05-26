@@ -1,12 +1,10 @@
 import {compare} from "bcrypt";
 import {NextFunction , Request as RQ , Response as RS ,} from "express-serve-static-core";
 import createHttpError from "http-errors";
-import {sign} from "jsonwebtoken";
+import {sign , verify} from "jsonwebtoken";
 import {Model} from "sequelize";
 import {v4} from "uuid";
-import {Schema} from "../../database/schema";
-import {PreflightInterface , SignupInterface , TokenInterface} from "../models";
-import * as crypto from "crypto";
+import {TokenInterface} from "../models";
 import {createHmac} from "crypto";
 import environment from "dotenv";
 import twilio from 'twilio';
@@ -75,62 +73,45 @@ export function generateAuthToken(resp: Model<any , any>): string {
     );
 }
 
-/** Generates OTP CODE for account verification **/
-export function generateMagicToken(payload: Model<any , any>): string {
-    return sign (
-        {
-            id :payload.getDataValue ("id") ,
-            email :payload.getDataValue ("email") ,
-            phoneNumber :payload.getDataValue ("phoneNumber") ,
-            otpCode :payload.getDataValue ("otpCode") ,
-        } as PreflightInterface ,
-        JWT_ACCESS_SECRET ,
-        {expiresIn :"62s"}
-    );
+/** Generate RefreshToken */
+export function generateRefreshToken(resp: Model<any , any>): string {
+    return sign ({
+        userId :resp.getDataValue ("id") ,
+        phoneNumber :resp.getDataValue ("phoneNumber") ,
+    } as TokenInterface , JWT_REFRESH_SECRET , {expiresIn :'7d'})
 }
 
-/** Check for Email Or Password already exists in Pre-signup process */
-export async function checkEmailOrPhoneNumberAlreadyExists(
-    res: ResponseInterface ,
-    payload: SignupInterface
-) {
-    /** Check for already user  account exists or not */
-    const isEmailExists = await Schema.Prefight.findOne ({
-        where :{email :payload.email} ,
-    });
-    if (isEmailExists != null) {
-        (isEmailExists as any).otpCode = crypto.randomBytes (3).toString ("hex");
-        await isEmailExists.save ();
+/** Send Authenticated Response
+ * when user signup account verification Succeeded
+ * OR
+ * when User Login Process Successfully Completes
+ *  */
 
-        const magicToken = generateMagicToken (isEmailExists);
-        return res.status (200).send ({
-            ...SUCCESS ,
-            otpCode :isEmailExists.getDataValue ("otpCode") ,
-            magicToken ,
-            message :"Please verify with the OTP code already sent!" ,
-            otpValidity :"1 min" ,
-        });
-    }
-    /** If Phone number already exists **/
-    const isPhoneNumberExists = await Schema.Prefight.findOne ({
-        where :{phoneNumber :payload.phoneNumber} ,
+export function sendAuthenticatedResponseWhenVerificationCompletes(res: ResponseInterface , accessToken: string , refreshToken: string , resp: Model<any , any> , phoneNumber: string) {
+    return res.status (202).cookie ('accessToken' , accessToken , {
+        // accessToken Cookie
+        expires :new Date (new Date ().getTime () + 3600 * 1000) ,
+        sameSite :'strict' ,
+        httpOnly :true
+    }).cookie ('refreshToken' , refreshToken , {
+        // refreshToken Cookie
+        expires :new Date (new Date ().getTime () + 7 * 3600 * 1000) ,
+        sameSite :'strict' ,
+        httpOnly :true
+    }).cookie ('isLoggedIn' , true , {expires :new Date (new Date ().getTime () + 3600 * 1000)}).send ({
+        ...SUCCESS ,
+        accessToken ,
+        refreshToken ,
+        userId :resp.getDataValue ('id') ,
+        phoneNumber ,
+        isLoggedIn :true ,
     });
-    if (isPhoneNumberExists != null) {
-        (isPhoneNumberExists as any).otpCode = crypto
-            .randomBytes (3)
-            .toString ("hex");
-        await isPhoneNumberExists.save ();
-
-        const magicToken = generateMagicToken (isPhoneNumberExists);
-        return res.status (200).send ({
-            ...SUCCESS ,
-            otpCode :isPhoneNumberExists.getDataValue ("otpCode") ,
-            otpValidity :"1 min" ,
-            magicToken ,
-            message :"Please verify with the OTP code already sent!" ,
-        });
-    }
 }
+
+export async function verifyRefreshTokenValidity(token: string): Promise<TokenInterface> {
+    return verify (token , JWT_REFRESH_SECRET) as TokenInterface;
+}
+
 
 // generate 6 digit OTP
 const generateOtpCode = (): string =>

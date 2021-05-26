@@ -21,7 +21,7 @@ import Song from "./songs.schema";
 import TrustScore from "./trustScore.schema";
 import User from "./user.schema";
 import VaccationDestination from "./vaccationDestination.schema";
-import Prefight from "./preflight.schema";
+import RefreshToken from "./refreshToken.schema";
 
 /** Will configure the association Mappings (1:N) / (M:N) / (N:1)  */
 function buildAssociationsBetweenSchemas() {
@@ -67,7 +67,7 @@ const Schema = {
   PeopleWhoViewedYou,
   Books,
   VaccationDestination,
-  Prefight,
+  RefreshToken,
   Languages,
   PrivacySetting,
   Movie,
