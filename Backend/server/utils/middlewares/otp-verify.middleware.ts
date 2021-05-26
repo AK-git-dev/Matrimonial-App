@@ -1,4 +1,9 @@
-import { Next, RequestInterface, ResponseInterface, SECRET } from "../index";
+import {
+  Next,
+  RequestInterface,
+  ResponseInterface,
+  JWT_ACCESS_SECRET,
+} from "../index";
 import createHttpError from "http-errors";
 import { verify } from "jsonwebtoken";
 import { Schema } from "../../../database/schema";
@@ -21,7 +26,7 @@ export async function requiresOtpVerification(
       if (typeof magicToken === "string") {
         const verifiedMagicToken: PreflightInterface = verify(
           magicToken,
-          SECRET
+          JWT_ACCESS_SECRET
         ) as PreflightInterface;
         const { otpCode } = req.body;
 

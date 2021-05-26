@@ -3,7 +3,7 @@ import {
   Next,
   RequestInterface,
   ResponseInterface,
-  SECRET,
+  JWT_ACCESS_SECRET,
 } from "../index";
 import { verify } from "jsonwebtoken";
 
@@ -12,7 +12,7 @@ export async function loginOtpVerification(
   otp: string,
   token: string
 ) {
-  const verifiedOtpAndToken = verify(token, SECRET) as {
+  const verifiedOtpAndToken = verify(token, JWT_ACCESS_SECRET) as {
     otp: string;
     phoneNumber: string;
   };

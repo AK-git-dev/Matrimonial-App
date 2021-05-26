@@ -1,11 +1,16 @@
-import { Next, RequestInterface, ResponseInterface, SECRET } from "../index";
+import {
+  Next,
+  RequestInterface,
+  ResponseInterface,
+  JWT_ACCESS_SECRET,
+} from "../index";
 import createHttpError from "http-errors";
 import { verify } from "jsonwebtoken";
 import { TokenInterface } from "../../models";
 import { Schema } from "../../../database/schema";
 
 async function verifyAuthTokenValidity(token: string): Promise<TokenInterface> {
-  return verify(token, SECRET) as TokenInterface;
+  return verify(token, JWT_ACCESS_SECRET) as TokenInterface;
 }
 
 export async function requiresAuth(

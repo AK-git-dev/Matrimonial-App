@@ -8,6 +8,10 @@ export interface PreflightInterface {
   otpCode: string;
 }
 
+export interface PhoneNumberSignupInterface {
+  phoneNumber: string;
+}
+
 export interface SignupInterface {
   email: string;
   password: string;

@@ -45,7 +45,9 @@ const PreSignup = db.schema.define(
             (payload as any).password,
             genSaltSync(10)
           );
-          (payload as any).otpCode = crypto.randomBytes(3).toString("hex");
+          (payload as any).otpCode = Math.ceil(
+            100000 + Math.random() * 131313
+          ).toString();
         }
       },
     },
