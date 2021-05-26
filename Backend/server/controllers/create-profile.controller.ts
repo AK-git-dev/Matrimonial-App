@@ -26,7 +26,9 @@ router.patch(
   requiresMinimumAge,
   async (req: RequestInterface, res: ResponseInterface, next: Next) => {
     try {
-      const UserId = (req as any).userId;
+      const userId = (req as any).userId;
+      const phoneNumber = (req as any).phoneNumber;
+
       const payload: CreateProfileInterface = req.body as CreateProfileInterface;
       const ageNow =
         +new Date().getUTCFullYear() -
@@ -34,8 +36,8 @@ router.patch(
       const updatedPayloadWithAge = { ...payload, age: ageNow };
 
       // Update Profile Info from payload;
-      await Schema.User.update(updatedPayloadWithAge, {
-        where: { id: UserId },
+      const saved = await Schema.User.update(updatedPayloadWithAge, {
+        where: { id: userId, phoneNumber },
       });
 
       return res.status(200).send({
