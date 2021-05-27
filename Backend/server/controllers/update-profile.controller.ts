@@ -68,7 +68,7 @@ router.post (
 
                 return res.status (200).send ({
                     ...SUCCESS ,
-                    message :`user address has been added successfully!` ,
+                    message :`user address information has been updated!` ,
                 });
             } else
                 throw new createError.UnprocessableEntity (
@@ -92,12 +92,21 @@ router.post (
             // update address info if any
             // update caste information if any
             if (payload) {
-                const castePayload = {...payload , UserId};
-                await Schema.Caste.create (castePayload);
+
+                const isCasteExists = await Schema.Caste.findOne ({where :{UserId}});
+                if (isCasteExists === null) {
+                    // create and associate new caste to the user
+                    const castePayload = {...payload , UserId};
+                    await Schema.Caste.create (castePayload);
+                } else {
+                    // update the caste information to the user
+                    await isCasteExists.update ({...payload});
+                    console.log (`user caste information has been updated!`);
+                }
 
                 return res.status (200).send ({
                     ...SUCCESS ,
-                    message :`user caste has been added successfully!` ,
+                    message :`user caste information has been updated!` ,
                 });
             } else
                 throw new createError.UnprocessableEntity (
@@ -120,12 +129,21 @@ router.post (
 
             // update lifestyle information if any
             if (payload) {
-                const lifestylePayload = {...payload , UserId};
-                await Schema.LifeStyle.create (lifestylePayload);
+
+                // check if user is already have lifestyle
+                const isLifeStyleExists = await Schema.LifeStyle.findOne ({where :{UserId}});
+                if (isLifeStyleExists === null) {
+                    // create a new lifestyle
+                    const lifestylePayload = {...payload , UserId};
+                    await Schema.LifeStyle.create (lifestylePayload);
+                } else {
+                    await isLifeStyleExists.update ({...payload});
+                    console.log (`user lifestyle information has been updated!`);
+                }
 
                 return res.status (200).send ({
                     ...SUCCESS ,
-                    message :`user lifestyle has been added successfully!` ,
+                    message :`user lifestyle information has been updated!` ,
                 });
             } else
                 throw new createError.UnprocessableEntity (
@@ -139,13 +157,13 @@ router.post (
 
 // [POST] : Add Educational Qualification to the user
 router.post (
-    "/update-educations" ,
+    "/add-education-details" ,
     requiresAuth ,
     async (req: RequestInterface , res: ResponseInterface , next: Next) => {
         try {
             const UserId = (req as any).userId;
             const payload: EducationInterface[] = req.body as EducationInterface[];
-            console.log (payload);
+
             if (payload) {
                 for (const education of payload) {
                     const educationPayload = {...education , UserId};
