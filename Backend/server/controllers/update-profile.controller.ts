@@ -10,7 +10,6 @@ import {
     LifestyleInterface ,
 } from "../models";
 import {Schema} from "../../database/schema";
-import {Model} from "sequelize";
 
 const router = Router ();
 
@@ -55,7 +54,6 @@ router.post (
             // update address info if any
             if (payload) {
 
-
                 const ifAddressExists = await Schema.Address.findOne ({where :{UserId}})
                 if (ifAddressExists === null) {
                     // if not present then create
@@ -63,8 +61,8 @@ router.post (
                     await Schema.Address.create (addressPayload);
                 } else {
                     // check if address exists then only updaten
-                  await ifAddressExists.update ({...payload});
-                  console.log(`Address has been updated`);
+                    await ifAddressExists.update ({...payload});
+                    console.log (`Address has been updated`);
                 }
 
 
