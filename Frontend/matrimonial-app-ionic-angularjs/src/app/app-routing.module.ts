@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'ed-car',
     loadChildren: () => import('./ed-car/ed-car.module').then( m => m.EdCarPageModule)
   },
+  {
+    path: 'pref-part',
+    loadChildren: () => import('./pref-part/pref-part.module').then( m => m.PrefPartPageModule)
+  },
 
 
 ];
