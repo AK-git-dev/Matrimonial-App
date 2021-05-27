@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-trust-score',
   templateUrl: './trust-score.page.html',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrustScorePage implements OnInit {
 
+ 
   constructor() { }
 
   ngOnInit() {

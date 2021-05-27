@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
+import { ReactiveFormsModule } from "@angular/forms";
 
 import { LoginPage } from './login.page';
 
