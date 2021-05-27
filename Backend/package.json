@@ -5,7 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "dev": "nodemon --exec ts-node ./src/index.ts",
-    "start": "ts-node ./src/index.ts"
+    "start": "ts-node ./src/index.ts",
+    "reset:db": "node ./resetDB.js"
   },
   "originalAuthor": "Sounish Nath",
   "originalEmail": "flock.sinasini@gmail.com",
