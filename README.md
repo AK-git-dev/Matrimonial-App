@@ -204,6 +204,9 @@ _From Eagle's Eye:_ Database Schema Designed.
     - True
     - False
 
+## Important Note:
+1. Please run `cd Backend && yarn reset:db`, if you ran into severe database issues. It might change from backend side, please run the command carefully!
+
 ## API Endpoints And Requests
 
 <br />
