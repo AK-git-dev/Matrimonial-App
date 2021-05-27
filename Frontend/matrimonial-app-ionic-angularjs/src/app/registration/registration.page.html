@@ -1,0 +1,45 @@
+
+<ion-content [fullscreen]="true">
+  <ion-title>Personal Details</ion-title>
+  <ion-label>1/3</ion-label>
+  <!-- <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button
+            [text]="buttonText"
+            [icon]="buttonIcon">
+        </ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header> -->
+      <div class="container">
+      <form action="" method="post">
+        <ion-radio-group value = "Gender">
+        <ion-radio class = "male" slot="start" value="male"></ion-radio>
+        <ion-icon class="mnane" name="man-outline"></ion-icon>
+        <ion-radio class = "female" slot="start" value="female"></ion-radio>
+        <ion-icon class = "fname" name="woman-outline"></ion-icon>
+      </ion-radio-group>
+            <ion-label class="name">Full Name*</ion-label> <br>
+            <ion-input id="Name1" type="name" class="name1" > </ion-input>
+    
+            <ion-label class="number">Mobile Number*</ion-label> <br>
+            <ion-input id="Number2" type="number" class="number2" > </ion-input>
+            <ion-input id="Number1" type="number" class="number1" > </ion-input>
+
+            <ion-label class="Date">Date of Birth*</ion-label><br>
+            <ion-input id="Date1" type="date" class="date1"> </ion-input>
+    
+            
+    
+            <ion-button (click)="onClick()" class="Nextbutton">
+              Next
+            </ion-button>
+    
+      </form>
+     </div>
+    
+    </ion-content>
+    
+    
+    

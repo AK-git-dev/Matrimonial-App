@@ -1,0 +1,29 @@
+<ion-content [fullscreen]="true">
+  <ion-title>Education and Career</ion-title>
+  <ion-label>2/3</ion-label>
+    <div class="container">
+      <form action="" method="post">
+        <ion-label class="name">Education</ion-label> <br>
+        <ion-icon class="cap" name="school-outline"></ion-icon>
+        <ion-input id="Name1" type="name" class="name1" placeholder = "Highest Degree *"> </ion-input>
+
+        <ion-label class="career">Career</ion-label> <br>
+        <ion-icon name="bag-outline" class="bag"></ion-icon>
+        <ion-label class="career1">Employed In *</ion-label> <br>
+            <ion-input id="Name2" type="name" class="name2" > </ion-input>
+
+            <ion-icon name="desktop-outline" class = desktop></ion-icon>
+            <ion-label class="occup">Occupation *</ion-label> <br>
+            <ion-input id="Name3" type="name" class="name3" > </ion-input>
+
+            <ion-icon name="wallet-outline" class="money"></ion-icon>
+            <ion-label class="income">Income *</ion-label> <br>
+            <ion-input id="Name4" type="name" class="name4" > </ion-input>
+
+            <ion-button (click)="onClick()" class="Nextbutton">
+              Next
+            </ion-button>
+    
+</form>
+    </div>
+</ion-content>

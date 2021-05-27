@@ -10,7 +10,8 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
+  },
+  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
@@ -18,6 +19,14 @@ const routes: Routes = [
     path: 'trust-score',
     loadChildren: () => import('./trust-score/trust-score.module').then( m => m.TrustScorePageModule)
   },
+  {
+    path: 'registration',
+    loadChildren: () => import('./registration/registration.module').then( m => m.RegistrationPageModule)
+  },  {
+    path: 'ed-car',
+    loadChildren: () => import('./ed-car/ed-car.module').then( m => m.EdCarPageModule)
+  },
+
 
 ];
 
