@@ -3,7 +3,7 @@ import createHttpError from "http-errors";
 import { Next, RequestInterface, ResponseInterface, SUCCESS } from "../utils";
 import AuthController from "./auth.controller";
 import UserController from "./users.controller";
-import CreateProfileController from "./create-profile.controller";
+import CreateProfileController from "./update-profile.controller";
 
 const router = Router();
 
@@ -26,7 +26,7 @@ router.get(
 
 // Controllers
 router.use("/auth", AuthController);
-router.use("/create-profile", CreateProfileController);
+router.use("/profile", CreateProfileController);
 router.use("/users", UserController);
 
 export default router;

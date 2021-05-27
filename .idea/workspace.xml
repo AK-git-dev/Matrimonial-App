@@ -4,16 +4,16 @@
     <list default="true" id="c949d03d-b43f-4ad8-a88f-b22580d60f18" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/Backend/.env" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/api-requests/Insomnia_2021-05-27.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/database/schema/refreshToken.schema.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/formatter.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/server/controllers/create-profile.controller.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/controllers/login.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/server/controllers/otp-generator.controller.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/controllers/signup.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/server/controllers/update-profile.controller.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/age-restrictor.middleware.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/login-otp-verification.middleware.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/otp-verify.middleware.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/requires-auth.middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +82,7 @@
       <workItem from="1621949136138" duration="1230000" />
       <workItem from="1622014607726" duration="4794000" />
       <workItem from="1622036076250" duration="18063000" />
+      <workItem from="1622087559086" duration="2940000" />
     </task>
     <servers />
   </component>

@@ -29,6 +29,8 @@ export async function requiresMinimumAge(
         throw new createError.UnprocessableEntity(
           `${payload.fullname}! you have to be minimum 18 years old to continue the process!`
         );
+
+      (req as any).age = age;
     }
     next();
   } catch (error) {
