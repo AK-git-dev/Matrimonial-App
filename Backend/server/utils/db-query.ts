@@ -5,6 +5,7 @@ export const getAllUsersWithAllDetails = async () =>
     include: [
       { model: Schema.Education },
       { model: Schema.Address },
+      { model: Schema.Caste },
       {
         model: Schema.LifeStyle,
         include: [

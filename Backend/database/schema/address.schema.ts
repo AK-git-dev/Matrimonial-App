@@ -8,7 +8,7 @@ const Address = db.schema.define(
   "Addresses",
   {
     id: { type: DataTypes.UUID, primaryKey: true, allowNull: false },
-    address: { type: DataTypes.STRING(30), allowNull: false },
+    address: { type: DataTypes.STRING(180), allowNull: false },
     city: { type: DataTypes.STRING(30), allowNull: false },
     district: { type: DataTypes.STRING(30), allowNull: false },
     country: { type: DataTypes.STRING(30), allowNull: false },

@@ -14,47 +14,45 @@ const User = db.schema.define(
     },
     fullname: {
       type: DataTypes.STRING(25),
-      allowNull: false,
     },
     dateOfBirth: {
       type: DataTypes.DATEONLY,
-      allowNull: false,
     },
     age: {
       type: DataTypes.SMALLINT,
-      allowNull: false,
     },
     gender: {
       type: DataTypes.ENUM("Male", "Female", "Shemale"),
-      allowNull: false,
     },
     phoneNumber: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
       unique: true,
     },
     email: {
       type: DataTypes.STRING,
-      allowNull: false,
       unique: true,
+    },
+    password: {
+      type: DataTypes.STRING(150),
     },
     martialStatus: {
       type: DataTypes.ENUM(
         "Single",
         "Widowed",
-        "Marriaged",
+        "Marriage",
         "Divorced",
         "Separated"
       ),
-      allowNull: false,
+      defaultValue: "Single",
     },
     motherTongue: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     isCasteBarrier: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
+      defaultValue: false,
     },
     fathersName: {
       type: DataTypes.STRING,
@@ -64,6 +62,7 @@ const User = db.schema.define(
     },
     accountActive: {
       type: DataTypes.BOOLEAN,
+      defaultValue: true,
     },
   },
   {
@@ -71,16 +70,13 @@ const User = db.schema.define(
     tableName: "Users",
     indexes: [
       { fields: ["age"] },
+      { fields: ["email", "phoneNumber"] },
       { fields: ["fullname"] },
       { fields: ["martialStatus"] },
     ],
     hooks: {
-      beforeValidate: function (user: any, options) {
-        user.id = uuid();
-        const ageNow =
-          new Date().getUTCFullYear() -
-          new Date(user.dateOfBirth.getUTCFullYear).getUTCFullYear();
-        user.age = ageNow;
+      beforeValidate: function (payload: any, options: any) {
+        payload.id = uuid();
       },
     },
   }

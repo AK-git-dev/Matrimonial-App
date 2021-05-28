@@ -28,6 +28,7 @@ const routes: Routes = [
     path: 'registration',
     loadChildren: () => import('./registration/registration.module').then( m => m.RegistrationPageModule)
   },
+<<<<<<< HEAD
   {
     path: 'pref-partner',
     loadChildren: () => import('./pref-partner/pref-partner.module').then( m => m.PrefPartnerPageModule)
@@ -36,6 +37,31 @@ const routes: Routes = [
     path: 'settings',
     loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
   },
+=======
+
+{
+    path: 'pref-part',
+    loadChildren: () => import('./pref-part/pref-part.module').then( m => m.PrefPartPageModule)
+  },
+
+  {
+    path: 'ed-car',
+    loadChildren: () => import('./ed-car/ed-car.module').then( m => m.EdCarPageModule)
+  },
+  // {
+  //   path: 'tab1',
+  //   loadChildren: () => import('./tabs/tab1/tab1.module').then( m => m.Tab1PageModule)
+  // },
+  // {
+  //   path: 'tab2',
+  //   loadChildren: () => import('./tabs/tab2/tab2.module').then( m => m.Tab2PageModule)
+  // },
+  // {
+  //   path: 'tabs2',
+  //   loadChildren: () => import('./tabs2/tabs2.module').then( m => m.Tabs2PageModule)
+  // },
+
+>>>>>>> 75dd3bb68f41fbd2b3a50259f2385192ef2cd029
 
 ];
 
@@ -46,4 +72,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-

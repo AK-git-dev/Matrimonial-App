@@ -2,7 +2,7 @@ import { DataTypes } from "sequelize";
 import { v4 } from "uuid";
 import { db } from "..";
 
-const uuid = v4 ;
+const uuid = v4;
 
 const Education = db.schema.define(
   "Educations",
@@ -13,23 +13,23 @@ const Education = db.schema.define(
       primaryKey: true,
     },
     type: {
-      type: DataTypes.ENUM("Gradudate", "Postgraduate", "Doctorate"),
+      type: DataTypes.STRING,
       allowNull: false,
     },
     degree: {
-      type: DataTypes.ENUM("B.Tech", "M.Tech", "Masters", "Hons", "B.Par"),
+      type: DataTypes.STRING,
       allowNull: false,
     },
-    InstitutionName: {
-      type: DataTypes.STRING(30),
+    institutionName: {
+      type: DataTypes.STRING(120),
       allowNull: false,
     },
     specializationIn: {
-      type: DataTypes.STRING(30),
+      type: DataTypes.STRING(100),
       allowNull: false,
     },
     passoutYear: {
-      type: DataTypes.DATEONLY,
+      type: DataTypes.STRING(4),
       allowNull: false,
     },
   },
@@ -44,6 +44,5 @@ const Education = db.schema.define(
     },
   }
 );
-
 
 export default Education;

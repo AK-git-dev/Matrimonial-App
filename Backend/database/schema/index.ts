@@ -21,6 +21,7 @@ import Song from "./songs.schema";
 import TrustScore from "./trustScore.schema";
 import User from "./user.schema";
 import VaccationDestination from "./vaccationDestination.schema";
+import RefreshToken from "./refreshToken.schema";
 
 /** Will configure the association Mappings (1:N) / (M:N) / (N:1)  */
 function buildAssociationsBetweenSchemas() {
@@ -38,6 +39,7 @@ function buildAssociationsBetweenSchemas() {
   User.hasMany(Message);
   User.hasMany(BlockedUsers);
   User.hasOne(UploadedDocument);
+  User.hasOne(Caste);
 
   LifeStyle.hasMany(Movie, { as: "favouriteMovies" });
   LifeStyle.hasMany(Books, { as: "favouriteBooks" });
@@ -48,7 +50,6 @@ function buildAssociationsBetweenSchemas() {
   LifeStyle.hasMany(Languages, { as: "languagesCanSpeak" });
 
   Education.belongsTo(User);
-  Caste.belongsTo(User);
 }
 
 /** Export Schema from index.ts file */
@@ -66,6 +67,7 @@ const Schema = {
   PeopleWhoViewedYou,
   Books,
   VaccationDestination,
+  RefreshToken,
   Languages,
   PrivacySetting,
   Movie,
