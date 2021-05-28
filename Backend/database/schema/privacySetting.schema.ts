@@ -32,4 +32,4 @@ const PrivacySetting = db.schema.define(
   }
 );
 
-export default  PrivacySetting;
+export default PrivacySetting;

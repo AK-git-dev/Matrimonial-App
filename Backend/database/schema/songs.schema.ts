@@ -14,10 +14,10 @@ const Song = db.schema.define(
     freezeTableName: true,
     tableName: "Songs",
     hooks: {
-      beforeValidate: function(payload: any, options) {
+      beforeValidate: function (payload: any, options) {
         payload.name = payload.name.toLowerCase();
-      }
-    }
+      },
+    },
   }
 );
 

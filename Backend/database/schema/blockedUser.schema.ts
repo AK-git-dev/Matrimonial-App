@@ -16,5 +16,4 @@ const BlockedUsers = db.schema.define(
   }
 );
 
-
 export default BlockedUsers;

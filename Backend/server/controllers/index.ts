@@ -1,5 +1,3 @@
-import APIController from './api.controller';
+import APIController from "./api.controller";
 
-export {
-    APIController
-}
+export { APIController };

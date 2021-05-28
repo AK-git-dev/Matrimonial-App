@@ -67,5 +67,4 @@ const UploadedDocument = db.schema.define(
   }
 );
 
-
 export default UploadedDocument;
