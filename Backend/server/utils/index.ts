@@ -12,7 +12,7 @@ import { TokenInterface } from "../models";
 import { createHmac } from "crypto";
 import environment from "dotenv";
 import twilio from "twilio";
-import {join} from "path";
+import { join } from "path";
 
 environment.config();
 
@@ -39,20 +39,19 @@ export const JWT_ACCESS_SECRET = process.env.JWT_ACCESS_TOKEN_SECRET as string;
 export const JWT_REFRESH_SECRET = process.env
   .JWT_REFRESH_TOKEN_SECRET as string;
 
-
 /** FileUploadDirectory Path */
 export const FileUploadDirectoryPath = join(
-    __dirname,
-    "..",
-    "public",
-    "uploads"
+  __dirname,
+  "..",
+  "public",
+  "uploads"
 );
 
 /** for serving as static assets - public/uploads */
 export const FileUploadFolderStaticServe = join(__dirname, "..", "public");
 
 // Acceptable FileFormat Only any type of images/*
-export type AcceptableFileFormat = "image/*" | "application/pdf" ;
+export type AcceptableFileFormat = "image/*" | "application/pdf";
 
 export interface FileUploadInterface {
   name: string;

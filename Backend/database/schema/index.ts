@@ -46,7 +46,6 @@ function buildAssociationsBetweenSchemas() {
   User.hasOne(Caste);
   RelativeContact.hasOne(PrivacySetting);
 
-
   LifeStyle.hasMany(Movie, { as: "favouriteMovies" });
   LifeStyle.hasMany(Books, { as: "favouriteBooks" });
   LifeStyle.hasMany(Song, { as: "favouriteSongs" });

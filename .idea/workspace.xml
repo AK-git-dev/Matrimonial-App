@@ -25,8 +25,6 @@
       <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/age-restrictor.middleware.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/otp-verify.middleware.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/requires-auth.middleware.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +100,7 @@
       <workItem from="1622087559086" duration="4236000" />
       <workItem from="1622140314968" duration="619000" />
       <workItem from="1622182041775" duration="9267000" />
-      <workItem from="1622210972577" duration="6380000" />
+      <workItem from="1622210972577" duration="6434000" />
     </task>
     <servers />
   </component>
