@@ -33,6 +33,11 @@ const routes: Routes = [
     path: 'pref-part',
     loadChildren: () => import('./pref-part/pref-part.module').then( m => m.PrefPartPageModule)
   },
+
+  {
+    path: 'ed-car',
+    loadChildren: () => import('./ed-car/ed-car.module').then( m => m.EdCarPageModule)
+  },
   // {
   //   path: 'tab1',
   //   loadChildren: () => import('./tabs/tab1/tab1.module').then( m => m.Tab1PageModule)
