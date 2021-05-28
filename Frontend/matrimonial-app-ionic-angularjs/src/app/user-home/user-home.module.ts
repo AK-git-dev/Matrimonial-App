@@ -9,6 +9,7 @@ import { UserHomePageRoutingModule } from './user-home-routing.module';
 import { UserHomePage } from './user-home.page';
 
 import { TabsComponent } from '../components/tabs/tabs.component';
+import { SidebarComponent } from '../components/sidebar/sidebar.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,6 @@ import { TabsComponent } from '../components/tabs/tabs.component';
     IonicModule,
     UserHomePageRoutingModule
   ],
-  declarations: [UserHomePage, TabsComponent]
+  declarations: [UserHomePage, TabsComponent, SidebarComponent]
 })
 export class UserHomePageModule {}
