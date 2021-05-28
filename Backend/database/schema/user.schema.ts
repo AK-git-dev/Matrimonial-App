@@ -33,9 +33,6 @@ const User = db.schema.define(
       type: DataTypes.STRING,
       unique: true,
     },
-    password: {
-      type: DataTypes.STRING(150),
-    },
     martialStatus: {
       type: DataTypes.ENUM(
         "Single",

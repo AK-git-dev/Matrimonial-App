@@ -22,11 +22,15 @@ import TrustScore from "./trustScore.schema";
 import User from "./user.schema";
 import VaccationDestination from "./vaccationDestination.schema";
 import RefreshToken from "./refreshToken.schema";
+import RelativeContact from "./relative-contacts.schema";
+import FamilyDetails from "./family-details.schema";
 
 /** Will configure the association Mappings (1:N) / (M:N) / (N:1)  */
 function buildAssociationsBetweenSchemas() {
   User.hasMany(Education);
   User.hasOne(Address);
+  User.hasOne(FamilyDetails);
+  User.hasMany(RelativeContact);
   User.hasMany(TrustScore);
   User.hasMany(FavouritePerson);
   User.hasMany(PersonWhoFavouritedHimself);
@@ -40,6 +44,8 @@ function buildAssociationsBetweenSchemas() {
   User.hasMany(BlockedUsers);
   User.hasOne(UploadedDocument);
   User.hasOne(Caste);
+  RelativeContact.hasOne(PrivacySetting);
+
 
   LifeStyle.hasMany(Movie, { as: "favouriteMovies" });
   LifeStyle.hasMany(Books, { as: "favouriteBooks" });
@@ -64,10 +70,13 @@ const Schema = {
   FavouritePerson,
   LifeStyle,
   Song,
+  Occupation,
+  RelativeContact,
   PeopleWhoViewedYou,
   Books,
   VaccationDestination,
   RefreshToken,
+  FamilyDetails,
   Languages,
   PrivacySetting,
   Movie,

@@ -6,8 +6,8 @@ import {
     AddressInterface ,
     CasteInterface ,
     CreateProfileInterface ,
-    EducationInterface ,
-    LifestyleInterface ,
+    EducationInterface , FamilyDetailsInterface ,
+    LifestyleInterface , OccupationInterface , RelativeContactInterface ,
 } from "../models";
 import {Schema} from "../../database/schema";
 
@@ -183,5 +183,97 @@ router.post (
         }
     }
 );
+
+// [POST] : Add / Update Occupation Details of the User
+router.post ('/update-occupation-details' , requiresAuth , async (req: RequestInterface , res: ResponseInterface , next: Next) => {
+    try {
+        const UserId = (req as any).userId;
+        const payload: OccupationInterface = req.body as OccupationInterface;
+
+        if (payload) {
+            // check if occupation exists
+            const isOccupationExists = await Schema.Occupation.findOne ({where :{UserId}});
+            if (isOccupationExists === null) {
+                // create a new lifestyle
+                const occupationPayload = {...payload , UserId};
+                await Schema.Occupation.create (occupationPayload);
+            } else {
+                await isOccupationExists.update ({...payload});
+                console.log (`user lifestyle information has been updated!`);
+            }
+
+            return res.status (200).send ({
+                ...SUCCESS ,
+                message :`user occupation information has been updated!` ,
+            });
+        } else
+            throw new createError.UnprocessableEntity (
+                `occupation information is not correctly formatted`
+            );
+
+    } catch (e) {
+        next (e);
+    }
+});
+
+// [POST] : Add Family Contact Details of the User
+router.post ('/update-relative-contact-details' , requiresAuth , async (req: RequestInterface , res: ResponseInterface , next: Next) => {
+    try {
+        const UserId = (req as any).userId;
+        const payload: RelativeContactInterface[] = req.body as RelativeContactInterface[];
+
+        if (payload) {
+
+            for (const contactDetail of payload) {
+                const contactPayload = {...contactDetail , UserId};
+                await Schema.RelativeContact.create (contactPayload);
+            }
+
+            return res.status (200).send ({
+                ...SUCCESS ,
+                message :`user relative contact information has been updated!` ,
+            });
+        } else
+            throw new createError.UnprocessableEntity (
+                `relative contact information is not correctly formatted`
+            );
+
+    } catch (e) {
+        next (e);
+    }
+});
+
+// [POST] Add / Update Family Details of the User
+router.post ('/update-family-details' , requiresAuth,async (req: RequestInterface , res: ResponseInterface , next: Next) => {
+    try {
+
+        const UserId = (req as any).userId;
+        const payload: FamilyDetailsInterface = req.body as FamilyDetailsInterface;
+
+        if (payload) {
+
+            const isFamilyDetailsExists = await Schema.FamilyDetails.findOne ({where :{UserId}});
+
+            if (isFamilyDetailsExists === null) {
+                const familyDetailsPayload = {...payload , UserId};
+                await Schema.FamilyDetails.create (familyDetailsPayload);
+            } else {
+                await isFamilyDetailsExists.update ({...payload});
+                console.log (`user family details information has been updated!`);
+            }
+
+            return res.status (202).send ({
+                ...SUCCESS ,
+                message :`user family details information has been updated!`
+            })
+
+        } else throw new createError.UnprocessableEntity (
+            `family details information is not correctly formatted!`
+        )
+
+    } catch (e) {
+        next (e);
+    }
+})
 
 export default router;
