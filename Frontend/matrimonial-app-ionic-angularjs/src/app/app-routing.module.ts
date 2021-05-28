@@ -28,19 +28,14 @@ const routes: Routes = [
     path: 'registration',
     loadChildren: () => import('./registration/registration.module').then( m => m.RegistrationPageModule)
   },
-  // {
-  //   path: 'tab1',
-  //   loadChildren: () => import('./tabs/tab1/tab1.module').then( m => m.Tab1PageModule)
-  // },
-  // {
-  //   path: 'tab2',
-  //   loadChildren: () => import('./tabs/tab2/tab2.module').then( m => m.Tab2PageModule)
-  // },
-  // {
-  //   path: 'tabs2',
-  //   loadChildren: () => import('./tabs2/tabs2.module').then( m => m.Tabs2PageModule)
-  // },
-
+  {
+    path: 'pref-partner',
+    loadChildren: () => import('./pref-partner/pref-partner.module').then( m => m.PrefPartnerPageModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+  },
 
 ];
 
