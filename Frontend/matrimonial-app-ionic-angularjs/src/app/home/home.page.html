@@ -1,4 +1,6 @@
-<div class="container">
+<ion-content [fullscreen]="true">
+  <!-- <app-tabs></app-tabs> -->
+ <div class="container">
   <div class="image">
   <img src="../../assets/1st page.png" alt="">
   </div>
@@ -6,7 +8,7 @@
   
   <div class="card">
     <h3>Find Your Perfect Match</h3>
-   <ion-button type="button">Sign Up </ion-button>
+   <ion-button type="button" [routerLink] = "['/registration']">Sign Up </ion-button>
     <h4>Already Register? <strong>Login</strong></h4>
   </div>
 
@@ -20,3 +22,5 @@
   </ion-toolbar>
 </ion-header>
 
+
+</ion-content>
