@@ -28,7 +28,6 @@ const routes: Routes = [
     path: 'registration',
     loadChildren: () => import('./registration/registration.module').then( m => m.RegistrationPageModule)
   },
-<<<<<<< HEAD
   {
     path: 'pref-partner',
     loadChildren: () => import('./pref-partner/pref-partner.module').then( m => m.PrefPartnerPageModule)
@@ -37,7 +36,6 @@ const routes: Routes = [
     path: 'settings',
     loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
   },
-=======
 
 {
     path: 'pref-part',
@@ -61,7 +59,6 @@ const routes: Routes = [
   //   loadChildren: () => import('./tabs2/tabs2.module').then( m => m.Tabs2PageModule)
   // },
 
->>>>>>> 75dd3bb68f41fbd2b3a50259f2385192ef2cd029
 
 ];
 
