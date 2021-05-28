@@ -11,7 +11,7 @@ ion-icon[name="home"] {
 
 ion-icon[name="search"] {
     position: absolute;
-    width: 40px;
+    width: 35px;
     height: 40px;
     // left: 88px;
     // top: 837px;
@@ -45,4 +45,30 @@ ion-icon[name="notification"] {
 
     background: url(../../../assets/tabs/notification.png);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+
+ion-icon {
+    padding-top: 5px;
+}
+
+
+ion-label {
+    position: absolute;
+    left: 10px;
+    top: 42px;
+    
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: left;
+    padding-top: 2px;
+    color: #000000;
+}
+
+ion-tab-bar {
+    margin: 15px;
 }

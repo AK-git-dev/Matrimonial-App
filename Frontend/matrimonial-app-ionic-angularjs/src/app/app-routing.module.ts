@@ -21,33 +21,9 @@ const routes: Routes = [
 
   },
   {
-    path: 'notifications',
-    loadChildren: () => import('./notifications/notifications.module').then( m => m.NotificationsPageModule)
-  },
-  {
-    path: 'registration',
-    loadChildren: () => import('./registration/registration.module').then( m => m.RegistrationPageModule)
-  },
-
-{
-    path: 'pref-part',
-    loadChildren: () => import('./pref-part/pref-part.module').then( m => m.PrefPartPageModule)
-  },
-  // {
-  //   path: 'tab1',
-  //   loadChildren: () => import('./tabs/tab1/tab1.module').then( m => m.Tab1PageModule)
-  // },
-  // {
-  //   path: 'tab2',
-  //   loadChildren: () => import('./tabs/tab2/tab2.module').then( m => m.Tab2PageModule)
-  // },
-  // {
-  //   path: 'tabs2',
-  //   loadChildren: () => import('./tabs2/tabs2.module').then( m => m.Tabs2PageModule)
-  // },
-
-
-];
+    path: 'user-home',
+    loadChildren: () => import('./user-home/user-home.module').then( m => m.UserHomePageModule)
+  }]
 
 @NgModule({
   imports: [
