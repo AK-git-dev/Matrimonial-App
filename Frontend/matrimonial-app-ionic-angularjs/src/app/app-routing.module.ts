@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'trust-score',
     loadChildren: () => import('./trust-score/trust-score.module').then( m => m.TrustScorePageModule)
   },
+  {
+    path: 'user-home',
+    loadChildren: () => import('./user-home/user-home.module').then( m => m.UserHomePageModule)
+  },
 
 ];
 
