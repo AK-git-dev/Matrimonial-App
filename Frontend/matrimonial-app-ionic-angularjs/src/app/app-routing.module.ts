@@ -49,7 +49,11 @@ const routes: Routes = [
 {
   path: 'ed-car',
     loadChildren: () => import('./ed-car/ed-car.module').then(m => m.EdCarPageModule)
-}
+},  {
+    path: 'edit-profile',
+    loadChildren: () => import('./edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
+  }
+
   // {
   //   path: 'tab1',
   //   loadChildren: () => import('./tabs/tab1/tab1.module').then( m => m.Tab1PageModule)
