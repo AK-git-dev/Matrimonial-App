@@ -55,6 +55,7 @@ color: #000000;
     font-size: 18px;
 line-height: 21px;
 color: #000000;
+
 }
 .code {
     top: 40px;
@@ -89,7 +90,7 @@ color: #000000
     left: 50px;
     font-size: 18px;
 line-height: 21px;
-color: #00000081
+color: #000000d8
 }
 
 // ///////////////////////////////////// Buttons
@@ -99,8 +100,7 @@ color: #00000081
     width: 333px;
     height: 56px;
     left: 20px;
-    top: 260px;
-    
+    top: 265px;
     background: #4C0890;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -113,7 +113,6 @@ width: 160px;
 height: 56px;
 left: 20px;
 top: 340px;
-
 background: #4C0890;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 10px;
@@ -125,7 +124,6 @@ border-radius: 10px;
     height: 56px;
     left: 190px;
     top: 340px;
-    
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), rgba(76, 8, 144, 0.72);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
