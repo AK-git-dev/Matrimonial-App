@@ -79,6 +79,7 @@ const Schema = {
   FamilyDetails,
   Languages,
   PrivacySetting,
+  ProfilPicture,
   Movie,
   PersonWhoFavouritedHimself,
   RequestAccepted,

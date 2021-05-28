@@ -17,6 +17,7 @@ export const getAllUsersWithAllDetails = async () =>
             {model :Schema.UploadedDocument} ,
             {model :Schema.Occupation} ,
             {model :Schema.FamilyDetails} ,
+            {model: Schema.ProfilPicture},
             {model : Schema.RelativeContact},
             {model :Schema.FavouritePerson} ,
             {model :Schema.PersonWhoFavouritedHimself} ,

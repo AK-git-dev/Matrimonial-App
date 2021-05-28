@@ -13,12 +13,19 @@
       <change afterPath="$PROJECT_DIR$/Backend/database/schema/relative-contacts.schema.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/formatter.bat" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/resetDB.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/server/controllers/file-uploader.controller.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/controllers/login.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/server/controllers/microservices/profile-picture.service.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/controllers/signup.controller.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/controllers/update-profile.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/server/public/uploads/2be172420c966295c7f65ba8c260799c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/server/public/uploads/522620958b986e725833f0e873358d59.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/server/public/uploads/e2bb6eab95c0eb83c6e0e1a28b7dc590.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/server/public/uploads/fbd1e4ea5c05e8da7450852bcda92926.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/age-restrictor.middleware.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/otp-verify.middleware.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/requires-auth.middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +66,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Backend/server/public/uploads" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -69,7 +76,11 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\TCS\Matrimonial-App\Backend\server\public\uploads" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\TCS\Matrimonial-App\Backend\server\public" />
       <recent name="E:\TCS\Matrimonial-App\Backend\server\utils\middlewares" />
     </key>
   </component>
@@ -90,7 +101,8 @@
       <workItem from="1622036076250" duration="18063000" />
       <workItem from="1622087559086" duration="4236000" />
       <workItem from="1622140314968" duration="619000" />
-      <workItem from="1622182041775" duration="9174000" />
+      <workItem from="1622182041775" duration="9267000" />
+      <workItem from="1622210972577" duration="6380000" />
     </task>
     <servers />
   </component>
