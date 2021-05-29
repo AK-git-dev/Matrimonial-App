@@ -24,10 +24,12 @@ import VaccationDestination from "./vaccationDestination.schema";
 import RefreshToken from "./refreshToken.schema";
 import RelativeContact from "./relative-contacts.schema";
 import FamilyDetails from "./family-details.schema";
+import PrefferedPartnerChoice from "./preffered-partner.schema";
 
 /** Will configure the association Mappings (1:N) / (M:N) / (N:1)  */
 function buildAssociationsBetweenSchemas() {
   User.hasMany(Education);
+  User.hasOne(PrefferedPartnerChoice);
   User.hasOne(Address);
   User.hasOne(FamilyDetails);
   User.hasMany(RelativeContact);
@@ -69,6 +71,7 @@ const Schema = {
   FavouritePerson,
   LifeStyle,
   Song,
+  PrefferedPartnerChoice,
   Occupation,
   RelativeContact,
   PeopleWhoViewedYou,

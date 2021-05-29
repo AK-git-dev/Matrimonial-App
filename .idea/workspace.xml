@@ -9,6 +9,7 @@
       <change afterPath="$PROJECT_DIR$/Backend/.env.example" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/api-requests/Insomnia_2021-05-28.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/database/schema/family-details.schema.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/database/schema/preffered-partner.schema.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/database/schema/refreshToken.schema.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/database/schema/relative-contacts.schema.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/formatter.bat" afterDir="false" />
@@ -25,6 +26,7 @@
       <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/age-restrictor.middleware.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/otp-verify.middleware.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/requires-auth.middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +71,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="ts.external.directory.path" value="E:\TCS\Matrimonial-App\Backend\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -100,7 +102,8 @@
       <workItem from="1622087559086" duration="4236000" />
       <workItem from="1622140314968" duration="619000" />
       <workItem from="1622182041775" duration="9267000" />
-      <workItem from="1622210972577" duration="6434000" />
+      <workItem from="1622210972577" duration="6784000" />
+      <workItem from="1622295449295" duration="1917000" />
     </task>
     <servers />
   </component>

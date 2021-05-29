@@ -115,3 +115,14 @@ export interface FamilyDetailsInterface {
   familyValues: string;
   ancestralOrigin: string;
 }
+
+
+/** PrefferedPartner Interface **/
+export interface PrefferedPartnerInterface {
+  minHeight: string;
+  maxHeight: string;
+  minAge: string;
+  maxAge: string;
+  expectedSalary: string;
+  salaryType: string;
+}
