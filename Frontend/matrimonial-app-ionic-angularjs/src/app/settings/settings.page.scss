@@ -1,0 +1,164 @@
+ion-content {
+    --background: none;
+    background-color: #4c0890;
+    position: relative;
+}
+
+.l1 {
+    position: absolute;
+    width: 88px;
+    height: 28px;
+    left: 26px;
+    top: 36px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #fbf9f9;
+}
+
+.l2 {
+    position: absolute;
+    height: 28px;
+    left: 337px;
+    top: 36px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.c1 {
+    position: absolute;
+    width: 414px;
+    height: 794px;
+    left: 0px;
+    top: 102px;
+
+    background: #fbf9f9;
+    border-radius: 30px 30px 0px 0px;
+}
+
+ion-list {
+    border-radius: 30px 30px 0px 0px;
+}
+
+.i1 {
+    width: 30px;
+    height: 30px;
+
+    background: url(../../assets/settings/account.png);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.i2 {
+    width: 30px;
+    height: 33px;
+
+    background: url(../../assets/settings/document.png);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.i3 {
+    width: 30px;
+    height: 33px;
+
+    background: url(../../assets/settings/language.png);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.i4 {
+    width: 30px;
+    height: 33px;
+
+    background: url(../../assets/settings/history.png);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.i5 {
+    width: 30px;
+    height: 33px;
+
+    background: url(../../assets/settings/sticker.png);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.i6 {
+    width: 30px;
+    height: 33px;
+
+    background: url(../../assets/settings/notification.png);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.i7 {
+    width: 30px;
+    height: 33px;
+
+    background: url(../../assets/settings/privacy.png);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.i8 {
+    width: 30px;
+    height: 33px;
+
+    background: url(../../assets/settings/qr.png);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.i9 {
+    width: 30px;
+    height: 33px;
+
+    background: url(../../assets/settings/favourite.png);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.i10 {
+    width: 30px;
+    height: 33px;
+
+    background: url(../../assets/settings/video.png);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.i11 {
+    width: 30px;
+    height: 33px;
+
+    background: url(../../assets/settings/platinum.png);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.i12 {
+    width: 30px;
+    height: 33px;
+
+    background: url(../../assets/settings/clear.png);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+div ion-label {
+    // position: absolute;
+    width: 238px;
+    height: 26px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #000000;
+}

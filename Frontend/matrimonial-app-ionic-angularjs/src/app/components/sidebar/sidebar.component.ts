@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { MenuController, ModalController } from '@ionic/angular';
+import { SettingsPage } from 'src/app/settings/settings.page';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,13 +9,22 @@ import { MenuController } from '@ionic/angular';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor(private menu: MenuController) { }
+  constructor(private menu: MenuController, private modalController: ModalController) { }
 
   ngOnInit() { }
 
   openFirst() {
     this.menu.enable(true, 'first');
     this.menu.open('first');
+  }
+
+  async presentModal() {
+    console.log('Inside modal')
+    const modal = await this.modalController.create({
+      component: SettingsPage,
+      cssClass: 'my-custom-class'
+    });
+    return await modal.present();
   }
 
 }
