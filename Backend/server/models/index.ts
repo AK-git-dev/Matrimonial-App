@@ -116,7 +116,6 @@ export interface FamilyDetailsInterface {
   ancestralOrigin: string;
 }
 
-
 /** PrefferedPartner Interface **/
 export interface PrefferedPartnerInterface {
   minHeight: string;

@@ -26,6 +26,7 @@
       <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/age-restrictor.middleware.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/otp-verify.middleware.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/requires-auth.middleware.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/image-compressor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,11 +38,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Backend" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -103,7 +105,7 @@
       <workItem from="1622140314968" duration="619000" />
       <workItem from="1622182041775" duration="9267000" />
       <workItem from="1622210972577" duration="6784000" />
-      <workItem from="1622295449295" duration="1917000" />
+      <workItem from="1622295449295" duration="4664000" />
     </task>
     <servers />
   </component>

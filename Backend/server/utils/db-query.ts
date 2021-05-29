@@ -16,7 +16,7 @@ export const getAllUsersWithAllDetails = async () =>
       },
       { model: Schema.UploadedDocument },
       { model: Schema.Occupation },
-      {model: Schema.PrefferedPartnerChoice},
+      { model: Schema.PrefferedPartnerChoice },
       { model: Schema.FamilyDetails },
       { model: Schema.ProfilPicture },
       { model: Schema.RelativeContact },
