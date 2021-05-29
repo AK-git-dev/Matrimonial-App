@@ -9,6 +9,9 @@ export class EditProfilePage implements OnInit {
 
   constructor() { }
 
+  username: string = "Aashray Jain";
+  userId: number = 12345;
+
   ngOnInit() {
   }
 

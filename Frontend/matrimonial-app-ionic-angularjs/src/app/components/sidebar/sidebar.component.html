@@ -3,12 +3,13 @@
 <ion-menu side="start" menuId="first" contentId="main">
   <ion-header>
     <ion-toolbar color="primary">
-      <ion-title>Start Menu</ion-title> 
+        <ion-icon class="icon1"></ion-icon>
+        <ion-title>Start Menu</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content>
     <ion-list>
-      <ion-item>
+      <ion-item [routerLink]="['/edit-profile']">
         <ion-icon name="edit_profile" slot="start"></ion-icon>
         <ion-label>Edit Profile</ion-label>
       </ion-item>

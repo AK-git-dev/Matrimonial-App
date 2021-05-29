@@ -1,9 +1,100 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>edit_profile</ion-title>
+    <div class="c1">
+      <ion-buttons slot="start" class="btn1">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-icon class="icon1"></ion-icon>
+      <ion-icon class="camera"></ion-icon>
+      <ion-icon class="eye"></ion-icon>
+
+      <ion-label class="label1">Hi {{ username }}</ion-label>
+      <ion-label class="label2">ID : {{ userId }}</ion-label>
+
+      <ion-icon class="verify"></ion-icon>
+      <ion-label class="label3">Verified</ion-label>
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <!-- <div class="cont"> -->
+  <div>
+    <ion-button name="btn2" color="#4c0890" shape="round">About me</ion-button>
+    <ion-button name="btn3" color="#934cda" shape="round">Looking For</ion-button>
+  </div>
 
+  <ion-card>
+    <ion-item>
+      <ion-label class="l1">Aashray Jain</ion-label>
+      <ion-icon class="edit1"></ion-icon>
+    </ion-item>
+
+    <ion-card-content>
+
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card>
+    <ion-item>
+      <ion-label class="l2">Critical Fields</ion-label>
+      <ion-icon class="edit2"></ion-icon>
+    </ion-item>
+
+    <ion-card-content>
+      This is content, without any paragraph or header tags,
+      within an ion-card-content element.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label class="l3">About me</ion-label>
+      <ion-icon class="edit3"></ion-icon>
+    </ion-item>
+
+    <ion-card-content>
+      This is content, without any paragraph or header tags,
+      within an ion-card-content element.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label class="l4">Education</ion-label>
+      <ion-icon class="edit4"></ion-icon>
+    </ion-item>
+
+    <ion-card-content>
+      This is content, without any paragraph or header tags,
+      within an ion-card-content element.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label class="l5">Career</ion-label>
+      <ion-icon class="edit5"></ion-icon>
+    </ion-item>
+
+    <ion-card-content>
+      This is content, without any paragraph or header tags,
+      within an ion-card-content element.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label class="l6">Family</ion-label>
+      <ion-icon class="edit6"></ion-icon>
+    </ion-item>
+
+    <ion-card-content>
+      This is content, without any paragraph or header tags,
+      within an ion-card-content element.
+    </ion-card-content>
+  </ion-card>
+
+  <!-- </div> -->
 </ion-content>

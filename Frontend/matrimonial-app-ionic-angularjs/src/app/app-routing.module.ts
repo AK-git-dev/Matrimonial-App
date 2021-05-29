@@ -52,6 +52,10 @@ const routes: Routes = [
 },  {
     path: 'edit-profile',
     loadChildren: () => import('./edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
+  },
+  {
+    path: 'edit-preference',
+    loadChildren: () => import('./edit-preference/edit-preference.module').then( m => m.EditPreferencePageModule)
   }
 
   // {
