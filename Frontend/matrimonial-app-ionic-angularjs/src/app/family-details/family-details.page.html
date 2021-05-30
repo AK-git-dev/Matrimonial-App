@@ -1,0 +1,90 @@
+<ion-content [fullscreen]="true">
+  <ion-title>Family Details</ion-title>
+  <div class="container">
+    <form action="" method="post">
+      <!-- <ion-label class="fname">Father Name *</ion-label> <br>
+      <ion-input id="Name1" type="name" class="fname1"> </ion-input> -->
+
+      <ion-label class="foccu">Father Occupation *</ion-label> <br>
+      <ion-select interface="popover" placeholder="Occupation" class="occu" >
+        <ion-select-option value="Service">Service</ion-select-option>
+        <ion-select-option value="Business">Business</ion-select-option>
+        <ion-select-option value="Retired">Retired</ion-select-option>
+        <ion-select-option value="Not Working">Not Working</ion-select-option>
+        <ion-select-option value="Expired">Expired</ion-select-option>
+      </ion-select>
+<!-- 
+      <ion-label class="mname">Mother Name *</ion-label> <br>
+      <ion-input id="Name1" type="name" class="mname"> </ion-input> -->
+
+      <ion-label class="moccu">Mothers Occupation *</ion-label> <br>
+      <ion-select interface="popover" placeholder="Occupation" class="occu1" >
+        <ion-select-option value="HouseWife">HouseWife</ion-select-option>
+        <ion-select-option value="Service">Service</ion-select-option>
+        <ion-select-option value="Business">Business</ion-select-option>
+        <ion-select-option value="Retired">Retired</ion-select-option>
+        <ion-select-option value="Expired">Expired</ion-select-option>
+      </ion-select>
+
+      <ion-label class="Bro">No. Of Brothers *</ion-label> <br>
+      <ion-select interface="popover" placeholder="--Select--" class="nbro" >
+        <ion-select-option value="0">0</ion-select-option>
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option value="4">4</ion-select-option>
+      </ion-select>
+
+      <ion-label class="MBro">Of Which Married *</ion-label> <br>
+      <ion-select interface="popover" placeholder="--Select--" class="Mbro1" >
+        <ion-select-option value="0">0</ion-select-option>
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option value="4">4</ion-select-option>
+      </ion-select>
+
+      <ion-label class="Sis">No. of Sisters *</ion-label> <br>
+      <ion-select interface="popover" placeholder="--Select--" class="nsis" >
+        <ion-select-option value="0">0</ion-select-option>
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option value="4">4</ion-select-option>
+      </ion-select>
+
+      <ion-label class="MSis">Of Which Married *</ion-label> <br>
+      <ion-select interface="popover" placeholder="--Select--" class="Msis1" >
+        <ion-select-option value="0">0</ion-select-option>
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option value="4">4</ion-select-option>
+      </ion-select>
+
+      <ion-label class="Fstat">Family Status *</ion-label> <br>
+      <ion-select interface="popover" placeholder="--Select--" class="stat" >
+        <ion-select-option value="Middle Class">Middle Class</ion-select-option>
+        <ion-select-option value="Upper Middle Class">Upper Middle Class</ion-select-option>
+        <ion-select-option value="Rich/Affluent">Rich/Affluent</ion-select-option>
+      </ion-select>
+
+      <ion-label class="Fval">Family Values *</ion-label> <br>
+      <ion-select interface="popover" placeholder="--Select--" class="val" >
+        <ion-select-option value="Orthodox">Orthodox</ion-select-option>
+        <ion-select-option value="Traditional">Traditional</ion-select-option>
+        <ion-select-option value="Liberal">Liberal</ion-select-option>
+        <ion-select-option value="Moderate">Moderate</ion-select-option>
+      </ion-select>
+
+      <ion-label class="Origin">Ancestral Origin *</ion-label> <br>
+      <ion-input id="Name1" type="name" class="Aorigin"> </ion-input>      
+      <ion-button (click)="onClick()" class="Submit">
+        SAVE
+      </ion-button>
+
+
+</form>
+     </div>
+
+    </ion-content>

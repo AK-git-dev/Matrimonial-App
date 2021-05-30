@@ -57,7 +57,13 @@ const routes: Routes = [
   {
     path: 'edit-preference',
     loadChildren: () => import('./edit-preference/edit-preference.module').then( m => m.EditPreferencePageModule)
+  },
+  
+  {
+    path: 'family-details',
+    loadChildren: () => import('./family-details/family-details.module').then( m => m.FamilyDetailsPageModule)
   }
+
 
   // {
   //   path: 'tab1',
