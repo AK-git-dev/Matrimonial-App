@@ -9,6 +9,8 @@ import { SettingsPage } from 'src/app/settings/settings.page';
 })
 export class SidebarComponent implements OnInit {
 
+  isDown: boolean = true;
+
   constructor(private menu: MenuController, private modalController: ModalController) { }
 
   ngOnInit() { }
