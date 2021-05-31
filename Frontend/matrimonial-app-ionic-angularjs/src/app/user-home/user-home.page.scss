@@ -1,0 +1,66 @@
+.c1 {
+    // position: relative;
+
+    background: #4c0890;
+    height: 140px;
+}
+
+.title {
+    position: absolute;
+    left: 40px;
+    top: 30px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+
+    color: #fbf9f9;
+}
+
+.l1 {
+    position: absolute;
+    left: 60px;
+    top: 51px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #ffffff;
+
+    border: 1px solid rgba(251, 249, 249, 0.14);
+}
+
+.icon1 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 342px;
+    top: 32px;
+}
+
+.b {
+    color: blue;
+}
+
+.avat {
+    margin: 15px;;
+}
+
+.badge {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 40px;
+    top: 45px;
+    margin: 5px;
+    border: solid white;
+}

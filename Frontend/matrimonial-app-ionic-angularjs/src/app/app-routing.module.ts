@@ -59,15 +59,22 @@ const routes: Routes = [
     loadChildren: () => import('./edit-preference/edit-preference.module').then( m => m.EditPreferencePageModule)
   },
   {
-    path: 'contact',
-    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
-  },
-
-  {
-    path: 'family-details',
-    loadChildren: () => import ('./family-details/family-details.module').then(m => m.FamilyDetailsPageModule)
+    path: 'request',
+    loadChildren: () => import('./request/request.module').then( m => m.RequestPageModule)
   }
 
+  // {
+  //   path: 'tab1',
+  //   loadChildren: () => import('./tabs/tab1/tab1.module').then( m => m.Tab1PageModule)
+  // },
+  // {
+  //   path: 'tab2',
+  //   loadChildren: () => import('./tabs/tab2/tab2.module').then( m => m.Tab2PageModule)
+  // },
+  // {
+  //   path: 'tabs2',
+  //   loadChildren: () => import('./tabs2/tabs2.module').then( m => m.Tabs2PageModule)
+  // },
 ];
 
 @NgModule({
@@ -76,5 +83,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-
 export class AppRoutingModule { }
