@@ -57,7 +57,11 @@ const routes: Routes = [
   {
     path: 'edit-preference',
     loadChildren: () => import('./edit-preference/edit-preference.module').then( m => m.EditPreferencePageModule)
+  },  {
+    path: 'request',
+    loadChildren: () => import('./request/request.module').then( m => m.RequestPageModule)
   }
+
 
   // {
   //   path: 'tab1',
