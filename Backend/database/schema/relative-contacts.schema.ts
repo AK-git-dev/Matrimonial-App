@@ -15,6 +15,10 @@ const RelativeContact = db.schema.define(
       type: DataTypes.STRING(30),
       allowNull: false,
     },
+    fullname: {
+      type: DataTypes.STRING(80),
+      allowNull: false,
+    },
     phoneNumber: {
       type: DataTypes.STRING(15),
       allowNull: false,
