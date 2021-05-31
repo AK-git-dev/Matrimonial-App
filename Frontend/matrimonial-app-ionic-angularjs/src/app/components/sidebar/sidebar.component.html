@@ -2,9 +2,17 @@
 
 <ion-menu side="start" menuId="first" contentId="main">
   <ion-header>
-    <ion-toolbar color="primary">
-      <ion-icon class="icon1"></ion-icon>
-      <ion-title>Start Menu</ion-title>
+    <ion-toolbar color="primary" style="height: 210px;">
+      <div style="background-color: #4C0890;">
+        <ion-avatar class="avat">
+          <img src="../../assets/user_home/avatar.svg">
+        </ion-avatar>
+        <div style="text-align: center;">
+          <ion-label class="l1">Aashray Jain</ion-label><br>
+          <ion-label class="l2">Id: {{ id }}</ion-label><br>
+          <ion-label class="l3">Trust Score {{ score }}</ion-label>
+        </div>
+      </div>
     </ion-toolbar>
   </ion-header>
   <ion-content>
@@ -53,10 +61,12 @@
           <ion-item>
             <ion-icon name="" slot="start"></ion-icon>
             <ion-label>Just Joined Matches</ion-label>
+            <ion-badge color="light">5</ion-badge>
           </ion-item>
           <ion-item>
             <ion-icon name="" slot="start"></ion-icon>
             <ion-label>Daily Recommnedations</ion-label>
+            <ion-badge color="light">15</ion-badge>
           </ion-item>
           <ion-item>
             <ion-icon name="" slot="start"></ion-icon>
@@ -89,7 +99,7 @@
         <ion-icon name="success_stories" slot="start"></ion-icon>
         <ion-label>Success Stories</ion-label>
       </ion-item>
-      <ion-item>
+      <ion-item [routerLink]="['/search']">
         <ion-icon name="search" slot="start"></ion-icon>
         <ion-label>Search</ion-label>
       </ion-item>

@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -61,9 +62,14 @@ const routes: Routes = [
   {
     path: 'request',
     loadChildren: () => import('./request/request.module').then( m => m.RequestPageModule)
-  },  {
+  },
+  {
     path: 'education-career',
     loadChildren: () => import('./education-career/education-career.module').then( m => m.EducationCareerPageModule)
+  },
+  {
+    path: 'search',
+    loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
   }
 
 
