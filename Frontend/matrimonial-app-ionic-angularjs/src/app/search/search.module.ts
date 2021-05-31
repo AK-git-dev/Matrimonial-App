@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { RequestPageRoutingModule } from './request-routing.module';
+import { SearchPageRoutingModule } from './search-routing.module';
 
-import { RequestPage } from './request.page';
+import { SearchPage } from './search.page';
 import { TabsComponent } from '../components/tabs/tabs.component';
 
 @NgModule({
@@ -14,8 +14,8 @@ import { TabsComponent } from '../components/tabs/tabs.component';
     CommonModule,
     FormsModule,
     IonicModule,
-    RequestPageRoutingModule
+    SearchPageRoutingModule
   ],
-  declarations: [RequestPage, TabsComponent]
+  declarations: [SearchPage, TabsComponent]
 })
-export class RequestPageModule {}
+export class SearchPageModule {}

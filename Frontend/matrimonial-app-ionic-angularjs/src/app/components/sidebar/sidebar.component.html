@@ -53,10 +53,12 @@
           <ion-item>
             <ion-icon name="" slot="start"></ion-icon>
             <ion-label>Just Joined Matches</ion-label>
+            <ion-badge color="light">5</ion-badge>
           </ion-item>
           <ion-item>
             <ion-icon name="" slot="start"></ion-icon>
             <ion-label>Daily Recommnedations</ion-label>
+            <ion-badge color="light">15</ion-badge>
           </ion-item>
           <ion-item>
             <ion-icon name="" slot="start"></ion-icon>
@@ -89,7 +91,7 @@
         <ion-icon name="success_stories" slot="start"></ion-icon>
         <ion-label>Success Stories</ion-label>
       </ion-item>
-      <ion-item>
+      <ion-item [routerLink]="['/search']">
         <ion-icon name="search" slot="start"></ion-icon>
         <ion-label>Search</ion-label>
       </ion-item>

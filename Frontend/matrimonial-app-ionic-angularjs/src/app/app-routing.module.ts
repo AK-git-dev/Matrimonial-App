@@ -61,6 +61,10 @@ const routes: Routes = [
   {
     path: 'request',
     loadChildren: () => import('./request/request.module').then( m => m.RequestPageModule)
+  },
+  {
+    path: 'search',
+    loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
   }
 
   // {
