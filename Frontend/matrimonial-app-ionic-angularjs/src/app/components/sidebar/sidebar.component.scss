@@ -111,3 +111,52 @@ ion-icon[name="setting"] {
 
     background: url(../../../assets/sidebar-icons/setting.png);
 }
+
+.avat {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    left: 95px;
+    padding: 10px;
+}
+
+.l1 {
+    
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+
+    color: #fbf9f9;
+}
+
+.l2 {
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+
+    color: #fbf9f9;
+}
+
+.l3 {
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #24f424;
+}
+
+:host(.ion-color) .toolbar-background {
+    background: #4C0890;
+}

@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -50,6 +51,11 @@ const routes: Routes = [
   path: 'ed-car',
     loadChildren: () => import('./ed-car/ed-car.module').then(m => m.EdCarPageModule)
 },
+{
+  path: 'family-details',
+    loadChildren: () => import('./family-details/family-details.module').then(m => m.FamilyDetailsPageModule)
+},
+
   {
     path: 'edit-profile',
     loadChildren: () => import('./edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
@@ -59,15 +65,31 @@ const routes: Routes = [
     loadChildren: () => import('./edit-preference/edit-preference.module').then( m => m.EditPreferencePageModule)
   },
   {
-    path: 'contact',
-    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+    path: 'request',
+    loadChildren: () => import('./request/request.module').then( m => m.RequestPageModule)
   },
-
   {
-    path: 'family-details',
-    loadChildren: () => import ('./family-details/family-details.module').then(m => m.FamilyDetailsPageModule)
+    path: 'education-career',
+    loadChildren: () => import('./education-career/education-career.module').then( m => m.EducationCareerPageModule)
+  },
+  {
+    path: 'search',
+    loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
   }
 
+
+  // {
+  //   path: 'tab1',
+  //   loadChildren: () => import('./tabs/tab1/tab1.module').then( m => m.Tab1PageModule)
+  // },
+  // {
+  //   path: 'tab2',
+  //   loadChildren: () => import('./tabs/tab2/tab2.module').then( m => m.Tab2PageModule)
+  // },
+  // {
+  //   path: 'tabs2',
+  //   loadChildren: () => import('./tabs2/tabs2.module').then( m => m.Tabs2PageModule)
+  // },
 ];
 
 @NgModule({
@@ -76,5 +98,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-
 export class AppRoutingModule { }

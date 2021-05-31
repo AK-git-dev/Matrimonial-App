@@ -10,6 +10,8 @@ import { SettingsPage } from 'src/app/settings/settings.page';
 export class SidebarComponent implements OnInit {
 
   isDown: boolean = true;
+  score: number = 20;
+  id: string = 'H12345';
 
   constructor(private menu: MenuController, private modalController: ModalController) { }
 
