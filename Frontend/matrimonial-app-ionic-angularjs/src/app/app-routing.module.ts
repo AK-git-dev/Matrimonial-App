@@ -51,6 +51,11 @@ const routes: Routes = [
   path: 'ed-car',
     loadChildren: () => import('./ed-car/ed-car.module').then(m => m.EdCarPageModule)
 },
+{
+  path: 'family-details',
+    loadChildren: () => import('./family-details/family-details.module').then(m => m.FamilyDetailsPageModule)
+},
+
   {
     path: 'edit-profile',
     loadChildren: () => import('./edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
