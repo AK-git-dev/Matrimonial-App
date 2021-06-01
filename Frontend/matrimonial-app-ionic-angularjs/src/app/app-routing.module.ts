@@ -75,6 +75,15 @@ const routes: Routes = [
   {
     path: 'search',
     loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
+  },
+  {
+    path: 'privacy-settings',
+    loadChildren: () => import('./additional-pages/privacy-settings/privacy-settings.module').then( m => m.PrivacySettingsPageModule)
+  },
+
+  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then(m => m.ContactPageModule)
   }
 
 
