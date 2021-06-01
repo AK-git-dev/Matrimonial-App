@@ -22,7 +22,7 @@
        <ion-input class="d6" ></ion-input>
        <ion-label class="resend">Did not get OTP?.<strong><u>Resend </u> </strong> </ion-label>
       
-       <ion-button (click)="clicksub()" color="primary" type="button" class="loginbutton">
+       <ion-button (click)="clicksub()" color="primary" type="button" class="loginbutton" [routerLink] = "['/user-home']">
         Login
       </ion-button>
 
@@ -30,7 +30,7 @@
         Email
         </ion-button>
 
-        <ion-button class="otpbutton">
+        <ion-button class="otpbutton" >
           OTP
           </ion-button>
   
