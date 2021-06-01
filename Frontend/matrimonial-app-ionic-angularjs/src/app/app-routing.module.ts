@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -50,6 +51,11 @@ const routes: Routes = [
   path: 'ed-car',
     loadChildren: () => import('./ed-car/ed-car.module').then(m => m.EdCarPageModule)
 },
+{
+  path: 'family-details',
+    loadChildren: () => import('./family-details/family-details.module').then(m => m.FamilyDetailsPageModule)
+},
+
   {
     path: 'edit-profile',
     loadChildren: () => import('./edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
@@ -63,9 +69,14 @@ const routes: Routes = [
     loadChildren: () => import('./request/request.module').then( m => m.RequestPageModule)
   },
   {
+    path: 'education-career',
+    loadChildren: () => import('./education-career/education-career.module').then( m => m.EducationCareerPageModule)
+  },
+  {
     path: 'search',
     loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
   }
+
 
   // {
   //   path: 'tab1',

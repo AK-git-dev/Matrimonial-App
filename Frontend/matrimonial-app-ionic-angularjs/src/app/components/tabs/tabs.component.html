@@ -5,7 +5,6 @@
       <ion-label>Home</ion-label>
     </ion-tab-button>
     
-
     <ion-tab-button [routerLink]="['/search']">
       <ion-icon name="search1"></ion-icon>
       <ion-label>Search</ion-label>
@@ -21,6 +20,8 @@
       <ion-label>Request</ion-label>
     </ion-tab-button>
 
+
+    <ion-tab-button (click)="presentModal()" >
     <ion-tab-button [routerLink]="['/notifications']">
       <ion-icon name="notification"></ion-icon>
       <ion-label>Notification</ion-label>
