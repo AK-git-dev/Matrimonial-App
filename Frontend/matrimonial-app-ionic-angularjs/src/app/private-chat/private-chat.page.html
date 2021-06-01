@@ -15,16 +15,23 @@
 
   <div class="c1">
 
-    <div>
-      <ion-item class="chat1">
-        <ion-textarea [(ngModel)]="message"></ion-textarea>
-        <ion-button fill="clear" icon-only (click)="toggled = !toggled" [(emojiPickerIf)]="toggled"
-          [emojiPickerDirection]="'top'" (emojiPickerSelect)="handleSelection($event)" style="width:60px; height: 60px">
-          <ion-icon name="md-happy" size="large"></ion-icon>
-        </ion-button>
-        
-      </ion-item>
-    </div>
+    <ion-button (ionFocus)="startRecording()" (ionBlur)="stopRecording()">
+      <ion-icon name="mic-outline"></ion-icon>
+    </ion-button>
+
+    <!-- <div> -->
+    <ion-item class="chat1">
+      <ion-textarea [(ngModel)]="message"></ion-textarea>
+
+
+    </ion-item>
+    <ion-button class="btn2" fill="clear" icon-only (click)="toggled = !toggled" [(emojiPickerIf)]="toggled"
+      [emojiPickerDirection]="'top'" (emojiPickerSelect)="handleSelection($event)">
+      <ion-icon name="md-happy" size="large"></ion-icon>
+    </ion-button>
+    <!-- </div> --> 
+
+
 
   </div>
 </ion-content>

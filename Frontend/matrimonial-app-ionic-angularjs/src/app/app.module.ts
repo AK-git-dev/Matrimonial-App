@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { ReactiveFormsModule } from "@angular/forms";
@@ -12,6 +12,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { EmojiPickerModule } from 'ionic-emoji-picker';
 import { NgxEmojiPickerModule } from 'ngx-emoji-picker';
+import { MediaCapture } from '@ionic-native/media-capture/ngx';
+import { File } from '@ionic-native/file/ngx';
+import { Media } from '@ionic-native/media/ngx';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +23,11 @@ import { NgxEmojiPickerModule } from 'ngx-emoji-picker';
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule,
     MatSelectModule,ReactiveFormsModule, NgxEmojiPickerModule.forRoot()
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, 
+                MediaCapture, 
+                File, 
+                Media
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

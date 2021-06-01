@@ -24,10 +24,14 @@
     "@angular/router": "~11.2.0",
     "@capacitor/core": "3.0.0",
     "@ionic-native/camera": "^4.20.0",
+    "@ionic-native/core": "^5.33.1",
     "@ionic-native/file": "^5.33.0",
     "@ionic-native/file-transfer": "^5.33.0",
+    "@ionic-native/media": "^5.33.1",
+    "@ionic-native/media-capture": "^5.33.1",
     "@ionic/angular": "^5.5.2",
     "bootstrap": "^5.0.1",
+    "cordova-plugin-media-capture": "^3.0.3",
     "ionic-emoji-picker": "^0.1.8",
     "ngx-emoji-picker": "^0.1.6",
     "rxjs": "~6.6.0",
@@ -59,6 +63,7 @@
     "cordova-plugin-file-transfer": "^1.7.1",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
     "cordova-plugin-ionic-webview": "^4.2.1",
+    "cordova-plugin-media": "^5.0.3",
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-statusbar": "^2.4.2",
     "cordova-plugin-whitelist": "^1.3.3",
@@ -90,7 +95,8 @@
       "cordova-plugin-ionic-webview": {
         "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
       },
-      "cordova-plugin-ionic-keyboard": {}
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-plugin-media": {}
     },
     "platforms": [
       "android"
