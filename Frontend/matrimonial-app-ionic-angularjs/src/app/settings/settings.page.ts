@@ -8,6 +8,7 @@ import { PrivacySettingsPage } from '../additional-pages/privacy-settings/privac
 })
 export class SettingsPage implements OnInit {
 
+
   isDown: boolean = true;
   score: number = 20;
   id: string = 'H12345';

@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RequestPage implements OnInit {
 
+  receivedPage: boolean = true; 
+  segmentModal1 = 'accepted';
+  segmentModal2 = 'accepted';
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  received() {
+    this.receivedPage = true;
+  }
+
+  sent() {
+    this.receivedPage = false;
+  }
+
+  segmentChanged(event) {
+    console.log(event)
   }
 
 }

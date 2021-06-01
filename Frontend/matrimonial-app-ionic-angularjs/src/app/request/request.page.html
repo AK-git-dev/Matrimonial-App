@@ -1,4 +1,83 @@
+<ion-content [fullscreen]="true">
+  <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/user-home']"></ion-icon>
+  <ion-label class="l1">Requests</ion-label>
+  <div class="c1">
 
-<ion-content>
-  <app-tabs></app-tabs>
+    <div class="d1">
+      <ion-button shape="round" name="b1" size="default" (click)="received()" id="r">Received</ion-button>
+      <ion-button shape="round" name="b2" size="default" (click)="sent()" id="s">Sent</ion-button>
+    </div>
+
+    
+    <ion-segment *ngIf="receivedPage" (ionChange)="segmentChanged($event)" [(ngModel)]="segmentModal1" style="padding-top: 30px;">
+      <ion-segment-button value="pending">
+        <ion-label>Pending ({{12}})</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="accepted">
+        <ion-label>Accepted</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="declined">
+        <ion-label>Declined</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <ion-list *ngIf="receivedPage && segmentModal1 === 'pending'">
+      <ion-item>
+        <ion-icon></ion-icon>
+        <ion-label>Aashray Jain</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon></ion-icon>
+        <ion-label>Ajay Rakul</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon></ion-icon>
+        <ion-label>Deepika Singh</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngIf="receivedPage && segmentModal1 === 'accepted'">
+      <ion-item>
+        <ion-icon></ion-icon>
+        <ion-label>Dharma</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon></ion-icon>
+        <ion-label>Ajay Rakul</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon></ion-icon>
+        <ion-label>Deepika Singh</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngIf="receivedPage && segmentModal1 === 'declined'">
+      <ion-item>
+        <ion-icon></ion-icon>
+        <ion-label>Hero</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon></ion-icon>
+        <ion-label>Ajay Rakul</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon></ion-icon>
+        <ion-label>Deepika Singh</ion-label>
+      </ion-item>
+    </ion-list>
+
+
+    <ion-segment *ngIf="!receivedPage" (ionChange)="segmentChanged($event)" [(ngModel)]="segmentModal2" style="padding-top: 30px;">
+      <ion-segment-button value="pending">
+        <ion-label>Pending</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="accepted">
+        <ion-label>Accepted</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="declined">
+        <ion-label>Declined</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    
+  </div>
 </ion-content>

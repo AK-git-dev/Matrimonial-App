@@ -73,6 +73,10 @@ const routes: Routes = [
     loadChildren: () => import('./education-career/education-career.module').then( m => m.EducationCareerPageModule)
   },
   {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+  },
+  {
     path: 'search',
     loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
   },

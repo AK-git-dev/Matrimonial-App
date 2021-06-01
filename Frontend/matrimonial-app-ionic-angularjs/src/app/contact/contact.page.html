@@ -1,6 +1,6 @@
 <ion-content>
 
-    <img src="../../assets/Trust Score/Back ]Arrow.png" alt="Back page" class="back" >
+  <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/edit-profile']"></ion-icon>
     <h2 class="heading">Contact Details</h2>
   
 <div class="card">
@@ -115,7 +115,7 @@
         </div>
         <ion-label class="Visible">Visible to all ?</ion-label>
         <ion-toggle slot="start" name="blueberry" checked></ion-toggle>
-        <ion-button class="savebutton" >SAVE</ion-button>
+        <ion-button class="savebutton" [routerLink]="['/user-home']" >SAVE</ion-button>
 
 </form>
 </div>

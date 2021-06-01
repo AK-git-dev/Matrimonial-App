@@ -1,6 +1,6 @@
 <ion-content>
 <div class="heading">
-  <img src="../../assets/Trust Score/Back ]Arrow.png" alt="">
+  <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/user-home']"></ion-icon>
   <h4>Preferred Partner</h4>
 </div>
 <div class="card">
@@ -157,6 +157,15 @@
       <ion-select-option value="100000-150000">$100000 to $150000</ion-select-option>
       <ion-select-option value="150000-200000">$150000 to $200000</ion-select-option>
       <ion-select-option value="200000-above">$200000 and above</ion-select-option>
+    </ion-select>
+
+    <ion-label class="MaritialStatus">Maritial Status*</ion-label> <br>
+    <ion-select interface="popover" placeholder="Maritial Status" class="Status" >
+      <ion-select-option value="Any">Any</ion-select-option>
+      <ion-select-option value="Never Married">Never Married</ion-select-option>
+      <ion-select-option value="Divorced">Divroced</ion-select-option>
+      <ion-select-option value="Seperated">Seperated</ion-select-option>
+      <ion-select-option value="Widowed">Widowed</ion-select-option>
     </ion-select>
 
     <ion-label class="occupation">Occupation</ion-label> <br>
