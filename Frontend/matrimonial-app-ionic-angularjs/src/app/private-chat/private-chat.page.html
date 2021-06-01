@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true">
+  <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/user-home']"></ion-icon>
+  <ion-avatar class="avat">
+    <img src="../../assets/user_home/avatar.svg">
+    <img src="../../assets/Ellipse 104.png" class="badge">
+  </ion-avatar>
+  <ion-label class="l1">{{ username }}</ion-label>
+  <ion-label class="l2">Last seen {{ time }}</ion-label>
+  <ion-buttons>
+    <ion-button class="btn1" (click)="presentPopover($event)">
+      <ion-icon name="ellipsis-vertical" size="large"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+
+  <div class="c1">
+
+    <div>
+      <ion-item class="chat1">
+        <ion-textarea [(ngModel)]="message"></ion-textarea>
+        <ion-button fill="clear" icon-only (click)="toggled = !toggled" [(emojiPickerIf)]="toggled"
+          [emojiPickerDirection]="'top'" (emojiPickerSelect)="handleSelection($event)" style="width:60px; height: 60px">
+          <ion-icon name="md-happy" size="large"></ion-icon>
+        </ion-button>
+        
+      </ion-item>
+    </div>
+
+  </div>
+</ion-content>

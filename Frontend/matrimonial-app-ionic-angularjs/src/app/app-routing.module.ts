@@ -79,7 +79,19 @@ const routes: Routes = [
   {
     path: 'search',
     loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
+  },  {
+    path: 'chat-list',
+    loadChildren: () => import('./chat-list/chat-list.module').then( m => m.ChatListPageModule)
+  },
+  {
+    path: 'private-chat',
+    loadChildren: () => import('./private-chat/private-chat.module').then( m => m.PrivateChatPageModule)
+  },
+  {
+    path: 'lifestyle',
+    loadChildren: () => import('./lifestyle/lifestyle.module').then( m => m.LifestylePageModule)
   }
+
 
 
   // {

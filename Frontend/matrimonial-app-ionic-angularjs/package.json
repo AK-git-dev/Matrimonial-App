@@ -28,8 +28,11 @@
     "@ionic-native/file-transfer": "^5.33.0",
     "@ionic/angular": "^5.5.2",
     "bootstrap": "^5.0.1",
+    "ionic-emoji-picker": "^0.1.8",
+    "ngx-emoji-picker": "^0.1.6",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
+    "twemoji": "^13.1.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
