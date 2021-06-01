@@ -20,7 +20,7 @@ const RelativeContact = db.schema.define(
       allowNull: false,
     },
     phoneNumber: {
-      type: DataTypes.STRING(15),
+      type: DataTypes.STRING(120),
       allowNull: false,
     },
     UserId: {

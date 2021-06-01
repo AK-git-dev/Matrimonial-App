@@ -9,10 +9,10 @@ const Address = db.schema.define(
   {
     id: { type: DataTypes.UUID, primaryKey: true, allowNull: false },
     address: { type: DataTypes.STRING(180), allowNull: false },
-    city: { type: DataTypes.STRING(30), allowNull: false },
-    district: { type: DataTypes.STRING(30), allowNull: false },
-    country: { type: DataTypes.STRING(30), allowNull: false },
-    zipCode: { type: DataTypes.STRING(30), allowNull: false },
+    city: { type: DataTypes.STRING(80), allowNull: false },
+    district: { type: DataTypes.STRING(80), allowNull: false },
+    country: { type: DataTypes.STRING(80), allowNull: false },
+    zipCode: { type: DataTypes.STRING(20), allowNull: false },
     residentStatus: { type: DataTypes.STRING(30) },
   },
   {
