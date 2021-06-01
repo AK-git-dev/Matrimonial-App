@@ -47,7 +47,7 @@
       <ion-select-option value="Pan">Pan Card</ion-select-option>
     </ion-select>
     <!-- <h4 class="photo-front" >Front</h4> -->
-    <img src="../../assets/Upload-documents.png" alt="Upload documwnts" class="upload1" onclick="upload()">
+    <img src="../../assets/Upload-documents.png" alt="Upload documwnts" class="upload1" (click)="getImage()">
     
 
     <ion-label class="Education">Education proof</ion-label> <br>
@@ -57,7 +57,7 @@
       <ion-select-option value="professional-certificates">professional qualification certificates</ion-select-option>
     </ion-select>
     <!-- <h4 class="education-front" >Front</h4> -->
-    <img src="../../assets/Upload-documents.png" alt="Upload documwnts" class="upload2" onclick="upload()">
+    <img src="../../assets/Upload-documents.png" alt="Upload documwnts" class="upload2" (click)="getImage()">
 
     <ion-label class="occupation">Occupation proof </ion-label> <br>
     <ion-select interface="popover" placeholder="-Select-" class="occupation-select" >
@@ -67,7 +67,7 @@
       <ion-select-option value="Professional">Professional body Membership</ion-select-option>
     </ion-select>
     <!-- <h4 class="occupation-front">Front</h4> -->
-    <img src="../../assets/Upload-documents.png" alt="Upload documwnts" class="upload3" onclick="upload()">
+    <img src="../../assets/Upload-documents.png" alt="Upload documwnts" class="upload3" (click)="getImage()">
 
     <ion-label class="income">Income proof</ion-label> <br>
     <ion-select interface="popover" placeholder="-Select-" class="income-select" >
@@ -77,7 +77,7 @@
       <ion-select-option value="TDS-Returns">TDS Returns</ion-select-option>
     </ion-select>
     <!-- <h4 class="income-front">Front</h4> -->
-    <img src="../../assets/Upload-documents.png" alt="Upload documwnts" class="upload4" onclick="upload()">
+    <img src="../../assets/Upload-documents.png" alt="Upload documwnts" class="upload4" (click)="getImage()">
 
 
     <ion-button (click)="upload()" class="savebutton">

@@ -15,7 +15,8 @@ import { NgxEmojiPickerModule } from 'ngx-emoji-picker';
 import { MediaCapture } from '@ionic-native/media-capture/ngx';
 import { File } from '@ionic-native/file/ngx';
 import { Media } from '@ionic-native/media/ngx';
-
+import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer/ngx';
+import { Camera } from '@ionic-native/camera/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,7 +27,10 @@ import { Media } from '@ionic-native/media/ngx';
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, 
                 MediaCapture, 
                 File, 
-                Media
+                Media, 
+                FileTransfer,
+                FileTransferObject,
+                Camera
   ],
   bootstrap: [AppComponent],
 })
