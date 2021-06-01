@@ -5,6 +5,14 @@ font-style: normal;
 font-weight: normal;
 color: #000000;
 }
+
+ion-content {
+    --background: none;
+    background-color: #4c0890;
+    position: relative;
+}
+
+
 .card {
    
 position: absolute;

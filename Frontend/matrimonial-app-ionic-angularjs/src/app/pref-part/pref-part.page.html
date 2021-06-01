@@ -134,7 +134,17 @@
         <ion-select-option value="150000 to 200000">$150000 to $200000</ion-select-option>
         <ion-select-option value="200000 and above">$200000 and above</ion-select-option>
       </ion-select>
-      <ion-button (click)="onClick()" class="Submit">
+
+      <ion-label class="MaritialStatus">Maritial Status*</ion-label> <br>
+    <ion-select interface="popover" placeholder="Maritial Status" class="Status" >
+      <ion-select-option value="Any">Any</ion-select-option>
+      <ion-select-option value="Never Married">Never Married</ion-select-option>
+      <ion-select-option value="Divorced">Divroced</ion-select-option>
+      <ion-select-option value="Seperated">Seperated</ion-select-option>
+      <ion-select-option value="Widowed">Widowed</ion-select-option>
+    </ion-select>
+       
+      <ion-button (click)="onClick()" class="Submit" [routerLink]="['/user-home']" >
         Submit
       </ion-button>
 
