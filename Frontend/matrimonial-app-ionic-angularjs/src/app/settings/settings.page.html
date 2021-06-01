@@ -5,10 +5,54 @@
   <div class="c1">
     <!-- <div> -->
     <ion-list>
-      <ion-item>
+      <ion-item (click)="isDown === true ? isDown = false: isDown = true">
         <ion-icon class="i1" size="large"></ion-icon>
         <ion-label class="la1">Account Management</ion-label>
+        <ion-icon [name]="isDown? 'caret-down-outline': 'caret-up-outline'" color="light"></ion-icon>
       </ion-item>
+
+      <ion-menu-toggle auto-hide="false">
+        <ion-list [hidden]="isDown" lines="none" class="mylist">
+          <ion-item>
+            <ion-icon name="" slot="start"></ion-icon>
+            <ion-label>Recommendation Settings</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="" slot="start"></ion-icon>
+            <ion-label (click)="presentModal()">Privacy Settings </ion-label>
+            <!-- <ion-badge color="light">5</ion-badge> -->
+          </ion-item>
+          <ion-item>
+            <ion-icon name="" slot="start"></ion-icon>
+            <ion-label>Notification Settings</ion-label>
+            <!-- <ion-badge color="light">15</ion-badge> -->
+          </ion-item>
+          <ion-item>
+            <ion-icon name="" slot="start"></ion-icon>
+            <ion-label>Change Password</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="" slot="start"></ion-icon>
+            <ion-label>Hide Profile</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="" slot="start"></ion-icon>
+            <ion-label>Delete Profile</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="" slot="start"></ion-icon>
+            <ion-label>Rate the app</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="" slot="start"></ion-icon>
+            <ion-label>Log out</ion-label>
+          </ion-item>
+          <!-- </ion-grid> -->
+        </ion-list>
+      </ion-menu-toggle>
+
+
       <ion-item>
         <ion-icon class="i2"></ion-icon>
         <ion-label>Uploaded Documents</ion-label>

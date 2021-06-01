@@ -1,0 +1,180 @@
+
+<ion-content [fullscreen]="true">
+
+    <ion-icon name="close" class="back" size="large" (click)="dismiss()"></ion-icon>
+    <ion-label class="l1">Privacy Settings</ion-label>
+    <!-- <ion-label class="l2" (click)="dismiss()">Done</ion-label> -->
+  
+    <form action="">
+    <div class="c1">
+      <!-- <div> -->
+      <ion-list>
+  
+        <!------------------------------------------------------------------ Mobile Setting ------------------------------------------------------------------->
+        
+        <ion-item (click)="isDown === true ? isDown = false: isDown = true">
+          <!-- <ion-icon class="i1" size="large"></ion-icon> -->
+          <ion-label class="la1">Mobile number</ion-label>
+          <ion-icon [name]="isDown? 'caret-down-outline': 'caret-up-outline'" color="light"></ion-icon>
+        </ion-item>
+  
+        <ion-menu-toggle auto-hide="false">
+          <ion-radio-group value="Mobile">
+          <ion-list [hidden]="isDown" lines="none" class="mylist">
+            <ion-item>
+              <ion-radio slot="start" color="success" value="r1"></ion-radio>
+              <ion-label>Show to all</ion-label>
+            </ion-item>
+  
+            <ion-item>
+             <ion-radio slot="start" color="success" value="r2"></ion-radio>
+              <ion-label>Show to only members I accept/Express Intrest in</ion-label>
+              <!-- <ion-badge color="light">5</ion-badge> -->
+            </ion-item>
+            <ion-item>
+             <ion-radio slot="start" color="success" value="r3"></ion-radio>
+              <ion-label>Do not Show to anyone</ion-label>
+              <!-- <ion-badge color="light">15</ion-badge> -->
+            </ion-item>
+            <!-- </ion-grid> -->
+          </ion-list>
+          </ion-radio-group>
+        </ion-menu-toggle>
+  
+    <!--------------------------------------------------------------- Album Privacy ------------------------------------------------------>
+    <ion-item (click)="isDown === true ? isDown = false: isDown = true">
+      <!-- <ion-icon class="i1" size="large"></ion-icon> -->
+      <ion-label class="la2">Album Privacy</ion-label>
+      <ion-icon [name]="isDown? 'caret-down-outline': 'caret-up-outline'" color="light"></ion-icon>
+    </ion-item>
+    <ion-menu-toggle auto-hide="false">
+      <ion-radio-group value="Album">
+      <ion-list [hidden]="isDown" lines="none" class="mylist2">
+        <ion-item>
+          <ion-radio slot="start" color="success" value="r1"></ion-radio>
+          <ion-label>Show to all(Recommendation)</ion-label>
+        </ion-item>
+  
+        <ion-item>
+         <ion-radio slot="start" color="success" value="r2"></ion-radio>
+          <ion-label>Visible to Paid members</ion-label>
+          <!-- <ion-badge color="light">5</ion-badge> -->
+        </ion-item>
+        <ion-item>
+         <ion-radio slot="start" color="success" value="r3"></ion-radio>
+          <ion-label>Visible only to those, You have accepted or expressed interest in</ion-label>
+          <!-- <ion-badge color="light">15</ion-badge> -->
+        </ion-item>
+        <!-- </ion-grid> -->
+      </ion-list>
+      </ion-radio-group>
+    </ion-menu-toggle>
+  
+      <!-------------------------------------------- Profile Visibility ----------------------------------------->
+      <ion-item (click)="isDown === true ? isDown = false: isDown = true">
+        <!-- <ion-icon class="i1" size="large"></ion-icon> -->
+        <ion-label class="la3">Profile Visibility</ion-label>
+        <ion-icon [name]="isDown? 'caret-down-outline': 'caret-up-outline'" color="light"></ion-icon>
+      </ion-item>
+      <ion-menu-toggle auto-hide="false">
+        <ion-radio-group value="Album">
+        <ion-list [hidden]="isDown" lines="none" class="mylist2">
+          <ion-item>
+            <ion-radio slot="start" color="success" value="r1"></ion-radio>
+            <ion-label>Show my Profile to all</ion-label>
+          </ion-item>
+    
+          <ion-item>
+           <ion-radio slot="start" color="success" value="r2"></ion-radio>
+            <ion-label>Show only to users who pass my filters</ion-label>
+            <!-- <ion-badge color="light">5</ion-badge> -->
+          </ion-item>
+          <ion-item>
+           <ion-radio slot="start" color="success" value="r3"></ion-radio>
+            <ion-label>Don't show to anyone,I will search and contact profiles</ion-label>
+            <!-- <ion-badge color="light">15</ion-badge> -->
+          </ion-item>
+          <!-- </ion-grid> -->
+        </ion-list>
+        </ion-radio-group>
+      </ion-menu-toggle>
+  
+      <!---------------------------------------- Voice call Settings ----------------------------------------------------->
+      <ion-item (click)="isDown === true ? isDown = false: isDown = true">
+        <!-- <ion-icon class="i1" size="large"></ion-icon> -->
+        <ion-label class="la4">Voice call Setting</ion-label>
+        <ion-icon [name]="isDown? 'caret-down-outline': 'caret-up-outline'" color="light"></ion-icon>
+      </ion-item>
+      <ion-menu-toggle auto-hide="false">
+        <ion-radio-group value="Album">
+        <ion-list [hidden]="isDown" lines="none" class="mylist2">
+          <ion-item>
+            <ion-radio slot="start" color="success" value="r1"></ion-radio>
+            <ion-label>Recive all voice calls</ion-label>
+          </ion-item>
+    
+          <ion-item>
+           <ion-radio slot="start" color="success" value="r2"></ion-radio>
+            <ion-label>Receive only from accepted members</ion-label>
+            
+            
+            <!-- <ion-badge color="light">5</ion-badge> -->
+          </ion-item>
+          <ion-item>
+            <ion-radio slot="start" color="success" value="r3"></ion-radio>
+            <ion-label>Suitable time to receive call(Specify time in IST)</ion-label>
+            <!-- <ion-badge color="light">15</ion-badge> -->
+          </ion-item>
+          <ion-item>
+            <ion-label type="text">From</ion-label>  
+            <ion-input type="text"></ion-input>
+              <ion-lable>To</ion-lable>
+              <ion-input type="text"></ion-input>
+          </ion-item>
+          <!-- </ion-grid> -->
+        </ion-list>
+        </ion-radio-group>
+      </ion-menu-toggle>
+  
+      <!-------------------------------------------- Video call Settings --------------------------------------->
+  
+      <ion-item (click)="isDown === true ? isDown = false: isDown = true">
+        <!-- <ion-icon class="i1" size="large"></ion-icon> -->
+        <ion-label class="la2">Video call Settings</ion-label>
+        <ion-icon [name]="isDown? 'caret-down-outline': 'caret-up-outline'" color="light"></ion-icon>
+      </ion-item>
+      <ion-menu-toggle auto-hide="false">
+        <ion-radio-group value="Album">
+        <ion-list [hidden]="isDown" lines="none" class="mylist2">
+          <ion-item>
+            <ion-radio slot="start" color="success" value="r1"></ion-radio>
+            <ion-label>Show to all(Recommendation)</ion-label>
+          </ion-item>
+    
+          <ion-item>
+           <ion-radio slot="start" color="success" value="r2"></ion-radio>
+            <ion-label>Visible to Paid members</ion-label>
+            <!-- <ion-badge color="light">5</ion-badge> -->
+          </ion-item>
+          <ion-item>
+            <ion-radio slot="start" color="success" value="r3"></ion-radio>
+            <ion-label>Suitable time to receive call(Specify time in IST)</ion-label>
+  
+            <!-- <ion-badge color="light">15</ion-badge> -->
+          </ion-item>
+          <ion-item>
+            <ion-label type="text">From</ion-label>  
+            <ion-input type="text"></ion-input>
+              <ion-lable>To</ion-lable>
+              <ion-input type="text"></ion-input>
+          </ion-item>
+          <!-- </ion-grid> -->
+        </ion-list>
+        </ion-radio-group>
+      </ion-menu-toggle>
+  
+    </ion-list>
+      <!-- </div> -->
+    </div>
+  </form>
+  </ion-content>
