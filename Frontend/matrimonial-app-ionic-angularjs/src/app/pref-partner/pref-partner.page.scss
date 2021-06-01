@@ -5,6 +5,12 @@
     color: black;
 }
 
+ion-content {
+    --background: none;
+    background-color: #4c0890;
+    position: relative;
+}
+
 img {
     position: absolute;
 width: 30px;
