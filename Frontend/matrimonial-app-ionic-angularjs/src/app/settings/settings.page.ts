@@ -8,6 +8,8 @@ import { ModalController } from '@ionic/angular';
 })
 export class SettingsPage implements OnInit {
 
+  segmentModal;
+
   constructor(private modalController: ModalController) { }
 
   ngOnInit() {

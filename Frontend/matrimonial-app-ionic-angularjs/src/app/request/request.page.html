@@ -1,4 +1,21 @@
+<ion-content [fullscreen]="true">
+  <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/user-home']"></ion-icon>
+  <ion-label class="l1">Requests</ion-label>
+  <div class="c1">
 
-<ion-content>
-  <app-tabs></app-tabs>
+    <div class="d1">
+      <ion-button shape="round" name="b1" size="default">Received</ion-button>
+      <ion-button shape="round" name="b2" size="default">Sent</ion-button>
+    </div>
+
+
+    <!-- <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="segmentModal">
+      <ion-segment-button value="received">
+        <ion-label>Received</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="sent">
+        <ion-label>Sent</ion-label>
+      </ion-segment-button>
+    </ion-segment> -->
+  </div>
 </ion-content>
