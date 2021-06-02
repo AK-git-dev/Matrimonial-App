@@ -5,6 +5,7 @@ import { PopoverComponent } from '../components/popover/popover.component';
 import { MediaObject } from '@ionic-native/media/ngx';
 import { File } from '@ionic-native/file/ngx';
 import { Media } from '@ionic-native/media/ngx';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-private-chat',
@@ -15,18 +16,26 @@ export class PrivateChatPage implements OnInit {
 
   username: string = 'Aashray Jain';
   time = '11:45 AM'
-
-  constructor(private popoverController: PopoverController, 
-    private file: File, private media: Media) { }
-
   toggled: boolean = false;
   message: string;
  
   status: string;
   audioFile: MediaObject;
 
+  user;
+  path;
+
+  
+
+  constructor(private popoverController: PopoverController, 
+    private file: File, private media: Media, private router: Router) { }
+
+  
   ngOnInit() {
     this.audioFile = this.media.create(this.file.externalRootDirectory + '/audiofile.mp3');
+    this.user = this.router.getCurrentNavigation().extras.state.user;
+    this.username = this.user.username;
+    this.path = this.router.getCurrentNavigation().extras.state.path;
   }
 
   async presentPopover(ev: any) {

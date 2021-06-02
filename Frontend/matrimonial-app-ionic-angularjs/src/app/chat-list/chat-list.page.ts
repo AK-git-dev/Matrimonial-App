@@ -10,6 +10,36 @@ export class ChatListPage implements OnInit {
 
   segmentModal = 'conversations';
 
+  // user: object = {
+  //   username: 'Aashray Jain',
+  //   photo: '',
+  //   message: 'Hello'
+  // }
+
+  users: object[] = [
+    {
+      username: 'Aashray Jain',
+      photo: '../../assets/chat-list/profile/i1.png',
+      message: 'Hello'
+    },
+    {
+      username: 'Sourabh Singh',
+      photo: '../../assets/chat-list/profile/i1.png',
+      message: 'Hi'
+    },
+    {
+      username: 'Abhay Singh',
+      photo: '../../assets/chat-list/profile/i2.png',
+      message: 'How are you'
+    },
+    {
+      username: 'Vijay',
+      photo: '../../assets/chat-list/profile/i2.png',
+      message: 'Ok'
+    }
+  ];
+  
+
   constructor(private router: Router) { }
 
   ngOnInit() {

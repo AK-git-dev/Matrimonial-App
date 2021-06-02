@@ -14,35 +14,40 @@
       </ion-segment-button>
     </ion-segment>
 
-    <ion-list *ngIf="segmentModal === 'conversations'">
-      <ion-item>
-        <ion-icon></ion-icon>
-        <ion-label>Aashray Jain</ion-label>
-      </ion-item>
-      <ion-item>
+    <div *ngIf="segmentModal === 'conversations'" class="d1">
+      <ion-list *ngFor="let user of users">
+        <ion-item button [routerLink]="['/private-chat']" [state]="{ user: user, path: '/chat-list' }">
+          <ion-img [src]="user.photo"></ion-img>
+          <ion-label class="l2">{{ user.username }}</ion-label>
+        </ion-item>
+        <!-- <ion-item>
         <ion-icon></ion-icon>
         <ion-label>Ajay Rakul</ion-label>
       </ion-item>
       <ion-item>
         <ion-icon></ion-icon>
         <ion-label>Deepika Singh</ion-label>
-      </ion-item>
-    </ion-list>
+      </ion-item> -->
+      </ion-list>
+    </div>
 
-    <ion-list *ngIf="segmentModal === 'active'">
-      <ion-item>
-        <ion-icon></ion-icon>
-        <ion-label>Aashray Jain</ion-label>
-      </ion-item>
-      <ion-item>
+
+    <div *ngIf="segmentModal === 'active'" class="d1">
+      <ion-list *ngFor="let user of users">
+        <ion-item button [routerLink]="['/private-chat']" [state]="{ user: user, path: '/chat-list' }">
+          <ion-img [src]="user.photo"></ion-img>
+          <ion-label class="l2">{{ user.username }}</ion-label>
+        </ion-item>
+        <!-- <ion-item>
         <ion-icon></ion-icon>
         <ion-label>Ajay Rakul</ion-label>
       </ion-item>
       <ion-item>
         <ion-icon></ion-icon>
         <ion-label>Deepika Singh</ion-label>
-      </ion-item>
-    </ion-list>
+      </ion-item> -->
+      </ion-list>
+    </div>
 
   </div>
 
