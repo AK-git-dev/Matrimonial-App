@@ -1,9 +1,49 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>chat-list</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true">
 
-<ion-content>
+  <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/user-home']"></ion-icon>
+  <ion-label class="l1">Chat</ion-label>
+
+  <div class="c1">
+
+    <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="segmentModal" style="padding-top: 5px;">
+      <ion-segment-button value="conversations">
+        <ion-label>Conversations</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="active">
+        <ion-label>Active</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <ion-list *ngIf="segmentModal === 'conversations'">
+      <ion-item>
+        <ion-icon></ion-icon>
+        <ion-label>Aashray Jain</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon></ion-icon>
+        <ion-label>Ajay Rakul</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon></ion-icon>
+        <ion-label>Deepika Singh</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngIf="segmentModal === 'active'">
+      <ion-item>
+        <ion-icon></ion-icon>
+        <ion-label>Aashray Jain</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon></ion-icon>
+        <ion-label>Ajay Rakul</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon></ion-icon>
+        <ion-label>Deepika Singh</ion-label>
+      </ion-item>
+    </ion-list>
+
+  </div>
 
 </ion-content>

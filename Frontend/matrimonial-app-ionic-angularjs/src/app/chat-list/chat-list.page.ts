@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-chat-list',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatListPage implements OnInit {
 
-  constructor() { }
+  segmentModal = 'conversations';
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    this.segmentModal = this.router.getCurrentNavigation().extras.state.data;
+  }
+
+  segmentChanged(event) {
+    console.log(event);
   }
 
 }
