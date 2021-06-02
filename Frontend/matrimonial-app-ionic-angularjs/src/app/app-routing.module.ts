@@ -151,7 +151,11 @@ const routes: Routes = [
   {
     path: 'contact',
     loadChildren: () => import('./contact/contact.module').then(m => m.ContactPageModule)
+  },  {
+    path: 'profile-visitor',
+    loadChildren: () => import('./profile-visitor/profile-visitor.module').then( m => m.ProfileVisitorPageModule)
   }
+
 
 
 

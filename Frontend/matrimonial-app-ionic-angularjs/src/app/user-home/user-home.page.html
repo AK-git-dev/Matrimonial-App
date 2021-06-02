@@ -18,9 +18,8 @@
 
 <ion-router-outlet id="main"></ion-router-outlet>
 <!-- sidebar -end -->
-<ion-content [fullscreen]="true">
 
-  <app-tabs></app-tabs>
+<ion-content [fullscreen]="true">
 
 
   <ion-grid>
@@ -65,7 +64,7 @@
         <ion-avatar style="margin: 5px;height:50px; width: 50px;">
           <ion-icon name="chevron-forward-circle-outline" size="large"></ion-icon>
         </ion-avatar>
-        <ion-label [routerLink]="['/chat-list']" [state]="{ data: 'active' }">See All</ion-label>
+        <ion-label [routerLink]="['/chat-list']" [state]="{ data: 'active' }"><u>See All</u></ion-label>
         <!-- </a> -->
       </ion-col>
     </ion-row>
@@ -73,4 +72,140 @@
 
 
 
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <div class="div1">
+
+        <div>
+          <ion-label class="lab1">New Joined Members</ion-label>
+          <ion-label class="lab3" [routerLink]="['/profile-visitor']"><u>View All</u></ion-label>
+          <br>
+          <ion-label class="lab2">Members who joined recently</ion-label>
+        </div>
+
+        <div>
+          <ion-icon class="img1"></ion-icon>
+          <ion-label class="lab4">Atish Singh</ion-label>
+           <ion-label class="lab5">Trust Score {{ 70 }}</ion-label>
+          <ion-label class="lab6">Age: {{ 26 }}</ion-label>
+          <ion-label class="lab7">Religion: Hindu</ion-label>
+          <ion-label class="lab8">Height: 5'11</ion-label>
+          <ion-label class="lab9">Mother Tounge:  Marathi</ion-label>
+          <ion-label class="lab10">Location: Maharashtra, India</ion-label>
+          <ion-label class="lab11">Salary: 12-15 Lac </ion-label>
+          <ion-button color="danger" shape="round" class="btn1" size="small">Send Interest</ion-button>
+        </div>
+
+      </div>
+
+    </ion-slide>
+    <ion-slide>
+      
+      <div class="div1">
+
+        <div>
+          <ion-label class="lab1">Match of the day</ion-label>
+          <ion-label class="lab3" [routerLink]="['/profile-visitor']"><u>View All</u></ion-label>
+          <br>
+          <ion-label class="lab2">Top picks handpicked for you</ion-label>
+        </div>
+
+        <div>
+          <ion-icon class="img1"></ion-icon>
+          <ion-label class="lab4">Atish Singh</ion-label>
+           <ion-label class="lab5">Trust Score {{ 70 }}</ion-label>
+          <ion-label class="lab6">Age: {{ 26 }}</ion-label>
+          <ion-label class="lab7">Religion: Hindu</ion-label>
+          <ion-label class="lab8">Height: 5'11</ion-label>
+          <ion-label class="lab9">Mother Tounge:  Marathi</ion-label>
+          <ion-label class="lab10">Location: Maharashtra, India</ion-label>
+          <ion-label class="lab11">Salary: 12-15 Lac </ion-label>
+          <ion-button color="danger" shape="round" class="btn1" size="small">Send Interest</ion-button>
+        </div>
+
+      </div>
+
+    </ion-slide>
+    <ion-slide>
+      
+      <div class="div1">
+
+        <div>
+          <ion-label class="lab1">Profile Visitors</ion-label>
+          <ion-label class="lab3" [routerLink]="['/profile-visitor']"><u>View All</u></ion-label>
+          <br>
+          <ion-label class="lab2">Your profile has been visited by the following</ion-label>
+        </div>
+
+        <div>
+          <ion-icon class="img1"></ion-icon>
+          <ion-label class="lab4">Atish Singh</ion-label>
+           <ion-label class="lab5">Trust Score {{ 70 }}</ion-label>
+          <ion-label class="lab6">Age: {{ 26 }}</ion-label>
+          <ion-label class="lab7">Religion: Hindu</ion-label>
+          <ion-label class="lab8">Height: 5'11</ion-label>
+          <ion-label class="lab9">Mother Tounge:  Marathi</ion-label>
+          <ion-label class="lab10">Location: Maharashtra, India</ion-label>
+          <ion-label class="lab11">Salary: 12-15 Lac </ion-label>
+          <ion-button color="danger" shape="round" class="btn1" size="small">Send Interest</ion-button>
+        </div>
+
+      </div>
+
+    </ion-slide>
+  </ion-slides>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>Card Title</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>Card Title</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>Card Title</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>Card Title</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
+
+
 </ion-content>
+
+<ion-footer class="footer1">
+  <app-tabs></app-tabs>
+</ion-footer>
