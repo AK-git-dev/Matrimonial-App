@@ -151,9 +151,22 @@ const routes: Routes = [
   {
     path: 'contact',
     loadChildren: () => import('./contact/contact.module').then(m => m.ContactPageModule)
-  },  {
+  },
+  {
     path: 'profile-visitor',
     loadChildren: () => import('./profile-visitor/profile-visitor.module').then( m => m.ProfileVisitorPageModule)
+  },
+  {
+    path: 'notifications-settings',
+    loadChildren: () => import('./additional-pages/notifications-settings/notifications-settings.module').then( m => m.NotificationsSettingsPageModule)
+  },
+  {
+    path: 'change-password',
+    loadChildren: () => import('./additional-pages/change-password/change-password.module').then( m => m.ChangePasswordPageModule)
+  },
+  {
+    path: 'hide-profile',
+    loadChildren: () => import('./additional-pages/hide-profile/hide-profile.module').then( m => m.HideProfilePageModule)
   }
 
 
