@@ -6,20 +6,20 @@ class Database {
   public schema: Sequelize;
   constructor() {
     // For MySQL Setup
-    // this.schema = new Sequelize("matrimonialDB", "root", "root", {
-    //   dialect: "mysql",
-    //   pool: {
-    //     min: 5,
-    //     max: 10,
-    //   },
-    // });
+    this.schema = new Sequelize("matrimonialDB", "root", "root", {
+      dialect: "mysql",
+      pool: {
+        min: 5,
+        max: 10,
+      },
+    });
 
     // For SQLITE3 Setup
-    this.schema = new Sequelize({
-      dialect: "sqlite",
-      storage: `${this.dir}/db-store.sqlite`,
-      database: "projectDB",
-    });
+    // this.schema = new Sequelize({
+    //   dialect: "sqlite",
+    //   storage: `${this.dir}/db-store.sqlite`,
+    //   database: "projectDB",
+    // });
 
     this.authenticate();
   }

@@ -34,6 +34,26 @@ const PrefferedPartnerChoice = db.schema.define(
     salaryType: {
       type: DataTypes.ENUM("INR", "DOLLAR"),
     },
+
+    caste: {
+      type: DataTypes.STRING(30),
+    },
+    occupation: {
+      type: DataTypes.STRING(100),
+    },
+    country: {
+      type: DataTypes.STRING(45),
+    },
+    martitialStatus: {
+      type: DataTypes.ENUM(
+        "Any",
+        "Never",
+        "Married",
+        "Divorced",
+        "Separated",
+        "Widowed"
+      ),
+    },
   },
   {
     freezeTableName: true,

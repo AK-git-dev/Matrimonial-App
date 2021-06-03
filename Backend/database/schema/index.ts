@@ -25,6 +25,7 @@ import RefreshToken from "./refreshToken.schema";
 import RelativeContact from "./relative-contacts.schema";
 import FamilyDetails from "./family-details.schema";
 import PrefferedPartnerChoice from "./preffered-partner.schema";
+import PrefferedPartnerLanguages from "./prefferedPartner-languages.schema";
 
 /** Will configure the association Mappings (1:N) / (M:N) / (N:1)  */
 function buildAssociationsBetweenSchemas() {
@@ -47,6 +48,11 @@ function buildAssociationsBetweenSchemas() {
   User.hasOne(UploadedDocument);
   User.hasOne(Caste);
   RelativeContact.hasOne(PrivacySetting);
+  
+  Languages.belongsToMany(PrefferedPartnerChoice, {
+    as: "prefferedMotherTounge",
+    through: PrefferedPartnerLanguages,
+  });
 
   LifeStyle.hasMany(Movie, { as: "favouriteMovies" });
   LifeStyle.hasMany(Books, { as: "favouriteBooks" });
@@ -87,6 +93,7 @@ const Schema = {
   RequestAccepted,
   RequestSend,
   BlockedUsers,
+  PrefferedPartnerLanguages
 };
 
 export { Schema, buildAssociationsBetweenSchemas };

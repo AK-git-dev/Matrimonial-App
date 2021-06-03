@@ -35,11 +35,13 @@ const User = db.schema.define(
     },
     martialStatus: {
       type: DataTypes.ENUM(
+        "Any",
+        "Never",
         "Single",
-        "Widowed",
-        "Marriage",
+        "Married",
         "Divorced",
-        "Separated"
+        "Separated",
+        "Widowed"
       ),
       defaultValue: "Single",
     },
