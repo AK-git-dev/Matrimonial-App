@@ -174,7 +174,12 @@ const routes: Routes = [
   {
     path: 'profile-creation',
     loadChildren: () => import('./profile-creation/profile-creation.module').then( m => m.ProfileCreationPageModule)
+  },
+  {
+    path: 'success-stories',
+    loadChildren: () => import('./success-stories/success-stories.module').then( m => m.SuccessStoriesPageModule)
   }
+
 
 
 
