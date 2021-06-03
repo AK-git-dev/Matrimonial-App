@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -163,6 +162,10 @@ const routes: Routes = [
   {
     path: 'change-password',
     loadChildren: () => import('./additional-pages/change-password/change-password.module').then( m => m.ChangePasswordPageModule)
+  },
+  {
+    path: 'lifestyle',
+    loadChildren: () => import('./lifestyle/lifestyle.module').then( m => m.LifestylePageModule)
   },
   {
     path: 'hide-profile',
