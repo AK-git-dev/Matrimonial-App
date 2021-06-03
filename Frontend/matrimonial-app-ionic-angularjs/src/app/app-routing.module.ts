@@ -170,6 +170,10 @@ const routes: Routes = [
   {
     path: 'hide-profile',
     loadChildren: () => import('./additional-pages/hide-profile/hide-profile.module').then( m => m.HideProfilePageModule)
+  },
+  {
+    path: 'profile-creation',
+    loadChildren: () => import('./profile-creation/profile-creation.module').then( m => m.ProfileCreationPageModule)
   }
 
 
