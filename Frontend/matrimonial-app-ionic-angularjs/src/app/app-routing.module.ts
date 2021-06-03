@@ -167,7 +167,12 @@ const routes: Routes = [
   {
     path: 'hide-profile',
     loadChildren: () => import('./additional-pages/hide-profile/hide-profile.module').then( m => m.HideProfilePageModule)
+  },
+  {
+    path: 'success-stories',
+    loadChildren: () => import('./success-stories/success-stories.module').then( m => m.SuccessStoriesPageModule)
   }
+
 
 
 
