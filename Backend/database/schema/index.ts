@@ -26,80 +26,84 @@ import RelativeContact from "./relative-contacts.schema";
 import FamilyDetails from "./family-details.schema";
 import PrefferedPartnerChoice from "./preffered-partner.schema";
 import PrefferedPartnerLanguages from "./prefferedPartner-languages.schema";
+import MotherTongue from "./motherTongue.schema";
 
 /** Will configure the association Mappings (1:N) / (M:N) / (N:1)  */
 function buildAssociationsBetweenSchemas() {
-  User.hasMany(Education);
-  User.hasOne(PrefferedPartnerChoice);
-  User.hasOne(Address);
-  User.hasOne(FamilyDetails);
-  User.hasMany(RelativeContact);
-  User.hasMany(TrustScore);
-  User.hasMany(FavouritePerson);
-  User.hasMany(PersonWhoFavouritedHimself);
-  User.hasOne(LifeStyle);
-  User.hasMany(ProfilPicture);
-  User.hasOne(Occupation);
-  User.hasMany(PeopleWhoViewedYou);
-  User.hasMany(RequestSend);
-  User.hasMany(RequestAccepted);
-  User.hasMany(Message);
-  User.hasMany(BlockedUsers);
-  User.hasOne(UploadedDocument);
-  User.hasOne(Caste);
-  RelativeContact.hasOne(PrivacySetting);
+    User.hasMany (Education);
+    User.hasOne (PrefferedPartnerChoice);
+    User.hasOne (Address);
+    User.hasOne (FamilyDetails);
+    User.hasMany (RelativeContact);
+    User.hasMany (TrustScore);
+    User.hasMany (FavouritePerson);
+    User.hasMany (PersonWhoFavouritedHimself);
+    User.hasOne (LifeStyle);
+    User.hasMany (ProfilPicture);
+    User.hasOne (Occupation);
+    User.hasMany (PeopleWhoViewedYou);
+    User.hasMany (RequestSend);
+    User.hasMany (RequestAccepted);
+    User.hasMany (Message);
+    User.hasMany (BlockedUsers);
+    User.hasOne (UploadedDocument);
+    User.hasOne (Caste);
+    RelativeContact.hasOne (PrivacySetting);
 
-  Languages.belongsToMany(PrefferedPartnerChoice, {
-    as: "prefferedMotherTounge",
-    through: PrefferedPartnerLanguages,
-  });
+    User.hasOne (MotherTongue);
 
-  PrefferedPartnerChoice.hasOne(PrefferedPartnerLanguages);
+    Languages.belongsToMany (PrefferedPartnerChoice , {
+        as :"prefferedMotherTounge" ,
+        through :PrefferedPartnerLanguages ,
+    });
 
-  LifeStyle.hasMany(Movie, { as: "favouriteMovies" });
-  LifeStyle.hasMany(Books, { as: "favouriteBooks" });
-  LifeStyle.hasMany(Song, { as: "favouriteSongs" });
-  LifeStyle.hasMany(Hobby);
-  LifeStyle.hasMany(VaccationDestination, { as: "favoriteDestinationPlaces" });
-  LifeStyle.belongsTo(PrivacySetting);
-  LifeStyle.hasMany(Languages, { as: "languagesCanSpeak" });
+    PrefferedPartnerChoice.hasOne (PrefferedPartnerLanguages);
 
-  Movie.belongsToMany(LifeStyle, {through: 'moviesLifestyles'});
-  VaccationDestination.belongsToMany(LifeStyle,  {through: 'vaccationLifestyles'});
-  Languages.belongsToMany(LifeStyle, { through: "vaccationLanguages" });
+    LifeStyle.hasMany (Movie , {as :"favouriteMovies"});
+    LifeStyle.hasMany (Books , {as :"favouriteBooks"});
+    LifeStyle.hasMany (Song , {as :"favouriteSongs"});
+    LifeStyle.hasMany (Hobby);
+    LifeStyle.hasMany (VaccationDestination , {as :"favoriteDestinationPlaces"});
+    LifeStyle.belongsTo (PrivacySetting);
+    LifeStyle.hasMany (Languages , {as :"languagesCanSpeak"});
 
-  Education.belongsTo(User);
+    Movie.belongsToMany (LifeStyle , {through :'moviesLifestyles'});
+    VaccationDestination.belongsToMany (LifeStyle , {through :'vaccationLifestyles'});
+    Languages.belongsToMany (LifeStyle , {through :"vaccationLanguages"});
+
+    Education.belongsTo (User);
 }
 
 /** Export Schema from index.ts file */
 
 const Schema = {
-  User,
-  Education,
-  Address,
-  TrustScore,
-  Caste,
-  UploadedDocument,
-  FavouritePerson,
-  LifeStyle,
-  Song,
-  PrefferedPartnerChoice,
-  Occupation,
-  RelativeContact,
-  PeopleWhoViewedYou,
-  Books,
-  VaccationDestination,
-  RefreshToken,
-  FamilyDetails,
-  Languages,
-  PrivacySetting,
-  ProfilPicture,
-  Movie,
-  PersonWhoFavouritedHimself,
-  RequestAccepted,
-  RequestSend,
-  BlockedUsers,
-  PrefferedPartnerLanguages,
+    User ,
+    Education ,
+    Address ,
+    MotherTongue ,
+    TrustScore ,
+    Caste ,
+    UploadedDocument ,
+    FavouritePerson ,
+    LifeStyle ,
+    Song ,
+    PrefferedPartnerChoice ,
+    Occupation ,
+    RelativeContact ,
+    PeopleWhoViewedYou ,
+    Books ,
+    VaccationDestination ,
+    RefreshToken ,
+    FamilyDetails ,
+    Languages ,
+    PrivacySetting ,
+    ProfilPicture ,
+    Movie ,
+    PersonWhoFavouritedHimself ,
+    RequestAccepted ,
+    RequestSend ,
+    BlockedUsers ,
+    PrefferedPartnerLanguages ,
 };
 
-export { Schema, buildAssociationsBetweenSchemas };
+export {Schema , buildAssociationsBetweenSchemas};

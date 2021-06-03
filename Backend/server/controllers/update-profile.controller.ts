@@ -44,6 +44,8 @@ router.patch(
         where: { id: userId, phoneNumber },
       });
 
+      await Schema.MotherTongue.create({UserId: userId, LanguageName: payload.motherTongue});
+
       return res.status(200).send({
         ...SUCCESS,
         message: "user profile information has been updated!",
@@ -169,7 +171,8 @@ router.post(
 
 // [POST]: Add Movives to LifeStyle
 router.post(
-  "/update-lifestyle/:lifeStyleId/add-movies", requiresAuth,
+  "/update-lifestyle/:lifeStyleId/add-movies",
+  requiresAuth,
   async (req: RequestInterface, res: ResponseInterface, next: Next) => {
     try {
       const LifeStyleId: string = (req as any).params.lifeStyleId;
@@ -196,7 +199,7 @@ router.post(
   }
 );
 
-// [Delete]: Add Movives to LifeStyle
+// [Delete]: Add Movies to LifeStyle
 router.delete(
   "/update-lifestyle/:lifeStyleId/:movieName/delete",
   requiresAuth,
@@ -249,18 +252,42 @@ router.post(
 
 // [Delete]: Add Movives to LifeStyle
 router.delete(
-  "/update-lifestyle/:lifeStyleId/:destinationName/delete", requiresAuth,
+  "/update-lifestyle/:lifeStyleId/:destinationName/delete",
+  requiresAuth,
   async (req: RequestInterface, res: ResponseInterface, next: Next) => {
     try {
       const LifeStyleId: string = (req as any).params.lifeStyleId;
-      const movieName: string = (req as any).params.movieName;
+      const destinationPlaceName: string = (req as any).params.destinationName;
 
-      await Schema.VaccationDestination.destroy({ where: { name: movieName, LifeStyleId } });
+      await Schema.VaccationDestination.destroy({
+        where: { name: destinationPlaceName, LifeStyleId },
+      });
 
       return res.status(200).send({
         ...SUCCESS,
         message: "destinations has been deleted from your favorite movies list",
       });
+    } catch (error) {
+      next(error);
+    }
+  }
+);
+
+// [POST]: Language Speaks
+router.post(
+  "/update-lifestyle/:lifeStyleId/add-languages",
+  requiresAuth,
+  async (req: RequestInterface, res: ResponseInterface, next: Next) => {
+    try {
+      const LifeStyleId: string = (req as any).params.lifeStyleId;
+
+      const payload = req.body as {languageName: string}[];
+
+      const finalPayload = payload.map((lang) => {return {
+        LifeStyleId,
+        
+      }})
+
     } catch (error) {
       next(error);
     }

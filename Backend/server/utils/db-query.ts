@@ -23,6 +23,7 @@ export const getAllUsersWithAllDetails = async () =>
       { model: Schema.Education },
       { model: Schema.Address },
       { model: Schema.Caste },
+      {model: Schema.MotherTongue},
       {
         model: Schema.LifeStyle,
         include: [
