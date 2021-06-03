@@ -11,8 +11,7 @@ import AuthController from "./auth.controller";
 import UserController from "./users.controller";
 import CreateProfileController from "./update-profile.controller";
 import FileUploaderController from "./file-uploader.controller";
-import ProfileRecommendationController from './profile-recommendation.controller';
-
+import ProfileRecommendationController from "./profile-recommendation.controller";
 
 const router = Router();
 
@@ -44,7 +43,7 @@ router.get(
 // Controllers
 router.use("/auth", AuthController);
 router.use("/profile", CreateProfileController);
-router.use('profiles-recommendations', ProfileRecommendationController);
+router.use("profiles-recommendations", ProfileRecommendationController);
 router.use("/users", UserController);
 router.use("/upload-service", FileUploaderController);
 

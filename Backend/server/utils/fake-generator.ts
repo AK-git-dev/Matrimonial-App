@@ -187,7 +187,8 @@ export async function generateRelativeInformation(allUsers: any, n: number) {
     relativeinfos.push({
       id: v4(),
       UserId: user.getDataValue("id"),
-      fullname: fakerStatic.name.firstName() + ' ' + fakerStatic.name.lastName(),
+      fullname:
+        fakerStatic.name.firstName() + " " + fakerStatic.name.lastName(),
       type:
         probablity > 8
           ? "Father"
@@ -288,7 +289,6 @@ export async function generatePrefferedPartner(allUsers: any, n: number) {
   await Schema.PrefferedPartnerChoice.bulkCreate([...prefferedPartners]);
 }
 
-
 // ~~~~~~~~~~~~~~~~~~~~ FAKE Education Generator ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 export async function generateFakeEducation(allUsers: any, n: number) {
@@ -298,19 +298,22 @@ export async function generateFakeEducation(allUsers: any, n: number) {
     educations.push({
       id: v4(),
       UserId: user.getDataValue("id"),
-      "type": (probablity > 7 ? "Masters" : ( probablity > 4 ? "Undergraduate" : "Hons")),
-      "degree": (probablity > 7 ? "M.Tech" : ( probablity > 4 ? "B.Tech" : "Commerce")),
-      "institutionName": fakerStatic.company.companyName(),
-      "specializationIn": fakerStatic.name.jobType(),
-      "passoutYear": fakerStatic.date.between("2010-01-01", "2023-12-31")
-    })
+      type:
+        probablity > 7 ? "Masters" : probablity > 4 ? "Undergraduate" : "Hons",
+      degree:
+        probablity > 7 ? "M.Tech" : probablity > 4 ? "B.Tech" : "Commerce",
+      institutionName: fakerStatic.company.companyName(),
+      specializationIn: fakerStatic.name.jobType(),
+      passoutYear: fakerStatic.date.between("2010-01-01", "2023-12-31"),
+    });
   }
 
   await Schema.Education.bulkCreate([...educations]);
 }
 
 export async function generateRandomProfileMatchs(allUsers: any, n: any) {
-  const randomRangeGenerator = (min: number, max: number) => Math.floor(Math.random() * (max - min)) + min ;
+  const randomRangeGenerator = (min: number, max: number) =>
+    Math.floor(Math.random() * (max - min)) + min;
 
   const favouritePersons = [];
   const personWhoFavouritedYours = [];
@@ -321,21 +324,22 @@ export async function generateRandomProfileMatchs(allUsers: any, n: any) {
 
     favouritePersons.push({
       id: v4(),
-      UserId: user1.getDataValue('id'),
-      favouritePersonId: user2.getDataValue('id')
+      UserId: user1.getDataValue("id"),
+      favouritePersonId: user2.getDataValue("id"),
     });
 
     user2 = allUsers[randomRangeGenerator(1, n)];
     personWhoFavouritedYours.push({
       id: v4(),
-      UserId: user1.getDataValue('id'),
-      personWhoFavoritedYouID: user2.getDataValue('id')
+      UserId: user1.getDataValue("id"),
+      personWhoFavoritedYouID: user2.getDataValue("id"),
     });
   }
 
   await Schema.FavouritePerson.bulkCreate([...favouritePersons]);
-  await Schema.PersonWhoFavouritedHimself.bulkCreate([...personWhoFavouritedYours]);
-
+  await Schema.PersonWhoFavouritedHimself.bulkCreate([
+    ...personWhoFavouritedYours,
+  ]);
 }
 
 // ~~~~~~~~~~~~~~~~~~~~ FAKE DATA GENERATOR ~~~~~~~~~~~~~~~~~~~~~~~~~
