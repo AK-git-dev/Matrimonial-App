@@ -124,6 +124,11 @@ export interface PrefferedPartnerInterface {
   maxAge: string;
   expectedSalary: string;
   salaryType: string;
+  caste: string;
+  occupation: string;
+  country: string;
+  martitialStatus: string;
+  prefferedMotherTounge: string[];
 }
 
 

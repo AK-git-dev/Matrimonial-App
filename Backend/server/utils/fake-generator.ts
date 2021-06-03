@@ -187,6 +187,7 @@ export async function generateRelativeInformation(allUsers: any, n: number) {
     relativeinfos.push({
       id: v4(),
       UserId: user.getDataValue("id"),
+      fullname: fakerStatic.name.firstName() + ' ' + fakerStatic.name.lastName(),
       type:
         probablity > 8
           ? "Father"

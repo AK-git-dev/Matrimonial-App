@@ -27,13 +27,23 @@ export const getAllUsersWithAllDetails = async () =>
         model: Schema.LifeStyle,
         include: [
           { model: Schema.Movie, as: "favouriteMovies" },
-          { model: Schema.VaccationDestination, as: "honeymoonPlaces" },
+          {
+            model: Schema.VaccationDestination,
+            as: "favoriteDestinationPlaces",
+          },
           { model: Schema.Languages, as: "languagesCanSpeak" },
         ],
       },
       { model: Schema.UploadedDocument },
       { model: Schema.Occupation },
-      { model: Schema.PrefferedPartnerChoice },
+      {
+        model: Schema.PrefferedPartnerChoice,
+        include: [
+          {
+            model: Schema.PrefferedPartnerLanguages,
+          },
+        ],
+      },
       { model: Schema.FamilyDetails },
       { model: Schema.ProfilPicture },
       { model: Schema.RelativeContact },

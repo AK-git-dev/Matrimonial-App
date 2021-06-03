@@ -48,19 +48,25 @@ function buildAssociationsBetweenSchemas() {
   User.hasOne(UploadedDocument);
   User.hasOne(Caste);
   RelativeContact.hasOne(PrivacySetting);
-  
+
   Languages.belongsToMany(PrefferedPartnerChoice, {
     as: "prefferedMotherTounge",
     through: PrefferedPartnerLanguages,
   });
 
+  PrefferedPartnerChoice.hasOne(PrefferedPartnerLanguages);
+
   LifeStyle.hasMany(Movie, { as: "favouriteMovies" });
   LifeStyle.hasMany(Books, { as: "favouriteBooks" });
   LifeStyle.hasMany(Song, { as: "favouriteSongs" });
   LifeStyle.hasMany(Hobby);
-  LifeStyle.hasMany(VaccationDestination, { as: "honeymoonPlaces" });
+  LifeStyle.hasMany(VaccationDestination, { as: "favoriteDestinationPlaces" });
   LifeStyle.belongsTo(PrivacySetting);
   LifeStyle.hasMany(Languages, { as: "languagesCanSpeak" });
+
+  Movie.belongsToMany(LifeStyle, {through: 'moviesLifestyles'});
+  VaccationDestination.belongsToMany(LifeStyle,  {through: 'vaccationLifestyles'});
+  Languages.belongsToMany(LifeStyle, { through: "vaccationLanguages" });
 
   Education.belongsTo(User);
 }
@@ -93,7 +99,7 @@ const Schema = {
   RequestAccepted,
   RequestSend,
   BlockedUsers,
-  PrefferedPartnerLanguages
+  PrefferedPartnerLanguages,
 };
 
 export { Schema, buildAssociationsBetweenSchemas };
