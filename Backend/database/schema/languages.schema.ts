@@ -5,7 +5,7 @@ const Languages = db.schema.define(
   "Languages",
   {
     name: {
-      type: DataTypes.STRING(20),
+      type: DataTypes.STRING(80),
       allowNull: false,
       primaryKey: true,
     },

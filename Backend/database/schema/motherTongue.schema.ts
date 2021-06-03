@@ -14,7 +14,7 @@ const MotherTongue = db.schema.define ('MotherTongues' , {
         primaryKey: true,
     } ,
     LanguageName :{
-        type :DataTypes.UUID ,
+        type :DataTypes.STRING(80),
         allowNull :false ,
         references :{
             model :Languages ,

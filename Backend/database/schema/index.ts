@@ -49,7 +49,6 @@ function buildAssociationsBetweenSchemas() {
     User.hasOne (UploadedDocument);
     User.hasOne (Caste);
     RelativeContact.hasOne (PrivacySetting);
-
     User.hasOne (MotherTongue);
 
     Languages.belongsToMany (PrefferedPartnerChoice , {
