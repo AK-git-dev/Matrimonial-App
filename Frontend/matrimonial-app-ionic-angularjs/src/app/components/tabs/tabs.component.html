@@ -1,30 +1,60 @@
 <ion-tabs>
   <ion-tab-bar slot="bottom" style="height: 100px;">
     <ion-tab-button [routerLink]="['/user-home']">
-      <ion-icon name="home1"></ion-icon>
-      <ion-label>Home</ion-label>
+      <ion-grid>
+        <ion-row>
+            <ion-icon name="home1"></ion-icon>
+        </ion-row>
+        <ion-row>
+          <ion-label>Home</ion-label>
+        </ion-row>
+      </ion-grid>
     </ion-tab-button>
-    
+
     <ion-tab-button [routerLink]="['/search']">
-      <ion-icon name="search1"></ion-icon>
-      <ion-label>Search</ion-label>
+      <ion-grid>
+        <ion-row>
+          <ion-icon name="search1"></ion-icon>
+        </ion-row>
+        <ion-row>
+          <ion-label>Search</ion-label>
+        </ion-row>
+      </ion-grid>
     </ion-tab-button>
 
     <ion-tab-button [routerLink]="['/']">
-      <ion-icon name="matches"></ion-icon>
-      <ion-label>Matches</ion-label>
+      <ion-grid>
+        <ion-row>
+          <ion-icon name="matches"></ion-icon>
+        </ion-row>
+        <ion-row>
+          <ion-label>Matches</ion-label>
+        </ion-row>
+      </ion-grid>
     </ion-tab-button>
 
     <ion-tab-button [routerLink]="['/request']">
-      <ion-icon name="request"></ion-icon>
-      <ion-label>Request</ion-label>
+      <ion-grid>
+        <ion-row>
+          <ion-icon name="request"></ion-icon>
+        </ion-row>
+        <ion-row>
+          <ion-label>Request</ion-label>
+        </ion-row>
+      </ion-grid>
     </ion-tab-button>
 
 
     <ion-tab-button (click)="presentModal()">
-      <ion-icon name="notification"></ion-icon>
-      <ion-label>Notification</ion-label>
+      <ion-grid>
+        <ion-row>
+          <ion-icon name="notification"></ion-icon>
+        </ion-row>
+        <ion-row>
+          <ion-label>Notification</ion-label>
+        </ion-row>
+      </ion-grid>
     </ion-tab-button>
-    
+
   </ion-tab-bar>
 </ion-tabs>
