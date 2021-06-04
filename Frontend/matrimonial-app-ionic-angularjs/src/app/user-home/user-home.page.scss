@@ -15,7 +15,7 @@ ion-menu-button {
 
 .title {
     position: absolute;
-    top: 15%;
+    top: 30%;
 
     font-family: Roboto;
     font-style: normal;
@@ -28,8 +28,7 @@ ion-menu-button {
 
 .l1 {
     position: absolute;
-    left: 3%;
-    top: 50%;
+    top: 70%;
 
     font-family: Roboto;
     font-style: normal;
@@ -81,6 +80,7 @@ ion-menu-button {
     font-size: 15px;
     line-height: 18px;
     color: #000000;
+    padding-top: 0%;
 }
 
 .lab2 {
@@ -92,13 +92,12 @@ ion-menu-button {
     font-weight: normal;
     font-size: 12px;
     line-height: 14px;
-
+    padding-top: 0%;
     color: #6f7094;
 }
 
 .lab3 {
-    position: absolute;
-    right: 8%;
+    // position: absolute;
     padding-top: 5%;
     font-family: Roboto;
     font-style: normal;
@@ -110,44 +109,35 @@ ion-menu-button {
 }
 
 .img1 {
-    width: 110px;
+    width: 100%;
     height: 150px;
-    background-image: url(../../assets/profile_visitor/i1.png);
-    position: absolute;
-    left: 5%;
-    top: 30%;
+    background-image: url(../../assets/user_home/download.jpg);
+    
+    margin-top: 10%;
+    
 }
 
 .lab4 {
-    position: absolute;
-    top: 85px;
-    left: 140px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;
+    margin-top: 5%;
     color: #000000;
 }
 
 .lab5 {
-    position: absolute;
-    top: 105px;
-    left: 140px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     line-height: 14px;
     text-align: center;
-
     color: #ff0000;
 }
 
 .lab6 {
-    position: absolute;
-    top: 125px;
-    left: 140px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -158,9 +148,6 @@ ion-menu-button {
 }
 
 .lab7 {
-    position: absolute;
-    top: 125px;
-    left: 240px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -171,9 +158,6 @@ ion-menu-button {
 }
 
 .lab8 {
-    position: absolute;
-    top: 145px;
-    left: 140px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -184,9 +168,6 @@ ion-menu-button {
 }
 
 .lab9 {
-    position: absolute;
-    top: 145px;
-    left: 220px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -197,9 +178,6 @@ ion-menu-button {
 }
 
 .lab10 {
-    position: absolute;
-    top: 175px;
-    left: 140px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -207,12 +185,10 @@ ion-menu-button {
     line-height: 16px;
 
     color: #000000;
+    padding: 5px;
 }
 
 .lab11 {
-    position: absolute;
-    top: 195px;
-    left: 140px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -220,13 +196,9 @@ ion-menu-button {
     line-height: 16px;
 
     color: #000000;
+    padding: 5px;
 }
 
-.btn1 {
-    position: absolute;
-    top: 210px;
-    left: 130px;
-}
 
 
 .footer1 {
@@ -238,7 +210,9 @@ ion-menu-button {
 
 
 ion-slides {
-    height: 55%;
+    height: 70%;
+    border: 1px solid #000000;
+    border-radius: 25px;
 }
 
 .div1 {

@@ -8,10 +8,10 @@
         <ion-row>
           <ion-col size="2">
             <div>
-            <ion-buttons slot="start">
-              <ion-menu-button color="light"></ion-menu-button>
-            </ion-buttons>
-          </div>
+              <ion-buttons slot="start">
+                <ion-menu-button color="light"></ion-menu-button>
+              </ion-buttons>
+            </div>
           </ion-col>
           <ion-col size="6">
             <ion-title class="title">Good morning!</ion-title>
@@ -33,7 +33,7 @@
 
 
 <ion-content [fullscreen]="true">
-  
+
 
   <ion-grid>
     <ion-row>
@@ -84,88 +84,172 @@
   </ion-grid>
 
 
-
   <ion-slides pager="true" [options]="slideOpts">
+
     <ion-slide>
-      <div class="div1">
 
-        <div>
-          <ion-label class="lab1">New Joined Members</ion-label>
-          <ion-label class="lab3" [routerLink]="['/profile-visitor']"><u>View All</u></ion-label>
-          <br>
-          <ion-label class="lab2">Members who joined recently</ion-label>
-        </div>
+      <ion-grid>
 
-        <div>
-          <ion-icon class="img1"></ion-icon>
-          <ion-label class="lab4">Atish Singh</ion-label>
-          <ion-label class="lab5">Trust Score {{ 70 }}</ion-label>
-          <ion-label class="lab6">Age: {{ 26 }}</ion-label>
-          <ion-label class="lab7">Religion: Hindu</ion-label>
-          <ion-label class="lab8">Height: 5'11</ion-label>
-          <ion-label class="lab9">Mother Tounge: Marathi</ion-label>
-          <ion-label class="lab10">Location: Maharashtra, India</ion-label>
-          <ion-label class="lab11">Salary: 12-15 Lac </ion-label>
-          <ion-button color="danger" shape="round" class="btn1" size="small">Send Interest</ion-button>
-        </div>
+        <ion-row>
+          <ion-col size="8">
 
-      </div>
+            <ion-label class="lab1">New Joined Members</ion-label><br>
+            <ion-label class="lab2">Members who joined recently</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label class="lab3" [routerLink]="['/profile-visitor']"><u>View All</u></ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <ion-icon class="img1"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-row>
+              <ion-label class="lab4">Atish Singh</ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-label class="lab5">Trust Score {{ 70 }}</ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-col size="5">
+                <ion-label class="lab6">Age: {{ 26 }}</ion-label>
+              </ion-col>
+              <ion-col>
+                <ion-label class="lab7">Religion: Hindu</ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="5">
+                <ion-label class="lab8">Height: 5'11</ion-label>
+              </ion-col>
+              <ion-col>
+                <ion-label class="lab9">Mother Tounge: Marathi</ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-label class="lab10">Location: Maharashtra, India</ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-label class="lab11">Salary: 12-15 Lac </ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-button color="danger" shape="round" class="btn1" size="small">Send Interest</ion-button>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+
+      <ion-grid>
+
+        <ion-row>
+          <ion-col size="8">
+
+            <ion-label class="lab1">Match of the day!!!</ion-label><br>
+            <ion-label class="lab2">Top picks handpicked for you</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label class="lab3" [routerLink]="['/profile-visitor']"><u>View All</u></ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <ion-icon class="img1"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-row>
+              <ion-label class="lab4">Atish Singh</ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-label class="lab5">Trust Score {{ 70 }}</ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-col size="5">
+                <ion-label class="lab6">Age: {{ 26 }}</ion-label>
+              </ion-col>
+              <ion-col>
+                <ion-label class="lab7">Religion: Hindu</ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="5">
+                <ion-label class="lab8">Height: 5'11</ion-label>
+              </ion-col>
+              <ion-col>
+                <ion-label class="lab9">Mother Tounge: Marathi</ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-label class="lab10">Location: Maharashtra, India</ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-label class="lab11">Salary: 12-15 Lac </ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-button color="danger" shape="round" class="btn1" size="small">Send Interest</ion-button>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
 
     </ion-slide>
     <ion-slide>
 
-      <div class="div1">
+      <ion-grid>
 
-        <div>
-          <ion-label class="lab1">Match of the day</ion-label>
-          <ion-label class="lab3" [routerLink]="['/profile-visitor']"><u>View All</u></ion-label>
-          <br>
-          <ion-label class="lab2">Top picks handpicked for you</ion-label>
-        </div>
+        <ion-row>
+          <ion-col size="8">
 
-        <div>
-          <ion-icon class="img1"></ion-icon>
-          <ion-label class="lab4">Atish Singh</ion-label>
-          <ion-label class="lab5">Trust Score {{ 70 }}</ion-label>
-          <ion-label class="lab6">Age: {{ 26 }}</ion-label>
-          <ion-label class="lab7">Religion: Hindu</ion-label>
-          <ion-label class="lab8">Height: 5'11</ion-label>
-          <ion-label class="lab9">Mother Tounge: Marathi</ion-label>
-          <ion-label class="lab10">Location: Maharashtra, India</ion-label>
-          <ion-label class="lab11">Salary: 12-15 Lac </ion-label>
-          <ion-button color="danger" shape="round" class="btn1" size="small">Send Interest</ion-button>
-        </div>
-
-      </div>
-
+            <ion-label class="lab1">Profile Visitors</ion-label><br>
+            <ion-label class="lab2">Your Profile has been visited by the following</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label class="lab3" [routerLink]="['/profile-visitor']"><u>View All</u></ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <ion-icon class="img1"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-row>
+              <ion-label class="lab4">Atish Singh</ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-label class="lab5">Trust Score {{ 70 }}</ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-col size="5">
+                <ion-label class="lab6">Age: {{ 26 }}</ion-label>
+              </ion-col>
+              <ion-col>
+                <ion-label class="lab7">Religion: Hindu</ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="5">
+                <ion-label class="lab8">Height: 5'11</ion-label>
+              </ion-col>
+              <ion-col>
+                <ion-label class="lab9">Mother Tounge: Marathi</ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-label class="lab10">Location: Maharashtra, India</ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-label class="lab11">Salary: 12-15 Lac </ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-button color="danger" shape="round" class="btn1" size="small">Send Interest</ion-button>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-slide>
-    <ion-slide>
 
-      <div class="div1">
-
-        <div>
-          <ion-label class="lab1">Profile Visitors</ion-label>
-          <ion-label class="lab3" [routerLink]="['/profile-visitor']"><u>View All</u></ion-label>
-          <br>
-          <ion-label class="lab2">Your profile has been visited by the following</ion-label>
-        </div>
-
-        <div>
-          <ion-icon class="img1"></ion-icon>
-          <ion-label class="lab4">Atish Singh</ion-label>
-          <ion-label class="lab5">Trust Score {{ 70 }}</ion-label>
-          <ion-label class="lab6">Age: {{ 26 }}</ion-label>
-          <ion-label class="lab7">Religion: Hindu</ion-label>
-          <ion-label class="lab8">Height: 5'11</ion-label>
-          <ion-label class="lab9">Mother Tounge: Marathi</ion-label>
-          <ion-label class="lab10">Location: Maharashtra, India</ion-label>
-          <ion-label class="lab11">Salary: 12-15 Lac </ion-label>
-          <ion-button color="danger" shape="round" class="btn1" size="small">Send Interest</ion-button>
-        </div>
-
-      </div>
-
-    </ion-slide>
   </ion-slides>
 
   <ion-card>
