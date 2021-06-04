@@ -178,7 +178,11 @@ const routes: Routes = [
   {
     path: 'success-stories',
     loadChildren: () => import('./success-stories/success-stories.module').then( m => m.SuccessStoriesPageModule)
+  },  {
+    path: 'privacy-policy',
+    loadChildren: () => import('./privacy-policy/privacy-policy.module').then( m => m.PrivacyPolicyPageModule)
   }
+
 
 
 

@@ -1,0 +1,162 @@
+<ion-content>
+  <ion-title>
+    <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/user-home']"></ion-icon>
+    Privacy Policy
+  </ion-title>
+<div class="con">
+  <div class="container">
+    <ion-list class="l1">
+  
+      <ion-item  class="i1">
+       <p class="p">This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our mobile application (the “Application”).   Please read this Privacy Policy carefully.  IF YOU DO NOT AGREE WITH THE TERMS OF THIS PRIVACY POLICY, PLEASE DO NOT ACCESS THE APPLICATION. </p>
+      </ion-item>
+      <!-----------------------------------------------z COLLECTION OF YOUR INFORMATION ---------------------------------------------------->
+      <ion-item (click)="isDown === true ? isDown = false: isDown = true">
+        <!-- <ion-icon class="i1" size="large"></ion-icon> -->
+        <ion-label class="la1">COLLECTION OF YOUR INFORMATION</ion-label>
+        <ion-icon [name]="isDown? 'caret-down-outline': 'caret-up-outline'" color="light"></ion-icon>
+      </ion-item>
+      <ion-menu-toggle auto-hide="false">
+        <ion-list [hidden]="isDown" lines="none" class="mylist">
+          <ion-item>
+            <ion-grid>
+              <ion-row>
+                <p>We may collect information about you in a variety of ways. 
+                  The information we may collect via the Application depends on the content and materials you use, and includes:  </p>
+              </ion-row>
+  
+              <ion-row>
+                <h2>Personal Data</h2>
+              </ion-row>
+              <ion-row>
+                 <p>Demographic and other personally identifiable information (such as your name and email address) that you voluntarily give to us when choosing to participate in various activities related to the Application, such as chat, posting messages in comment sections or in our forums, liking posts, sending feedback, and responding to surveys.  If you choose to share data about yourself via your profile, online chat, or other interactive areas of the Application, please be advised that all data you disclose in these areas is public and your data will be accessible to anyone who accesses the Application.</p>
+              </ion-row>
+  
+              <ion-row>
+                <h2>Derivative Data</h2>
+              </ion-row>
+              <ion-row>
+                 <p>Information our servers automatically collect when you access the Application, such as your native actions that are integral to the Application, including liking, 
+                   re-blogging, or replying to a post, as well as other interactions with the Application and other users via server log files.  </p>
+              </ion-row>
+  
+              <ion-row>
+              <h2>Financial Data</h2>
+            </ion-row>
+            <ion-row>
+               <p>Financial information, such as data related to your payment method (e.g. valid credit card number, card brand, expiration date) that we may collect when you purchase, order, return, exchange, or request information about our services from the Application. [We store only very limited, if any, financial information that we collect. Otherwise, all financial information is stored by our payment processor,  [Amazon Payments,] [Authornize.Net,]  [Braintree Payments,] [Chargify,] [Dwolla,] [Google Checkout,] [Paypal,] [SafeCharge,] [Stripe,] [WePay,] [2Checkout,] [other], and you are encouraged to review their privacy policy and contact them directly for responses to your questions.</p>
+            </ion-row>
+  
+            <ion-row>
+              <h2>Facebook Permissions  </h2>
+            </ion-row>
+            <ion-row>
+              <p>The Application may by default access your Facebook basic account information, including your name, email, gender, birthday, current city, and profile picture URL, as well as other information that you choose to make public. We may also request access to other permissions related to your account, such as friends, checkins, and likes, and you may choose to grant or deny us access to each individual permission. For more information regarding Facebook permissions, refer to the Facebook Permissions Reference page.</p>      
+             </ion-row>
+  
+             <ion-row>
+              <h2>Facebook Permissions  </h2>
+            </ion-row>
+            <ion-row>
+              <p>The Application may by default access your Facebook basic account information, including your name, email, gender, birthday, current city, and profile picture URL, as well as other information that you choose to make public. We may also request access to other permissions related to your account, such as friends, checkins, and likes, and you may choose to grant or deny us access to each individual permission. For more information regarding Facebook permissions, refer to the Facebook Permissions Reference page.</p>      
+             </ion-row>
+  
+  
+             <ion-row>
+              <h2>Data from Social Networks  </h2>
+            </ion-row>
+            <ion-row>
+              <p>User information from social networking sites, such as [Apple’s Game Center, Facebook, Google+ Instagram, Pinterest, Twitter], including your name, your social network username, location, gender, birth date, email address, profile picture, and public data for contacts, if you connect your account to such social networks. This information may also include the contact information of anyone you invite to use and/or join the Application.</p>      
+             </ion-row>
+  
+            </ion-grid>
+          </ion-item>
+  
+        
+        </ion-list>
+      </ion-menu-toggle>
+      <!-- ------------------------------------------DISCLOSURE OF YOUR INFORMATION----------------------------------------------- -->
+  
+    </ion-list>
+    <ion-item (click)="isDown === true ? isDown = false: isDown = true">
+      <!-- <ion-icon class="i1" size="large"></ion-icon> -->
+      <ion-label class="la1">DISCLOSURE OF YOUR INFORMATION</ion-label>
+      <ion-icon [name]="isDown? 'caret-down-outline': 'caret-up-outline'" color="light"></ion-icon>
+    </ion-item>
+    <ion-menu-toggle auto-hide="false">
+      <ion-list [hidden]="isDown" lines="none" class="mylist">
+        <ion-item>
+          <ion-grid>
+            <ion-row>
+              <p class="p">We may share information we have collected about you in certain situations. Your information may be disclosed as follows: </p>
+            </ion-row>
+  
+            <ion-row>
+              <h2>By Law or to Protect Rights </h2>
+            </ion-row>
+            <ion-row>
+               <p>If we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others, we may share your information as permitted or required by any applicable law, rule, or regulation.  This includes exchanging information with other entities for fraud protection and credit risk reduction.</p>
+            </ion-row>
+  
+            <ion-row>
+              <h2>Third-Party Service Providers </h2>
+            </ion-row>
+            <ion-row>
+               <p>We may share your information with third parties that perform services for us or on our behalf, including payment processing, data analysis, email delivery, hosting services, customer service, and marketing assistance.  </p>
+            </ion-row>
+  
+            <ion-row>
+            <h2>Marketing Communications</h2>
+          </ion-row>
+          <ion-row>
+             <p>With your consent, or with an opportunity for you to withdraw consent, we may share your information with third parties for marketing purposes, as permitted by law.</p>
+          </ion-row>
+  
+          <ion-row>
+            <h2>Interactions with Other Users  </h2>
+          </ion-row>
+          <ion-row>
+            <p>With your consent, or with an opportunity for you to withdraw consent, we may share your information with third parties for marketing purposes, as permitted by law.</p>      
+           </ion-row>
+  
+           <ion-row>
+            <h2>Online Postings </h2>
+          </ion-row>
+          <ion-row>
+            <p>When you post comments, contributions or other content to the Applications, your posts may be viewed by all users and may be publicly distributed outside the Application in perpetuity</p>      
+           </ion-row>
+  
+  
+           <ion-row>
+            <h2>Third-Party Advertisers </h2>
+          </ion-row>
+          <ion-row>
+            <p>We may use third-party advertising companies to serve ads when you visit the Application. These companies may use information about your visits to the Application and other websites that are contained in web cookies in order to provide advertisements about goods and services of interest to you. </p>      
+           </ion-row>
+  
+          </ion-grid>
+        </ion-item>
+  
+      
+      </ion-list>
+    </ion-menu-toggle>
+    <br><br>
+    <form action="">
+  
+    </form>
+    <ion-grid>
+      <ion-row>
+        <br>
+        <ion-checkbox checked="true"></ion-checkbox>
+        <h3 class="agree" >I confirm that I have read. consent and agree to Matrimonial Privacy Policy. 
+          and I am of legal age.</h3>
+      </ion-row>
+      <div class="ion-text-center">
+        <ion-button class="savebutton" >
+          Continue
+        </ion-button>
+        </div>
+    </ion-grid>
+    </div>
+</div>
+</ion-content>
