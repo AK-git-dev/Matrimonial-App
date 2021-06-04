@@ -300,9 +300,9 @@ router.post(
 
       return res.status(202).send({
         ...SUCCESS,
-        message: 'spoken languages are added to your goto lifestyle information'
-      })
-
+        message:
+          "spoken languages are added to your goto lifestyle information",
+      });
     } catch (error) {
       next(error);
     }

@@ -43,7 +43,7 @@ router.get(
 // Controllers
 router.use("/auth", AuthController);
 router.use("/profile", CreateProfileController);
-router.use("profiles-recommendations", ProfileRecommendationController);
+router.use("/profiles-recommendations", ProfileRecommendationController);
 router.use("/users", UserController);
 router.use("/upload-service", FileUploaderController);
 
