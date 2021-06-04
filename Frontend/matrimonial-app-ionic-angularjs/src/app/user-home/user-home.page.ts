@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonInfiniteScroll } from '@ionic/angular';
+import { IonInfiniteScroll, PopoverController } from '@ionic/angular';
+import { UserPopoverComponent } from '../components/user-popover/user-popover.component';
 
 @Component({
   selector: 'app-user-home',
@@ -13,7 +14,7 @@ export class UserHomePage implements OnInit {
   @ViewChild(IonInfiniteScroll)
   infiniteScroll: IonInfiniteScroll;
 
-  constructor() { }
+  constructor(private popoverController: PopoverController) { }
 
   ngOnInit() {
   }
@@ -29,6 +30,21 @@ export class UserHomePage implements OnInit {
         event.target.disabled = true;
       }
     }, 10000);
+  }
+
+  async presentPopover(ev: any) {
+    const popover = await this.popoverController.create({
+      component: UserPopoverComponent,
+      cssClass: 'my-custom-class',
+      event: ev,
+      translucent: true,
+      backdropDismiss: true
+    });
+    await popover.present();
+
+    const { role } = await popover.onDidDismiss();
+    console.log('onDidDismiss resolved with role', role);
+    console.log(role)
   }
 
 }

@@ -4,12 +4,14 @@
   <ion-header>
     <ion-toolbar color="primary" style="height: 210px;">
       <div style="background-color: #4C0890;">
-        <ion-avatar class="avat">
+        <ion-avatar class="avat" [routerLink]="['/edit-profile']">
           <img src="../../assets/user_home/avatar.svg">
         </ion-avatar>
         <div style="text-align: center;">
+          <div [routerLink]="['/edit-profile']">
           <ion-label class="l1">Aashray Jain</ion-label><br>
           <ion-label class="l2">Id: {{ id }}</ion-label><br>
+          </div>
           <ion-label class="l3">Trust Score {{ score }}</ion-label>
         </div>
       </div>

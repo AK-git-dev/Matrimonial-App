@@ -18,7 +18,7 @@
             <ion-label class="l1">{{ username }}</ion-label>
           </ion-col>
           <ion-col size="4">
-            <ion-avatar class="icon1">
+            <ion-avatar class="icon1" (click)="presentPopover($event)">
               <img src="../../assets/user_home/avatar.svg">
             </ion-avatar>
           </ion-col>
