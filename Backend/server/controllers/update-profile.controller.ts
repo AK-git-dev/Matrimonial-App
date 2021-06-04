@@ -282,6 +282,7 @@ router.delete(
 router.post(
   "/update-lifestyle/:lifeStyleId/add-languages",
   requiresAuth,
+  requiresAuth,
   async (req: RequestInterface, res: ResponseInterface, next: Next) => {
     try {
       const LifeStyleId: string = (req as any).params.lifeStyleId;
@@ -290,9 +291,18 @@ router.post(
 
       const finalPayload = payload.map((lang) => {
         return {
+          name: lang.languageName,
           LifeStyleId,
         };
       });
+
+      await Schema.LifestyleLanguage.bulkCreate([...finalPayload]);
+
+      return res.status(202).send({
+        ...SUCCESS,
+        message: 'spoken languages are added to your goto lifestyle information'
+      })
+
     } catch (error) {
       next(error);
     }

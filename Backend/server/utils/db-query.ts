@@ -32,7 +32,7 @@ export const getAllUsersWithAllDetails = async () =>
             model: Schema.VaccationDestination,
             as: "favoriteDestinationPlaces",
           },
-          { model: Schema.Languages, as: "languagesCanSpeak" },
+          { model: Schema.LifestyleLanguage },
         ],
       },
       { model: Schema.UploadedDocument },

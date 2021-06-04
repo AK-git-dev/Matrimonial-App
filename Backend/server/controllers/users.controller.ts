@@ -19,6 +19,7 @@ router.get(
       // await fakeDataGenerator();
 
       // await Schema.Languages.create({name: 'hindi'});
+      //   await Schema.Languages.create({name: 'bengali'});
 
       const allUsers = await getAllUsersWithAllDetails();
 

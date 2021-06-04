@@ -27,6 +27,7 @@ import FamilyDetails from "./family-details.schema";
 import PrefferedPartnerChoice from "./preffered-partner.schema";
 import PrefferedPartnerLanguages from "./prefferedPartner-languages.schema";
 import MotherTongue from "./motherTongue.schema";
+import LifestyleLanguage from "./lifestyle-language.schema";
 
 /** Will configure the association Mappings (1:N) / (M:N) / (N:1)  */
 function buildAssociationsBetweenSchemas() {
@@ -64,13 +65,13 @@ function buildAssociationsBetweenSchemas() {
   LifeStyle.hasMany(Hobby);
   LifeStyle.hasMany(VaccationDestination, { as: "favoriteDestinationPlaces" });
   LifeStyle.belongsTo(PrivacySetting);
-  LifeStyle.hasMany(Languages, { as: "languagesCanSpeak" });
+  LifeStyle.hasMany(LifestyleLanguage);
 
   Movie.belongsToMany(LifeStyle, { through: "moviesLifestyles" });
   VaccationDestination.belongsToMany(LifeStyle, {
     through: "vaccationLifestyles",
   });
-  Languages.belongsToMany(LifeStyle, { through: "vaccationLanguages" });
+  // Languages.belongsToMany(LifeStyle, { through: LifestyleLanguage });
 
   Education.belongsTo(User);
 }
@@ -82,6 +83,7 @@ const Schema = {
   Education,
   Address,
   MotherTongue,
+  LifestyleLanguage,
   TrustScore,
   Caste,
   UploadedDocument,
