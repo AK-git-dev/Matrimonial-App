@@ -180,6 +180,8 @@ const routes: Routes = [
 
 
 
+
+
   // {
   //   path: 'tab1',
   //   loadChildren: () => import('./tabs/tab1/tab1.module').then( m => m.Tab1PageModule)

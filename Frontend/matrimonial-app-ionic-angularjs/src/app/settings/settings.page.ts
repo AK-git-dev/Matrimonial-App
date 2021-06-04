@@ -84,8 +84,6 @@ export class SettingsPage implements OnInit {
        header: 'Rate Us...',
         message: 'Hi, Take a minute to rate this app and help support to improve more new features.',
         buttons: ['Pass','Rate it!','Ask Later']
-      
-      
     });
     await alert.present();
   }
