@@ -1,9 +1,11 @@
 .label1 {
-    position: absolute;
+    // position: absolute;
     width: 236px;
     height: 35px;
-    left: 91px;
-    top: 134px;
+    // left: 91px;
+    // top: 134px;
+    margin-left: auto;
+    margin-right: auto;
 
     font-family: Roboto;
     font-style: normal;
@@ -13,16 +15,16 @@
     text-align: center;
 
     color: #fbf9f9;
-
-    border: 1px solid rgba(0, 0, 0, 0.27);
 }
 
 .label2 {
-    position: absolute;
+    // position: absolute;
     width: 152px;
     height: 49px;
-    left: 119.99px;
-    top: 169px;
+    // left: 119.99px;
+    // top: 169px;
+    margin-left: auto;
+    margin-right: auto;
 
     font-family: Roboto;
     font-style: normal;
@@ -35,11 +37,9 @@
 }
 
 .label3 {
-    position: absolute;
+    // position: absolute;
     width: 68px;
     height: 23px;
-    left: 321px;
-    top: 199px;
 
     font-family: Roboto;
     font-style: normal;
@@ -62,7 +62,7 @@
     position: absolute;
     width: 100%;
     left: 0px;
-    top: 230px;
+    top: 250px;
 
     background: #fbf9f9;
     border-radius: 30px 30px 0px 0px;
@@ -73,64 +73,56 @@ ion-icon[name="arrow-back-outline"] {
 }
 
 .icon1 {
-    position: absolute;
     width: 80px;
     height: 80px;
-    left: 158.99px;
-    top: 35px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: white;
-    padding: 5px;
     border-radius: 50%;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    background-image: url(../../assets/proflie_creation/proflie.png);
 }
 
 .camera {
-    position: absolute;
     width: 20px;
     height: 19.09px;
-    left: 336px;
-    top: 16px;
 
     background: url("../../assets/proflie_creation/camera.png");
 }
 
 .eye {
-    position: absolute;
     width: 22px;
     height: 18px;
-    left: 378px;
-    top: 16px;
 
     background: url("../../assets/proflie_creation/eye.png");
 }
 
 .verify {
-    position: absolute;
+    // position: absolute;
     width: 24px;
     height: 24px;
-    left: 290px;
-    top: 198px;
+    margin-left: auto;
+    // left: 290px;
+    // top: 198px;
     background: url(../../assets/proflie_creation/verifiy.png);
 }
 
 ion-button[name="btn2"] {
-    width: 200px;
-    height: 70px;
-    left: 7px;
-    top: 240px;
-
+    width: 150px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     background: #4c0890;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
 }
 
 ion-button[name="btn3"] {
-    width: 200px;
-    height: 70px;
-    left: 209px;
-    top: 239px;
-
+    width: 150px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     background: #934cda;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
