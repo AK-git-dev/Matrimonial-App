@@ -5,25 +5,31 @@
     height: 140px;
 }
 
+.sc-ion-buttons-md-h {
+    display: block !important;
+}
+
+ion-menu-button {
+    font-size: 50px !important;
+}
+
 .title {
     position: absolute;
-    left: 40px;
-    top: 30px;
+    top: 15%;
 
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
-    /* identical to box height */
-
     color: #fbf9f9;
+    padding: 5px;
 }
 
 .l1 {
     position: absolute;
-    left: 60px;
-    top: 51px;
+    left: 3%;
+    top: 50%;
 
     font-family: Roboto;
     font-style: normal;
@@ -35,16 +41,16 @@
     text-align: center;
 
     color: #ffffff;
-
-    border: 1px solid rgba(251, 249, 249, 0.14);
+    padding: 5px;
 }
 
 .icon1 {
     position: absolute;
+    right: 10%;
     width: 50px;
     height: 50px;
-    left: 342px;
-    top: 32px;
+    // left: 342px;
+    // top: 32px;
 }
 
 .b {
