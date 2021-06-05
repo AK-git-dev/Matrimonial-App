@@ -8,11 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class EditProfilePage implements OnInit {
 
   constructor() { }
+  segmentModel = 'about';
 
   username: string = "Aashray Jain";
   userId: number = 12345;
 
   ngOnInit() {
+  }
+
+  segmentChanged(event) {
+    console.log(event)
   }
 
 }
