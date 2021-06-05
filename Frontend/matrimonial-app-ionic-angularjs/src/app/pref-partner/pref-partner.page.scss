@@ -6,31 +6,15 @@
 }
 
 ion-icon[name="arrow-back-outline"] {
-    
+    padding-top: 33px;
+    padding-left: 5px;
     color: white;
 }
 
-ion-content {
-    --background: none;
-    background-color: #4c0890;
-    position: relative;
-}
 
-img {
-    position: absolute;
-width: 30px;
-height: 28px;
-left: 15px;
-top: 35px;
-font-size: 24px;
-line-height: 28px;
-color: #FBF9F9;
-
-}
 
 h4{
-   /* Preferred Partner */
-
+   
 position: absolute;
 width: 204px;
 height: 28px;
@@ -53,304 +37,212 @@ background: #FBF9F9;
 border-radius: 30px 30px 0px 0px;
 
 }
+ion-grid{
+    padding: 40px;
+}
 
-// /////////////////////////////////////////////////////////// Min age
+ion-row{
+    padding-top: 10px;
+}
+// ///////////////////////////////////////////////////////////age
 
 .min1 {
- 
-position: absolute;
-width: 109px;
-height: 21px;
-padding-left: 30px;
-top: 10px;
-font-size: 18px;
-line-height: 21px;
-color: #000000;
-}
-
-.min {
-    /* Rectangle 142 */
-
-position: absolute;
-width: 120px;
-height: 24px;
-left: 30px;
-top: 40px;
-background: #FBF9F9;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
- 
-// //////////////////////////////////////////// Max age
-.max2 {
- 
-/* Max Age * */
-
-position: absolute;
-width: 103px;
-height: 21px;
-left: 249px;
-top: 10px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.max {
-    position: absolute;
-    width: 120px;
     height: 21px;
-    left: 210px;
-    top: 40px;
+    text-align: left;
+    font-size: 18px;
+line-height: 21px;
+color: #000000;
+}
+
+.max2 {
+    position: absolute;
+   padding-left: 50%;
+    text-align: end;
     font-size: 18px;
     line-height: 21px;
     color: #000000;
-
-    background: #FBF9F9;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
 }
 
-// //////////////////////////////////////// Min height
-
-.min3 {
-    position: absolute;
-width: 190px;
-height: 21px;
-padding-left: 30px;
-top: 80px;
-font-size: 18px;
-line-height: 21px;
-color: #000000;
-}
-
-.minheight {
-    position: absolute;
-width: 120px;
-height: 24px;
-left: 30px;
-top: 110px;
-background: #FBF9F9;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-// ////////////////////////////////////// Max height
-
-.max3 {
-    position: absolute;
-    width: 200px;
-height: 21px;
-left: 210px;
-top: 80px;
-font-size: 18px;
-line-height: 21px;
-color: #000000;
-}
-
-.maxheight {
-    position: absolute;
+.min{
     width: 120px;
-    height: 24px;
-    left: 210px;
-    top: 110px;
+height: 24px;
     background: #FBF9F9;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border: 1px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-// ///////////////////////////////////////////////////// Cast
+.max{
+    position: absolute;
+    left: 59%;
+    width: 120px;
+height: 24px;
+    background: #FBF9F9;
+border: 1px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+// ///////////////////////////////////////////// heoght
+.min3{
+    height: 21px;
+    text-align: left;
+    font-size: 18px;
+line-height: 21px;
+color: #000000;
+}
+.max3{
+   position: absolute;
+   padding-left: 50%;
+    text-align: end;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.minheight{
+    width: 120px;
+height: 24px;
+    background: #FBF9F9;
+border: 1px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.maxheight{
+    position: absolute;
+    left: 59%;
+    width: 120px;
+height: 24px;
+    background: #FBF9F9;
+border: 1px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+///////////////////////////////////////////// CAast
 
 .caste{
-    position: absolute;
-    width: 190px;
     height: 21px;
-    padding-left: 30px;
-    top: 145px;
+    text-align: left;
     font-size: 18px;
-    line-height: 21px;
-    color: #000000;
-}
-
-.castselect {
-    position: absolute;
-    width: 300px;
-    height: 24px;
-    left: 30px;
-    top: 175px;
-    background: #FBF9F9;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-// ///////////////////////////////////////////// language
-.language {
-    position: absolute;
-    width: 190px;
-    height: 21px;
-    padding-left: 30px;
-    top: 215px;
-    font-size: 18px;
-    line-height: 21px;
-    color: #000000;
-}
-
-.languageselect {
-    position: absolute;
-    width: 300px;
-    height: 24px;
-    left: 30px;
-    top: 245px;
-    background: #FBF9F9;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-// //////////////////////////////////////////// salary 
-.salary {
-    position: absolute;
-    width: 190px;
-    height: 21px;
-    padding-left: 30px;
-    top: 280px;
-    font-size: 18px;
-    line-height: 21px;
-    color: #000000;
-}
-
-.sal {
-/* Rectangle 144 */
-
-position: absolute;
-width: 120px;
-height: 24px;
-left: 31px;
-top: 305px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.dol {
-/* Rectangle 188 */
-
-position: absolute;
-width: 120px;
-height: 24px;
-left: 210px;
-top: 305px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-// ////////////////////////////////////////////// occupation
-.MaritialStatus{
-/* Maritial; Status * */
-
-position: absolute;
-width: 133px;
-height: 21px;
-left: 30px;
-top: 350px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
 line-height: 21px;
-/* identical to box height */
-
 color: #000000;
+}
+
+.castselect{
+    width: 96%;
+    height: 24px;
+        background: #FBF9F9;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+// ///////////////////////////////////////////////////// Language
 
 
+.language{
+    height: 21px;
+    text-align: left;
+    font-size: 18px;
+line-height: 21px;
+color: #000000;
+}
+
+.languageselect{
+    width: 96%;
+    height: 24px;
+        background: #FBF9F9;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+// ////////////////////////////////////////////////// Salary
+
+.salary{
+    height: 21px;
+    text-align: left;
+    font-size: 18px;
+line-height: 21px;
+color: #000000;
+}
+
+.rup{
+    width: 120px;
+height: 24px;
+    background: #FBF9F9;
+border: 1px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.dol{
+    position: absolute;
+    left: 59%;
+    width: 120px;
+height: 24px;
+    background: #FBF9F9;
+border: 1px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+// ///////////////////////////////////////////// MaritialStatus
+
+.MaritialStatus {
+    height: 21px;
+    text-align: left;
+    font-size: 18px;
+line-height: 21px;
+color: #000000;
 }
 
 .Status{
-/* Rectangle 189 */
-
-position: absolute;
-width: 300px;
-height: 24px;
-left: 30px;
-top: 385px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
+    width: 96%;
+    height: 24px;
+        background: #FBF9F9;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+
+// //////////////////////////////////// Occupation
 .occupation {
-    position: absolute;
-    width: 190px;
     height: 21px;
-    padding-left: 30px;
-    top: 425px;
+    text-align: left;
     font-size: 18px;
-    line-height: 21px;
-    color: #000000;
+line-height: 21px;
+color: #000000;
 }
 
 .occup{
-    position: absolute;
-    width: 300px;
+   
+    width: 70%;
     height: 24px;
-    left: 30px;
-    top: 460px;
-    background: #FBF9F9;
+        background: #FBF9F9;
     border: 1px solid #000000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-// ////////////////////////////////////////////// country
+
+// /////////////////////////////////// Country & State
 
 .country {
-    position: absolute;
-    width: 190px;
     height: 21px;
-    padding-left: 30px;
-    top: 495px;
+    text-align: left;
     font-size: 18px;
-    line-height: 21px;
-    color: #000000;
+line-height: 21px;
+color: #000000;
 }
 
-.countryselect {
-    position: absolute;
-    width: 300px;
+.countryselect{
+   
+    width: 96%;
     height: 24px;
-    left: 30px;
-    top: 535px;
-    background: #FBF9F9;
+        background: #FBF9F9;
     border: 1px solid #000000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-// ///////////////////////////////////////// Save Button
+// ////////////////////////////////////// Button
 
 .save {
-    /* Rectangle 2 */
 
-position: absolute;
 width: 274px;
 height: 56px;
-left: 37px;
-top: 630px;
-
 background: #4C0890;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 10px;

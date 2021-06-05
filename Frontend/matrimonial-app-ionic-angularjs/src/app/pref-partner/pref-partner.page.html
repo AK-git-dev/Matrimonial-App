@@ -5,36 +5,15 @@
 </div>
 <div class="card">
   <form action="" method="post">
-    <ion-label class="min1">Min Age *</ion-label> <br>
+   <ion-grid>
+   
+    <ion-row>
+      <ion-label class="min1">Min Age *</ion-label>
+      <ion-label class="max2">Max Age *</ion-label>
+    </ion-row>
   
-    <ion-select interface="popover" placeholder="-Select-" class="min" >
-      <ion-select-option value="18">18</ion-select-option>
-      <ion-select-option value="19">19</ion-select-option>
-      <ion-select-option value="20">20 </ion-select-option>
-      <ion-select-option value="21">21 </ion-select-option>
-      <ion-select-option value="22">22 </ion-select-option>
-      <ion-select-option value="23">23</ion-select-option>
-      <ion-select-option value="24">24</ion-select-option>
-      <ion-select-option value="25">25</ion-select-option>
-      <ion-select-option value="26">26</ion-select-option>
-      <ion-select-option value="27">27</ion-select-option>
-      <ion-select-option value="28">28</ion-select-option>
-      <ion-select-option value="29">29</ion-select-option>
-      <ion-select-option value="30">30</ion-select-option>
-      <ion-select-option value="31">31</ion-select-option>
-      <ion-select-option value="32">32</ion-select-option>
-      <ion-select-option value="33">33</ion-select-option>
-      <ion-select-option value="34">34</ion-select-option>
-      <ion-select-option value="35">35</ion-select-option>
-      <ion-select-option value="36">36</ion-select-option>
-      <ion-select-option value="37">37</ion-select-option>
-      <ion-select-option value="38">38</ion-select-option>
-      <ion-select-option value="39">39</ion-select-option>
-      <ion-select-option value="40">40</ion-select-option>
-    </ion-select>
-
-    <ion-label class="max2">Max Age *</ion-label> <br>
-    <ion-select interface="popover" placeholder="-Select-" class="max" >
+<ion-row>
+  <ion-select interface="popover" placeholder="-Select-" class="min" >
     <ion-select-option value="18">18</ion-select-option>
     <ion-select-option value="19">19</ion-select-option>
     <ion-select-option value="20">20 </ion-select-option>
@@ -60,120 +39,177 @@
     <ion-select-option value="40">40</ion-select-option>
   </ion-select>
 
-  <ion-label class="min3">Min Height *</ion-label> <br>
+  
+  <ion-select interface="popover" placeholder="-Select-" class="max" >
+  <ion-select-option value="18">18</ion-select-option>
+  <ion-select-option value="19">19</ion-select-option>
+  <ion-select-option value="20">20 </ion-select-option>
+  <ion-select-option value="21">21 </ion-select-option>
+  <ion-select-option value="22">22 </ion-select-option>
+  <ion-select-option value="23">23</ion-select-option>
+  <ion-select-option value="24">24</ion-select-option>
+  <ion-select-option value="25">25</ion-select-option>
+  <ion-select-option value="26">26</ion-select-option>
+  <ion-select-option value="27">27</ion-select-option>
+  <ion-select-option value="28">28</ion-select-option>
+  <ion-select-option value="29">29</ion-select-option>
+  <ion-select-option value="30">30</ion-select-option>
+  <ion-select-option value="31">31</ion-select-option>
+  <ion-select-option value="32">32</ion-select-option>
+  <ion-select-option value="33">33</ion-select-option>
+  <ion-select-option value="34">34</ion-select-option>
+  <ion-select-option value="35">35</ion-select-option>
+  <ion-select-option value="36">36</ion-select-option>
+  <ion-select-option value="37">37</ion-select-option>
+  <ion-select-option value="38">38</ion-select-option>
+  <ion-select-option value="39">39</ion-select-option>
+  <ion-select-option value="40">40</ion-select-option>
+</ion-select>
+</ion-row>
+
+<ion-row>
+  <ion-label class="min3">Min Height *</ion-label> 
+  <ion-label class="max3">Max Height *</ion-label> 
+</ion-row>
+
+   <ion-row>
     <ion-select interface="popover" placeholder="-Select-" class="minheight" >
-    <ion-select-option value="4'8">4'8</ion-select-option>
-    <ion-select-option value="4'9">4'9</ion-select-option>
-    <ion-select-option value="5'0">5'0 </ion-select-option>
-    <ion-select-option value="5'1">5'1 </ion-select-option>
-    <ion-select-option value="5'2">5'2 </ion-select-option>
-    <ion-select-option value="5'3">5'3</ion-select-option>
-    <ion-select-option value="5'4">5'4</ion-select-option>
-    <ion-select-option value="5'5">5'5</ion-select-option>
-    <ion-select-option value="5'6">5'6</ion-select-option>
-    <ion-select-option value="5'7">5'7</ion-select-option>
-    <ion-select-option value="5'8">5'8</ion-select-option>
-    <ion-select-option value="5'9">5'9</ion-select-option>
-    <ion-select-option value="6'0">6'0</ion-select-option>
-    <ion-select-option value="6'1">6'1</ion-select-option>
-    <ion-select-option value="6'2">6'2</ion-select-option>
-    <ion-select-option value="6'3">6'3</ion-select-option>
-    <ion-select-option value="6'4">6'4</ion-select-option>
-    <ion-select-option value="6'5">6'5</ion-select-option>
-    <ion-select-option value="6'6">6'6</ion-select-option>
-    <ion-select-option value="6'7">6'7</ion-select-option>
-</ion-select>
+      <ion-select-option value="4'8">4'8</ion-select-option>
+      <ion-select-option value="4'9">4'9</ion-select-option>
+      <ion-select-option value="5'0">5'0 </ion-select-option>
+      <ion-select-option value="5'1">5'1 </ion-select-option>
+      <ion-select-option value="5'2">5'2 </ion-select-option>
+      <ion-select-option value="5'3">5'3</ion-select-option>
+      <ion-select-option value="5'4">5'4</ion-select-option>
+      <ion-select-option value="5'5">5'5</ion-select-option>
+      <ion-select-option value="5'6">5'6</ion-select-option>
+      <ion-select-option value="5'7">5'7</ion-select-option>
+      <ion-select-option value="5'8">5'8</ion-select-option>
+      <ion-select-option value="5'9">5'9</ion-select-option>
+      <ion-select-option value="6'0">6'0</ion-select-option>
+      <ion-select-option value="6'1">6'1</ion-select-option>
+      <ion-select-option value="6'2">6'2</ion-select-option>
+      <ion-select-option value="6'3">6'3</ion-select-option>
+      <ion-select-option value="6'4">6'4</ion-select-option>
+      <ion-select-option value="6'5">6'5</ion-select-option>
+      <ion-select-option value="6'6">6'6</ion-select-option>
+      <ion-select-option value="6'7">6'7</ion-select-option>
+  </ion-select>
+  
+  
+      <ion-select interface="popover" placeholder="-Select-" class="maxheight" >
+      <ion-select-option value="4'8">4'8</ion-select-option>
+      <ion-select-option value="4'9">4'9</ion-select-option>
+      <ion-select-option value="5'0">5'0 </ion-select-option>
+      <ion-select-option value="5'1">5'1 </ion-select-option>
+      <ion-select-option value="5'2">5'2 </ion-select-option>
+      <ion-select-option value="5'3">5'3</ion-select-option>
+      <ion-select-option value="5'4">5'4</ion-select-option>
+      <ion-select-option value="5'5">5'5</ion-select-option>
+      <ion-select-option value="5'6">5'6</ion-select-option>
+      <ion-select-option value="5'7">5'7</ion-select-option>
+      <ion-select-option value="5'8">5'8</ion-select-option>
+      <ion-select-option value="5'9">5'9</ion-select-option>
+      <ion-select-option value="6'0">6'0</ion-select-option>
+      <ion-select-option value="6'1">6'1</ion-select-option>
+      <ion-select-option value="6'2">6'2</ion-select-option>
+      <ion-select-option value="6'3">6'3</ion-select-option>
+      <ion-select-option value="6'4">6'4</ion-select-option>
+      <ion-select-option value="6'5">6'5</ion-select-option>
+      <ion-select-option value="6'6">6'6</ion-select-option>
+      <ion-select-option value="6'7">6'7</ion-select-option>
+  </ion-select>
+   </ion-row>
 
-<ion-label class="max3">Max Height *</ion-label> <br>
-    <ion-select interface="popover" placeholder="-Select-" class="maxheight" >
-    <ion-select-option value="4'8">4'8</ion-select-option>
-    <ion-select-option value="4'9">4'9</ion-select-option>
-    <ion-select-option value="5'0">5'0 </ion-select-option>
-    <ion-select-option value="5'1">5'1 </ion-select-option>
-    <ion-select-option value="5'2">5'2 </ion-select-option>
-    <ion-select-option value="5'3">5'3</ion-select-option>
-    <ion-select-option value="5'4">5'4</ion-select-option>
-    <ion-select-option value="5'5">5'5</ion-select-option>
-    <ion-select-option value="5'6">5'6</ion-select-option>
-    <ion-select-option value="5'7">5'7</ion-select-option>
-    <ion-select-option value="5'8">5'8</ion-select-option>
-    <ion-select-option value="5'9">5'9</ion-select-option>
-    <ion-select-option value="6'0">6'0</ion-select-option>
-    <ion-select-option value="6'1">6'1</ion-select-option>
-    <ion-select-option value="6'2">6'2</ion-select-option>
-    <ion-select-option value="6'3">6'3</ion-select-option>
-    <ion-select-option value="6'4">6'4</ion-select-option>
-    <ion-select-option value="6'5">6'5</ion-select-option>
-    <ion-select-option value="6'6">6'6</ion-select-option>
-    <ion-select-option value="6'7">6'7</ion-select-option>
-</ion-select>
+    <ion-row>
+      <ion-label class="caste">Caste*</ion-label>
+    </ion-row>
 
-<ion-label class="caste">Caste*</ion-label> <br>
-    <ion-select interface="popover" placeholder="Cast" class="castselect" >
-      <ion-select-option value="sc">SC</ion-select-option>
-      <ion-select-option value="st">ST</ion-select-option>
-      <ion-select-option value="obc">OBC</ion-select-option>
-      <ion-select-option value="sbc">SBC</ion-select-option>
-      <ion-select-option value="open">OPEN</ion-select-option>
-    </ion-select>
+    <ion-row>
+      <ion-select interface="popover" placeholder="Cast" class="castselect" >
+        <ion-select-option value="sc">SC</ion-select-option>
+        <ion-select-option value="st">ST</ion-select-option>
+        <ion-select-option value="obc">OBC</ion-select-option>
+        <ion-select-option value="sbc">SBC</ion-select-option>
+        <ion-select-option value="open">OPEN</ion-select-option>
+      </ion-select>
+    </ion-row>
 
-    <ion-label class="language">Mother Tongue</ion-label> <br>
-    <ion-select interface="popover" placeholder="Caste" class="languageselect" >
-      <ion-select-option value="Hindi">Hindi</ion-select-option>
-      <ion-select-option value="Bengali">Bengali</ion-select-option>
-      <ion-select-option value="Marathi">Marathi</ion-select-option>
-      <ion-select-option value="Telugu">Telugu</ion-select-option>
-      <ion-select-option value="Tamil">Tamil</ion-select-option>
-      <ion-select-option value="Gujarati">Gujarati</ion-select-option>
-      <ion-select-option value="Urdu">Urdu</ion-select-option>
-      <ion-select-option value="Kannada">Kannada</ion-select-option>
-      <ion-select-option value="Oriya">Oriya</ion-select-option>
-      <ion-select-option value="Sindhi">Sindhi</ion-select-option>
-      <ion-select-option value="Marwari">Marwari</ion-select-option>
-    </ion-select>
+    <ion-row>
+      <ion-label class="language">Mother Tongue</ion-label>
+    </ion-row>
+    <ion-row>
+      <ion-select interface="popover" placeholder="Caste" class="languageselect" >
+        <ion-select-option value="Hindi">Hindi</ion-select-option>
+        <ion-select-option value="Bengali">Bengali</ion-select-option>
+        <ion-select-option value="Marathi">Marathi</ion-select-option>
+        <ion-select-option value="Telugu">Telugu</ion-select-option>
+        <ion-select-option value="Tamil">Tamil</ion-select-option>
+        <ion-select-option value="Gujarati">Gujarati</ion-select-option>
+        <ion-select-option value="Urdu">Urdu</ion-select-option>
+        <ion-select-option value="Kannada">Kannada</ion-select-option>
+        <ion-select-option value="Oriya">Oriya</ion-select-option>
+        <ion-select-option value="Sindhi">Sindhi</ion-select-option>
+        <ion-select-option value="Marwari">Marwari</ion-select-option>
+      </ion-select>
+    </ion-row>
  
-    <ion-label class="salary">Salary *</ion-label> <br>
-    <ion-select interface="popover" placeholder="Rupees" class="sal" >
-      <ion-select-option value="0-2">0 to 2 lakh</ion-select-option>
-      <ion-select-option value="3-4">3 to 4 lakh</ion-select-option>
-      <ion-select-option value="4-5">4 to 5 lakh</ion-select-option>
-      <ion-select-option value="5-7.5">5 to 7.5 lakh </ion-select-option>
-      <ion-select-option value="7.5-10">7.5 to 10 lakh </ion-select-option>
-      <ion-select-option value="10-15">10 to 15 lakh</ion-select-option>
-      <ion-select-option value="15-20">15 to 20 lakh</ion-select-option>
-      <ion-select-option value="20-25">20 to 25 lakh</ion-select-option>
-      <ion-select-option value="25-35">25 to 35 lakh </ion-select-option>
-      <ion-select-option value="35-50">35 to 50 lakh </ion-select-option>
-      <ion-select-option value="50-75">50 to 75 lakh</ion-select-option>
-      <ion-select-option value="75-1">75 lakh to 1 cr </ion-select-option>
-      <ion-select-option value="1-above">1 cr and above </ion-select-option>
-    </ion-select>
-    <ion-select interface="popover" placeholder="Dollars" class="dol" >
-      <ion-select-option value="0-25000">$0 to $25000</ion-select-option>
-      <ion-select-option value="25000-45000">$25000 to $45000</ion-select-option>
-      <ion-select-option value="45000-60000">$45000 to $60000</ion-select-option>
-      <ion-select-option value="60000-80000">$60000 to $80000 </ion-select-option>
-      <ion-select-option value="80000-100000">$80000 to $100000 </ion-select-option>
-      <ion-select-option value="100000-150000">$100000 to $150000</ion-select-option>
-      <ion-select-option value="150000-200000">$150000 to $200000</ion-select-option>
-      <ion-select-option value="200000-above">$200000 and above</ion-select-option>
-    </ion-select>
+    <ion-row>
+      <ion-label class="salary">Salary *</ion-label>
+    </ion-row>
+    <ion-row>
+      <ion-select interface="popover" placeholder="Rupees" class="rup" >
+        <ion-select-option value="0-2">0 to 2 lakh</ion-select-option>
+        <ion-select-option value="3-4">3 to 4 lakh</ion-select-option>
+        <ion-select-option value="4-5">4 to 5 lakh</ion-select-option>
+        <ion-select-option value="5-7.5">5 to 7.5 lakh </ion-select-option>
+        <ion-select-option value="7.5-10">7.5 to 10 lakh </ion-select-option>
+        <ion-select-option value="10-15">10 to 15 lakh</ion-select-option>
+        <ion-select-option value="15-20">15 to 20 lakh</ion-select-option>
+        <ion-select-option value="20-25">20 to 25 lakh</ion-select-option>
+        <ion-select-option value="25-35">25 to 35 lakh </ion-select-option>
+        <ion-select-option value="35-50">35 to 50 lakh </ion-select-option>
+        <ion-select-option value="50-75">50 to 75 lakh</ion-select-option>
+        <ion-select-option value="75-1">75 lakh to 1 cr </ion-select-option>
+        <ion-select-option value="1-above">1 cr and above </ion-select-option>
+      </ion-select>
+      <ion-select interface="popover" placeholder="Dollars" class="dol" >
+        <ion-select-option value="0-25000">$0 to $25000</ion-select-option>
+        <ion-select-option value="25000-45000">$25000 to $45000</ion-select-option>
+        <ion-select-option value="45000-60000">$45000 to $60000</ion-select-option>
+        <ion-select-option value="60000-80000">$60000 to $80000 </ion-select-option>
+        <ion-select-option value="80000-100000">$80000 to $100000 </ion-select-option>
+        <ion-select-option value="100000-150000">$100000 to $150000</ion-select-option>
+        <ion-select-option value="150000-200000">$150000 to $200000</ion-select-option>
+        <ion-select-option value="200000-above">$200000 and above</ion-select-option>
+      </ion-select>
+    </ion-row>
 
-    <ion-label class="MaritialStatus">Maritial Status*</ion-label> <br>
-    <ion-select interface="popover" placeholder="Maritial Status" class="Status" >
-      <ion-select-option value="Any">Any</ion-select-option>
-      <ion-select-option value="Never Married">Never Married</ion-select-option>
-      <ion-select-option value="Divorced">Divroced</ion-select-option>
-      <ion-select-option value="Seperated">Seperated</ion-select-option>
-      <ion-select-option value="Widowed">Widowed</ion-select-option>
-    </ion-select>
+     <ion-row>
+      <ion-label class="MaritialStatus">Maritial Status*</ion-label>
+     </ion-row>
+    <ion-row>
+      <ion-select interface="popover" placeholder="Maritial Status" class="Status" >
+        <ion-select-option value="Any">Any</ion-select-option>
+        <ion-select-option value="Never Married">Never Married</ion-select-option>
+        <ion-select-option value="Divorced">Divroced</ion-select-option>
+        <ion-select-option value="Seperated">Seperated</ion-select-option>
+        <ion-select-option value="Widowed">Widowed</ion-select-option>
+      </ion-select>
+    </ion-row>
 
-    <ion-label class="occupation">Occupation</ion-label> <br>
+    <ion-row>
+      <ion-label class="occupation">Occupation</ion-label>
+    </ion-row>
+  <ion-row>
     <ion-input class="occup" placeholder=" Ex.-Manager" ></ion-input>
+  </ion-row>
 
-    
-    <ion-label class="country">Country & State</ion-label> <br>
-    <ion-select interface="popover" placeholder="Cast" class="countryselect" >
+  <ion-row>
+    <ion-label class="country">Country & State</ion-label>
+  </ion-row>
+   <ion-row>
+    <ion-select interface="popover" value="India" class="countryselect" >
       <ion-select-option value="America">America</ion-select-option>
       <ion-select-option value="Brazil">Brazil</ion-select-option>
       <ion-select-option value="Canada">Canada</ion-select-option>
@@ -187,23 +223,17 @@
       <ion-select-option value="Korea">Korea</ion-select-option>
     </ion-select>
 
-
-
-
-
-
-
-
-
-
-
+   </ion-row> <br><br>
 
     <!-- -->
-    <ion-button (click)="onClick()" class="save" [routerLink]="['/user-home']">
-      SAVE
-    </ion-button>
+    <div class="ion-text-center">
+      <ion-button (click)="onClick()" class="save" [routerLink]="['/user-home']">
+        SAVE
+      </ion-button>
+  
+    </div>
 
-
+   </ion-grid>
 </form>
 
 </div>

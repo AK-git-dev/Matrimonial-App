@@ -29,10 +29,11 @@ color: #FFFFFF;
     width: 100%;
     background: #FBF9F9;
         border-radius: 30px 30px 0px 0px;
-        scale: 1.5;
+      
 }
 
 // //////////////////////////////////////// Form Containds
+
 // /////////////////////////////////////////  Mobile number
 
 .number {
@@ -47,7 +48,7 @@ color: #000000;
 .number2 {
     position: absolute;
     width: 200px;
-    top: 75px;
+    top: 80px;
     left: 110px;
     font-size: 18px;
 height: 24px;
@@ -60,7 +61,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 .code {
     top: 55px;
     width: 50px;
-    left: 50px;
+    left: 43px;
     font-size: 18px;
     height: 24px;
 color: #000000;
@@ -71,7 +72,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 // ///////////////////////////////////////// OTP
 .OTP {
-    top: 70px;
+    top: 80px;
     left: 20px;
     font-size: 18px;
 line-height: 21px;
@@ -79,10 +80,11 @@ color: #000000
 }
 
 .d1 {
-    position: absolute;
-    top: 170px;
-    width: 26px;
-    left: 50px;
+    // position: absolute;
+ top: 90px;
+ left: 33px;
+    max-width: 26px;
+   margin: 10px;
     font-size: 18px;
     height: 24px;
 color: #000000;
@@ -91,10 +93,11 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .d2 {
-    position: absolute;
-    top: 170px;
-    width: 26px;
-    left: 95px;
+    // position: absolute;
+    top: 90px;
+    left: 33px;
+    max-width: 26px;
+    margin: 10px;
     font-size: 18px;
     height: 24px;
 color: #000000;
@@ -105,10 +108,11 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 .d3 {
     
-    position: absolute;
-    top: 170px;
-    width: 26px;
-    left: 135px;
+    // position: absolute;
+    top: 90px;
+    left: 33px;
+    max-width: 26px;
+    margin: 10px;
     font-size: 18px;
     height: 24px;
 color: #000000;
@@ -119,10 +123,11 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 .d4 {
     
-    position: absolute;
-    top: 170px;
-    width: 26px;
-    left: 175px;
+    // position: absolute;
+    top: 90px;
+    left: 33px;
+    max-width: 26px;
+    margin: 10px;
     font-size: 18px;
     height: 24px;
 color: #000000;
@@ -132,10 +137,11 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .d5 {
     
-    position: absolute;
-    top: 170px;
-    width: 26px;
-    left: 215px;
+    // position: absolute;
+    top: 90px;
+    left: 33px;
+    max-width: 26px;
+    margin: 10px;
     font-size: 18px;
     height: 24px;
 color: #000000;
@@ -145,11 +151,12 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .d6 {
-    
-    position: absolute;
-    top: 170px;
-    width: 26px;
-    left: 255px;
+    top: 90px;
+    left: 33px;
+    // position: absolute;
+
+    max-width: 26px;
+    margin: 10px;
     font-size: 18px;
     height: 24px;
 color: #000000;
@@ -162,21 +169,23 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 .resend {
     position: absolute;
-    top: 240px;
-    left: 50px;
+    top: 260px;
+    left: 70px;
     font-size: 18px;
 line-height: 21px;
 color: #000000d8
 }
 
 // ///////////////////////////////////// Buttons
-
+.buttons {
+   padding-top: 180px;
+   padding-left: 40px;
+}
 .loginbutton {
-    position: absolute;
+
     width: 333px;
     height: 56px;
-    left: 20px;
-    top: 265px;
+  
     background: #4C0890;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -184,22 +193,20 @@ color: #000000d8
 }
 
 .emailbutton {
-    position: absolute;
+   
 width: 160px;
 height: 56px;
-left: 20px;
-top: 340px;
+
+// margin: 0;
 background: #4C0890;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 10px;
 }
 
 .otpbutton {
-    position: absolute;
+//   margin: 0;
     width: 160px;
     height: 56px;
-    left: 190px;
-    top: 340px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), rgba(76, 8, 144, 0.72);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
