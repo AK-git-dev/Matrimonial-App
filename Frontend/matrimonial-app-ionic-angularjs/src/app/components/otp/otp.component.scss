@@ -1,0 +1,51 @@
+* {
+    text-transform: none;
+}
+
+.div1 {
+    padding: 30px;
+}
+
+.div1 .l1 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #000000;
+    display: block;
+    text-align: center;
+}
+
+.div1 .l2 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: black;
+}
+
+.div1 .l3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-decoration: underline;
+
+    color: black;
+}
+
+.div1 .btn1 {
+    --background: none;
+    --background: #4C0890;
+
+}
+
+
+.div2 {
+    padding: 10px;
+    text-align: center;
+}

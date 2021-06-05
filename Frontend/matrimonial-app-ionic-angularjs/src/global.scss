@@ -31,7 +31,7 @@
 }
 
 .my-custom-class .popover-content {
-  background: #4C0890;
+  background: #4c0890;
 }
 
 .swiper-pagination {
@@ -40,4 +40,19 @@
 
 .my-custom-class .alert-wrapper {
   background: #e5e5e5;
+}
+
+.my-custom-class2 .modal-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0%;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%), #d3d2e1;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px 30px 0px 0px;
+}
+
+ion-modal.stack-modal {
+  --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+  --backdrop-opacity: var(--ion-backdrop-opacity, 0.32);
 }

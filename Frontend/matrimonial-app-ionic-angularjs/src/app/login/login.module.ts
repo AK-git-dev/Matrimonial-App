@@ -8,6 +8,7 @@ import { LoginPageRoutingModule } from './login-routing.module';
 
 import { LoginPage } from './login.page';
 import { IonIntlTelInputModule } from 'ion-intl-tel-input';
+import { NgxOtpInputModule } from 'ngx-otp-input';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { IonIntlTelInputModule } from 'ion-intl-tel-input';
     FormsModule,
     IonicModule,
     LoginPageRoutingModule,
-    IonIntlTelInputModule
+    IonIntlTelInputModule, 
+    NgxOtpInputModule
   ],
   declarations: [LoginPage]
 })

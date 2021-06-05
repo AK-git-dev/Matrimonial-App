@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
+import { OtpComponent } from '../components/otp/otp.component';
 // import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import { AlertController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private alertController: AlertController, private router: Router) { }
+  constructor(private modalController: ModalController, private router: Router) { }
   // exform: FormGroup;
   mobileNumber = '';
 
@@ -23,43 +24,21 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    this.presentAlert();
+    this.presentModal();
+
   }
 
-  async presentAlert() {
-    const alert = await this.alertController.create({
-      header: 'Enter 6 digit OTP',
-      cssClass: 'my-custom-class',
-      inputs: [{
-        name: 'otp',
-        type: 'number',
-        placeholder: 'Enter 6 digit OTP',
-        id: 'otp',
-        attributes: {
-          maxLength: 6,
-          minLength: 6
-        }
-      }],
-      buttons: [{
-        text: 'Resend',
-        handler: () => {
-          console.log('resend');
-        }
-      },
-      {
-        text: 'Login',
-        handler: () => {
-          console.log('Login');
-          this.router.navigate(['/user-home']);
-        }
-      }]
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: OtpComponent,
+      cssClass: 'my-custom-class2'
     });
-    await alert.present();
-
-    const { role } = await alert.onDidDismiss();
-    console.log('onDidDismiss resolved with role', role);
+    await modal.present();
+    const { data } = await modal.onWillDismiss();
+    console.log(data);
   }
 
+  
   // clicksub() {
   //   console.log(this.exform.value);
   //   this.exform.reset();

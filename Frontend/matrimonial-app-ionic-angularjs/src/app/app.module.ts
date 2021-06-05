@@ -18,12 +18,14 @@ import { Media } from '@ionic-native/media/ngx';
 import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer/ngx';
 import { Camera } from '@ionic-native/camera/ngx';
 import  { IonIntlTelInputModule } from 'ion-intl-tel-input';
+import { NgxOtpInputModule } from 'ngx-otp-input';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule,
-    MatSelectModule,ReactiveFormsModule, NgxEmojiPickerModule.forRoot(), IonIntlTelInputModule
+    MatSelectModule,ReactiveFormsModule, NgxEmojiPickerModule.forRoot(), IonIntlTelInputModule, 
+    NgxOtpInputModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, 
                 MediaCapture, 
