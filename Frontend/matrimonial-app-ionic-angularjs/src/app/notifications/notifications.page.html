@@ -2,7 +2,10 @@
   <ion-icon name="close" class="back" size="large" (click)="dismiss()"></ion-icon>
   <h2 class="heading">Notifications</h2>
 </ion-header>
-<ion-content>
+<ion-content [fullscreen] = "true">
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeLg="10" sizeMd="10" sizeXs="12">  
   <div class="container">
     <form action="">
       <ion-list>
@@ -27,5 +30,8 @@
 
     </form>
   </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
 

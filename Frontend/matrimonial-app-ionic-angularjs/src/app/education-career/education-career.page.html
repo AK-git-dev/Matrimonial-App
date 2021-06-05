@@ -1,8 +1,13 @@
 <ion-content [fullscreen]="true">
   <ion-title>
     <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/edit-profile']"></ion-icon>Education and Career</ion-title>
-  <div class="container">
+    <ion-grid>
+      <ion-row>
+        <ion-col sizeLg="10" sizeMd="10" sizeXs="12">  
+    
+    <div class="container">
     <form action="" method="post">
+  
       <ion-label class="Hdegree">Highest Degree</ion-label> <br>
       <!-- <ion-icon class="cap" name="school-outline"></ion-icon> -->
       <ion-input id="Name1" type="name" class="Degree" placeholder = "Highest Degree *"> </ion-input>
@@ -49,5 +54,6 @@
 
 </form>
      </div>
-
+        </ion-col>
+      </ion-row></ion-grid>
 </ion-content>

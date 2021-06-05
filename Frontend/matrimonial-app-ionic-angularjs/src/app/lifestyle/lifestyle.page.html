@@ -1,7 +1,10 @@
 <ion-content [fullscreen]="true">
   <ion-title>
     <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/edit-profile']"></ion-icon>LifeStyle</ion-title>
-  <div class="container">
+    <ion-grid>
+      <ion-row>
+        <ion-col sizeLg="10" sizeMd="10" sizeXs="12">  
+    <div class="container">
     <form action="" method="post">
       <ion-label class="Height">Height</ion-label> <br>
       <ion-input id="Name1" type="name" class="height" placeholder = "Height*"> </ion-input>
@@ -68,4 +71,7 @@
       </ion-button>
 </form>
   </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
     </ion-content>
