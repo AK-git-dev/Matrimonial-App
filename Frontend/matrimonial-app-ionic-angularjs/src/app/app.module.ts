@@ -17,12 +17,13 @@ import { File } from '@ionic-native/file/ngx';
 import { Media } from '@ionic-native/media/ngx';
 import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer/ngx';
 import { Camera } from '@ionic-native/camera/ngx';
+import  { IonIntlTelInputModule } from 'ion-intl-tel-input';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule,
-    MatSelectModule,ReactiveFormsModule, NgxEmojiPickerModule.forRoot()
+    MatSelectModule,ReactiveFormsModule, NgxEmojiPickerModule.forRoot(), IonIntlTelInputModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, 
                 MediaCapture, 

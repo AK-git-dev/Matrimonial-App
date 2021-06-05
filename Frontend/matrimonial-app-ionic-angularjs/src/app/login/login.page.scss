@@ -1,214 +1,266 @@
-*{
+* {
     font-family: Roboto;
-font-style: normal;
-font-weight: normal;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none;
 }
 
-// /////////////////////////////////////// Heading
-ion-label {
+ion-content {
+    --background: none;
+    background-color: #4c0890;
     position: relative;
-    padding-left: 20px;
-    top: 20px;
-    font-size: 24px;
-line-height: 28px;
-color: #FFFFFF;
 }
 
-
-// //////////////////////////////////////// Image
 .image {
-    position: relative;
-    top: 45px;
+    width: 373px;
+    height: 338px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    background-image: url("../../assets/login.png");
 }
 
-// //////////////////////////////////////// Card
+.l1 {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
 
-.card {
-   position: absolute;
-    height: 100%;
+    color: #ffffff;
+}
+
+.div1 {
+    background: white;
+    position: absolute;
     width: 100%;
-    background: #FBF9F9;
-        border-radius: 30px 30px 0px 0px;
-      
+    height: 45%;
+    bottom: 0%;
+    border-radius: 30px 30px 0px 0px;
 }
 
-// //////////////////////////////////////// Form Containds
-
-// /////////////////////////////////////////  Mobile number
-
-.number {
-    top: 40px;
-   
-    left: 20px;
-    font-size: 18px;
-line-height: 21px;
-color: #000000;
+.myform {
+    padding: 20px;
 }
 
-.number2 {
-    position: absolute;
-    width: 200px;
-    top: 80px;
-    left: 110px;
-    font-size: 18px;
-height: 24px;
-color: #000000;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-
-}
-.code {
-    top: 55px;
-    width: 50px;
-    left: 43px;
-    font-size: 18px;
-    height: 24px;
-color: #000000;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-
-// ///////////////////////////////////////// OTP
-.OTP {
-    top: 80px;
-    left: 20px;
-    font-size: 18px;
-line-height: 21px;
-color: #000000
-}
-
-.d1 {
-    // position: absolute;
- top: 90px;
- left: 33px;
-    max-width: 26px;
-   margin: 10px;
-    font-size: 18px;
-    height: 24px;
-color: #000000;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.d2 {
-    // position: absolute;
-    top: 90px;
-    left: 33px;
-    max-width: 26px;
-    margin: 10px;
-    font-size: 18px;
-    height: 24px;
-color: #000000;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.d3 {
-    
-    // position: absolute;
-    top: 90px;
-    left: 33px;
-    max-width: 26px;
-    margin: 10px;
-    font-size: 18px;
-    height: 24px;
-color: #000000;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.d4 {
-    
-    // position: absolute;
-    top: 90px;
-    left: 33px;
-    max-width: 26px;
-    margin: 10px;
-    font-size: 18px;
-    height: 24px;
-color: #000000;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-.d5 {
-    
-    // position: absolute;
-    top: 90px;
-    left: 33px;
-    max-width: 26px;
-    margin: 10px;
-    font-size: 18px;
-    height: 24px;
-color: #000000;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.d6 {
-    top: 90px;
-    left: 33px;
-    // position: absolute;
-
-    max-width: 26px;
-    margin: 10px;
-    font-size: 18px;
-    height: 24px;
-color: #000000;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-
-
-.resend {
-    position: absolute;
-    top: 260px;
-    left: 70px;
-    font-size: 18px;
-line-height: 21px;
-color: #000000d8
-}
-
-// ///////////////////////////////////// Buttons
-.buttons {
-   padding-top: 180px;
-   padding-left: 40px;
-}
-.loginbutton {
-
-    width: 333px;
-    height: 56px;
+.btn1 {
+    --background: none;
+    --background: #4c0890;
+    margin: 25px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
   
-    background: #4C0890;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    
-}
+    color: #fcfcfc;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
 
-.emailbutton {
-   
-width: 160px;
-height: 56px;
+// // /////////////////////////////////////// Heading
+// ion-label {
+//     position: relative;
+//     padding-left: 20px;
+//     top: 20px;
+//     font-size: 24px;
+// line-height: 28px;
+// color: #FFFFFF;
+// }
 
-// margin: 0;
-background: #4C0890;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-}
+// // //////////////////////////////////////// Image
+// .image {
+//     position: relative;
+//     top: 45px;
+// }
 
-.otpbutton {
-//   margin: 0;
-    width: 160px;
-    height: 56px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), rgba(76, 8, 144, 0.72);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    
-}
+// // //////////////////////////////////////// Card
+
+// .card {
+//    position: absolute;
+//     height: 100%;
+//     width: 100%;
+//     background: #FBF9F9;
+//         border-radius: 30px 30px 0px 0px;
+
+// }
+
+// // //////////////////////////////////////// Form Containds
+
+// // /////////////////////////////////////////  Mobile number
+
+// .number {
+//     top: 40px;
+
+//     left: 20px;
+//     font-size: 18px;
+// line-height: 21px;
+// color: #000000;
+// }
+
+// .number2 {
+//     position: absolute;
+//     width: 200px;
+//     top: 80px;
+//     left: 110px;
+//     font-size: 18px;
+// height: 24px;
+// color: #000000;
+// border: 1px solid #000000;
+// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+// }
+// .code {
+//     top: 55px;
+//     width: 50px;
+//     left: 43px;
+//     font-size: 18px;
+//     height: 24px;
+// color: #000000;
+// border: 1px solid #000000;
+// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+// }
+
+// // ///////////////////////////////////////// OTP
+// .OTP {
+//     top: 80px;
+//     left: 20px;
+//     font-size: 18px;
+// line-height: 21px;
+// color: #000000
+// }
+
+// .d1 {
+//     // position: absolute;
+//  top: 90px;
+//  left: 33px;
+//     max-width: 26px;
+//    margin: 10px;
+//     font-size: 18px;
+//     height: 24px;
+// color: #000000;
+// border: 1px solid #000000;
+// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+// }
+
+// .d2 {
+//     // position: absolute;
+//     top: 90px;
+//     left: 33px;
+//     max-width: 26px;
+//     margin: 10px;
+//     font-size: 18px;
+//     height: 24px;
+// color: #000000;
+// border: 1px solid #000000;
+// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+// }
+
+// .d3 {
+
+//     // position: absolute;
+//     top: 90px;
+//     left: 33px;
+//     max-width: 26px;
+//     margin: 10px;
+//     font-size: 18px;
+//     height: 24px;
+// color: #000000;
+// border: 1px solid #000000;
+// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+// }
+
+// .d4 {
+
+//     // position: absolute;
+//     top: 90px;
+//     left: 33px;
+//     max-width: 26px;
+//     margin: 10px;
+//     font-size: 18px;
+//     height: 24px;
+// color: #000000;
+// border: 1px solid #000000;
+// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+// }
+// .d5 {
+
+//     // position: absolute;
+//     top: 90px;
+//     left: 33px;
+//     max-width: 26px;
+//     margin: 10px;
+//     font-size: 18px;
+//     height: 24px;
+// color: #000000;
+// border: 1px solid #000000;
+// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+// }
+
+// .d6 {
+//     top: 90px;
+//     left: 33px;
+//     // position: absolute;
+
+//     max-width: 26px;
+//     margin: 10px;
+//     font-size: 18px;
+//     height: 24px;
+// color: #000000;
+// border: 1px solid #000000;
+// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+// }
+
+// .resend {
+//     position: absolute;
+//     top: 260px;
+//     left: 70px;
+//     font-size: 18px;
+// line-height: 21px;
+// color: #000000d8
+// }
+
+// // ///////////////////////////////////// Buttons
+// .buttons {
+//    padding-top: 180px;
+//    padding-left: 40px;
+// }
+// .loginbutton {
+
+//     width: 333px;
+//     height: 56px;
+
+//     background: #4C0890;
+//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+//     border-radius: 10px;
+
+// }
+
+// .emailbutton {
+
+// width: 160px;
+// height: 56px;
+
+// // margin: 0;
+// background: #4C0890;
+// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+// border-radius: 10px;
+// }
+
+// .otpbutton {
+// //   margin: 0;
+//     width: 160px;
+//     height: 56px;
+//     background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), rgba(76, 8, 144, 0.72);
+//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+//     border-radius: 10px;
+
+// }
