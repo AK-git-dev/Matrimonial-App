@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { NgxOtpInputConfig } from 'ngx-otp-input';
+import { NgxOtpInputModule } from 'ngx-otp-input';
 
 @Component({
   selector: 'app-otp',
@@ -22,7 +24,7 @@ export class OtpComponent implements OnInit {
     }
   };
 
-  constructor(private modalController: ModalController) {
+  constructor(private modalController: ModalController, private router: Router) {
     
   }
 
@@ -33,6 +35,11 @@ export class OtpComponent implements OnInit {
     this.modalController.dismiss({
       'dismissed': true
     });
+  }
+
+  login() {
+    this.dismiss();
+    this.router.navigate(['/user-home']);
   }
 
 
