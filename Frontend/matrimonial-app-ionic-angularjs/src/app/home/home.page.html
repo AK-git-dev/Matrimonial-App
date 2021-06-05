@@ -1,27 +1,51 @@
 <!--  -->
 <ion-content [fullscreen]="true">
-  <ion-grid>
-  <ion-row>
-    <ion-col sizeLg="10" sizeMd="10" sizeXs="12">
 
-  <!-- <app-tabs></app-tabs> -->
- <div class="container">
-  <div class="image">
-  <img src="../../assets/1st page.png" alt="">
+  <ion-icon class="image"></ion-icon>
+
+  <div class="div1">
+
+    <ion-grid>
+      <ion-row>
+        <ion-label class="l1">Find Your Perfect Match</ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="full" shape="round" class="btn1" (click)="signUp()">Sign Up</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col style="text-align: center;">
+          <ion-label class="l3">Already register?</ion-label>&nbsp;
+          <ion-label class="l4" (click)="login()">Login</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
   </div>
 
-  
-  <div class="card">
-    <h3>Find Your Perfect Match</h3>
-   <ion-button type="button" [routerLink] = "['/registration']">Sign Up </ion-button>
-    <h4>Already Register? <strong [routerLink] = "['/login']">Login</strong></h4>
-  </div>
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col sizeLg="10" sizeMd="10" sizeXs="12">
+
+        
+        <div class="container">
+          <div class="image">
+            <img src="../../assets/1st page.png" alt="">
+          </div>
 
 
-</div>
-</ion-col>
-</ion-row>
-</ion-grid>
+          <div class="card">
+            <h3>Find Your Perfect Match</h3>
+            <ion-button type="button" [routerLink]="['/registration']">Sign Up </ion-button>
+            <h4>Already Register? <strong [routerLink]="['/login']">Login</strong></h4>
+          </div>
+
+
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
 </ion-content>
 
 <!-- -->
