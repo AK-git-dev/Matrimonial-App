@@ -1,9 +1,61 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>user-profile</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <div>
+      
+      <ion-slides  pager="true" [options]="slideOpts">
+        <ion-slide>
+          <ion-icon class="img1"></ion-icon>
+          <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/user-home']"></ion-icon>
+          <ion-label class="l1">Atul Salunke</ion-label>
+          <ion-label class="l2">24 years | 5'11 feet</ion-label>
+        </ion-slide>
+        
+        <ion-slide>
+          <ion-icon class="img1"></ion-icon>
+          <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/user-home']"></ion-icon>
+          <ion-label class="l1">Atul Salunke</ion-label>
+          <ion-label class="l2">24 years | 5'11 feet</ion-label>
+        </ion-slide>
 
+        <ion-slide>
+          <ion-icon class="img1"></ion-icon>
+          <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/user-home']"></ion-icon>
+          <ion-label class="l1">Atul Salunke</ion-label>
+          <ion-label class="l2">24 years | 5'11 feet</ion-label>
+        </ion-slide>
+
+        <ion-slide>
+          <ion-icon class="img1"></ion-icon>
+          <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/user-home']"></ion-icon>
+          <ion-label class="l1">Atul Salunke</ion-label>
+          <ion-label class="l2">24 years | 5'11 feet</ion-label>
+        </ion-slide>
+      </ion-slides>
+  </div>
+
+  <div class="div1">
+    <div>
+
+      <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="segmentModel">
+        <ion-segment-button value="about">
+          <ion-label>About me</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="family">
+          <ion-label>Family</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="looking">
+          <ion-label>Looking For</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+
+    <div>
+      
+    </div>
+
+  </div>
 </ion-content>
+
+<ion-footer class="footer1">
+  <app-tabs></app-tabs>
+</ion-footer>
