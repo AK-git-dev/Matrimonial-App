@@ -19,9 +19,10 @@ import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer/ng
 import { Camera } from '@ionic-native/camera/ngx';
 import  { IonIntlTelInputModule } from 'ion-intl-tel-input';
 import { NgxOtpInputModule } from 'ngx-otp-input';
+import { OtpComponent } from './components/otp/otp.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, OtpComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule,
     MatSelectModule,ReactiveFormsModule, NgxEmojiPickerModule.forRoot(), IonIntlTelInputModule, 

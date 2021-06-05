@@ -1,14 +1,17 @@
 <div class="div1">
   <ion-label class="l1">Verify OTP</ion-label>
 
-  <ngx-otp-input [config]="otpInputConfig" (otpChange)="handeOtpChange($event)" (fill)="handleFillEvent($event)">
-  </ngx-otp-input>
-  
+  <div class="otp">
+
+    <ngx-otp-input [config]="otpInputConfig" (otpChange)="handeOtpChange($event)" (fill)="handleFillEvent($event)">
+    </ngx-otp-input>
+  </div>
+
   <div class="div2">
     <ion-label class="l2">Didn't get OTP?</ion-label>
     <ion-label class="l3">Resend</ion-label>
   </div>
   <ion-button expand="full" shape="round" class="btn1" (click)="login()">Done</ion-button>
 
-  
+
 </div>

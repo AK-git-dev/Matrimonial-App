@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { NgxOtpInputConfig } from 'ngx-otp-input';
-import { NgxOtpInputModule } from 'ngx-otp-input';
 
 @Component({
   selector: 'app-otp',
