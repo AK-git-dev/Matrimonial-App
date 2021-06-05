@@ -2,24 +2,50 @@
   <!-- <div class="cont"> -->
 
   <div class="c1">
-
-    <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/user-home']"></ion-icon>
-
-    <ion-icon class="icon1"></ion-icon>
-    <ion-icon class="camera"></ion-icon>
-    <ion-icon class="eye"></ion-icon>
-
-    <ion-label class="label1">Hi {{ username }}</ion-label>
-    <ion-label class="label2">ID : {{ userId }}</ion-label>
-
-    <ion-icon class="verify"></ion-icon>
-    <ion-label class="label3">Verified</ion-label>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="10">
+          <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/user-home']"></ion-icon>
+        </ion-col>
+        <ion-col>
+          <ion-icon class="camera"></ion-icon>&nbsp;
+          <ion-icon class="eye"></ion-icon>
+        </ion-col>
+        <!-- <ion-col>
+          <ion-icon class="eye"></ion-icon>
+        </ion-col> -->
+      </ion-row>
+      <ion-row>
+        <ion-avatar class="icon1">
+          <img src="../../assets/user_home/avatar.svg">
+        </ion-avatar>
+      </ion-row>
+      <ion-row>
+        <ion-label class="label1">Hi {{ username }}</ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label class="label2">ID : {{ userId }}</ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-icon class="verify"></ion-icon>&nbsp;
+        <ion-label class="label3">Verified</ion-label>
+      </ion-row>
+    </ion-grid>
   </div>
 
   <div class="c2">
     <div>
-      <ion-button name="btn2" color="#4c0890" shape="round">About me</ion-button>
-      <ion-button name="btn3" color="#934cda" shape="round">Looking For</ion-button>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button name="btn2" color="#4c0890" shape="round">About me</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button name="btn3" color="#934cda" shape="round">Looking For</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
     </div>
 
     <ion-card>
@@ -72,7 +98,7 @@
 
     <ion-card>
       <ion-item>
-        <ion-label class="l5"  [routerLink]="['/lifestyle']">LifeStyle</ion-label>
+        <ion-label class="l5" [routerLink]="['/lifestyle']">LifeStyle</ion-label>
         <ion-icon class="edit5"></ion-icon>
       </ion-item>
 
