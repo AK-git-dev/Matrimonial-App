@@ -1,3 +1,6 @@
+*{
+    color: #000000;
+}
 .label1 {
     // position: absolute;
     width: 236px;
@@ -7,9 +10,7 @@
     margin-left: auto;
     margin-right: auto;
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
+   
     font-size: 30px;
     line-height: 35px;
     text-align: center;
@@ -26,8 +27,7 @@
     margin-left: auto;
     margin-right: auto;
 
-    font-family: Roboto;
-    font-style: normal;
+
     font-weight: normal;
     font-size: 24px;
     line-height: 28px;
@@ -41,14 +41,10 @@
     width: 68px;
     height: 23px;
 
-    font-family: Roboto;
-    font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 23px;
-
     color: #fbf9f9;
-
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -128,6 +124,7 @@ ion-button[name="btn3"] {
     border-radius: 50px;
 }
 
+
 ion-content {
     --background: none;
     background: rgb(230, 225, 225) !important;
@@ -137,8 +134,7 @@ ion-content {
 .l1 {
     width: 116px;
     height: 21px;
-    font-family: Roboto;
-    font-style: normal;
+   
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;
@@ -148,8 +144,7 @@ ion-content {
 .l2 {
     width: 116px;
     height: 21px;
-    font-family: Roboto;
-    font-style: normal;
+    
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;
@@ -159,8 +154,7 @@ ion-content {
 .l3 {
     width: 116px;
     height: 21px;
-    font-family: Roboto;
-    font-style: normal;
+    
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;
@@ -170,8 +164,7 @@ ion-content {
 .l4 {
     width: 116px;
     height: 21px;
-    font-family: Roboto;
-    font-style: normal;
+  
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;
@@ -181,8 +174,7 @@ ion-content {
 .l5 {
     width: 116px;
     height: 21px;
-    font-family: Roboto;
-    font-style: normal;
+   
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;
@@ -192,8 +184,7 @@ ion-content {
 .l6 {
     width: 116px;
     height: 21px;
-    font-family: Roboto;
-    font-style: normal;
+    
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;
@@ -253,4 +244,5 @@ ion-content {
 
 ion-card {
     border-radius: 30px;
+    background: #fbf9f9;
 }

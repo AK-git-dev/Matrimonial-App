@@ -1,3 +1,6 @@
+*{
+    font-family: "Product Sans";
+}
 .mylist {
     margin-left: 25px;
 }
@@ -93,7 +96,7 @@ ion-icon[name="success_stories"] {
 
     background: url(../../../assets/sidebar-icons/success_stories.png);
 }
-ion-icon[name="search"] {
+ion-icon[name="search1"] {
     // position: absolute;
     width: 42px;
     height: 42px;
@@ -123,9 +126,7 @@ ion-icon[name="setting"] {
 .l1 {
     
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
+    
     font-size: 30px;
     line-height: 35px;
     text-align: center;
@@ -135,9 +136,7 @@ ion-icon[name="setting"] {
 
 .l2 {
     
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
+    
     font-size: 24px;
     line-height: 28px;
     text-align: center;
@@ -147,9 +146,7 @@ ion-icon[name="setting"] {
 
 .l3 {
     
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
+   
     font-size: 25px;
     line-height: 29px;
     text-align: center;
