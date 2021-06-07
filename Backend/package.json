@@ -44,6 +44,7 @@
     "@types/sequelize": "^4.28.9",
     "@types/twilio": "^3.19.3",
     "@types/uuid": "^8.3.0",
+    "loadtest": "^5.1.2",
     "morgan": "^1.10.0",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.7",

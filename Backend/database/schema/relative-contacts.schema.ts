@@ -11,7 +11,7 @@ const RelativeContact = db.schema.define(
       allowNull: false,
       primaryKey: true,
     },
-    type: {
+    relationship: {
       type: DataTypes.STRING(30),
       allowNull: false,
     },

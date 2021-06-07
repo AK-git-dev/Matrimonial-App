@@ -35,10 +35,10 @@ const FamilyDetails = db.schema.define(
       defaultValue: 0,
     },
     familyStatus: {
-      type: DataTypes.STRING(30),
+      type: DataTypes.ENUM("Orthodox", "Traditional", "Moderate", "Liberal"),
     },
     familyValues: {
-      type: DataTypes.STRING(30),
+      type: DataTypes.ENUM('Middle Class', 'Upper Middle Class', 'Rich/Affluent')
     },
     ancestralOrigin: {
       type: DataTypes.STRING(30),

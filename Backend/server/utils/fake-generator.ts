@@ -197,9 +197,6 @@ export async function generateRelativeInformation(allUsers: any, n: number) {
           : probablity > 3
           ? "Sister"
           : "Brother",
-
-      fullname:
-        fakerStatic.name.firstName() + " " + fakerStatic.name.lastName(),
       phoneNumber: fakerStatic.phone.phoneNumber(),
     });
   }
