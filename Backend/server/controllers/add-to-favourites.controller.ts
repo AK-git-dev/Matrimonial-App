@@ -27,6 +27,10 @@ router.post ('/add-to-favourites/:profileId' , requiresAuth , async (req: Reques
 
         await Schema.FavouritePerson.create ({favouritePersonId :profileId , UserId});
 
+        /*
+            * Register an event to send notification to the user2 who has been favoured
+         */
+
         return res.status (202).send ({
             ...SUCCESS ,
             message :`${userExists.getDataValue ('fullname')} has been added to your favorite person to interest!`
