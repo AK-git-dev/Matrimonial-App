@@ -55,6 +55,9 @@ function buildAssociationsBetweenSchemas() {
         through :PrefferedPartnerLanguages ,
     });
 
+    FavouritePerson.belongsTo(User, {foreignKey: 'favouritePersonId', as: 'personDeatils'});
+    PersonWhoFavouritedHimself.belongsTo(User, {foreignKey: 'personWhoFavoritedYouID', as: 'details'});
+
     PrefferedPartnerChoice.hasOne (PrefferedPartnerLanguages);
 
     LifeStyle.hasMany (Hobby);

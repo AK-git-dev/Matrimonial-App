@@ -2,6 +2,7 @@ import {DataTypes} from "sequelize";
 import {v4} from "uuid";
 import {db} from "..";
 import PersonWhoFavouritedYou from "./personWhoFavoriteYou.schema";
+import User from "./user.schema";
 
 const uuid = v4;
 
@@ -16,6 +17,10 @@ const FavouritePerson = db.schema.define (
         favouritePersonId :{
             type :DataTypes.UUID ,
             allowNull :false ,
+            references: {
+                model: User,
+                key: 'id'
+            }
         } ,
     } ,
     {

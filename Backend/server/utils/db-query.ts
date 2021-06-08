@@ -45,8 +45,15 @@ export const getAllUsersWithAllDetails = async () =>
       { model: Schema.FamilyDetails },
       { model: Schema.ProfilPicture },
       { model: Schema.RelativeContact },
-      { model: Schema.FavouritePerson },
-      { model: Schema.PersonWhoFavouritedHimself },
+      { model: Schema.FavouritePerson,
+        include: [
+          {model: Schema.User, as: 'personDeatils', attributes:['id', 'fullname', 'age', 'martialStatus'] }
+        ] },
+      { model: Schema.PersonWhoFavouritedHimself,
+        include: [
+          {model: Schema.User, as: 'details', attributes:['id', 'fullname', 'age', 'martialStatus'] }
+        ]
+      },
     ],
   });
 

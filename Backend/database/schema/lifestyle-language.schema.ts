@@ -2,13 +2,18 @@ import { db } from "../index";
 import { DataTypes } from "sequelize";
 import Languages from "./languages.schema";
 import LifeStyle from "./lifeStyle.schema";
+import {uuid} from "../../server/utils";
 
 const LifestyleLanguage = db.schema.define(
   "lifestyleLanguages",
   {
+    id: {
+      type: DataTypes.UUID,
+      allowNull: false,
+      primaryKey: true
+    },
     name: {
       type: DataTypes.STRING(80),
-      primaryKey: true,
       allowNull: false,
       references: {
         model: Languages,
@@ -27,6 +32,14 @@ const LifestyleLanguage = db.schema.define(
   {
     freezeTableName: true,
     tableName: "lifestyleLanguages",
+    indexes: [
+      {fields: ['name']}
+    ],
+    hooks: {
+      beforeValidate(payload, options) {
+        (payload as any).id = uuid();
+      }
+    }
   }
 );
 

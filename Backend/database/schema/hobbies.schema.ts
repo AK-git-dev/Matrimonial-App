@@ -6,6 +6,11 @@ import LifeStyle from "./lifeStyle.schema";
 const Hobby = db.schema.define(
   "Hobbies",
   {
+    id: {
+      type: DataTypes.UUID,
+      allowNull: false,
+      primaryKey: true
+    },
     hobby: {
       type: DataTypes.STRING(30),
       primaryKey: true,
@@ -23,6 +28,9 @@ const Hobby = db.schema.define(
   {
     freezeTableName: true,
     tableName: "Hobbies",
+    indexes: [
+      {fields: ['hobby']}
+    ],
     hooks: {
       beforeValidate: function (payload, options) {
         (payload as any).name = ((payload as any).name as string).toLowerCase();

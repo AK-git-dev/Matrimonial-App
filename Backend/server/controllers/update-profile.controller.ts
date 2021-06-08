@@ -17,7 +17,7 @@ import {
     Next ,
     RequestInterface ,
     ResponseInterface ,
-    SUCCESS ,
+    SUCCESS , uuid ,
 } from "../utils";
 import {requiresMinimumAge} from "../utils/middlewares/age-restrictor.middleware";
 import {requiresAuth} from "../utils/middlewares/requires-auth.middleware";
@@ -182,6 +182,7 @@ router.post ('/update-lifestyle/:lifeStyleId/add-hobbies' , requiresAuth , async
         const payload = req.body as { hobby: string }[];
         const finalPayload = payload.map ((payload) => {
             return {
+                id: uuid(),
                 ...payload ,
                 LifeStyleId
             }
@@ -231,6 +232,7 @@ router.post (
 
             const finalPayload = payload.map ((lang) => {
                 return {
+                    id: uuid(),
                     name :lang.languageName ,
                     LifeStyleId ,
                 };
