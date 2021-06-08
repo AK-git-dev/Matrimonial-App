@@ -1,260 +1,305 @@
-ion-title{
-    position: absolute;
-    width: 800px;
-    height: 130px;
-    left: 0px;
-    top: 0px;
-    
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
+.div1 {
+    background: #4c0890;
+    height: 100%;
+}
+
+.title1 {
     font-size: 24px;
     line-height: 28px;
-    background-color: #4C0890;
-    color: #FFFFFF;
-    }
-ion-label{
-/* Step 2/3 */
-
-position: absolute;
-width: 46px;
-height: 14px;
-left: 344px;
-top: 55px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 14px;
-/* identical to box height */
-
-color: #FBF9F9;
-
-
+    background-color: #4c0890;
+    color: #ffffff;
+    padding-left: 0px;
+    padding-top: 10px;
 }
-/* Rectangle 1 */
-.container {
+
+.div2 {
     position: absolute;
-    width: 414px;
-    height: 794px;
-    left: 0px;
-    top: 102px;
-    
-    background: #FBF9F9;
+    background: #ffffff;
+    width: 100%;
+    height: 85%;
+    bottom: 0px;
     border-radius: 30px 30px 0px 0px;
-    }
-
-.name{
-    /* Education */
-
-position: absolute;
-width: 80px;
-height: 21px;
-left: 32px;
-top: 85px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
 }
 
-.cap{
-    /* Rectangle 3 */
-
-position: absolute;
-width: 41px;
-height: 79px;
-left: 17px;
-top: 109.5px;
-
-background: #FBF9F9;
-border-radius: 30px 30px 0px 0px;
-
+.item1 {
+    padding: 12px;
 }
 
-.name1{
-    /* Line 3 */
 
-position: absolute;
-width: 260px;
-height: 25px;
-left: 84px;
-top: 131.5px;
+.btn1 {
+    --background: none;
+    --background: #4c0890;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: none;
+    margin-left: auto;
+    margin-right: auto;
 
-border: 1px solid #4C0890;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
+    color: #fcfcfc;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.career{
-    /* Career */
-
-position: absolute;
-width: 53px;
-height: 21px;
-left: 28px;
-top: 228px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
+.lab1 {
+    color: #fcfcfc;
+    padding-left: 15px;
 }
 
-.bag{
-    /* visitor 1 */
+// ion-title{
+//     position: absolute;
+//     width: 800px;
+//     height: 130px;
+//     left: 0px;
+//     top: 0px;
 
-position: absolute;
-width: 20px;
-height: 20px;
-left: 31px;
-top: 271px;
+//     font-family: Roboto;
+//     font-style: normal;
+//     font-weight: normal;
+//     font-size: 24px;
+//     line-height: 28px;
+//     background-color: #4C0890;
+//     color: #FFFFFF;
+//     }
+// ion-label{
+// /* Step 2/3 */
 
-//background: url(visitor.png);
-}
+// position: absolute;
+// width: 46px;
+// height: 14px;
+// left: 344px;
+// top: 55px;
 
-.career1{
-    /* Employed In * */
+// font-family: Roboto;
+// font-style: normal;
+// font-weight: normal;
+// font-size: 12px;
+// line-height: 14px;
+// /* identical to box height */
 
-position: absolute;
-width: 86px;
-height: 16px;
-left: 54px;
-top: 275px;
+// color: #FBF9F9;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 16px;
+// }
+// /* Rectangle 1 */
+// .container {
+//     position: absolute;
+//     width: 414px;
+//     height: 794px;
+//     left: 0px;
+//     top: 102px;
 
-color: #000000;
-}
+//     background: #FBF9F9;
+//     border-radius: 30px 30px 0px 0px;
+//     }
 
-.name2{
-    /* Line 4 */
+// .name{
+//     /* Education */
 
-position: absolute;
-width: 279px;
-height: 25px;
-left: 31px;
-top: 309.5px;
+// position: absolute;
+// width: 80px;
+// height: 21px;
+// left: 32px;
+// top: 85px;
 
-border: 1px solid #4C0890;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+// font-family: Roboto;
+// font-style: normal;
+// font-weight: normal;
+// font-size: 18px;
+// line-height: 21px;
+// /* identical to box height */
 
-}
+// color: #000000;
 
-.desktop{
-    /* businessman 2 */
+// }
 
-position: absolute;
-width: 20px;
-height: 20px;
-left: 31px;
-top: 364px;
+// .cap{
+//     /* Rectangle 3 */
 
-//background: url(businessman.png);
+// position: absolute;
+// width: 41px;
+// height: 79px;
+// left: 17px;
+// top: 109.5px;
 
-}
+// background: #FBF9F9;
+// border-radius: 30px 30px 0px 0px;
 
-.occup{
-    /* Occupation * */
+// }
 
-position: absolute;
-width: 81px;
-height: 16px;
-left: 54px;
-top: 364px;
+// .name1{
+//     /* Line 3 */
 
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 16px;
+// position: absolute;
+// width: 260px;
+// height: 25px;
+// left: 84px;
+// top: 131.5px;
 
-color: #000000;
-}
+// border: 1px solid #4C0890;
+// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-.name3{
-    /* Line 5 */
+// }
 
-position: absolute;
-width: 284px;
-height: 25px;
-left: 31px;
-top: 405px;
+// .career{
+//     /* Career */
 
-border: 1px solid #4C0890;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
+// position: absolute;
+// width: 53px;
+// height: 21px;
+// left: 28px;
+// top: 228px;
 
-.money{
-    /* india-rupee-currency-symbol 1 */
+// font-family: Roboto;
+// font-style: normal;
+// font-weight: normal;
+// font-size: 18px;
+// line-height: 21px;
+// /* identical to box height */
 
-position: absolute;
-width: 20px;
-height: 20px;
-left: 28px;
-top: 450px;
+// color: #000000;
+// }
 
-//background: url(india-rupee-currency-symbol.png);
-}
+// .bag{
+//     /* visitor 1 */
 
-.income{
-    /* Income * */
+// position: absolute;
+// width: 20px;
+// height: 20px;
+// left: 31px;
+// top: 271px;
 
-position: absolute;
-width: 57px;
-height: 16px;
-left: 54px;
-top: 450px;
+// //background: url(visitor.png);
+// }
 
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 16px;
+// .career1{
+//     /* Employed In * */
 
-color: #000000;
-}
+// position: absolute;
+// width: 86px;
+// height: 16px;
+// left: 54px;
+// top: 275px;
 
-.name4{
-    /* Line 6 */
+// font-family: Roboto;
+// font-style: normal;
+// font-weight: normal;
+// font-size: 14px;
+// line-height: 16px;
 
-position: absolute;
-width: 279.03px;
-height: 25px;
-left: 31px;
-top: 480px;
+// color: #000000;
+// }
 
-border: 1px solid #4C0890;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+// .name2{
+//     /* Line 4 */
 
-}
+// position: absolute;
+// width: 279px;
+// height: 25px;
+// left: 31px;
+// top: 309.5px;
 
-.Nextbutton{
-    /* Rectangle 5 */
+// border: 1px solid #4C0890;
+// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-position: absolute;
-width: 274px;
-height: 56px;
-left: 70px;
-top: 609px;
+// }
 
-background: #4C0890;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
+// .desktop{
+//     /* businessman 2 */
 
-}
+// position: absolute;
+// width: 20px;
+// height: 20px;
+// left: 31px;
+// top: 364px;
+
+// //background: url(businessman.png);
+
+// }
+
+// .occup{
+//     /* Occupation * */
+
+// position: absolute;
+// width: 81px;
+// height: 16px;
+// left: 54px;
+// top: 364px;
+
+// font-family: Roboto;
+// font-style: normal;
+// font-weight: normal;
+// font-size: 14px;
+// line-height: 16px;
+
+// color: #000000;
+// }
+
+// .name3{
+//     /* Line 5 */
+
+// position: absolute;
+// width: 284px;
+// height: 25px;
+// left: 31px;
+// top: 405px;
+
+// border: 1px solid #4C0890;
+// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+// }
+
+// .money{
+//     /* india-rupee-currency-symbol 1 */
+
+// position: absolute;
+// width: 20px;
+// height: 20px;
+// left: 28px;
+// top: 450px;
+
+// //background: url(india-rupee-currency-symbol.png);
+// }
+
+// .income{
+//     /* Income * */
+
+// position: absolute;
+// width: 57px;
+// height: 16px;
+// left: 54px;
+// top: 450px;
+
+// font-family: Roboto;
+// font-style: normal;
+// font-weight: normal;
+// font-size: 14px;
+// line-height: 16px;
+
+// color: #000000;
+// }
+
+// .name4{
+//     /* Line 6 */
+
+// position: absolute;
+// width: 279.03px;
+// height: 25px;
+// left: 31px;
+// top: 480px;
+
+// border: 1px solid #4C0890;
+// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+// }
+
+// .Nextbutton{
+//     /* Rectangle 5 */
+
+// position: absolute;
+// width: 274px;
+// height: 56px;
+// left: 70px;
+// top: 609px;
+
+// background: #4C0890;
+// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+// border-radius: 10px;
+
+// }
