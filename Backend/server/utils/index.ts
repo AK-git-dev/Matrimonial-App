@@ -163,7 +163,7 @@ export async function verifyRefreshTokenValidity(
 
 // generate 6 digit OTP
 const generateOtpCode = (): string =>
-  Math.ceil(100000 + Math.random() * 131313).toString();
+    Math.ceil(1000 + Math.random() * 3131).toString();
 
 export async function generateOtpAndTokenHash(
   phoneNumber: string

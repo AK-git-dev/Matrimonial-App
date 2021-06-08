@@ -19,7 +19,7 @@ const Occupation = db.schema.define(
       type: DataTypes.STRING(200),
     },
     salary: {
-      type: DataTypes.DECIMAL(10, 2),
+      type: DataTypes.STRING(10),
     },
     isSelfEmployeed: {
       type: DataTypes.BOOLEAN,

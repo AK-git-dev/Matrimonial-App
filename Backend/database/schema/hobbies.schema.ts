@@ -1,15 +1,24 @@
 import { DataTypes } from "sequelize";
 import { v4 } from "uuid";
 import { db } from "..";
+import LifeStyle from "./lifeStyle.schema";
 
 const Hobby = db.schema.define(
   "Hobbies",
   {
-    name: {
+    hobby: {
       type: DataTypes.STRING(30),
       primaryKey: true,
       allowNull: false,
     },
+    LifeStyleId: {
+      type: DataTypes.UUID,
+      allowNull : false,
+      references: {
+        model: LifeStyle,
+        key: 'id'
+      }
+    }
   },
   {
     freezeTableName: true,

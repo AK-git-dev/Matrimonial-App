@@ -28,11 +28,7 @@ export const getAllUsersWithAllDetails = async () =>
       {
         model: Schema.LifeStyle,
         include: [
-          { model: Schema.Movie, as: "favouriteMovies" },
-          {
-            model: Schema.VaccationDestination,
-            as: "favoriteDestinationPlaces",
-          },
+          { model: Schema.Hobby},
           { model: Schema.LifestyleLanguage },
         ],
       },

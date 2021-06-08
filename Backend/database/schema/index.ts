@@ -72,6 +72,7 @@ const Schema = {
     Education ,
     Address ,
     MotherTongue ,
+    Hobby,
     LifestyleLanguage ,
     TrustScore ,
     Caste ,
