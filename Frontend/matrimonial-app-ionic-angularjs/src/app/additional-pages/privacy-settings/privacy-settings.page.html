@@ -1,9 +1,9 @@
 
 <ion-content [fullscreen]="true">
 
-    <ion-icon name="close" class="back" size="large" (click)="dismiss()"></ion-icon>
+    <ion-icon name="close" class="back" size="large" [routerLink]="['/settings']"></ion-icon>
     <ion-label class="l1">Privacy Settings</ion-label>
-    <!-- <ion-label class="l2" (click)="dismiss()">Done</ion-label> -->
+   
   
     <form action="">
     <div class="c1">
@@ -17,7 +17,6 @@
           <ion-label class="la1">Mobile number</ion-label>
           <ion-icon [name]="isDown? 'caret-down-outline': 'caret-up-outline'" color="light"></ion-icon>
         </ion-item>
-  
         <ion-menu-toggle auto-hide="false">
           <ion-radio-group value="Mobile">
           <ion-list [hidden]="isDown" lines="none" class="mylist">
@@ -42,14 +41,14 @@
         </ion-menu-toggle>
   
     <!--------------------------------------------------------------- Album Privacy ------------------------------------------------------>
-    <ion-item (click)="isDown === true ? isDown = false: isDown = true">
+    <ion-item (click)="isDown1 === true ? isDown1 = false: isDown1 = true">
       <!-- <ion-icon class="i1" size="large"></ion-icon> -->
       <ion-label class="la2">Album Privacy</ion-label>
-      <ion-icon [name]="isDown? 'caret-down-outline': 'caret-up-outline'" color="light"></ion-icon>
+      <ion-icon [name]="isDown1? 'caret-down-outline': 'caret-up-outline'" color="light"></ion-icon>
     </ion-item>
     <ion-menu-toggle auto-hide="false">
       <ion-radio-group value="Album">
-      <ion-list [hidden]="isDown" lines="none" class="mylist2">
+      <ion-list [hidden]="isDown1" lines="none" class="mylist2">
         <ion-item>
           <ion-radio slot="start" color="success" value="r1"></ion-radio>
           <ion-label>Show to all(Recommendation)</ion-label>
@@ -71,14 +70,14 @@
     </ion-menu-toggle>
   
       <!-------------------------------------------- Profile Visibility ----------------------------------------->
-      <ion-item (click)="isDown === true ? isDown = false: isDown = true">
+      <ion-item (click)="isDown2 === true ? isDown2 = false: isDown2 = true">
         <!-- <ion-icon class="i1" size="large"></ion-icon> -->
         <ion-label class="la3">Profile Visibility</ion-label>
-        <ion-icon [name]="isDown? 'caret-down-outline': 'caret-up-outline'" color="light"></ion-icon>
+        <ion-icon [name]="isDown2? 'caret-down-outline': 'caret-up-outline'" color="light"></ion-icon>
       </ion-item>
       <ion-menu-toggle auto-hide="false">
         <ion-radio-group value="Album">
-        <ion-list [hidden]="isDown" lines="none" class="mylist2">
+        <ion-list [hidden]="isDown2" lines="none" class="mylist2">
           <ion-item>
             <ion-radio slot="start" color="success" value="r1"></ion-radio>
             <ion-label>Show my Profile to all</ion-label>
@@ -100,14 +99,14 @@
       </ion-menu-toggle>
   
       <!---------------------------------------- Voice call Settings ----------------------------------------------------->
-      <ion-item (click)="isDown === true ? isDown = false: isDown = true">
+      <ion-item (click)="isDown3 === true ? isDown3 = false: isDown3 = true">
         <!-- <ion-icon class="i1" size="large"></ion-icon> -->
         <ion-label class="la4">Voice call Setting</ion-label>
-        <ion-icon [name]="isDown? 'caret-down-outline': 'caret-up-outline'" color="light"></ion-icon>
+        <ion-icon [name]="isDown3? 'caret-down-outline': 'caret-up-outline'" color="light"></ion-icon>
       </ion-item>
       <ion-menu-toggle auto-hide="false">
         <ion-radio-group value="Album">
-        <ion-list [hidden]="isDown" lines="none" class="mylist2">
+        <ion-list [hidden]="isDown3" lines="none" class="mylist2">
           <ion-item>
             <ion-radio slot="start" color="success" value="r1"></ion-radio>
             <ion-label>Recive all voice calls</ion-label>
@@ -138,14 +137,14 @@
   
       <!-------------------------------------------- Video call Settings --------------------------------------->
   
-      <ion-item (click)="isDown === true ? isDown = false: isDown = true">
+      <ion-item (click)="isDown4 === true ? isDown4 = false: isDown4 = true">
         <!-- <ion-icon class="i1" size="large"></ion-icon> -->
         <ion-label class="la2">Video call Settings</ion-label>
-        <ion-icon [name]="isDown? 'caret-down-outline': 'caret-up-outline'" color="light"></ion-icon>
+        <ion-icon [name]="isDown4? 'caret-down-outline': 'caret-up-outline'" color="light"></ion-icon>
       </ion-item>
       <ion-menu-toggle auto-hide="false">
         <ion-radio-group value="Album">
-        <ion-list [hidden]="isDown" lines="none" class="mylist2">
+        <ion-list [hidden]="isDown4" lines="none" class="mylist2">
           <ion-item>
             <ion-radio slot="start" color="success" value="r1"></ion-radio>
             <ion-label>Show to all(Recommendation)</ion-label>
@@ -172,6 +171,13 @@
         </ion-list>
         </ion-radio-group>
       </ion-menu-toggle>
+
+     
+          <ion-row>
+            <ion-button class="savebutton" shape="round" [routerLink]="['/settings']" >SAVE</ion-button>
+          </ion-row>
+        
+      
   
     </ion-list>
       <!-- </div> -->

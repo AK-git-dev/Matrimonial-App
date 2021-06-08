@@ -9,6 +9,7 @@ import { MenuController, ModalController } from '@ionic/angular';
 export class PrivacyPolicyPage implements OnInit {
   menu: any;
   isDown: boolean = true;
+  isHide: boolean = true;
   constructor() { }
 
   ngOnInit() {

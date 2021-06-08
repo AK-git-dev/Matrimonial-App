@@ -1,17 +1,17 @@
 <ion-content>
 
   <ion-title><ion-icon name="arrow-back-outline" size="large" [routerLink]="['/edit-profile']"></ion-icon>Contact Details</ion-title>
-    
- 
-    
+  
 <div class="container">
   <ion-grid>
     <ion-row>
       <ion-col sizeLg="10" sizeMd="10" sizeXs="12">  
     <form action="">
-    <div class="p1">
-    <ion-label class="person1">Person 1</ion-label>
-    <ion-select interface="popover" placeholder="Select 1st person" class="persons" >
+      <ion-item>
+      <ion-label class="p3">Person 1</ion-label>
+      </ion-item> <br>
+    <ion-row>
+      <ion-select interface="popover" placeholder="Select Person" class="persons2" >
         <ion-select-option value="Self">Self</ion-select-option>
         <ion-select-option value="Father">Father</ion-select-option>
         <ion-select-option value="Mother">Mother</ion-select-option>
@@ -20,35 +20,51 @@
         <ion-select-option value="Relative">Relative</ion-select-option>
         <ion-select-option value="Friend">Friend</ion-select-option>
       </ion-select>
-      <ion-label class="phone1">Phone no.*</ion-label>
-      <!-- <input type="text" placeholder="+91" class="p1code"> -->
-      <ion-select interface="popover"class="p1code" >
-        <ion-select-option value="india">91</ion-select-option>
-        <ion-select-option value="Afghanistan">93</ion-select-option>
-        <ion-select-option value="japan">81</ion-select-option>
-        <ion-select-option value="australia">61</ion-select-option>
-        <ion-select-option value="brazil">55</ion-select-option>
-        <ion-select-option value="canada">1</ion-select-option>
-        <ion-select-option value="nepal">977</ion-select-option>
-      </ion-select>
-      <input type="text" placeholder="Enter 10 digit number" class="p1no">
-   
-      <ion-label class="phone1-2">Phone no. 2</ion-label>
-      <ion-select interface="popover"class="p1code2" >
-        <ion-select-option value="india">91</ion-select-option>
-        <ion-select-option value="Afghanistan">93</ion-select-option>
-        <ion-select-option value="japan">81</ion-select-option>
-        <ion-select-option value="australia">61</ion-select-option>
-        <ion-select-option value="brazil">55</ion-select-option>
-        <ion-select-option value="canada">1</ion-select-option>
-        <ion-select-option value="nepal">977</ion-select-option>
-      </ion-select>
-      <input type="text" placeholder="Enter 10 digit number" class="p1no2">
+    </ion-row>
+    <ion-row>
+        <ion-label>Mobile Number 1*</ion-label>
+        <ion-intl-tel-input id="mobile-number" name="mobile-number" [(ngModel)]="mobileNumber"
+          #mobileNumberControl="ngModel" ionIntlTelInputValid></ion-intl-tel-input>
+
+      <div *ngIf="mobileNumberControl.invalid && mobileNumberControl.touched">
+        <ion-text color="damage" *ngIf="mobileNumberControl.errors.required">
+          <p class="ion-no-margin"><sub>Mobile number is required.</sub></p>
+        </ion-text>
+        <ion-text color="danger" *ngIf="mobileNumberControl.errors.phone">
+          <p class="ion-no-margin"><sub>Mobile is not valid.</sub></p>
+        </ion-text>
+      </div>
+    </ion-row>
+      
+    <ion-row>
+      <ion-label>Mobile Number 2</ion-label>
+      <ion-intl-tel-input id="mobile-number" name="mobile-number" [(ngModel)]="mobileNumber"
+        #mobileNumberControl="ngModel" ionIntlTelInputValid></ion-intl-tel-input>
+
+    <div *ngIf="mobileNumberControl.invalid && mobileNumberControl.touched">
+      <ion-text color="damage" *ngIf="mobileNumberControl.errors.required">
+        <p class="ion-no-margin"><sub>Mobile number is required.</sub></p>
+      </ion-text>
+      <ion-text color="danger" *ngIf="mobileNumberControl.errors.phone">
+        <p class="ion-no-margin"><sub>Mobile is not valid.</sub></p>
+      </ion-text>
     </div>
+  </ion-row>
 
-    <div class="p2">
-        <ion-label class="person2">Person 2</ion-label>
-        <ion-select interface="popover" placeholder="Select 2st person" class="persons2" >
+    <ion-row>
+      <ion-label class="more" >Click Bellow to add more Persons</ion-label>
+    </ion-row>
+    
+    <ion-item (click)="isDown === true ? isDown = false: isDown = true">
+      <!-- <ion-icon class="i1" size="large"></ion-icon> -->
+      <ion-label class="p3">Person 2</ion-label>
+      <ion-icon [name]="isDown? 'add-outline': 'remove-outline'" color="light"></ion-icon>
+    </ion-item>
+    <ion-menu-toggle auto-hide="false">
+      <ion-radio-group value="Album">
+      <ion-list [hidden]="isDown" lines="none" class="mylist2">
+        <ion-row>
+          <ion-select interface="popover" placeholder="Select Person" class="persons2" >
             <ion-select-option value="Self">Self</ion-select-option>
             <ion-select-option value="Father">Father</ion-select-option>
             <ion-select-option value="Mother">Mother</ion-select-option>
@@ -57,34 +73,51 @@
             <ion-select-option value="Relative">Relative</ion-select-option>
             <ion-select-option value="Friend">Friend</ion-select-option>
           </ion-select>
-          <ion-label class="p2phone1">Phone no.*</ion-label>
-          <ion-select interface="popover"class="p2code" >
-            <ion-select-option value="india">91</ion-select-option>
-            <ion-select-option value="Afghanistan">93</ion-select-option>
-            <ion-select-option value="japan">81</ion-select-option>
-            <ion-select-option value="australia">61</ion-select-option>
-            <ion-select-option value="brazil">55</ion-select-option>
-            <ion-select-option value="canada">1</ion-select-option>
-            <ion-select-option value="nepal">977</ion-select-option>
-          </ion-select>
-          <input type="text" placeholder="Enter 10 digit number" class="p2no">
-       
-          <ion-label class="p2phone1-2">Phone no. 2</ion-label>
-          <ion-select interface="popover"class="p2code2" >
-            <ion-select-option value="india">91</ion-select-option>
-            <ion-select-option value="Afghanistan">93</ion-select-option>
-            <ion-select-option value="japan">81</ion-select-option>
-            <ion-select-option value="australia">61</ion-select-option>
-            <ion-select-option value="brazil">55</ion-select-option>
-            <ion-select-option value="canada">1</ion-select-option>
-            <ion-select-option value="nepal">977</ion-select-option>
-          </ion-select>
-          <input type="text" placeholder="Enter 10 digit number" class="p2no2">
+        </ion-row>
+        <ion-row>
+            <ion-label>Mobile Number 1*</ion-label>
+            <ion-intl-tel-input id="mobile-number" name="mobile-number" [(ngModel)]="mobileNumber"
+              #mobileNumberControl="ngModel" ionIntlTelInputValid></ion-intl-tel-input>
+    
+          <div *ngIf="mobileNumberControl.invalid && mobileNumberControl.touched">
+            <ion-text color="damage" *ngIf="mobileNumberControl.errors.required">
+              <p class="ion-no-margin"><sub>Mobile number is required.</sub></p>
+            </ion-text>
+            <ion-text color="danger" *ngIf="mobileNumberControl.errors.phone">
+              <p class="ion-no-margin"><sub>Mobile is not valid.</sub></p>
+            </ion-text>
+          </div>
+        </ion-row>
+          
+        <ion-row>
+          <ion-label>Mobile Number 2</ion-label>
+          <ion-intl-tel-input id="mobile-number" name="mobile-number" [(ngModel)]="mobileNumber"
+            #mobileNumberControl="ngModel" ionIntlTelInputValid></ion-intl-tel-input>
+    
+        <div *ngIf="mobileNumberControl.invalid && mobileNumberControl.touched">
+          <ion-text color="damage" *ngIf="mobileNumberControl.errors.required">
+            <p class="ion-no-margin"><sub>Mobile number is required.</sub></p>
+          </ion-text>
+          <ion-text color="danger" *ngIf="mobileNumberControl.errors.phone">
+            <p class="ion-no-margin"><sub>Mobile is not valid.</sub></p>
+          </ion-text>
         </div>
-
-    <div class="p3">
-        <ion-label class="person3">Person 3</ion-label>
-        <ion-select interface="popover" placeholder="Select 3st person" class="persons3" >
+      </ion-row>
+        <!-- </ion-grid> -->
+      </ion-list>
+      </ion-radio-group>
+    </ion-menu-toggle>
+    
+    <ion-item (click)="isDown1 === true ? isDown1 = false: isDown1 = true">
+      <!-- <ion-icon class="i1" size="large"></ion-icon> -->
+      <ion-label class="p3">Person 3</ion-label>
+      <ion-icon [name]="isDown1? 'add-outline': 'remove-outline'" color="light"></ion-icon>
+    </ion-item>
+    <ion-menu-toggle auto-hide="false">
+      <ion-radio-group value="Album">
+      <ion-list [hidden]="isDown1" lines="none" class="mylist2">
+        <ion-row>
+          <ion-select interface="popover" placeholder="Select Person" class="persons2" >
             <ion-select-option value="Self">Self</ion-select-option>
             <ion-select-option value="Father">Father</ion-select-option>
             <ion-select-option value="Mother">Mother</ion-select-option>
@@ -93,33 +126,49 @@
             <ion-select-option value="Relative">Relative</ion-select-option>
             <ion-select-option value="Friend">Friend</ion-select-option>
           </ion-select>
-          <ion-label class="p3phone1">Phone no.*</ion-label>
-          <ion-select interface="popover"class="p3code" >
-            <ion-select-option value="india">91</ion-select-option>
-            <ion-select-option value="Afghanistan">93</ion-select-option>
-            <ion-select-option value="japan">81</ion-select-option>
-            <ion-select-option value="australia">61</ion-select-option>
-            <ion-select-option value="brazil">55</ion-select-option>
-            <ion-select-option value="canada">1</ion-select-option>
-            <ion-select-option value="nepal">977</ion-select-option>
-          </ion-select>
-          <input type="text" placeholder="Enter 10 digit number" class="p3no">
-       
-          <ion-label class="p3phone1-2">Phone no. 2</ion-label>
-          <ion-select interface="popover"class="p3code2" >
-            <ion-select-option value="india">91</ion-select-option>
-            <ion-select-option value="Afghanistan">93</ion-select-option>
-            <ion-select-option value="japan">81</ion-select-option>
-            <ion-select-option value="australia">61</ion-select-option>
-            <ion-select-option value="brazil">55</ion-select-option>
-            <ion-select-option value="canada">1</ion-select-option>
-            <ion-select-option value="nepal">977</ion-select-option>
-          </ion-select>
-          <input type="text" placeholder="Enter 10 digit number" class="p3no2">
+        </ion-row>
+        <ion-row>
+            <ion-label>Mobile Number 1*</ion-label>
+            <ion-intl-tel-input id="mobile-number" name="mobile-number" [(ngModel)]="mobileNumber"
+              #mobileNumberControl="ngModel" ionIntlTelInputValid></ion-intl-tel-input>
+    
+          <div *ngIf="mobileNumberControl.invalid && mobileNumberControl.touched">
+            <ion-text color="damage" *ngIf="mobileNumberControl.errors.required">
+              <p class="ion-no-margin"><sub>Mobile number is required.</sub></p>
+            </ion-text>
+            <ion-text color="danger" *ngIf="mobileNumberControl.errors.phone">
+              <p class="ion-no-margin"><sub>Mobile is not valid.</sub></p>
+            </ion-text>
+          </div>
+        </ion-row>
+          
+        <ion-row>
+          <ion-label>Mobile Number 2</ion-label>
+          <ion-intl-tel-input id="mobile-number" name="mobile-number" [(ngModel)]="mobileNumber"
+            #mobileNumberControl="ngModel" ionIntlTelInputValid></ion-intl-tel-input>
+    
+        <div *ngIf="mobileNumberControl.invalid && mobileNumberControl.touched">
+          <ion-text color="damage" *ngIf="mobileNumberControl.errors.required">
+            <p class="ion-no-margin"><sub>Mobile number is required.</sub></p>
+          </ion-text>
+          <ion-text color="danger" *ngIf="mobileNumberControl.errors.phone">
+            <p class="ion-no-margin"><sub>Mobile is not valid.</sub></p>
+          </ion-text>
         </div>
-        <ion-label class="Visible">Visible to all ?</ion-label>
-        <ion-toggle slot="start" name="blueberry" checked></ion-toggle>
-        <ion-button class="savebutton" [routerLink]="['/user-home']" >SAVE</ion-button>
+      </ion-row>
+        <!-- </ion-grid> -->
+      </ion-list>
+      </ion-radio-group>
+    </ion-menu-toggle>
+    
+<!-- <ion-row>
+  <ion-label class="Visible">Visible to all ?</ion-label>
+  <ion-toggle slot="start" checked></ion-toggle>
+</ion-row> -->
+  
+<ion-row>
+  <ion-button class="savebutton" shape="round" [routerLink]="['/user-home']" >SAVE</ion-button>
+</ion-row>
 
 </form>
 
@@ -128,3 +177,6 @@
 </ion-grid>
 </div>
 </ion-content>
+
+
+

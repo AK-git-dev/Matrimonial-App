@@ -1,34 +1,26 @@
 * {
    
     color: black;
+    
 }
 
 ion-icon[name="arrow-back-outline"] {
-    padding-top: 33px;
-    padding-left: 5px;
+    
     color: white;
 }
 
 
 
-h4{
-   
-position: absolute;
-width: 204px;
-height: 28px;
-left: 58px;
-top: 35px;
-font-size: 24px;
-line-height: 28px;
-color: #FBF9F9;
+ion-title{
+    padding: 25px;
+    padding-left: 5px;
+    color: #FBF9F9;
 }
 
-
 .card {
-position: absolute;
+
 width: 100%;
 height: 100%;
-left: 0px;
 top: 90px;
 
 background: #FBF9F9;
@@ -48,13 +40,12 @@ ion-row{
     height: 21px;
     text-align: left;
     font-size: 18px;
-line-height: 21px;
-color: #000000;
+    line-height: 21px;
+    color: #000000;
 }
 
 .max2 {
-    position: absolute;
-   padding-left: 50%;
+    padding-left: 112px;
     text-align: end;
     font-size: 18px;
     line-height: 21px;
@@ -63,20 +54,28 @@ color: #000000;
 
 .min{
     width: 120px;
-height: 24px;
-    background: #FBF9F9;
-border: 1px solid #000000;
+// height: 24px;
+
+// width: 367px;
+height: 40px;
+
+background: #FEFAFA;
+border: 1px solid #4C0890;
+box-sizing: border-box;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
 }
 
 .max{
-    position: absolute;
-    left: 59%;
+    margin-left: 90px;
     width: 120px;
-height: 24px;
-    background: #FBF9F9;
-border: 1px solid #000000;
+height: 40px;
+background: #FEFAFA;
+border: 1px solid #4C0890;
+box-sizing: border-box;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
 }
 
 // ///////////////////////////////////////////// heoght
@@ -88,8 +87,7 @@ line-height: 21px;
 color: #000000;
 }
 .max3{
-   position: absolute;
-   padding-left: 50%;
+    padding-left: 112px;
     text-align: end;
     font-size: 18px;
     line-height: 21px;
@@ -98,20 +96,24 @@ color: #000000;
 
 .minheight{
     width: 120px;
-height: 24px;
-    background: #FBF9F9;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 40px;
+    background: #FEFAFA;
+    border: 1px solid #4C0890;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 
 .maxheight{
-    position: absolute;
-    left: 59%;
+
+    margin-left: 90px;
     width: 120px;
-height: 24px;
-    background: #FBF9F9;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 40px;
+    background: #FEFAFA;
+    border: 1px solid #4C0890;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 
 ///////////////////////////////////////////// CAast
@@ -125,11 +127,13 @@ color: #000000;
 }
 
 .castselect{
-    width: 96%;
-    height: 24px;
-        background: #FBF9F9;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 40px;
+background: #FEFAFA;
+border: 1px solid #4C0890;
+box-sizing: border-box;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
 }
 
 // ///////////////////////////////////////////////////// Language
@@ -144,11 +148,13 @@ color: #000000;
 }
 
 .languageselect{
-    width: 96%;
-    height: 24px;
-        background: #FBF9F9;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 40px;
+background: #FEFAFA;
+border: 1px solid #4C0890;
+box-sizing: border-box;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
 }
 
 // ////////////////////////////////////////////////// Salary
@@ -163,20 +169,23 @@ color: #000000;
 
 .rup{
     width: 120px;
-height: 24px;
-    background: #FBF9F9;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 40px;
+    background: #FEFAFA;
+    border: 1px solid #4C0890;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 
 .dol{
-    position: absolute;
-    left: 59%;
+    margin-left: 90px;
     width: 120px;
-height: 24px;
-    background: #FBF9F9;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 40px;
+    background: #FEFAFA;
+    border: 1px solid #4C0890;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 
 // ///////////////////////////////////////////// MaritialStatus
@@ -190,14 +199,15 @@ color: #000000;
 }
 
 .Status{
-    width: 96%;
-    height: 24px;
-        background: #FBF9F9;
-    border: 1px solid #000000;
+    width: 100%;
+    height: 40px;
+    background: #FEFAFA;
+    border: 1px solid #4C0890;
+    box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
 }
-
-
 // //////////////////////////////////// Occupation
 .occupation {
     height: 21px;
@@ -209,11 +219,13 @@ color: #000000;
 
 .occup{
    
-    width: 70%;
-    height: 24px;
-        background: #FBF9F9;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 40px;
+background: #FEFAFA;
+border: 1px solid #4C0890;
+box-sizing: border-box;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
 }
 
 // /////////////////////////////////// Country & State
@@ -228,21 +240,24 @@ color: #000000;
 
 .countryselect{
    
-    width: 96%;
-    height: 24px;
-        background: #FBF9F9;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 40px;
+background: #FEFAFA;
+border: 1px solid #4C0890;
+box-sizing: border-box;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
 }
+
 
 // ////////////////////////////////////// Button
 
 .save {
 
-width: 274px;
-height: 56px;
-background: #4C0890;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
 
+
+// box-sizing: border-box;
+// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+// border-radius: 10px;
+color: #FBF9F9;
 }

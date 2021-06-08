@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.page.scss'],
 })
 export class ContactPage implements OnInit {
-
+  isDown: boolean = true;
+  isDown1: boolean = true;
   constructor() { }
 
   ngOnInit() {

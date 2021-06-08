@@ -6,69 +6,118 @@
         <ion-col sizeLg="10" sizeMd="10" sizeXs="12">  
     <div class="container">
     <form action="" method="post">
-      <ion-label class="Height">Height</ion-label> <br>
-      <ion-input id="Name1" type="name" class="height" placeholder = "Height*"> </ion-input>
+      <ion-grid>
+        <ion-row>
+          <ion-label class="Height">Height</ion-label> 
+        </ion-row>
+        <ion-row>
+          <ion-input id="Name1" type="name" class="height" placeholder = "Height*"> </ion-input>
+        </ion-row>
 
-      <ion-label class="Weight">Weight</ion-label> <br>
-      <ion-input id="Name1" type="name" class="weight" placeholder = "Weight"> </ion-input>
+        <ion-row>
+          <ion-label class="Weight">Weight</ion-label> 
+        </ion-row>
+        <ion-row>
+          <ion-input id="Name1" type="name" class="weight" placeholder = "Weight"> </ion-input>
+        </ion-row>
       
-      <ion-label class="BT">Body Type</ion-label> <br>
-      <ion-select interface="popover" placeholder="--Select--" class="Body" >
-        <ion-select-option value="Slim">Slim</ion-select-option>
-        <ion-select-option value="Athletic">Athletic</ion-select-option>
-        <ion-select-option value="Average">Average</ion-select-option>
-        <ion-select-option value="Fat">Fat</ion-select-option>
-      </ion-select>
+      <ion-row>
+        <ion-label class="BT">Body Type</ion-label> 
+      </ion-row>
+      <ion-row>
+        <ion-select interface="popover" placeholder="--Select--" class="Body" >
+          <ion-select-option value="Slim">Slim</ion-select-option>
+          <ion-select-option value="Athletic">Athletic</ion-select-option>
+          <ion-select-option value="Average">Average</ion-select-option>
+          <ion-select-option value="Fat">Fat</ion-select-option>
+        </ion-select>
+      </ion-row>
 
 
-      <ion-label class="Complexion">Complexion</ion-label> <br>
+    <ion-row>
+      <ion-label class="Complexion">Complexion</ion-label>
+    <ion-row>
+      </ion-row>
       <ion-select interface="popover" placeholder="--Select--" class="comp" >
         <ion-select-option value="Very Fair">Very Fair</ion-select-option>
         <ion-select-option value="Fair">Fair</ion-select-option>
         <ion-select-option value="Wheatish">Wheatish</ion-select-option>
         <ion-select-option value="Dark">Dark</ion-select-option>
       </ion-select>
+    </ion-row>
 
 
-  <ion-label class="Any">Any Disability</ion-label> <br>
+    <ion-row>
+      <ion-label class="Any">Any Disability</ion-label>
+        </ion-row>
 
+     <ion-row>
       <ion-radio-group value = "Disability">
+        <ion-radio class = "Yes" slot="start" value="Yes"></ion-radio>
+        <ion-label class = "Y">Yes</ion-label>
         
-      <ion-radio class = "Yes" slot="start" value="Yes"></ion-radio>
-      <ion-label class = "Y">Yes</ion-label>
-    <ion-radio class = "No" slot="start" value="No"></ion-radio>
-    <ion-label class = "N">No</ion-label>
-  </ion-radio-group>
+      <ion-radio class = "No" slot="start" value="No"></ion-radio>
+      <ion-label class = "N">No</ion-label>
+    </ion-radio-group>
+     </ion-row>
 
-  <ion-label class="If">If yes, Specify</ion-label> <br>
+     <ion-row>
+      <ion-label class="If">If yes, Specify</ion-label> 
+     </ion-row>
+     <ion-row>
       <ion-input id="Name1" type="name" class="specify" placeholder = "Specify"> </ion-input>
+     </ion-row>
   
-      <ion-label class="Smoking">Smoking Habits</ion-label> <br>
-      <ion-select interface="popover" placeholder="--Select--" class="smoke" >
-        <ion-select-option value="Non-Smoker">Non-Smoker</ion-select-option>
-        <ion-select-option value="Occasional">Occasional</ion-select-option>
-        <ion-select-option value="Regular">Regular</ion-select-option>
-      </ion-select>
+      <ion-row>
+        <ion-label class="Smoking">Smoking Habits</ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-select interface="popover" placeholder="--Select--" class="smoke" >
+          <ion-select-option value="Non-Smoker">Non-Smoker</ion-select-option>
+          <ion-select-option value="Occasional">Occasional</ion-select-option>
+          <ion-select-option value="Regular">Regular</ion-select-option>
+        </ion-select>
+      </ion-row>
 
-      <ion-label class="Drinking">Drinking Habits</ion-label> <br>
-      <ion-select interface="popover" placeholder="--Select--" class="Habits" >
-        <ion-select-option value="Non-Drinker">Non-Drinker</ion-select-option>
-        <ion-select-option value="Occasional">Occasional</ion-select-option>
-        <ion-select-option value="Regular">Regular</ion-select-option>
-      </ion-select>
+      <ion-row>
+        <ion-label class="Drinking">Drinking Habits</ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-select interface="popover" placeholder="--Select--" class="Habits" >
+          <ion-select-option value="Non-Drinker">Non-Drinker</ion-select-option>
+          <ion-select-option value="Occasional">Occasional</ion-select-option>
+          <ion-select-option value="Regular">Regular</ion-select-option>
+        </ion-select>
+      </ion-row>
       
-      <ion-label class="Diet">Diet</ion-label> <br>
-      <ion-input id="Name1" type="name" class="diet" placeholder = "Diet"> </ion-input>
+      <ion-row>
+        <ion-label class="Diet">Diet</ion-label> 
+      </ion-row>
+      <ion-row>
+        <ion-input id="Name1" type="name" class="diet" placeholder = "Diet"> </ion-input>
+      </ion-row>
 
-      <ion-label class="Hobbies">Hobbies</ion-label> <br>
-      <ion-input id="Name1" type="name" class="hobbies" placeholder = "Hobbies"> </ion-input>
+      <ion-row>
+        <ion-label class="Hobbies">Hobbies</ion-label> 
+      </ion-row>
+      <ion-row>
+        <ion-input id="Name1" type="name" class="hobbies" placeholder = "Hobbies"> </ion-input>
+      </ion-row>
 
-      <ion-label class="Sports">Sports & Fitness</ion-label> <br>
-      <ion-input id="Name1" type="name" class="fitness" placeholder = "Sports & Fitness"> </ion-input>
+      <ion-row>
+        <ion-label class="Sports">Sports & Fitness</ion-label> 
+      </ion-row>
+      <ion-row>
+        <ion-input id="Name1" type="name" class="fitness" placeholder = "Sports & Fitness"> </ion-input>
+      </ion-row>
 
-      <ion-button (click)="onClick()" class="Submit" [routerLink]="['/edit-profile']">
+
+     <ion-row>
+      <ion-button (click)="onClick()" shape="round" class="Submit" [routerLink]="['/edit-profile']">
         SAVE
       </ion-button>
+     </ion-row>
+      </ion-grid>
 </form>
   </div>
         </ion-col>

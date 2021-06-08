@@ -12,10 +12,13 @@ ion-title{
     background-color: #4C0890;
     color: #FFFFFF;
     }
+    ion-icon {
+        color: #FBF9F9;
+    }
 .container {
         position: absolute;
-        width: 414px;
-        height: 794px;
+        width: 100%;
+    height: auto;
         left: 0px;
         top: 102px;
         
@@ -23,368 +26,43 @@ ion-title{
         border-radius: 30px 30px 0px 0px;
         }
 
-.name{
-/* Highest Degree */
-
-position: absolute;
-width: 123px;
-height: 21px;
-left: 20px;
-top: 100px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.n1{
-/* Rectangle 177 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 17px;
-top: 130px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Height{
-/* Post Graduate Degree */
-
-position: absolute;
-width: 176px;
-height: 21px;
-left: 20px;
-top: 185px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.height{
-/* Rectangle 178 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 215px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-.Age{
-/* University Name */
-
-position: absolute;
-width: 186px;
-height: 21px;
-left: 20px;
-top: 255px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.age{
-/* Rectangle 179 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 17px;
-top: 280px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.MS{
-/* Under Grad College */
-
-position: absolute;
-width: 155px;
-height: 21px;
-left: 17px;
-top: 320px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.Maritial{
-/* Rectangle 180 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 17px;
-top: 345px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Caste{
-/* Under Grad College */
-
-position: absolute;
-width: 155px;
-height: 21px;
-left: 17px;
-top: 385px;
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-}
-
-.caste{
-    position: absolute;
-    width: 315px;
-    height: 26px;
-    left: 17px;
-    top: 410px;
-    
-    background: #FBF9F9;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
-}
-.Mother{
-/* School Name */
-
-position: absolute;
-width: 108px;
-height: 21px;
-left: 17px;
-top: 447px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.Tongue{
-/* Rectangle 181 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 474px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Country{
-/* Emplyed In */
-
-position: absolute;
-width: 188px;
-height: 21px;
-left: 20px;
-top: 510px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.country{
-/* Rectangle 182 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 540px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.State{
-/* Occupation */
-
-position: absolute;
-width: 92px;
-height: 21px;
-left: 20px;
-top: 575px;
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.state{
-/* Rectangle 183 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 607px;
-
-background: #FFFFFF;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.City{
-/* Organizaton Name */
-
-position: absolute;
-width: 190px;
-height: 21px;
-left: 20px;
-top: 649px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.city{
-/* Rectangle 184 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 686px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Status{
-/* Interested in Settling Abroad? */
-
-position: absolute;
-width: 377px;
-height: 21px;
-left: 17px;
-top: 728px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.status{
-/* Rectangle 185 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 765px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
+ ion-label{
+            padding-left: 25px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            font-size: 18px;
+            line-height: 21px;
+            color: #000000;
+        }
+
+ ion-input{
+            margin-left: 25px;
+            margin-right: 25px;
+            height: 40px;
+            background: #FEFAFA;
+            border: 1px solid #4C0890;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+        }
+ion-select{
+              margin-left: 25px;
+             margin-right: 25px;
+            height: 40px;
+            width: 100%;
+            background: #FEFAFA;
+            border: 1px solid #4C0890;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+        }
 
 .Submit{
-    position: absolute;
-    width: 274px;
-    height: 56px;
-    left: 67px;
-    top: 823px;
-    
-    background: #4C0890;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    
+    margin-top: 10px;
+    margin: 25px;
+    width: 100%;
+height: 40px;
+--background: none;
+--background: #4c0890;
+color: #FBF9F9;
 }

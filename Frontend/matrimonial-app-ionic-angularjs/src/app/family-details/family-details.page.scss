@@ -1,8 +1,3 @@
-
-ion-icon[name="arrow-back-outline"] {
-    color: white;
-}
-
 ion-title{
     position: absolute;
     width: 800px;
@@ -10,350 +5,64 @@ ion-title{
     left: 0px;
     top: 0px;
     
-    
+   
     font-weight: normal;
     font-size: 24px;
     line-height: 28px;
     background-color: #4C0890;
     color: #FFFFFF;
     }
+    ion-icon {
+        color: #FBF9F9;
+    }
 .container {
         position: absolute;
-        width: 414px;
-        height: 794px;
+        width: 100%;
+    height: auto;
         left: 0px;
         top: 102px;
         
         background: #FBF9F9;
         border-radius: 30px 30px 0px 0px;
         }
-.foccu{
-/* Father’s Occupation */
 
-position: absolute;
-width: 159px;
-height: 21px;
-left: 17px;
-top: 121px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.occu{
-/* Rectangle 154 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 17px;
-top: 148px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.moccu{
-/* Mother’s Occupation */
-
-position: absolute;
-width: 186px;
-height: 21px;
-left: 20px;
-top: 193px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.occu1{
-/* Rectangle 155 */
-
-position: absolute;
-width: 315px;
-height: 24px;
-left: 17px;
-top: 227px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Bro{
-/* No. of Brothers */
-
-position: absolute;
-width: 137px;
-height: 21px;
-left: 23px;
-top: 273px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.nbro{
-/* Rectangle 156 */
-
-position: absolute;
-width: 315px;
-height: 24px;
-left: 20px;
-top: 307px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.MBro{
-/* of Which Married */
-
-position: absolute;
-width: 167px;
-height: 21px;
-left: 20px;
-top: 350px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.Mbro1{
-/* Rectangle 157 */
-
-position: absolute;
-width: 315px;
-height: 24px;
-left: 20px;
-top: 387px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Sis{
-/* No. Of Sisters */
-
-position: absolute;
-width: 111px;
-height: 21px;
-left: 23px;
-top: 431px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.nsis{
-/* Rectangle 158 */
-
-position: absolute;
-width: 315px;
-height: 24px;
-left: 20px;
-top: 458px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.MSis{
-/* Of which Married */
-
-position: absolute;
-width: 167px;
-height: 29px;
-left: 17px;
-top: 504px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-
-color: #000000;
-
-
-}
-
-.Msis1{
-/* Rectangle 159 */
-
-position: absolute;
-width: 315px;
-height: 24px;
-left: 17px;
-top: 533px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Fstat{
-/* Family Status */
-
-position: absolute;
-width: 137px;
-height: 21px;
-left: 17px;
-top: 579px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.stat{
-/* Rectangle 160 */
-
-position: absolute;
-width: 315px;
-height: 24px;
-left: 20px;
-top: 616px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Fval{
-/* Family Value */
-
-position: absolute;
-width: 132px;
-height: 21px;
-left: 23px;
-top: 659px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.val{
-/* Rectangle 161 */
-
-position: absolute;
-width: 315px;
-height: 24px;
-left: 17px;
-top: 693px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-// .Origin{
-// /* Ancestral Origin */
-
-// position: absolute;
-// width: 157px;
-// height: 21px;
-// left: 17px;
-// top: 736px;
-
-// font-family: Roboto;
-// font-style: normal;
-// font-weight: normal;
-// font-size: 18px;
-// line-height: 21px;
-// /* identical to box height */
-
-// color: #000000;
-
-
-// }
-
-// .Aorigin{
-// /* Rectangle 162 */
-
-// position: absolute;
-// width: 315px;
-// height: 24px;
-// left: 17px;
-// top: 773px;
-
-// background: #FBF9F9;
-// border: 1px solid #000000;
-// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-// }
+ ion-label{
+            padding-left: 25px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            font-size: 18px;
+            line-height: 21px;
+            color: #000000;
+        }
+
+ ion-input{
+            margin-left: 25px;
+            margin-right: 25px;
+            height: 40px;
+            background: #FEFAFA;
+            border: 1px solid #4C0890;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+        }
+ion-select{
+              margin-left: 25px;
+             margin-right: 25px;
+            height: 40px;
+            width: 100%;
+            background: #FEFAFA;
+            border: 1px solid #4C0890;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+        }
 
 .Submit{
-/* Rectangle 163 */
-
-position: absolute;
-width: 274px;
-height: 56px;
-left: 35px;
-top: 750px;
-
-background: #4C0890;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-
+    margin-top: 10px;
+    margin: 25px;
+    width: 100%;
+height: 40px;
+--background: none;
+--background: #4c0890;
+color: #FBF9F9;
 }

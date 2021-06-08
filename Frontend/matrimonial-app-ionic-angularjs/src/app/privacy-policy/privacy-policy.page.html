@@ -79,13 +79,13 @@
       <!-- ------------------------------------------DISCLOSURE OF YOUR INFORMATION----------------------------------------------- -->
   
     </ion-list>
-    <ion-item (click)="isDown === true ? isDown = false: isDown = true">
+    <ion-item (click)="isHide === true ? isHide = false: isHide = true">
       <!-- <ion-icon class="i1" size="large"></ion-icon> -->
       <ion-label class="la1">DISCLOSURE OF YOUR INFORMATION</ion-label>
-      <ion-icon [name]="isDown? 'caret-down-outline': 'caret-up-outline'" color="light"></ion-icon>
+      <ion-icon [name]="isHide? 'caret-down-outline': 'caret-up-outline'" color="light"></ion-icon>
     </ion-item>
     <ion-menu-toggle auto-hide="false">
-      <ion-list [hidden]="isDown" lines="none" class="mylist">
+      <ion-list [hidden]="isHide" lines="none" class="mylist">
         <ion-item>
           <ion-grid>
             <ion-row>
