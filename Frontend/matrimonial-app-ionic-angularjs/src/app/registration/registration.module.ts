@@ -7,13 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { RegistrationPageRoutingModule } from './registration-routing.module';
 
 import { RegistrationPage } from './registration.page';
+import { IonIntlTelInputModule } from 'ion-intl-tel-input';
+import { NgxOtpInputModule } from 'ngx-otp-input';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RegistrationPageRoutingModule
+    RegistrationPageRoutingModule,
+    IonIntlTelInputModule, 
+    NgxOtpInputModule
   ],
   declarations: [RegistrationPage]
 })

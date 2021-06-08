@@ -31,7 +31,10 @@ export class LoginPage implements OnInit {
   async presentModal() {
     const modal = await this.modalController.create({
       component: OtpComponent,
-      cssClass: 'my-custom-class2'
+      cssClass: 'my-custom-class2',
+      componentProps: {
+        'path': '/user-home'
+      }
     });
     await modal.present();
     const { data } = await modal.onWillDismiss();
