@@ -26,14 +26,15 @@ const FavouritePerson = db.schema.define(
         favouritePerson.id = uuid();
       },
       beforeCreate: function (payload: any, options) {
-        const whoIsFavoritingYou = payload.userId;
+        const whoIsFavoritingYou = payload.UserId; //{UserId, FavoritePersonID}
 
         PersonWhoFavouritedYou.create({
           personWhoFavoritedYouID: whoIsFavoritingYou,
+          UserId: payload.favouritePersonId
         })
           .then((r) =>
             console.log(
-              `${whoIsFavoritingYou} marked as favorited by ${payload.userId}`
+              `${payload.favouritePersonId} marked as favorite by ${payload.UserId}`
             )
           )
           .catch((e) => console.error(e));

@@ -19,6 +19,7 @@
       <change afterPath="$PROJECT_DIR$/Backend/database/schema/relative-contacts.schema.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/formatter.bat" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/resetDB.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/server/controllers/add-to-favourites.controller.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/controllers/file-uploader.controller.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/controllers/login.controller.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/controllers/microservices/profile-picture.service.ts" afterDir="false" />
@@ -119,7 +120,7 @@
       <workItem from="1622953882828" duration="3259000" />
       <workItem from="1622958515589" duration="2004000" />
       <workItem from="1623079839815" duration="4387000" />
-      <workItem from="1623126256351" duration="5981000" />
+      <workItem from="1623126256351" duration="8373000" />
     </task>
     <servers />
   </component>
