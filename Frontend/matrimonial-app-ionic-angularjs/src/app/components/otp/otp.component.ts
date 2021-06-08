@@ -16,7 +16,7 @@ export class OtpComponent implements OnInit {
   path: string;
 
   otpInputConfig: NgxOtpInputConfig = {
-    otpLength: 6,
+    otpLength: 4,
     autofocus: true,
     classList: {
       inputBox: "my-super-box-class",
