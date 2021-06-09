@@ -34,7 +34,6 @@
       <change afterPath="$PROJECT_DIR$/Backend/server/utils/middlewares/requires-auth.middleware.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/systems-design/notification-system.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/systems-design/notification.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +120,7 @@
       <workItem from="1622958515589" duration="2004000" />
       <workItem from="1623079839815" duration="4387000" />
       <workItem from="1623126256351" duration="13915000" />
-      <workItem from="1623158824402" duration="5195000" />
+      <workItem from="1623158824402" duration="5352000" />
     </task>
     <servers />
   </component>
