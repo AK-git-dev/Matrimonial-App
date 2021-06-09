@@ -1,90 +1,136 @@
 <ion-content>
-  
-    <img src="../../assets/Trust Score/Back ]Arrow.png" alt="Back page" class="back" >
-    
-    <h2 class="heading">Trust Score</h2>
+  <ion-title><ion-icon name="arrow-back-outline" size="large" [routerLink]="['/edit-profile']"></ion-icon>Trust Score</ion-title>
   
 
 <div class="container">
-  <h3>Your Trust Score is:</h3>
-  <div class="sub-container">
-    
-    <ion-fab slot="fixed" class="button1">
-      <ion-fab-button><img src="../../assets/Trust Score/otp.png" alt=""></ion-fab-button>
-    </ion-fab>
-    <ion-label class="mobile1">Mobile OTP Verification (20)</ion-label>
-    
-    <ion-fab slot="fixed" class="button2" >
-      <ion-fab-button><img src="../../assets/Trust Score/Photo.png" alt=""></ion-fab-button>
-    </ion-fab>
-     <ion-label class="photo1">Photo ID (35)</ion-label>
 
-    <ion-fab slot="fixed" class="button3" >
-      <ion-fab-button><img src="../../assets/Trust Score/education.png" alt=""></ion-fab-button>
-    </ion-fab>
-    <ion-label  class="education1" >Educational proof (15)</ion-label>
-   
-    <ion-fab slot="fixed" class="button4" >
-      <ion-fab-button><img src="../../assets/Trust Score/occupation.png" alt=""></ion-fab-button>
-    </ion-fab>
-    <ion-label class="occupation1">Occupation proof (15)</ion-label>
+  <ion-grid>
+    <form action="">
+    <ion-row>
+      <ion-label class="ion-text-center" >Your Trust Score is:</ion-label>>
+    </ion-row><br>
+  <div class="sub-container">
+    <ion-row>
+      <ion-col>
+        <ion-fab class="button1">
+          <ion-fab-button><img src="../../assets/Trust Score/otp.png" alt=""></ion-fab-button>
+        </ion-fab>
+       
+      </ion-col>
+      <ion-col>
+        <ion-fab class="button2" >
+          <ion-fab-button><img src="../../assets/Trust Score/Photo.png" alt=""></ion-fab-button>
+        </ion-fab>
+      </ion-col>
+      <ion-col>
+        <ion-fab  class="button3" >
+          <ion-fab-button><img src="../../assets/Trust Score/education.png" alt=""></ion-fab-button>
+        </ion-fab>
+      </ion-col>
+      <ion-col>
+        <ion-fab  class="button4" >
+          <ion-fab-button><img src="../../assets/Trust Score/occupation.png" alt=""></ion-fab-button>
+        </ion-fab>
+      </ion-col>
+      <ion-col>
+        <ion-fab  class="button5" >
+          <ion-fab-button><img src="../../assets/Trust Score/income.png" alt=""></ion-fab-button>
+        </ion-fab>
+      </ion-col>
+    </ion-row>
+<br>&nbsp;
+    <ion-row>
+      <ion-col>
+        <ion-label class="l1">Mobile OTP Verification (20)</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label class="l1">Photo ID (35)</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label  class="l1" >Educational proof (15)</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label class="l1">Occupation proof (15)</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label class="l1" >Income Proof (15)</ion-label>
+      </ion-col>
+    </ion-row>
+   <br>
+    <ion-row class="ion-text-center">
+      <ion-label  >Upload documents to increase your trust score</ion-label>
+    </ion-row>
     
-    <ion-fab slot="fixed" class="button5" >
-      <ion-fab-button><img src="../../assets/Trust Score/income.png" alt=""></ion-fab-button>
-    </ion-fab>
-    <ion-label class="income1" >Income Proof (15)</ion-label>
-    <h4>Upload documents to increase your trust score</h4>
+    
   </div>
 
     <!-------------------------- Documments upload Section -------------------------->
-  <form action="">
-    <ion-label class="Photo">Photo ID</ion-label> <br>
-    <ion-select interface="popover" placeholder="-Select-" class="Photo-select" >
-      <ion-select-option value="Aadhaar">Aadhaar card</ion-select-option>
-      <ion-select-option value="Passport">Passport</ion-select-option>
-      <ion-select-option value="Driving-License">Driving License</ion-select-option>
-      <ion-select-option value="Voter-ID">Voter’s ID</ion-select-option>
-      <ion-select-option value="Pan">Pan Card</ion-select-option>
-    </ion-select>
-    <!-- <h4 class="photo-front" >Front</h4> -->
-    <img src="../../assets/Upload-documents.png" alt="Upload documwnts" class="upload1" (click)="getImage()">
-    
+  
+   <ion-row>
+    <ion-label class="Photo">Photo ID</ion-label> 
+   </ion-row>
+    <ion-row>
+      <ion-select interface="popover" placeholder="-Select-" class="Photo-select" >
+        <ion-select-option value="Aadhaar">Aadhaar card</ion-select-option>
+        <ion-select-option value="Passport">Passport</ion-select-option>
+        <ion-select-option value="Driving-License">Driving License</ion-select-option>
+        <ion-select-option value="Voter-ID">Voter’s ID</ion-select-option>
+        <ion-select-option value="Pan">Pan Card</ion-select-option>
+      </ion-select>
+      <!-- <h4 class="photo-front" >Front</h4> -->
+      <img src="../../assets/Upload-documents.png" alt="Upload documwnts" class="upload1" (click)="getImage()">
+    </ion-row>
 
-    <ion-label class="Education">Education proof</ion-label> <br>
-    <ion-select interface="popover" placeholder="-Select-" class="education-select" >
-      <ion-select-option value="Higher-education">Higher education-degree</ion-select-option>
-      <ion-select-option value="Diploma">Diploma</ion-select-option>
-      <ion-select-option value="professional-certificates">professional qualification certificates</ion-select-option>
-    </ion-select>
-    <!-- <h4 class="education-front" >Front</h4> -->
-    <img src="../../assets/Upload-documents.png" alt="Upload documwnts" class="upload2" (click)="getImage()">
+   <ion-row>
+    <ion-label class="Education">Education proof</ion-label> 
+   </ion-row>
+    <ion-row>
+      <ion-select interface="popover" placeholder="-Select-" class="education-select" >
+        <ion-select-option value="Higher-education">Higher education-degree</ion-select-option>
+        <ion-select-option value="Diploma">Diploma</ion-select-option>
+        <ion-select-option value="professional-certificates">professional qualification certificates</ion-select-option>
+      </ion-select>
+      <!-- <h4 class="education-front" >Front</h4> -->
+      <img src="../../assets/Upload-documents.png" alt="Upload documwnts" class="upload2" (click)="getImage()">
+    </ion-row>
 
-    <ion-label class="occupation">Occupation proof </ion-label> <br>
-    <ion-select interface="popover" placeholder="-Select-" class="occupation-select" >
-      <ion-select-option value="appointment">Appointment letter</ion-select-option>
-      <ion-select-option value="trade-license">Trade License</ion-select-option>
-      <ion-select-option value="shop-license">Shop and Establishment License</ion-select-option>
-      <ion-select-option value="Professional">Professional body Membership</ion-select-option>
-    </ion-select>
-    <!-- <h4 class="occupation-front">Front</h4> -->
-    <img src="../../assets/Upload-documents.png" alt="Upload documwnts" class="upload3" (click)="getImage()">
+    <ion-row>
+      <ion-label class="occupation">Occupation proof </ion-label> 
+    </ion-row>
+    <ion-row>
+      <ion-select interface="popover" placeholder="-Select-" class="occupation-select" >
+        <ion-select-option value="appointment">Appointment letter</ion-select-option>
+        <ion-select-option value="trade-license">Trade License</ion-select-option>
+        <ion-select-option value="shop-license">Shop and Establishment License</ion-select-option>
+        <ion-select-option value="Professional">Professional body Membership</ion-select-option>
+      </ion-select>
+      <!-- <h4 class="occupation-front">Front</h4> -->
+      <img src="../../assets/Upload-documents.png" alt="Upload documwnts" class="upload3" (click)="getImage()">
+    </ion-row>
 
-    <ion-label class="income">Income proof</ion-label> <br>
-    <ion-select interface="popover" placeholder="-Select-" class="income-select" >
-      <ion-select-option value="passbook">Bank Passbook</ion-select-option>
-      <ion-select-option value="Pay-Slip">Pay Slip</ion-select-option>
-      <ion-select-option value="Salary-Certificate">Salary Certificate</ion-select-option>
-      <ion-select-option value="TDS-Returns">TDS Returns</ion-select-option>
-    </ion-select>
-    <!-- <h4 class="income-front">Front</h4> -->
-    <img src="../../assets/Upload-documents.png" alt="Upload documwnts" class="upload4" (click)="getImage()">
+    <ion-row>
+      <ion-label class="income">Income proof</ion-label> 
+    </ion-row>
+    <ion-row>
+      <ion-select interface="popover" placeholder="-Select-" class="income-select" >
+        <ion-select-option value="passbook">Bank Passbook</ion-select-option>
+        <ion-select-option value="Pay-Slip">Pay Slip</ion-select-option>
+        <ion-select-option value="Salary-Certificate">Salary Certificate</ion-select-option>
+        <ion-select-option value="TDS-Returns">TDS Returns</ion-select-option>
+      </ion-select>
+      <!-- <h4 class="income-front">Front</h4> -->
+      <img src="../../assets/Upload-documents.png" alt="Upload documwnts" class="upload4" (click)="getImage()">
+    </ion-row>
 
 
-    <ion-button (click)="upload()" class="savebutton">
+    <ion-row>
+      <ion-button (click)="upload()" shape="round" class="savebutton">
       Save
     </ion-button>
+    </ion-row>
 
   </form>
+  </ion-grid>
 </div>
 
 </ion-content>

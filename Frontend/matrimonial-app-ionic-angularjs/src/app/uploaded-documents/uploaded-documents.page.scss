@@ -1,0 +1,95 @@
+ion-title{
+    position: absolute;
+    width: 800px;
+    height: 130px;
+    left: 0px;
+    top: 0px;
+    
+   
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    background-color: #4C0890;
+    color: #FFFFFF;
+    }
+    .back {
+        color: #FBF9F9;
+    }
+.container {
+        position: absolute;
+        width: 100%;
+    height: auto;
+        left: 0px;
+        top: 102px;
+        
+        background: #FBF9F9;
+        border-radius: 30px 30px 0px 0px;
+        }
+
+.war{
+margin: 10px;
+font-size: 16px;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 18px;
+
+
+color: red;
+text-align: left;
+
+    }
+
+    .doci{
+        padding-left: 25px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        color: #000000;
+    }
+.doc{
+    font-weight: bold;
+    padding-left: 15px;
+}
+    ion-label{
+        padding-left: 25px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        font-size: 18px;
+        line-height: 21px;
+        color: #000000;
+    }
+
+    .subcontainer{
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+        left: 0px;
+       
+        background: #FBF9F9;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        
+        }
+
+//         ion-button{
+//    margin: 10px;
+// }
+
+.download{
+    --background: none;
+--background: #4c0890;
+color: #FBF9F9;
+margin-left: 10px;
+
+}
+.upload{
+    --background: none;
+--background: #4c0890;
+color: #FBF9F9;
+}
+
+.delete{
+    --background: none;
+--background: #FF0000;
+color: #FBF9F9;
+}

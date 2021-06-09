@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController,ModalController } from '@ionic/angular';
+import { MenuController,ModalController,PopoverController } from '@ionic/angular';
 import { PrivacySettingsPage } from '../additional-pages/privacy-settings/privacy-settings.page';
 import { HideProfilePage } from "../additional-pages/hide-profile/hide-profile.page";
 import { NotificationsSettingsPage } from "../additional-pages/notifications-settings/notifications-settings.page";
@@ -19,7 +19,7 @@ export class SettingsPage implements OnInit {
   isDown: boolean = true;
   score: number = 20;
   id: string = 'H12345';
-  constructor(private modalController: ModalController,private menu: MenuController, private alertController: AlertController ) { }
+  constructor(private modalController: ModalController,private menu: MenuController, private alertController: AlertController,private popoverController: PopoverController ) { }
 
   ngOnInit() {
   }
@@ -34,7 +34,9 @@ export class SettingsPage implements OnInit {
     console.log('Inside modal')
     const modal = await this.modalController.create({
       component: PrivacySettingsPage,
-      cssClass: 'my-custom-class'
+      cssClass: 'my-custom-class',
+     
+      backdropDismiss: true
     });
     return await modal.present();
   }
@@ -43,7 +45,9 @@ export class SettingsPage implements OnInit {
     console.log('Inside modal')
     const modal = await this.modalController.create({
       component: NotificationsSettingsPage,
-      cssClass: 'my-custom-class'
+      cssClass: 'my-custom-class',
+     
+      backdropDismiss: true
     });
     return await modal.present();
   }
@@ -52,7 +56,9 @@ export class SettingsPage implements OnInit {
     console.log('Inside modal')
     const modal = await this.modalController.create({
       component: ChangePasswordPage,
-      cssClass: 'my-custom-class'
+      cssClass: 'my-custom-class',
+     
+      backdropDismiss: true
     });
     return await modal.present();
   }
@@ -60,7 +66,9 @@ export class SettingsPage implements OnInit {
     console.log('Inside modal')
     const modal = await this.modalController.create({
       component: HideProfilePage,
-      cssClass: 'my-custom-class'
+      cssClass: 'my-custom-class',
+     
+      backdropDismiss: true
     });
     return await modal.present();
   }

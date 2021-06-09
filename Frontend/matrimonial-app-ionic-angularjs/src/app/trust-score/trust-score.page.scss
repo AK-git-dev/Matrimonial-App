@@ -1,27 +1,26 @@
-.heading {
+ion-title{
+    position: absolute;
+    width: 800px;
+    height: 130px;
+    left: 0px;
+    top: 0px;
     
-position: absolute;
-width: 100%;
-height: 28px;
-left: 53px;
-top: 35px;
-font-size: 24px;
-line-height: 28px;
-color: #FBF9F9;
-
-}
-
-.back {
-position: absolute;
-left: 13px;
-top: 40px;
-}
+   
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    background-color: #4C0890;
+    color: #FFFFFF;
+    }
+    ion-icon {
+        color: #FBF9F9;
+    }
 
 
 .container {
 position: absolute;
 width: 100%;
-height: 100%;
+height: auto;
 top: 102px;
 background: #FBF9F9;
 border-radius: 30px 30px 0px 0px;
@@ -39,369 +38,55 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 30px;
 
 }
-
-// ///////////////////////////////////////////////////// score calculation buttons
-
-.button1 {
-
-position: absolute;
-width: 50px;
-height: 50px;
-left: 20px;
-padding-top: auto;
-
+h3{
+    text-align: center;
 }
-.mobile1{
-
-position: absolute;
-width: 59px;
-height: 64px;
-left: 20px;
-top: 100px;
-
-font-size: 16px;
-line-height: 16px;
-color: #000000;
-
+ion-col{
+    margin: 5px;
 }
+// ////////////////////////////////////// select
+ion-select{
+  margin: 20px;
 
-
-.button2 {
-    
-    position: absolute;
-width: 50px;
-height: 50px;
-padding-top: auto;
-left: 90px;
+  height: 40px;
+  width: 80%;
+  background: #FEFAFA;
+  border: 1px solid #4C0890;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
 }
-
-.photo1{
-    position: absolute;
-width: 59px;
-height: 64px;
-left: 95px;
-top: 100px;
-
-font-size: 16px;
-line-height: 16px;
-color: #000000;
-
+.Photo{
+    padding-top: 20px;
 }
+ion-label{
 
-.button3 {
-  
-    position: absolute;
-width: 50px;
-height: 50px;
-padding-top: auto;
-left: 162px;
-
-
-}
-
-.education1 {
-    position: absolute;
-    width: 59px;
-    height: 64px;
-    left: 165px;
-    top: 100px;
-    
-    font-size: 16px;
-    line-height: 16px;
+    padding-left: 20px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 21px;
     color: #000000;
 }
-
-.button4 {
-   
-    position: absolute;
-width: 50px;
-height: 50px;
-left: 234px;
-padding-top: auto;
-
+.l1{
+    padding-left: 0;
+    font-size: small;
 }
-
-.occupation1 {
-    position: absolute;
-    width: 59px;
-    height: 64px;
-    left: 235px;
-    top: 100px;
-    
-    font-size: 16px;
-    line-height: 16px;
-    color: #000000;
+.ion-text-center{
+    text-align: center;
+    font-size: 18px;
 }
-.button5 {
-   
-    position: absolute;
-width: 50px;
-height: 50px;
-left: 305px;
-padding-top: auto;
+img{
+margin-top: 5px;
+    width: 40px;
+    height: 50px;
 }
-.income1 {
-    position: absolute;
-    width: 59px;
-    height: 64px;
-    left: 306px;
-    top: 100px;
-    
-    font-size: 16px;
-    line-height: 16px;
-    color: #000000;
-}
-
-
-
-h3 {
-
-width: 250px;
-height: 23px;
-padding-left: 40px;
-padding-top: 10px;
-
-font-size: 20px;
-line-height: 23px;
-text-align: center;
-color: #D71212;
-}
-
-h4 {
-margin: 20px;
-width: 350px;
-height: 21px;
-padding-top: 180px;
-font-size: 18px;
-line-height: 21px;
-color: #000000;
-text-align: center;
-
-}
-
-
-//  ////////////////////////////////////////// Photo ID
-.Photo {
-    /* Photo ID */
-position: absolute;
-height: 21px;
-left: 20px;
-top: 366px;
-
-
-font-size: 18px;
-line-height: 21px;
-text-align: center;
-color: #000000;
-}
-
-.Photo-select {
-position: absolute;
-width: 231px;
-height: 0px;
-left: 15px;
-top: 410px;
-color: rgb(0, 0, 0);
-}
-
-.photo-front {
-    /* Front */
-
-position: absolute;
-
-height: 21px;
-left: 291px;
-top: 390px;
-
-font-size: 18px;
-line-height: 21px;
-color: #000000;
-
-}
-
-.upload1 {
-    /* photo-video */
-
-position: absolute;
-width: 30px;
-height: 30px;
-left: 300px;
-top: 400px;
-
-}
-
-// //////////////////////////////////////////////// Education proof
-.Education {
-    /* Education proof */
-
-position: absolute;
-
-height: 21px;
-left: 20px;
-top: 459px;
-
-font-size: 18px;
-line-height: 21px;
-
-text-align: center;
-color: #000000;
-}
-
-.education-select {
-
-position: absolute;
-width: 231px;
-height: 0px;
-left: 15px;
-top: 503px;
-color: rgb(0, 0, 0);
-}
-
-.education-front {
-    /* Front */
-
-position: absolute;
-
-height: 21px;
-left: 291px;
-top: 479px;
-
-font-size: 18px;
-line-height: 21px;
-
-text-align: center;
-color: #000000;
-
-}
-
-.upload2 {
-    /* photo-video */
-
-position: absolute;
-width: 30px;
-height: 30px;
-left: 300px;
-top: 490px;
-
-}
-// //////////////////////////////////////////// Occupation proof
-.occupation { 
-    /* Occupation proof */
-
-position: absolute;
-height: 21px;
-left: 20px;
-top: 554px;
-font-size: 18px;
-line-height: 21px;
-text-align: center;
-
-color: #000000;
-
-
-}
-
-.occupation-select {
-position: absolute;
-width: 231px;
-height: 0px;
-left: 15px;
-top: 598px;
-color: rgb(0, 0, 0);
-}
-
-.occupation-front {
-    /* Front */
-
-position: absolute;
-
-height: 21px;
-left: 291px;
-top: 580px;
-
-font-size: 18px;
-line-height: 21px;
-text-align: center;
-
-color: #000000;
-}
-
-.upload3 {
-    /* photo-video */
-
-position: absolute;
-width: 30px;
-height: 30px;
-left: 300px;
-top: 590px;
-
-}
-
-// ///////////////////////////////////////////// Income proof
-.income {
-    /* Income Proof */
-
-position: absolute;
-
-height: 21px;
-left: 20px;
-top: 657px;
-
-font-size: 18px;
-line-height: 21px;
-text-align: center;
-color: #000000;
-}
-
-.income-select {
-    /* Line 18 */
-
-position: absolute;
-width: 231.05px;
-height: 0px;
-left: 15px;
-top: 701px;
-color: rgb(0, 0, 0);
-
-}
-
-.income-front {
-    /* Front */
-
-position: absolute;
-width: 42px;
-height: 21px;
-left: 291px;
-top: 680px;
-
-font-size: 18px;
-line-height: 21px;
-text-align: center;
-color: #000000;
-}
-
-.upload4 {
-    /* photo-video */
-
-position: absolute;
-width: 30px;
-height: 30px;
-left: 300px;
-top: 690px;
-
-}
-
-
-// /////////////////////////////////////////////////// Button
-
-.savebutton {
-    position: relative;
-width: 274px;
-height: 56px;
-left: 55px;
-top: 380px;
-
-background: #4C0890;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
+.savebutton{
+    margin-top: 10px;
+    margin: 25px;
+    width: 100%;
+    font-size: large;
+height: 40px;
+--background: none;
+--background: #4c0890;
+color: #FBF9F9;
 }

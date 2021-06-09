@@ -185,6 +185,10 @@ const routes: Routes = [
   {
     path: 'user-profile',
     loadChildren: () => import('./user-profile/user-profile.module').then( m => m.UserProfilePageModule)
+  },
+  {
+    path: 'uploaded-documents',
+    loadChildren: () => import('./uploaded-documents/uploaded-documents.module').then( m => m.UploadedDocumentsPageModule)
   }
 
 

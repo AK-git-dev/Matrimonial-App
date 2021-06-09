@@ -1,0 +1,101 @@
+
+<ion-content>
+  <ion-title><ion-icon name="arrow-back-outline" size="large" class="back" [routerLink]="['/settings']"></ion-icon>Family Details</ion-title>
+  <ion-grid>
+
+    <div class="container">
+      <form action="" method="post">
+<ion-row>
+  <ion-label class="war" disabled >WARNING: If you delete documents than your Trust Score decrease</ion-label>
+</ion-row>
+
+<div class="subcontainer">
+  <ion-row> 
+    <ion-label>Photo ID</ion-label>
+  </ion-row>
+  <ion-row> 
+    <ion-icon name="documents-outline" size="large" class="doci" ></ion-icon>
+    <ion-label class="doc">Document_name.png</ion-label>
+  </ion-row>
+  <ion-row> 
+    <ion-col>
+      <ion-button class="download" shape="round" >Download</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class="upload" shape="round" (click)="getImage()" >Upload new</ion-button>
+      </ion-col>
+    <ion-col>
+      <ion-button class="delete" shape="round">Delete</ion-button>
+    </ion-col>
+  </ion-row>
+</div>
+
+<div class="subcontainer">
+  <ion-row> 
+    <ion-label>Education Proof</ion-label>
+  </ion-row>
+  <ion-row> 
+    <ion-icon name="documents-outline" size="large" class="doci" ></ion-icon>
+    <ion-label class="doc">Document_name.png</ion-label>
+  </ion-row>
+  <ion-row> 
+    <ion-col>
+      <ion-button class="download" shape="round" >Download</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class="upload" shape="round" (click)="getImage()" >Upload new</ion-button>
+      </ion-col>
+    <ion-col>
+      <ion-button class="delete" shape="round">Delete</ion-button>
+    </ion-col>
+  </ion-row>
+</div>
+
+<div class="subcontainer">
+  <ion-row> 
+    <ion-label>Occupation Proof</ion-label>
+  </ion-row>
+  <ion-row> 
+    <ion-icon name="documents-outline" size="large" class="doci" ></ion-icon>
+    <ion-label class="doc">Document_name.png</ion-label>
+  </ion-row>
+  <ion-row> 
+    <ion-col>
+      <ion-button class="download" shape="round" >Download</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class="upload" shape="round" (click)="getImage()" >Upload new</ion-button>
+      </ion-col>
+    <ion-col>
+      <ion-button class="delete" shape="round">Delete</ion-button>
+    </ion-col>
+  </ion-row>
+</div>
+
+<div class="subcontainer">
+  <ion-row> 
+    <ion-label>Income Proof</ion-label>
+  </ion-row>
+  <ion-row> 
+    <ion-icon name="documents-outline" size="large" class="doci"></ion-icon>
+    <ion-label class="doc">Document_name.png</ion-label>
+  </ion-row>
+  <ion-row> 
+    <ion-col>
+      <ion-button class="download" shape="round" >Download</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class="upload" shape="round" (click)="getImage()" >Upload new</ion-button>
+      </ion-col>
+    <ion-col>
+      <ion-button class="delete" shape="round">Delete</ion-button>
+    </ion-col>
+  </ion-row>
+</div>
+
+
+
+    </form>
+    </div>
+    </ion-grid>
+</ion-content>
