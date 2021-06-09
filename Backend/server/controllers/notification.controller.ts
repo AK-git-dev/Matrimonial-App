@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { Schema } from "../../database/schema";
 import {
+  createError,
   FCM_SERVER_KEY,
   Next,
   RequestInterface,
@@ -10,6 +11,7 @@ import {
 
 import gcm from "node-gcm";
 import createHttpError from "http-errors";
+import { requiresAuth } from "../utils/middlewares/requires-auth.middleware";
 
 const router = Router();
 
@@ -71,19 +73,22 @@ router.get(
 
 router.post(
   "/registerDeviceToken/:platform/:uuid/:token",
+  requiresAuth,
   async (req: RequestInterface, res: ResponseInterface, next: Next) => {
     try {
+      const UserId: string = (req as any).userId;
       const platform: string = req.params.platform;
       const uuid: string = req.params.uuid;
       const token: string = req.params.token;
 
       const whereQuery = {
         uuid,
+        UserId,
         platform,
       };
 
-      await Schema.PushDevice.findOrCreate({ where: whereQuery }).catch(
-        (e) => new Error(e)
+      await Schema.PushDevice.findOrCreate({ where: whereQuery }).catch(() =>
+        createError("Device Token corrupted! Please Try to send it again!")
       );
 
       // updateToken

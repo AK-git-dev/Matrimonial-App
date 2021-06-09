@@ -1,6 +1,7 @@
 import { DataTypes } from "sequelize";
 import { v4 } from "uuid";
 import { db } from "..";
+import User from "./user.schema";
 
 const PushDevice = db.schema.define(
   "PushDevices",
@@ -16,6 +17,13 @@ const PushDevice = db.schema.define(
     },
     platform: {
       type: DataTypes.ENUM("android", "ios"),
+    },
+    UserId: {
+      type: DataTypes.UUID,
+      references: {
+        model: User,
+        key: "id",
+      },
     },
   },
   {
