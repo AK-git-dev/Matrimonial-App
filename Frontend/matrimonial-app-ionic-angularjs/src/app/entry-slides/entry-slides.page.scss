@@ -1,0 +1,87 @@
+ion-slides {
+  height: 100%;
+}
+
+.swiper-slide {
+  display: block;
+}
+
+
+.image {
+    width: 350px;
+    display: block;
+    height: 422px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("../../assets/1st page.png");
+  }
+  
+  ion-content {
+    position: relative;
+  }
+  
+  .div1 {
+    background: white;
+    position: absolute;
+    width: 100%;
+    height: 35%;
+    bottom: 0%;
+  }
+  
+  .l1 {
+    
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    display: block;
+    margin: auto;
+    padding-top: 30px;
+    color: #000000;
+  }
+  
+  .btn1 {
+    --background: none;
+    --background: #4c0890;
+   
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+  
+    color: #fcfcfc;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .btn2 {
+   
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+  
+    color: blue;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .l3 {
+   
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+  
+    color: #000000;
+  }
+  
+  .l4 {
+   
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-decoration: underline;
+  
+    color: #000000;
+  }
+
+  .lab1 {
+    font-size: 14px;
+  }

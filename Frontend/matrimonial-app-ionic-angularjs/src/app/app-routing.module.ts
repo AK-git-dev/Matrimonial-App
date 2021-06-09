@@ -3,15 +3,19 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    path: 'entry-slides',
+    loadChildren: () => import('./entry-slides/entry-slides.module').then(m => m.EntrySlidesPageModule)
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'entry-slides',
     pathMatch: 'full'
   },
   {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+  }
+  ,{
     path: 'login',
     loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
   },
@@ -25,126 +29,126 @@ const routes: Routes = [
     loadChildren: () => import('./user-home/user-home.module').then(m => m.UserHomePageModule)
   },
   {
-  path: 'notifications',
-  loadChildren: () => import('./notifications/notifications.module').then(m => m.NotificationsPageModule)
+    path: 'notifications',
+    loadChildren: () => import('./notifications/notifications.module').then(m => m.NotificationsPageModule)
   },
-{
-  path: 'registration',
+  {
+    path: 'registration',
     loadChildren: () => import('./registration/registration.module').then(m => m.RegistrationPageModule)
-},
-{
-  path: 'pref-partner',
+  },
+  {
+    path: 'pref-partner',
     loadChildren: () => import('./pref-partner/pref-partner.module').then(m => m.PrefPartnerPageModule)
-},
-{
-  path: 'settings',
+  },
+  {
+    path: 'settings',
     loadChildren: () => import('./settings/settings.module').then(m => m.SettingsPageModule)
-},
+  },
 
-{
-  path: 'pref-part',
+  {
+    path: 'pref-part',
     loadChildren: () => import('./pref-part/pref-part.module').then(m => m.PrefPartPageModule)
-},
+  },
 
-{
-  path: 'ed-car',
+  {
+    path: 'ed-car',
     loadChildren: () => import('./ed-car/ed-car.module').then(m => m.EdCarPageModule)
-},
-{
-  path: 'family-details',
+  },
+  {
+    path: 'family-details',
     loadChildren: () => import('./family-details/family-details.module').then(m => m.FamilyDetailsPageModule)
-},
+  },
 
   {
     path: 'edit-profile',
-    loadChildren: () => import('./edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
+    loadChildren: () => import('./edit-profile/edit-profile.module').then(m => m.EditProfilePageModule)
   },
   {
     path: 'edit-preference',
-    loadChildren: () => import('./edit-preference/edit-preference.module').then( m => m.EditPreferencePageModule)
+    loadChildren: () => import('./edit-preference/edit-preference.module').then(m => m.EditPreferencePageModule)
   },
   {
     path: 'request',
-    loadChildren: () => import('./request/request.module').then( m => m.RequestPageModule)
+    loadChildren: () => import('./request/request.module').then(m => m.RequestPageModule)
   },
   {
     path: 'education-career',
-    loadChildren: () => import('./education-career/education-career.module').then( m => m.EducationCareerPageModule)
+    loadChildren: () => import('./education-career/education-career.module').then(m => m.EducationCareerPageModule)
   },
   {
     path: 'contact',
-    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+    loadChildren: () => import('./contact/contact.module').then(m => m.ContactPageModule)
   },
   {
     path: 'search',
-    loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
+    loadChildren: () => import('./search/search.module').then(m => m.SearchPageModule)
   },
   {
     path: 'chat-list',
-    loadChildren: () => import('./chat-list/chat-list.module').then( m => m.ChatListPageModule)
+    loadChildren: () => import('./chat-list/chat-list.module').then(m => m.ChatListPageModule)
   },
   {
     path: 'private-chat',
-    loadChildren: () => import('./private-chat/private-chat.module').then( m => m.PrivateChatPageModule)
+    loadChildren: () => import('./private-chat/private-chat.module').then(m => m.PrivateChatPageModule)
   },
   {
-  path: 'notifications',
-  loadChildren: () => import('./notifications/notifications.module').then(m => m.NotificationsPageModule)
+    path: 'notifications',
+    loadChildren: () => import('./notifications/notifications.module').then(m => m.NotificationsPageModule)
   },
-{
-  path: 'registration',
+  {
+    path: 'registration',
     loadChildren: () => import('./registration/registration.module').then(m => m.RegistrationPageModule)
-},
-{
-  path: 'pref-partner',
+  },
+  {
+    path: 'pref-partner',
     loadChildren: () => import('./pref-partner/pref-partner.module').then(m => m.PrefPartnerPageModule)
-},
-{
-  path: 'settings',
+  },
+  {
+    path: 'settings',
     loadChildren: () => import('./settings/settings.module').then(m => m.SettingsPageModule)
-},
+  },
 
-{
-  path: 'pref-part',
+  {
+    path: 'pref-part',
     loadChildren: () => import('./pref-part/pref-part.module').then(m => m.PrefPartPageModule)
-},
+  },
 
-{
-  path: 'ed-car',
+  {
+    path: 'ed-car',
     loadChildren: () => import('./ed-car/ed-car.module').then(m => m.EdCarPageModule)
-},
-{
-  path: 'family-details',
+  },
+  {
+    path: 'family-details',
     loadChildren: () => import('./family-details/family-details.module').then(m => m.FamilyDetailsPageModule)
-},
+  },
 
   {
     path: 'edit-profile',
-    loadChildren: () => import('./edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
+    loadChildren: () => import('./edit-profile/edit-profile.module').then(m => m.EditProfilePageModule)
   },
   {
     path: 'edit-preference',
-    loadChildren: () => import('./edit-preference/edit-preference.module').then( m => m.EditPreferencePageModule)
+    loadChildren: () => import('./edit-preference/edit-preference.module').then(m => m.EditPreferencePageModule)
   },
   {
     path: 'request',
-    loadChildren: () => import('./request/request.module').then( m => m.RequestPageModule)
+    loadChildren: () => import('./request/request.module').then(m => m.RequestPageModule)
   },
   {
     path: 'education-career',
-    loadChildren: () => import('./education-career/education-career.module').then( m => m.EducationCareerPageModule)
+    loadChildren: () => import('./education-career/education-career.module').then(m => m.EducationCareerPageModule)
   },
   {
     path: 'contact',
-    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+    loadChildren: () => import('./contact/contact.module').then(m => m.ContactPageModule)
   },
   {
     path: 'search',
-    loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
+    loadChildren: () => import('./search/search.module').then(m => m.SearchPageModule)
   },
   {
     path: 'privacy-settings',
-    loadChildren: () => import('./additional-pages/privacy-settings/privacy-settings.module').then( m => m.PrivacySettingsPageModule)
+    loadChildren: () => import('./additional-pages/privacy-settings/privacy-settings.module').then(m => m.PrivacySettingsPageModule)
   },
 
   {
@@ -153,61 +157,46 @@ const routes: Routes = [
   },
   {
     path: 'profile-visitor',
-    loadChildren: () => import('./profile-visitor/profile-visitor.module').then( m => m.ProfileVisitorPageModule)
+    loadChildren: () => import('./profile-visitor/profile-visitor.module').then(m => m.ProfileVisitorPageModule)
   },
   {
     path: 'notifications-settings',
-    loadChildren: () => import('./additional-pages/notifications-settings/notifications-settings.module').then( m => m.NotificationsSettingsPageModule)
+    loadChildren: () => import('./additional-pages/notifications-settings/notifications-settings.module').then(m => m.NotificationsSettingsPageModule)
   },
- 
+
   {
     path: 'lifestyle',
-    loadChildren: () => import('./lifestyle/lifestyle.module').then( m => m.LifestylePageModule)
+    loadChildren: () => import('./lifestyle/lifestyle.module').then(m => m.LifestylePageModule)
   },
   {
     path: 'hide-profile',
-    loadChildren: () => import('./additional-pages/hide-profile/hide-profile.module').then( m => m.HideProfilePageModule)
+    loadChildren: () => import('./additional-pages/hide-profile/hide-profile.module').then(m => m.HideProfilePageModule)
   },
   {
     path: 'profile-creation',
-    loadChildren: () => import('./profile-creation/profile-creation.module').then( m => m.ProfileCreationPageModule)
+    loadChildren: () => import('./profile-creation/profile-creation.module').then(m => m.ProfileCreationPageModule)
   },
   {
     path: 'success-stories',
-    loadChildren: () => import('./success-stories/success-stories.module').then( m => m.SuccessStoriesPageModule)
+    loadChildren: () => import('./success-stories/success-stories.module').then(m => m.SuccessStoriesPageModule)
   },
   {
     path: 'privacy-policy',
-    loadChildren: () => import('./privacy-policy/privacy-policy.module').then( m => m.PrivacyPolicyPageModule)
+    loadChildren: () => import('./privacy-policy/privacy-policy.module').then(m => m.PrivacyPolicyPageModule)
   },
   {
     path: 'user-profile',
-    loadChildren: () => import('./user-profile/user-profile.module').then( m => m.UserProfilePageModule)
+    loadChildren: () => import('./user-profile/user-profile.module').then(m => m.UserProfilePageModule)
   },
   {
     path: 'uploaded-documents',
-    loadChildren: () => import('./uploaded-documents/uploaded-documents.module').then( m => m.UploadedDocumentsPageModule)
+    loadChildren: () => import('./uploaded-documents/uploaded-documents.module').then(m => m.UploadedDocumentsPageModule)
+  },
+  {
+    path: 'entry-slides',
+    loadChildren: () => import('./entry-slides/entry-slides.module').then(m => m.EntrySlidesPageModule)
   }
 
-
-
-
-
-
-
-
-  // {
-  //   path: 'tab1',
-  //   loadChildren: () => import('./tabs/tab1/tab1.module').then( m => m.Tab1PageModule)
-  // },
-  // {
-  //   path: 'tab2',
-  //   loadChildren: () => import('./tabs/tab2/tab2.module').then( m => m.Tab2PageModule)
-  // },
-  // {
-  //   path: 'tabs2',
-  //   loadChildren: () => import('./tabs2/tabs2.module').then( m => m.Tabs2PageModule)
-  // },
 ];
 
 @NgModule({
