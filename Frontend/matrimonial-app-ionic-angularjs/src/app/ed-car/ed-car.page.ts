@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ed-car',
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EdCarPage implements OnInit {
 
-  constructor() { }
+  educationArray: object[] = [];
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
+
+  }
+
+  submit() {
+    this.router.navigate(['/pref-part']);
+  }
+
+  addEducation() {
+    console.log('Add')
+    this.educationArray.push({
+      'label': 'Other Degree',
+      'value': ''
+    });
+  }
+
+  removeEducation(index) {
+    this.educationArray.splice(index, 1);
   }
 
 }

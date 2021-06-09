@@ -1,8 +1,10 @@
 <ion-content>
-<div class="heading">
-  <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/user-home']"></ion-icon>
-  <h4>Preferred Partner</h4>
-</div>
+<ion-heading>
+  <ion-title>
+    <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/user-home']"></ion-icon>
+    Preferred Partner
+  </ion-title>
+</ion-heading>
 <div class="card">
   <form action="" method="post">
    <ion-grid>
@@ -227,7 +229,7 @@
 
     <!-- -->
     <div class="ion-text-center">
-      <ion-button (click)="onClick()" class="save" [routerLink]="['/user-home']">
+      <ion-button (click)="onClick()" shape="round" class="save" [routerLink]="['/user-home']">
         SAVE
       </ion-button>
   

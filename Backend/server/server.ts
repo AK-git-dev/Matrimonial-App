@@ -11,6 +11,7 @@ import {
   ResponseInterface,
 } from "./utils";
 import cookieParser from "cookie-parser";
+import fileUpload from "express-fileupload";
 
 export class Server {
   private readonly PORT = 5000 || process.env.PORT;
@@ -36,6 +37,13 @@ export class Server {
 
   private async serverConfig() {
     // express-file-upload setup middleware
+    this.app.use(
+      fileUpload({
+        useTempFiles: true,
+        tempFileDir: "/tmp/",
+        limits: { filesize: 10 * 1024 * 1024 },
+      })
+    );
     this.app.use(json());
     this.app.use(cors());
     this.app.use(morgan("dev"));

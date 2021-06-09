@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { NgxOtpInputConfig } from 'ngx-otp-input';
@@ -10,8 +10,13 @@ import { NgxOtpInputConfig } from 'ngx-otp-input';
 })
 export class OtpComponent implements OnInit {
 
+
+  // Data passed in by componentProps
+  @Input()
+  path: string;
+
   otpInputConfig: NgxOtpInputConfig = {
-    otpLength: 6,
+    otpLength: 4,
     autofocus: true,
     classList: {
       inputBox: "my-super-box-class",
@@ -22,6 +27,8 @@ export class OtpComponent implements OnInit {
       inputError: "my-super-error-class"
     }
   };
+
+  
 
   constructor(private modalController: ModalController, private router: Router) {
     
@@ -38,7 +45,9 @@ export class OtpComponent implements OnInit {
 
   login() {
     this.dismiss();
-    this.router.navigate(['/user-home']);
+    if (this.path !== 'none') {
+      this.router.navigate([this.path]);
+    } 
   }
 
 

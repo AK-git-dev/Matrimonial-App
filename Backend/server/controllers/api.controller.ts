@@ -1,11 +1,29 @@
-import { Router } from "express";
+import { Router, static as st } from "express";
 import createHttpError from "http-errors";
-import { Next, RequestInterface, ResponseInterface, SUCCESS } from "../utils";
+import {
+  FileUploadFolderStaticServe,
+  Next,
+  RequestInterface,
+  ResponseInterface,
+  SUCCESS,
+} from "../utils";
 import AuthController from "./auth.controller";
 import UserController from "./users.controller";
 import CreateProfileController from "./update-profile.controller";
+import FileUploaderController from "./file-uploader.controller";
+import ProfileRecommendationController from "./profile-recommendation.controller";
+import UserFavoriteController from './add-to-favourites.controller';
+
 
 const router = Router();
+
+router.use(
+  st(FileUploadFolderStaticServe, {
+    cacheControl: true,
+    immutable: true,
+    fallthrough: true,
+  })
+);
 
 router.get(
   "/data",
@@ -27,6 +45,9 @@ router.get(
 // Controllers
 router.use("/auth", AuthController);
 router.use("/profile", CreateProfileController);
+router.use("/profiles-recommendations", ProfileRecommendationController);
 router.use("/users", UserController);
+router.use("/upload-service", FileUploaderController);
+router.use('/user/favorites/0', UserFavoriteController);
 
 export default router;

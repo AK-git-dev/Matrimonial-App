@@ -8,48 +8,89 @@
     <div class="container">
     <form action="" method="post">
   
-      <ion-label class="Hdegree">Highest Degree</ion-label> <br>
-      <!-- <ion-icon class="cap" name="school-outline"></ion-icon> -->
+      <ion-row>
+        <ion-label class="Hdegree">Highest Degree</ion-label> 
+      </ion-row>
+     <ion-row>
       <ion-input id="Name1" type="name" class="Degree" placeholder = "Highest Degree *"> </ion-input>
+     </ion-row>
 
-      <ion-label class="PG">Post Grad Degree</ion-label> <br>
+      <ion-row>
+        <ion-label class="PG">Post Grad Degree</ion-label>
+      </ion-row> 
+     <ion-row>
       <ion-input id="Name1" type="name" class="Pgrad" placeholder = "Post Grad Degree"> </ion-input>
+     </ion-row>
       
-      <ion-label class="UG">Under Grad Degree</ion-label> <br>
-      <ion-input id="Name1" type="name" class="Ugrad" placeholder = "Under Grad Degree"> </ion-input>
+      <ion-row>
+        <ion-label class="UG">Under Grad Degree</ion-label> 
+      </ion-row>
+      <ion-row><ion-input id="Name1" type="name" class="Ugrad" placeholder = "Under Grad Degree"> </ion-input></ion-row>
 
-      <ion-label class="Uname">University Name</ion-label> <br>
-      <ion-input id="Name1" type="name" class="uni" placeholder = "University Name"> </ion-input>
+      <ion-row>
+        <ion-label class="Uname">University Name</ion-label> 
+      </ion-row>
+      <ion-row>
+        <ion-input id="Name1" type="name" class="uni" placeholder = "University Name"> </ion-input>
+      </ion-row>
 
-      <ion-label class="UGC">Under Grad College</ion-label> <br>
+
+      <ion-row>
+        <ion-label class="UGC">Under Grad College</ion-label> 
+      </ion-row>
+     <ion-row>
       <ion-input id="Name1" type="name" class="col" placeholder = "Under Grad College"> </ion-input>
+     </ion-row>
 
-      <ion-label class="Sname">School Name</ion-label> <br>
+      <ion-row>
+        <ion-label class="Sname">School Name</ion-label> 
+      </ion-row>
+     <ion-row>
       <ion-input id="Name1" type="name" class="school" placeholder = "School Name"> </ion-input>
+     </ion-row>
 
-      <ion-label class="Employ">Employed In</ion-label> <br>
-      <ion-select interface="popover" placeholder="--Select--" class="Sector" >
-        <ion-select-option value="Private Sector">Private Sector</ion-select-option>
-        <ion-select-option value="Governement">Governement</ion-select-option>
-        <ion-select-option value="Business/Entrepreneur">Business/Entrepreneur</ion-select-option>
-      </ion-select>
+     <ion-row>
+      <ion-label class="Employ">Employed In</ion-label> 
+     </ion-row>
+      <ion-row>
+        <ion-select interface="popover" placeholder="--Select--" class="Sector" >
+          <ion-select-option value="Private Sector">Private Sector</ion-select-option>
+          <ion-select-option value="Governement">Governement</ion-select-option>
+          <ion-select-option value="Business/Entrepreneur">Business/Entrepreneur</ion-select-option>
+        </ion-select>
+      </ion-row>
       
-      <ion-label class="Org">Occupation</ion-label> <br>
-      <ion-input id="Name1" type="name" class="Oname" placeholder = "Occupation"> </ion-input>
+      <ion-row>
+        <ion-label class="Org">Occupation</ion-label> 
+      </ion-row>
+      <ion-row>
+        <ion-input id="Name1" type="name" class="Oname" placeholder = "Occupation"> </ion-input>
+      </ion-row>
 
-      <ion-label class="Occ">Organization Name</ion-label> <br>
-      <ion-input id="Name1" type="name" class="work" placeholder = "Organization Name"> </ion-input>
+      <ion-row>
+        <ion-label class="Occ">Organization Name</ion-label> 
+      </ion-row>
+      <ion-row>
+        <ion-input id="Name1" type="name" class="work" placeholder = "Organization Name"> </ion-input>
+      </ion-row>
 
-      <ion-label class="Abroad">Are you Interested in Settling Abroad??</ion-label> <br>
-      <ion-select interface="popover" placeholder="--Select--" class="YN" >
-        <ion-select-option value="Yes">Yes</ion-select-option>
-        <ion-select-option value="No">No</ion-select-option>
-      </ion-select>
+      <ion-row>
+        
+      <ion-label class="Abroad">Are you Interested in Settling Abroad??</ion-label> 
+      </ion-row>
+      <ion-row>
+        <ion-select interface="popover" placeholder="--Select--" class="YN" >
+          <ion-select-option value="Yes">Yes</ion-select-option>
+          <ion-select-option value="No">No</ion-select-option>
+        </ion-select>
+      </ion-row>
      
      
-      <ion-button (click)="onClick()" class="Submit" [routerLink]="['/edit-profile']">
+     <ion-row>
+      <ion-button (click)="onClick()" shape="round" class="Submit" [routerLink]="['/edit-profile']">
         SAVE
       </ion-button>
+     </ion-row>
 
 
 </form>

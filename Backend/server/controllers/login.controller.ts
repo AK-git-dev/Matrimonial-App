@@ -11,7 +11,7 @@ import {
   ResponseInterface,
   sendAuthenticatedResponseWhenVerificationCompletes,
   setAuthorizationHeader,
-  SUCCESS
+  SUCCESS,
 } from "../utils";
 import { requiresOtpVerification } from "../utils/middlewares/otp-verify.middleware";
 

@@ -5,468 +5,78 @@ ion-title{
     left: 0px;
     top: 0px;
     
-    
+   
     font-weight: normal;
     font-size: 24px;
     line-height: 28px;
     background-color: #4C0890;
     color: #FFFFFF;
     }
+    ion-icon {
+        color: #FBF9F9;
+    }
 .container {
         position: absolute;
-        width: 414px;
-        height: 794px;
+        width: 100%;
+    height: auto;
         left: 0px;
         top: 102px;
         
         background: #FBF9F9;
         border-radius: 30px 30px 0px 0px;
         }
-.Height{
-    /* Height */
 
-position: absolute;
-width: 53px;
-height: 21px;
-left: 23px;
-top: 10px;
+ ion-label{
+            padding-left: 25px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            font-size: 18px;
+            line-height: 21px;
+            color: #000000;
+        }
 
+ ion-input{
+            margin-left: 25px;
+            margin-right: 25px;
+            height: 40px;
+            background: #FEFAFA;
+            border: 1px solid #4C0890;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+        }
+ion-select{
+              margin-left: 25px;
+             margin-right: 25px;
+            height: 40px;
+            width: 100%;
+            background: #FEFAFA;
+            border: 1px solid #4C0890;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+        }
 
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-
+        ion-radio-group{
+            padding-left: 25px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            font-size: 18px;
+            line-height: 21px;
+            color: #000000;
+        }
+.Submit{
+    margin-top: 10px;
+    margin: 25px;
+    width: 100%;
+height: 40px;
+--background: none;
+--background: #4c0890;
+color: #FBF9F9;
 }
-
-.height{
-/* Rectangle 191 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 40px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Weight{
-/* Weight */
-
-position: absolute;
-width: 56px;
-height: 21px;
-left: 23px;
-top: 78px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.weight{
-/* Rectangle 192 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 108px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
-}
-
-.BT{
-    /* Body type */
-
-position: absolute;
-width: 179px;
-height: 22px;
-left: 23px;
-top: 145px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-
-color: #000000;
-
-
-}
-
-.Body{
-    /* Rectangle 193 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 179px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Complexion{
-/* Complexion */
-
-position: absolute;
-width: 96px;
-height: 21px;
-left: 23px;
-top: 218px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.comp{
-/* Rectangle 194 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 246px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Any{
-    /* Any Disablility */
-
-position: absolute;
-width: 112px;
-height: 21px;
-left: 23px;
-top: 279px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.Yes{
-
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    left: 37px;
-    top: 310px;
-    
-    background: #FBF9F9;
-    //border: 1px solid #4C0890;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.Y{
-    position: absolute;
-width: 61px;
-height: 21px;
-left: 57px;
-top: 310px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-}
-
-ion-list {
-    border-radius: 30px 30px 0px 0px;
-}
-
-
-.No{
-
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    left: 167px;
-    top: 310px;
-    
-    background: #FBF9F9;
-    //border: 1px solid #4C0890;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.Y {
+    padding: 5px;
 }
 .N{
-    position: absolute;
-width: 61px;
-height: 21px;
-left: 187px;
-top: 310px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-}
-
-.If{
-    /* Height */
-
-position: absolute;
-width: 183px;
-height: 21px;
-left: 23px;
-top: 350px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-
-}
-
-.specify{
-/* Rectangle 191 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 380px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Smoking{
-/* Smoking Habits */
-
-position: absolute;
-width: 128px;
-height: 21px;
-left: 23px;
-top: 420px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.smoke{
-/* Rectangle 196 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 454px;
-
-background: #FFFFFF;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Drinking{
-/* Drinking Habits */
-
-position: absolute;
-width: 123px;
-height: 21px;
-left: 23px;
-top: 493px;
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-
-
-.Habits{
-/* Rectangle 197 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 527px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Diet{
-/* Diet */
-
-position: absolute;
-width: 32px;
-height: 21px;
-left: 23px;
-top: 568px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.diet{
-/* Rectangle 198 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 598px;
-
-background: #FFFFFF;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Hobbies{
-/* Hobies */
-
-position: absolute;
-width: 157px;
-height: 21px;
-left: 23px;
-top: 637px;
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.hobbies{
-/* Rectangle 199 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 667px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Sports{
-/* Sports & Fitness */
-
-position: absolute;
-width: 132px;
-height: 21px;
-left: 23px;
-top: 703px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.fitness{
-/* Rectangle 200 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 735px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Submit{
-    position: absolute;
-    width: 274px;
-    height: 56px;
-    left: 67px;
-    top: 790px;
-    
-    background: #4C0890;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    
+    padding: 5px;
 }

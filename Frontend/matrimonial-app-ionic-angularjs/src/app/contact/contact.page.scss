@@ -1,440 +1,91 @@
 ion-title{
-    position: absolute;
+
     width: 800px;
     height: 130px;
     left: 0px;
     top: 0px;
     
-    
+   
+    font-weight: normal;
     font-size: 24px;
     line-height: 28px;
     background-color: #4C0890;
     color: #FFFFFF;
     }
-
-
-
-ion-icon[name="arrow-back-outline"] {
-    color: white;
-}
-
-
-// ion-content {
-//     --background: none;
-//     background-color: #4c0890;
-//     position: relative;
-// }
-
-
+    ion-icon {
+        color: #FBF9F9;
+    }
 .container {
-   
-position: absolute;
-width: 100%;
-height: 100%;
-left: 0px;
-top: 102px;
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-border-radius: 30px 30px 0px 0px;
-
-}
-
-// .heading {
-//     position: absolute;
-    
-//     width: 100%;
-//     height: 28px;
-//   left: 60px;
-//   top: 40px;
-//     font-size: 24px;
-//     line-height: 28px;
-//     color: #FBF9F9;
-    
-//     }
-    
-// .back {
-//     position: absolute;
-//     padding-left: 20px;
-//     top: 40px;
-//     }
-
-// ///////////////////////////////////////////// Person 1
-
-.person1 {
-
-position: absolute;
-width: 87px;
-height: 26px;
-left: 26px;
-top: 25px;
-font-size: 22px;
-line-height: 26px;
-
-text-decoration-line: underline;
-color: #000000;
-
-}
-
-.persons {
-    /* Rectangle 154 */
-position: absolute;
-width: 309px;
-height: 26px;
-left: 26px;
-top: 54px;
-color: #000000;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.phone1 {
-    /* Phone no.* */
-
-position: absolute;
-width: 89px;
-height: 21px;
-left: 26px;
-top: 94px;
-
-color: #000000;
-font-size: 18px;
-line-height: 21px;
-}
-
-.p1code {
-    /* Rectangle 164 */
-
-position: absolute;
-width: 52px;
-height: 24px;
-left: 26px;
-top: 120px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.p1no {
-    
-/* Rectangle 155 */
-
-position: absolute;
-width: 241px;
-height: 24px;
-left: 94px;
-top: 120px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.phone1-2 {
-    position: absolute;
-width: 150px;
-height: 21px;
-left: 26px;
-top: 160px;
-
-color: #000000;
-font-size: 18px;
-line-height: 21px;
-}
-
-.p1code2 {
-    position: absolute;
-width: 52px;
-height: 24px;
-left: 26px;
-top: 186px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.p1no2 {
-    position: absolute;
-width: 241px;
-height: 24px;
-left: 94px;
-top: 186px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-
-// /////////////////////////////////////////////////// Person 2
-
-.person2 {
-
-    position: absolute;
-    width: 87px;
-    height: 26px;
-    left: 26px;
-    top: 230px;
-    font-size: 22px;
-    line-height: 26px;
-    
-    text-decoration-line: underline;
-    color: #000000;
-    
-    }
-    
-    .persons2 {
-        /* Rectangle 154 */
-    position: absolute;
-    width: 309px;
-    height: 26px;
-    left: 26px;
-    top: 262px;
-    color: #000000;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
-    }
-    
-    .p2phone1 {
-        /* Phone no.* */
-    
-    position: absolute;
-    width: 89px;
-    height: 21px;
-    left: 26px;
-    top: 312px;
-    
-    color: #000000;
-    font-size: 18px;
-    line-height: 21px;
-    }
-    
-    .p2code {
-        /* Rectangle 164 */
-    
-    position: absolute;
-    width: 52px;
-    height: 24px;
-    left: 26px;
-    top: 338px;
-    
-    background: #FBF9F9;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
-    }
-    
-    .p2no {
+        position: absolute;
+        width: 100%;
+    height: auto;
+        left: 0px;
+        top: 102px;
         
-    /* Rectangle 155 */
-    
-    position: absolute;
-    width: 241px;
-    height: 24px;
-    left: 94px;
-    top: 338px;
-    
-    background: #FBF9F9;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
-    }
-    
-    .p2phone1-2 {
-        position: absolute;
-    width: 150px;
-    height: 21px;
-    left: 26px;
-    top: 378px;
-    
-    color: #000000;
+        background: #FBF9F9;
+        border-radius: 30px 30px 0px 0px;
+        }
+
+ ion-label{
+            padding-left: 25px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            font-size: 18px;
+            line-height: 21px;
+            color: #000000;
+            text-transform: none;
+        }
+.p3{
     font-size: 18px;
     line-height: 21px;
-    }
-    
-    .p2code2 {
-        position: absolute;
-    width: 52px;
-    height: 24px;
-    left: 26px;
-    top: 404px;
-    
-    background: #FBF9F9;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
-    }
-    
-    .p2no2 {
-        position: absolute;
-    width: 241px;
-    height: 24px;
-    left: 94px;
-    top: 404px;
-    
-    background: #FBF9F9;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-    
-
-    // //////////////////////////////////////////////////////////////////////// Person 3
-    
-.person3 {
-
-    position: absolute;
-    width: 87px;
-    height: 26px;
-    left: 26px;
-    top: 448px;
-    font-size: 22px;
-    line-height: 26px;
-    
-    text-decoration-line: underline;
-    color: #000000;
-    
-    }
-    
-    .persons3 {
-        /* Rectangle 154 */
-    position: absolute;
-    width: 309px;
-    height: 26px;
-    left: 26px; 
-    top: 480px;
-    color: #000000;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
-    }
-    
-    .p3phone1 {
-        /* Phone no.* */
-    
-    position: absolute;
-    width: 89px;
-    height: 21px;
-    left: 26px;
-    top: 530px;
-    
-    color: #000000;
-    font-size: 18px;
-    line-height: 21px;
-    }
-    
-    .p3code {
-        /* Rectangle 164 */
-    
-    position: absolute;
-    width: 52px;
-    height: 24px;
-    left: 26px;
-    top: 555px;
-    
-    background: #FBF9F9;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
-    }
-    
-    .p3no {
-        
-    /* Rectangle 155 */
-    
-    position: absolute;
-    width: 241px;
-    height: 24px;
-    left: 94px;
-    top: 555px;
-    
-    background: #FBF9F9;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
-    }
-    
-    .p3phone1-2 {
-        position: absolute;
-    width: 150px;
-    height: 21px;
-    left: 26px;
-    top: 590px;
-    
-    color: #000000;
-    font-size: 18px;
-    line-height: 21px;
-    }
-    
-    .p3code2 {
-        position: absolute;
-    width: 52px;
-    height: 24px;
-    left: 26px;
-    top: 615px;
-    
-    background: #FBF9F9;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
-    }
-    
-    .p3no2 {
-        position: absolute;
-    width: 241px;
-    height: 24px;
-    left: 94px;
-    top: 615px;
-    
-    background: #FBF9F9;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-    
-    // /////////////////////////////////////////////////////////////////////// privacy
-    .Visible{
-        /* Visible to All ? */
-
-position: absolute;
-width: 112px;
-height: 21px;
-left: 26px;
-top: 670px;
-font-size: 18px;
-line-height: 21px;
-color: #000000;
-
-
-    }
-
-ion-toggle {
-
-position: absolute;
-left: 282px;
-top: 665px;
-
 }
+ ion-input{
+            margin-left: 25px;
+            margin-right: 25px;
+            height: 40px;
+            background: #FEFAFA;
+            border: 1px solid #4C0890;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+        }
+ion-intl-tel-input{
+    text-align: justify;
+              margin-left: 25px;
+             margin-right: 25px;
+            height: 40px;
+            width: 100%;
+            background: #FEFAFA;
+            border: 1px solid #4C0890;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+        }
 
-    // /////////////////////////////////////////////////////// Save button
+ion-select {
+            text-align: justify;
+                      margin-left: 25px;
+                     margin-right: 25px;
+                    height: 40px;
+                    width: 100%;
+                    background: #FEFAFA;
+                    border: 1px solid #4C0890;
+                    box-sizing: border-box;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    border-radius: 10px;
+                }
+    p{
+        padding-left: 25px;
+        font-size: 18px;
+        color: red;
+    }
 
-    .savebutton {
-        /* Rectangle 163 */
-
-position: absolute;
-width: 274px;
-height: 56px;
-left: 50px;
-top: 700px;
+.savebutton {
+    margin-top: 10px;
+    margin: 25px;
+    width: 100%;
+height: 40px;
+--background: none;
+--background: #4c0890;
 color: #FBF9F9;
-
-background: #4C0890;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-
-    }
+}

@@ -9,10 +9,11 @@ const Address = db.schema.define(
   {
     id: { type: DataTypes.UUID, primaryKey: true, allowNull: false },
     address: { type: DataTypes.STRING(180), allowNull: false },
-    city: { type: DataTypes.STRING(30), allowNull: false },
-    district: { type: DataTypes.STRING(30), allowNull: false },
-    country: { type: DataTypes.STRING(30), allowNull: false },
-    zipCode: { type: DataTypes.STRING(30), allowNull: false },
+    city: { type: DataTypes.STRING(80), allowNull: false },
+    district: { type: DataTypes.STRING(80), allowNull: false },
+    country: { type: DataTypes.STRING(80), allowNull: false },
+    zipCode: { type: DataTypes.STRING(20), allowNull: false },
+    residentStatus: { type: DataTypes.STRING(30) },
   },
   {
     freezeTableName: true,
@@ -20,6 +21,8 @@ const Address = db.schema.define(
     hooks: {
       beforeValidate: function (address, options) {
         (address as any).id = uuid();
+        const country = (address as any).country;
+        if (country === "India") (address as any).residentStatus = "N/A";
       },
     },
   }

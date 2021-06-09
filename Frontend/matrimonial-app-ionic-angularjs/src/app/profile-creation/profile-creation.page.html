@@ -1,49 +1,97 @@
 <ion-content [fullscreen]="true">
   <ion-title>
-    <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/edit-profile']"></ion-icon>LifeStyle</ion-title>
+    <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/edit-profile']"></ion-icon>Profile Creation</ion-title>
     <ion-grid>
       <ion-row>
         <ion-col sizeLg="10" sizeMd="10" sizeXs="12">  
     <div class="container">
     <form action="" method="post">
-      <ion-label class="name">Name</ion-label> <br>
+     <ion-grid>
+      <ion-row>
+        <ion-label class="name">Name</ion-label>
+      </ion-row>
+     <ion-row>
       <ion-input id="Name1" type="name" class="n1" placeholder = "Name"> </ion-input>
+     </ion-row>
 
-      <ion-label class="Height">Height</ion-label> <br>
-      <ion-input id="Name1" type="name" class="height" placeholder = "Height"> </ion-input>
+     <ion-row>
+      <ion-label class="Height">Height</ion-label> 
+     </ion-row>
+      <ion-row>
+        <ion-input id="Name1" type="name" class="height" placeholder = "Height"> </ion-input>
+      </ion-row>
 
-      <ion-label class="Age">Age</ion-label> <br>
+      <ion-row>
+        <ion-label class="Age">Age</ion-label>
+      </ion-row>
+    <ion-row>
       <ion-input id="Name1" type="name" class="age" placeholder = "Age"> </ion-input>
+    </ion-row>
 
-      <ion-label class="MS">Maritial Status</ion-label> <br>
+    <ion-row>
+      <ion-label class="MS">Maritial Status</ion-label> 
+    </ion-row>
+      
+    <ion-row>
       <ion-select interface="popover" placeholder="--Select--" class="Maritial" >
         <ion-select-option value="Never Married">Never Married</ion-select-option>
         <ion-select-option value="Divorced">Divorced</ion-select-option>
         <ion-select-option value="Seperated">Seperated</ion-select-option>
         <ion-select-option value="Widowed">Widowed</ion-select-option>
       </ion-select>
-
-      <ion-label class="Caste">Caste</ion-label> <br>
+    </ion-row>
+      
+    <ion-row>
+      <ion-label class="Caste">Caste</ion-label>
+    </ion-row>
+       
+    <ion-row>
       <ion-input id="Name1" type="name" class="caste" placeholder = "Caste"> </ion-input>
+    </ion-row>
 
-      <ion-label class="Mother">Mother Tongue</ion-label> <br>
-      <ion-input id="Name1" type="name" class="Tongue" placeholder = "Mother Tongue"> </ion-input>
+  <ion-row>
+    <ion-label class="Mother">Mother Tongue</ion-label> 
+  </ion-row>
+      
+  <ion-row>
+    <ion-input id="Name1" type="name" class="Tongue" placeholder = "Mother Tongue"> </ion-input>
+  </ion-row>
 
-      <ion-label class="Country">Country</ion-label> <br>
+      <ion-row>
+        <ion-label class="Country">Country</ion-label>
+      </ion-row>
+     <ion-row>
       <ion-input id="Name1" type="name" class="country" placeholder = "Country"> </ion-input>
+     </ion-row>
 
-      <ion-label class="State">State</ion-label> <br>
-      <ion-input id="Name1" type="name" class="state" placeholder = "State"> </ion-input>
+      <ion-row>
+        <ion-label class="State">State</ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-input id="Name1" type="name" class="state" placeholder = "State"> </ion-input>
+      </ion-row>
+     
 
-      <ion-label class="City">City</ion-label> <br>
+     <ion-row>
+      <ion-label class="City">City</ion-label>
+     </ion-row>
+     <ion-row>
       <ion-input id="Name1" type="name" class="city" placeholder = "City"> </ion-input>
+     </ion-row>
 
-      <ion-label class="Status">Residential Status</ion-label> <br>
+     <ion-row>
+      <ion-label class="Status">Residential Status</ion-label>
+     </ion-row>
+     <ion-row>
       <ion-input id="Name1" type="name" class="status" placeholder = "status"> </ion-input>
+     </ion-row>
 
-      <ion-button (click)="onClick()" class="Submit" [routerLink]="['/edit-profile']">
-        SAVE
-      </ion-button>
+      <ion-row>
+        <ion-button (click)="onClick()" shape="round" class="Submit" [routerLink]="['/edit-profile']">
+          SAVE
+        </ion-button>
+      </ion-row>
+     </ion-grid>
 </form>
   </div>
         </ion-col>

@@ -5,18 +5,20 @@ ion-title{
     left: 0px;
     top: 0px;
     
-    
-
+   
     font-weight: normal;
     font-size: 24px;
     line-height: 28px;
     background-color: #4C0890;
     color: #FFFFFF;
     }
+    ion-icon {
+        color: #FBF9F9;
+    }
 .container {
         position: absolute;
-        width: 414px;
-        height: 794px;
+        width: 100%;
+    height: auto;
         left: 0px;
         top: 102px;
         
@@ -24,369 +26,43 @@ ion-title{
         border-radius: 30px 30px 0px 0px;
         }
 
-.Hdegree{
-/* Highest Degree */
-
-position: absolute;
-width: 123px;
-height: 21px;
-left: 20px;
-top: 100px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.Degree{
-/* Rectangle 177 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 17px;
-top: 130px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.PG{
-/* Post Graduate Degree */
-
-position: absolute;
-width: 176px;
-height: 21px;
-left: 20px;
-top: 185px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.Pgrad{
-/* Rectangle 178 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 215px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-.UG{
-/* University Name */
-
-position: absolute;
-width: 186px;
-height: 21px;
-left: 20px;
-top: 255px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.Ugrad{
-/* Rectangle 179 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 17px;
-top: 280px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Uname{
-/* Under Grad College */
-
-position: absolute;
-width: 155px;
-height: 21px;
-left: 17px;
-top: 320px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.uni{
-/* Rectangle 180 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 17px;
-top: 345px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.UGC{
-/* Under Grad College */
-
-position: absolute;
-width: 155px;
-height: 21px;
-left: 17px;
-top: 385px;
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-}
-
-.col{
-    position: absolute;
-    width: 315px;
-    height: 26px;
-    left: 17px;
-    top: 410px;
-    
-    background: #FBF9F9;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
-}
-.Sname{
-/* School Name */
-
-position: absolute;
-width: 108px;
-height: 21px;
-left: 17px;
-top: 447px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.school{
-/* Rectangle 181 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 474px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Employ{
-/* Emplyed In */
-
-position: absolute;
-width: 188px;
-height: 21px;
-left: 20px;
-top: 510px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.Sector{
-/* Rectangle 182 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 540px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Org{
-/* Occupation */
-
-position: absolute;
-width: 92px;
-height: 21px;
-left: 20px;
-top: 575px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.Oname{
-/* Rectangle 183 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 607px;
-
-background: #FFFFFF;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Occ{
-/* Organizaton Name */
-
-position: absolute;
-width: 190px;
-height: 21px;
-left: 20px;
-top: 649px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.work{
-/* Rectangle 184 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 686px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.Abroad{
-/* Interested in Settling Abroad? */
-
-position: absolute;
-width: 377px;
-height: 21px;
-left: 17px;
-top: 728px;
-
-
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-
-color: #000000;
-
-
-}
-
-.YN{
-/* Rectangle 185 */
-
-position: absolute;
-width: 315px;
-height: 26px;
-left: 20px;
-top: 765px;
-
-background: #FBF9F9;
-border: 1px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
+ ion-label{
+            padding-left: 25px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            font-size: 18px;
+            line-height: 21px;
+            color: #000000;
+        }
+
+ ion-input{
+            margin-left: 25px;
+            margin-right: 25px;
+            height: 40px;
+            background: #FEFAFA;
+            border: 1px solid #4C0890;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+        }
+ion-select{
+              margin-left: 25px;
+             margin-right: 25px;
+            height: 40px;
+            width: 100%;
+            background: #FEFAFA;
+            border: 1px solid #4C0890;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+        }
 
 .Submit{
-    position: absolute;
-    width: 274px;
-    height: 56px;
-    left: 67px;
-    top: 823px;
-    
-    background: #4C0890;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    
+    margin-top: 10px;
+    margin: 25px;
+    width: 100%;
+height: 40px;
+--background: none;
+--background: #4c0890;
+color: #FBF9F9;
 }
