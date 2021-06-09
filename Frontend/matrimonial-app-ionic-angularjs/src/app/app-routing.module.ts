@@ -159,10 +159,7 @@ const routes: Routes = [
     path: 'notifications-settings',
     loadChildren: () => import('./additional-pages/notifications-settings/notifications-settings.module').then( m => m.NotificationsSettingsPageModule)
   },
-  {
-    path: 'change-password',
-    loadChildren: () => import('./additional-pages/change-password/change-password.module').then( m => m.ChangePasswordPageModule)
-  },
+ 
   {
     path: 'lifestyle',
     loadChildren: () => import('./lifestyle/lifestyle.module').then( m => m.LifestylePageModule)
@@ -178,7 +175,8 @@ const routes: Routes = [
   {
     path: 'success-stories',
     loadChildren: () => import('./success-stories/success-stories.module').then( m => m.SuccessStoriesPageModule)
-  },  {
+  },
+  {
     path: 'privacy-policy',
     loadChildren: () => import('./privacy-policy/privacy-policy.module').then( m => m.PrivacyPolicyPageModule)
   },

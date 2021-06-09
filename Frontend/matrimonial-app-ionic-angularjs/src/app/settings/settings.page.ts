@@ -3,7 +3,7 @@ import { MenuController,ModalController,PopoverController } from '@ionic/angular
 import { PrivacySettingsPage } from '../additional-pages/privacy-settings/privacy-settings.page';
 import { HideProfilePage } from "../additional-pages/hide-profile/hide-profile.page";
 import { NotificationsSettingsPage } from "../additional-pages/notifications-settings/notifications-settings.page";
-import { ChangePasswordPage } from "../additional-pages/change-password/change-password.page";
+
 
 import { AlertController } from '@ionic/angular';
 // window.alertController = alertController;
@@ -52,16 +52,7 @@ export class SettingsPage implements OnInit {
     return await modal.present();
   }
 
-  async presentModal3() {
-    console.log('Inside modal')
-    const modal = await this.modalController.create({
-      component: ChangePasswordPage,
-      cssClass: 'my-custom-class',
-     
-      backdropDismiss: true
-    });
-    return await modal.present();
-  }
+ 
   async presentModal4() {
     console.log('Inside modal')
     const modal = await this.modalController.create({
