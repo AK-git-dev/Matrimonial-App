@@ -12,8 +12,8 @@ import UserController from "./users.controller";
 import CreateProfileController from "./update-profile.controller";
 import FileUploaderController from "./file-uploader.controller";
 import ProfileRecommendationController from "./profile-recommendation.controller";
-import UserFavoriteController from './add-to-favourites.controller';
-
+import UserFavoriteController from "./add-to-favourites.controller";
+import NotificationController from "./notification.controller";
 
 const router = Router();
 
@@ -48,6 +48,7 @@ router.use("/profile", CreateProfileController);
 router.use("/profiles-recommendations", ProfileRecommendationController);
 router.use("/users", UserController);
 router.use("/upload-service", FileUploaderController);
-router.use('/user/favorites/0', UserFavoriteController);
+router.use("/user/favorites/0", UserFavoriteController);
+router.use("/notifications", NotificationController);
 
 export default router;

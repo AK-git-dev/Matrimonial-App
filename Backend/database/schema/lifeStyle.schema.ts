@@ -71,8 +71,11 @@ const LifeStyle = db.schema.define(
     hooks: {
       beforeValidate: function (payload, options) {
         (payload as any).id = uuid();
-        if ((payload as any).haveAnyDisability === true && !(payload as any).descriptionOfDisability)
-            throw Error('Please specify your disability description');
+        if (
+          (payload as any).haveAnyDisability === true &&
+          !(payload as any).descriptionOfDisability
+        )
+          throw Error("Please specify your disability description");
       },
     },
   }

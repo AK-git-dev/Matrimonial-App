@@ -21,6 +21,9 @@ export const TWILIO_ACCOUNT_SID = process.env.TWILIO_ACCOUNT_SID as string;
 export const TWILIO_AUTH_TOKEN = process.env.TWILIO_AUTH_TOKEN as string;
 export const SMS_SECRET_TOKEN = process.env.SMS_SECRET_TOKEN as string;
 
+/** Google GCM Secret */
+export const FCM_SERVER_KEY = process.env.FCM_SERVER_KEY as string;
+
 // Twilio Client Initialization
 export const twilioClient = twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
 
@@ -163,7 +166,7 @@ export async function verifyRefreshTokenValidity(
 
 // generate 6 digit OTP
 const generateOtpCode = (): string =>
-    Math.ceil(1000 + Math.random() * 3131).toString();
+  Math.ceil(1000 + Math.random() * 3131).toString();
 
 export async function generateOtpAndTokenHash(
   phoneNumber: string
