@@ -21,6 +21,8 @@ export async function requiresMinimumAge(
         throw new createError.UnprocessableEntity(
           `${payload.fullname}! you have to be minimum 22 years old to continue the process!`
         );
+
+      (req as any).age = age;
     } else {
       const year = new Date().getUTCFullYear();
       const dob = new Date(payload.dateOfBirth).getUTCFullYear();

@@ -13,13 +13,13 @@ const Occupation = db.schema.define(
       primaryKey: true,
     },
     type: {
-      type: DataTypes.STRING(15),
+      type: DataTypes.STRING(100),
     },
     currentCompanyName: {
-      type: DataTypes.STRING(15),
+      type: DataTypes.STRING(200),
     },
     salary: {
-      type: DataTypes.DECIMAL(10, 2),
+      type: DataTypes.STRING(10),
     },
     isSelfEmployeed: {
       type: DataTypes.BOOLEAN,

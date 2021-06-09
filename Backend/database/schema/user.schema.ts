@@ -1,6 +1,7 @@
 import { DataTypes } from "sequelize";
 import { v4 } from "uuid";
 import { db } from "..";
+import Languages from "./languages.schema";
 
 const uuid = v4;
 
@@ -33,21 +34,17 @@ const User = db.schema.define(
       type: DataTypes.STRING,
       unique: true,
     },
-    password: {
-      type: DataTypes.STRING(150),
-    },
     martialStatus: {
       type: DataTypes.ENUM(
+        "Any",
+        "Never",
         "Single",
-        "Widowed",
-        "Marriage",
+        "Married",
         "Divorced",
-        "Separated"
+        "Separated",
+        "Widowed"
       ),
       defaultValue: "Single",
-    },
-    motherTongue: {
-      type: DataTypes.STRING,
     },
     isCasteBarrier: {
       type: DataTypes.BOOLEAN,

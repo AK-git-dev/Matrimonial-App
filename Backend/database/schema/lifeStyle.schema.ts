@@ -25,19 +25,19 @@ const LifeStyle = db.schema.define(
       type: DataTypes.STRING,
     },
     bodyShape: {
-      type: DataTypes.STRING,
+      type: DataTypes.ENUM("Slim", "Athletic", "Average", "Fat"),
     },
     skinComplextion: {
-      type: DataTypes.STRING,
+      type: DataTypes.ENUM("Very fair", "Fair", "Whitish", "Dark"),
     },
     diet: {
-      type: DataTypes.STRING,
+      type: DataTypes.ENUM("Veg", "Egalitarian", "Non veg", "Jain", "Vegan"),
     },
     drinkingHabits: {
-      type: DataTypes.STRING,
+      type: DataTypes.ENUM("Non drinker", "Casual", "Regular"),
     },
     smokingHabits: {
-      type: DataTypes.STRING,
+      type: DataTypes.ENUM("Non smoker", "Casual", "Regular"),
     },
     sportsFitness: {
       type: DataTypes.STRING,
@@ -57,10 +57,10 @@ const LifeStyle = db.schema.define(
     reasonForDivorced: {
       type: DataTypes.STRING(180),
     },
-    haveAnyDieases: {
+    haveAnyDisability: {
       type: DataTypes.BOOLEAN,
     },
-    descriptionOfDieseases: {
+    descriptionOfDisability: {
       type: DataTypes.STRING(180),
     },
   },
@@ -71,6 +71,8 @@ const LifeStyle = db.schema.define(
     hooks: {
       beforeValidate: function (payload, options) {
         (payload as any).id = uuid();
+        if ((payload as any).haveAnyDisability === true && !(payload as any).descriptionOfDisability)
+            throw Error('Please specify your disability description');
       },
     },
   }
