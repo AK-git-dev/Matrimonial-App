@@ -1,6 +1,6 @@
 ion-title{
-    position: absolute;
-    width: 800px;
+    position: relative;
+    width: auto;
     height: 130px;
     left: 0px;
     top: 0px;
@@ -16,8 +16,8 @@ ion-title{
         color: #FBF9F9;
     }
 .container {
-        position: absolute;
-        width: 100%;
+        position: relative;
+        width: auto;
     height: auto;
         left: 0px;
         top: 102px;
