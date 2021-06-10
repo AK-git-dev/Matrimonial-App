@@ -3,9 +3,11 @@ import { Schema } from "../../database/schema";
 import {
   createError,
   FCM_SERVER_KEY,
+  gcmMessenger,
   Next,
   RequestInterface,
   ResponseInterface,
+  sender,
   SUCCESS,
 } from "../utils";
 
@@ -38,12 +40,9 @@ router.get(
         androidDeviceToken.get("token")
       ) as string[];
 
-      // setting up sender ID with Google FCM API KEY
-      var sender: gcm.Sender = new gcm.Sender(FCM_SERVER_KEY);
-
+      
       // preparing notifications to be send
-      var gcmMessages: gcm.Message = new gcm.Message();
-      gcmMessages.addNotification({
+      gcmMessenger.addNotification({
         title: "New Match Found!",
         body: "Yo! You gotta new matches! Check'em out",
         icon: "ic_launcher",
@@ -51,7 +50,7 @@ router.get(
 
       // now send notifications
       sender.send(
-        gcmMessages,
+        gcmMessenger,
         { registrationTokens: tokens },
         (err: any, resp: gcm.IResponseBody) => {
           if (err) throw new createHttpError.BadRequest(err);

@@ -1,12 +1,49 @@
 import { Router } from "express";
 import { requiresAuth } from "../utils/middlewares/requires-auth.middleware";
-import { Next, RequestInterface, ResponseInterface, SUCCESS } from "../utils";
+import {
+  createError,
+  gcmMessenger,
+  Next,
+  RequestInterface,
+  ResponseInterface,
+  sender,
+  SUCCESS,
+} from "../utils";
 import { Schema } from "../../database/schema";
 import createHttpError from "http-errors";
+import { Model, Op } from "sequelize";
+
+export async function collectDeviceTokens(
+  userId: string,
+  profileId: string
+): Promise<string[]> {
+  return new Promise(
+    async (
+      resolve: (value: string[] | PromiseLike<string[]>) => void,
+      reject
+    ) => {
+      try {
+        const userDevicesTokens: Model<any, any>[] =
+          await Schema.PushDevice.findAll({
+            where: { UserId: { [Op.in]: [userId, profileId] } },
+            attributes: ["token"],
+          });
+
+        const sanitizedToken: string[] = userDevicesTokens.map(
+          (userToken: Model<any, any>) => userToken.getDataValue("token")
+        ) as string[];
+
+        resolve(sanitizedToken);
+      } catch (error) {``
+        reject(error);
+      }
+    }
+  );
+}
 
 const router = Router();
 
-// [POST]: Add to Favorite
+// [POST]: Add to Favorite With Notifaction
 router.post(
   "/add-to-favourites/:profileId",
   requiresAuth,
@@ -27,6 +64,7 @@ router.post(
           UserId,
         },
       });
+
       if (alreadyAddedToFavourite)
         throw new createHttpError.BadRequest(
           `You have already added ${userExists.getDataValue(
@@ -37,6 +75,22 @@ router.post(
       await Schema.FavouritePerson.create({
         favouritePersonId: profileId,
         UserId,
+      });
+
+      // Sending Push Notification
+      gcmMessenger.addNotification({
+        title: "New Match Found!",
+        body: "Yo! You gotta new matches! Check'em out",
+        icon: "ic_launcher",
+      });
+
+      const registrationTokens: string[] = await collectDeviceTokens(
+        UserId,
+        profileId
+      );
+
+      sender.send(gcmMessenger, registrationTokens, (err, _) => {
+        if (err) new createError.Forbidden("Device Token Not found")
       });
 
       /*

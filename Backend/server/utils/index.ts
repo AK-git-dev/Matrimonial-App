@@ -14,6 +14,8 @@ import environment from "dotenv";
 import twilio from "twilio";
 import { join } from "path";
 
+import gcm from 'node-gcm';
+
 environment.config();
 
 /** Twilio Secrets from .ENV file */
@@ -193,3 +195,11 @@ export async function generateOtpAndTokenHash(
     return undefined;
   }
 }
+
+
+/** Google FCM Notification Sender and Gcm Instances */
+
+// setting up sender ID with Google FCM API KEY
+export const sender: gcm.Sender = new gcm.Sender(FCM_SERVER_KEY);
+// setting up messenger to send notification over client devcies
+export const gcmMessenger: gcm.Message = new gcm.Message();
