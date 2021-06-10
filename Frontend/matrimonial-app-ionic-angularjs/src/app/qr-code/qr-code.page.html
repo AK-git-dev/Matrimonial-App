@@ -1,0 +1,82 @@
+<ion-content>
+  <ion-title><ion-icon name="arrow-back-outline" size="large" [routerLink]="['/user-home']"></ion-icon>QR Code</ion-title>
+  
+
+<div class="container">
+<ion-grid>
+  
+  <div class="card">
+    <ion-item class="item">
+      <ion-label class="label" >
+        Your QR code
+      </ion-label>
+    </ion-item>
+    <ngx-qrcode 
+         [elementType]="elementType" 
+         [value] = "value"
+         cssClass = "aclass"
+         errorCorrectionLevel = "L">
+   </ngx-qrcode>
+  </div>
+
+  <div class="card2">
+    <ion-item class="item">
+      <ion-label class="label" >
+        To Scan QR code
+      </ion-label>
+    </ion-item>
+ <ion-row>
+  <input #fileinput type="file" accept="image/*;capture=camera" hidden
+  (change)="handleFile($event.target.files)" >
+ </ion-row>
+
+  
+
+
+ <ion-row>
+  <ion-button extend="full" (click)="startScan()" class="btn" shape="round" >
+    <ion-icon name="camera-reverse-outline" class="icon"></ion-icon> &nbsp;Start Scan
+  </ion-button> 
+ </ion-row>
+
+ <ion-row>
+  <ion-button extend="full" (click)="captureImage()" class="btn" shape="round" >
+    <ion-icon name="image-outline" class="icon" ></ion-icon> &nbsp;Select Image
+  </ion-button> 
+ </ion-row>
+
+
+  <ion-rw>
+    <ion-button extend="full" (click)="reset()" color="warning" *ngIf="scanResult" class="btn" shape="round">
+      <ion-icon slot="start" name="refresh"></ion-icon> Reset
+    </ion-button> 
+  </ion-rw>
+
+  <ion-row>
+    <video #video [hidden]="!scanActive" width="100%"></video>
+  <canvas #canvas hidden></canvas>
+  </ion-row>
+
+ <ion-row>
+  <ion-button extend="full" (click)="stopScan()" color="warning" *ngIf="scanActive" class="btn" shape="round">
+    <ion-icon slot="start" name="refresh"></ion-icon> stop Canner
+  </ion-button>
+ </ion-row>
+
+  <ion-card *ngIf="scanResult">
+<ion-card-head>
+<ion-card-title>
+ Result:
+</ion-card-title>
+</ion-card-head>
+<ion-card-contain>
+{{ scanResult }}
+</ion-card-contain>
+  </ion-card>
+
+  </div>
+</ion-grid>
+
+</div>
+  
+</ion-content>

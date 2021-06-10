@@ -195,7 +195,11 @@ const routes: Routes = [
   {
     path: 'entry-slides',
     loadChildren: () => import('./entry-slides/entry-slides.module').then(m => m.EntrySlidesPageModule)
+  },  {
+    path: 'qr-code',
+    loadChildren: () => import('./qr-code/qr-code.module').then( m => m.QrCodePageModule)
   }
+
 
 ];
 
