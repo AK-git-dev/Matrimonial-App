@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PickerController } from '@ionic/angular';
+import { ChatService } from '../services/chat.service';
 
 @Component({
   selector: 'app-pref-part',
@@ -9,7 +10,7 @@ import { PickerController } from '@ionic/angular';
 })
 export class PrefPartPage implements OnInit {
 
-  constructor(private router: Router, private pickerController: PickerController) { }
+  constructor(private router: Router, private pickerController: PickerController, private chatService: ChatService) { }
 
   // multiColumnOptions = [
   //   [
@@ -31,6 +32,15 @@ export class PrefPartPage implements OnInit {
   // }
 
   submit() {
+    // let user = {
+    //   userId: 1,
+    //   username: 'aashrayjain',
+    //   password: '7389330512',
+    //   phone: '7389330511',
+    //   full_name: 'Aashray Jain'
+    // }
+    // this.chatService.signUp(user);
+    // this.chatService.createUserSession(user);
     this.router.navigate(['/user-home']);
   }
 

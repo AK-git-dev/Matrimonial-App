@@ -26,7 +26,7 @@
 
     <div *ngIf="segmentModal === 'conversations'" class="d1">
       <ion-list *ngFor="let user of users">
-        <ion-item button [routerLink]="['/private-chat']" [state]="{ user: user, path: '/chat-list' }">
+        <ion-item button (click)="connectToPrivate(user)">
           <ion-img [src]="user.photo"></ion-img>
           <ion-label class="l2">{{ user.username }}</ion-label>
         </ion-item>
@@ -44,7 +44,7 @@
 
     <div *ngIf="segmentModal === 'active'" class="d1">
       <ion-list *ngFor="let user of users">
-        <ion-item button [routerLink]="['/private-chat']" [state]="{ user: user, path: '/chat-list' }">
+        <ion-item button (click)="connectToPrivate(user)">
           <ion-img [src]="user.photo"></ion-img>
           <ion-label class="l2">{{ user.username }}</ion-label>
         </ion-item>

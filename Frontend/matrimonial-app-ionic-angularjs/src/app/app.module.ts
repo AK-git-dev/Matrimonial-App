@@ -21,6 +21,7 @@ import  { IonIntlTelInputModule } from 'ion-intl-tel-input';
 import { NgxOtpInputModule } from 'ngx-otp-input';
 import { OtpComponent } from './components/otp/otp.component';
 
+
 @NgModule({
   declarations: [AppComponent, OtpComponent],
   entryComponents: [],

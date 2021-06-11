@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { OtpComponent } from '../components/otp/otp.component';
+import { ChatService } from '../services/chat.service';
 // import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ import { OtpComponent } from '../components/otp/otp.component';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private modalController: ModalController, private router: Router) { }
+  constructor(private modalController: ModalController, private router: Router, private chatService: ChatService) { }
   // exform: FormGroup;
   mobileNumber = '';
 
@@ -24,6 +25,15 @@ export class LoginPage implements OnInit {
   }
 
   login() {
+    let user = {
+      userId: 1,
+      username: 'aashrayjain',
+      password: '7389330512',
+      phone: '7389330511',
+      full_name: 'Aashray Jain'
+    }
+    this.chatService.signUp(user);
+    this.chatService.createUserSession(user);
     this.presentModal();
 
   }

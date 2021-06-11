@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonInfiniteScroll, PopoverController } from '@ionic/angular';
 import { UserPopoverComponent } from '../components/user-popover/user-popover.component';
+import { ChatService } from '../services/chat.service';
 
 @Component({
   selector: 'app-user-home',
@@ -17,6 +18,7 @@ export class UserHomePage implements OnInit {
   constructor(private popoverController: PopoverController) { }
 
   ngOnInit() {
+    
   }
 
   loadData(event) {
