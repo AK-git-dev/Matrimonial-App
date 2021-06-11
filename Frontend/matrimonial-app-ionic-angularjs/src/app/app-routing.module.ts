@@ -198,6 +198,10 @@ const routes: Routes = [
   },  {
     path: 'qr-code',
     loadChildren: () => import('./qr-code/qr-code.module').then( m => m.QrCodePageModule)
+  },
+  {
+    path: 'match-day',
+    loadChildren: () => import('./match-day/match-day.module').then( m => m.MatchDayPageModule)
   }
 
 

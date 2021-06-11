@@ -38,7 +38,7 @@
       </ion-item>
       <ion-item>
         <ion-icon name="daily_recommendation" slot="start"></ion-icon>
-        <ion-label>Daily Recommendation</ion-label>
+        <ion-label [routerLink]="['/match-day']">Daily Recommendation</ion-label>
       </ion-item>
       <ion-item [routerLink]="['/chat-list']" [state]="{ data: 'active' }">
         <ion-icon name="your_chat" slot="start"></ion-icon>
@@ -65,27 +65,33 @@
             <ion-label>Just Joined Matches</ion-label>
             <ion-badge color="light">5</ion-badge>
           </ion-item>
-          <ion-item>
+
+          <!-- <ion-item>
             <ion-icon name="" slot="start"></ion-icon>
             <ion-label>Daily Recommnedations</ion-label>
             <ion-badge color="light">15</ion-badge>
-          </ion-item>
+          </ion-item> -->
+
           <ion-item>
             <ion-icon name="" slot="start"></ion-icon>
             <ion-label>Mutual Matches</ion-label>
           </ion-item>
+
           <ion-item>
             <ion-icon name="" slot="start"></ion-icon>
             <ion-label>Verified Matches</ion-label>
           </ion-item>
-          <ion-item>
+
+          <!-- <ion-item>
             <ion-icon name="" slot="start"></ion-icon>
             <ion-label>Video Matches</ion-label>
-          </ion-item>
+          </ion-item> -->
+
           <ion-item>
             <ion-icon name="" slot="start"></ion-icon>
             <ion-label>Compatible Matches</ion-label>
           </ion-item>
+
           <ion-item>
             <ion-icon name="" slot="start"></ion-icon>
             <ion-label>Member looking for me</ion-label>
@@ -104,10 +110,6 @@
       <ion-item [routerLink]="['/search']">
         <ion-icon name="search1" slot="start"></ion-icon>
         <ion-label>Search</ion-label>
-      </ion-item>
-      <ion-item [routerLink]="['/qr-code']" >
-        <ion-icon name="qr" slot="start" ></ion-icon>
-        <ion-label>QR Code</ion-label>
       </ion-item>
       <ion-item button (click)="presentModal()">
         <ion-icon name="setting" slot="start"></ion-icon>
