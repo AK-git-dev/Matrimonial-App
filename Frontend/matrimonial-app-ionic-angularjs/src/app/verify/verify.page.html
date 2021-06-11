@@ -1,0 +1,61 @@
+<ion-content>
+  <ion-title><ion-icon name="arrow-back-outline" size="large" [routerLink]="['/user-home']"></ion-icon>Verify Your Profile</ion-title>
+  
+
+  <div class="container">
+
+    <ion-grid>
+      <form action="">
+        <div class="card">
+
+       <ion-row>
+        <img src="../../assets/temp verify.png" alt="ID Image">
+       </ion-row>
+
+           <ion-label> We need to verify your ID</ion-label>
+            <br>
+
+           <ion-row>
+             <p> In order to create an account. We need to be 100% sure that You are You.
+               As we're a Matrimonial service. We have to complete Verification is mandatory </p>
+           </ion-row> <br>
+
+           <ion-row>
+            <ion-label class="label" > Select the type of documents</ion-label>
+           </ion-row>
+           <ion-row>
+            <ion-select interface="popover" value="Aadhaar" class="Photo-select" >
+              <ion-select-option value="Aadhaar">Aadhaar card</ion-select-option>
+              <ion-select-option value="Passport">Passport</ion-select-option>
+              <ion-select-option value="Driving-License">Driving License</ion-select-option>
+              <ion-select-option value="Voter-ID">Voter’s ID</ion-select-option>
+              <ion-select-option value="Pan">Pan Card</ion-select-option>
+            </ion-select>
+           </ion-row>
+           <ion-row>
+            <ion-label class="label" >Enter Number</ion-label> &nbsp;
+            <p class="label2" >(Ex.Aadhar no./Pan no.)</p>
+           </ion-row>
+           <ion-row>
+            <ion-input  type="text" class="school" placeholder = "1111 2222 2233 3333"> </ion-input>
+           </ion-row>
+            <p>We need to determine if an identity document is authentic and belongs to you</p>
+
+
+            <ion-row>
+              <ion-button (click)="upload()" shape="round" class="savebutton">
+              Submit
+            </ion-button>
+            </ion-row>
+            <p class="danger" >This Process take 48hr to verify successfully.</p>
+
+        </div>
+
+
+
+        </form>
+    </ion-grid>
+
+  </div>
+</ion-content>
+

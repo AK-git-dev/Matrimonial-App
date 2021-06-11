@@ -202,6 +202,10 @@ const routes: Routes = [
   {
     path: 'match-day',
     loadChildren: () => import('./match-day/match-day.module').then( m => m.MatchDayPageModule)
+  },
+  {
+    path: 'verify',
+    loadChildren: () => import('./verify/verify.module').then( m => m.VerifyPageModule)
   }
 
 
