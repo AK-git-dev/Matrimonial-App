@@ -206,6 +206,10 @@ const routes: Routes = [
   {
     path: 'verify',
     loadChildren: () => import('./verify/verify.module').then( m => m.VerifyPageModule)
+  },
+  {
+    path: 'shortlisted',
+    loadChildren: () => import('./shortlisted/shortlisted.module').then( m => m.ShortlistedPageModule)
   }
 
 
