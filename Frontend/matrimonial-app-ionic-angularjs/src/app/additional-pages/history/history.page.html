@@ -1,0 +1,86 @@
+
+<ion-content>
+  <ion-title><ion-icon name="arrow-back-outline" size="large" [routerLink]="['/settings']"></ion-icon>Your History</ion-title>
+    
+    <div class="container">
+      <ion-grid>
+<br>
+        <ion-list>
+
+          <ion-list-header> Recent History</ion-list-header>
+          <ion-item class="item">
+            <ion-label>View Someone's Profile </ion-label>
+            <ion-icon name="eye-outline" size="large"></ion-icon> &nbsp;&nbsp;
+            <ion-icon name="trash-outline"  size="large"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-label>Accept request from Abc</ion-label>
+            <ion-icon name="eye-outline" size="large"></ion-icon> &nbsp;&nbsp;
+            <ion-icon name="trash-outline"  size="large"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-label>Send Intrest to Xyz</ion-label>
+           <ion-icon name="eye-outline" size="large"></ion-icon> &nbsp;&nbsp;
+            <ion-icon name="trash-outline"  size="large"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-label>Uploaded documents to increase Trust Score</ion-label>
+           <ion-icon name="eye-outline" size="large"></ion-icon> &nbsp;&nbsp;
+            <ion-icon name="trash-outline"  size="large"></ion-icon>
+          </ion-item>
+
+          <ion-list-header> Yesterday History</ion-list-header>
+          <ion-item class="item">
+            <ion-label>View Someone's Profile </ion-label>
+            <ion-icon name="eye-outline" size="large"></ion-icon> &nbsp;&nbsp;
+            <ion-icon name="trash-outline"  size="large"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-label>Accept request from Abc</ion-label>
+            <ion-icon name="eye-outline" size="large"></ion-icon> &nbsp;&nbsp;
+            <ion-icon name="trash-outline"  size="large"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-label>Send Intrest to Xyz</ion-label>
+           <ion-icon name="eye-outline" size="large"></ion-icon> &nbsp;&nbsp;
+            <ion-icon name="trash-outline"  size="large"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-label>Uploaded documents to increase Trust Score</ion-label>
+           <ion-icon name="eye-outline" size="large"></ion-icon> &nbsp;&nbsp;
+            <ion-icon name="trash-outline"  size="large"></ion-icon>
+          </ion-item>
+
+          <ion-list-header> Monday, june 11, 2021 </ion-list-header>
+          <ion-item class="item">
+            <ion-label>View Someone's Profile </ion-label>
+            <ion-icon name="eye-outline" size="large"></ion-icon> &nbsp;&nbsp;
+            <ion-icon name="trash-outline"  size="large"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-label>Accept request from Abc</ion-label>
+            <ion-icon name="eye-outline" size="large"></ion-icon> &nbsp;&nbsp;
+            <ion-icon name="trash-outline"  size="large"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-label>Send Intrest to Xyz</ion-label>
+           <ion-icon name="eye-outline" size="large"></ion-icon> &nbsp;&nbsp;
+            <ion-icon name="trash-outline"  size="large"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-label>Uploaded documents to increase Trust Score</ion-label>
+           <ion-icon name="eye-outline" size="large"></ion-icon> &nbsp;&nbsp;
+            <ion-icon name="trash-outline"  size="large"></ion-icon>
+          </ion-item>
+        </ion-list>
+
+        <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+          <ion-infinite-scroll-content
+            loadingSpinner="bubbles"
+            loadingText="Loading more data...">
+          </ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+
+        </ion-grid>
+      </div>
+</ion-content>

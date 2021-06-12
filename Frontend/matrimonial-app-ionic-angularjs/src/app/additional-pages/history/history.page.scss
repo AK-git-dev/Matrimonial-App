@@ -1,0 +1,50 @@
+*{
+    font-family: "Product Sans";
+}
+ion-title{
+    position: relative;
+    width: auto;
+    height: 130px;
+    left: 0px;
+    top: 0px;
+    
+   
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    background-color: #4C0890;
+    color: #FFFFFF;
+    }
+    ion-icon[name= "arrow-back-outline"] {
+        color: #FBF9F9;
+    }
+.container {
+        position: absolute;
+        width: 100%;
+    height: auto;
+        left: 0px;
+        top: 102px;
+        
+        background: #FBF9F9;
+        border-radius: 30px 30px 0px 0px;
+        }
+
+ion-icon{
+            color: #000000;
+        }
+ ion-label{
+    --font-family: "Product Sans";
+    font-size: medium;
+    color: rgba(117, 116, 116, 0.945);
+        }
+
+   
+ ion-item{
+    --font-family: "Product Sans";
+            margin: 10px;
+            --detail-label-font-size: 16px;
+        }
+        
+ion-list-header{
+            font-size: 20px;
+        }

@@ -210,6 +210,10 @@ const routes: Routes = [
   {
     path: 'shortlisted',
     loadChildren: () => import('./shortlisted/shortlisted.module').then( m => m.ShortlistedPageModule)
+  },
+  {
+    path: 'history',
+    loadChildren: () => import('./additional-pages/history/history.module').then( m => m.HistoryPageModule)
   }
 
 

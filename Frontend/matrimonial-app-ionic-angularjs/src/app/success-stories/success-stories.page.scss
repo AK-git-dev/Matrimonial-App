@@ -32,21 +32,25 @@ background: #FBF9F9;
 border-radius: 30px 30px 0px 0px;
 
 }
+ion-list{
+    border-radius: 30px 30px 0px 0px;
+}
 
 
 ion-card {
     background: #f9f9f9;
+    height: auto;
 }
 ion-item {
     width: 100%;
     border-radius: 30px 30px 0px 0px;
-    padding-top: 10px;
+    
 }
 
 
 img {
     width: 100%;
-    height: auto;
+    height: 50%;
 }
 
 .readmore{
