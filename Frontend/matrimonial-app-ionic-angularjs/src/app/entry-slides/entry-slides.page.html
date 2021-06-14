@@ -1,7 +1,7 @@
 <ion-content>
 
 
-  <ion-slides>
+  <ion-slides pager="true" [options]="slideOpts" #theSlides>
     <ion-slide id="s1">
       <ion-icon class="image"></ion-icon>
 
@@ -16,7 +16,7 @@
           </ion-row>
           <ion-row>
             <ion-col>
-              <ion-button expand="full" shape="round" class="btn1" (click)="next()">Next</ion-button>
+              <ion-button expand="full" shape="round" class="btn1" (click)="move(theSlides)">Next</ion-button>
             </ion-col>
           </ion-row>
           <ion-row>
@@ -29,7 +29,7 @@
     </ion-slide>
 
     <ion-slide id="s2">
-      <ion-icon class="image"></ion-icon>
+      <ion-icon class="image2"></ion-icon>
 
       <div class="div1">
 
@@ -42,7 +42,7 @@
           </ion-row>
           <ion-row>
             <ion-col>
-              <ion-button expand="full" shape="round" class="btn1" (click)="next()">Next</ion-button>
+              <ion-button expand="full" shape="round" class="btn1" (click)="move1(theSlides)">Next</ion-button>
             </ion-col>
           </ion-row>
           <ion-row>
@@ -55,7 +55,7 @@
     </ion-slide>
 
     <ion-slide>
-      <ion-icon class="image"></ion-icon>
+      <ion-icon class="image3"></ion-icon>
 
       <div class="div1">
 
