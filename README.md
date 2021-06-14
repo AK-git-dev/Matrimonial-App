@@ -2,6 +2,23 @@
 
 Last Updated by: Sounish Nath -TCS-1964566_Intern
 
+# Chat API link
+
+connectycube -  https://developers.connectycube.com/cordova/
+
+## ConnectyCube Dashboard for Users, Chat, Dialog, Video
+
+https://admin.connectycube.com/signin
+
+Username - aashrayjain
+Password - 7389330515
+
+## ConnectyCube App Credentials
+
+APPLICATION ID - 4974
+AUTHORIZATION KEY - 4uK2wqdYd9nKunx
+AUTHORIZATION SECRET - Xu5K23tUUH3pdNu
+
 # UI/UX Utilities
 
 ## Bridal Illustations Designs
