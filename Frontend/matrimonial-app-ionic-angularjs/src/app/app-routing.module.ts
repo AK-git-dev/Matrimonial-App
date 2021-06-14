@@ -218,6 +218,14 @@ const routes: Routes = [
   {
     path: 'dp-match',
     loadChildren: () => import('./dp-match/dp-match.module').then( m => m.DpMatchPageModule)
+  },
+  {
+    path: 'jj-match',
+    loadChildren: () => import('./jj-match/jj-match.module').then( m => m.JjMatchPageModule)
+  },
+  {
+    path: 'mutual-match',
+    loadChildren: () => import('./mutual-match/mutual-match.module').then( m => m.MutualMatchPageModule)
   }
 
 
