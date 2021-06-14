@@ -214,6 +214,10 @@ const routes: Routes = [
   {
     path: 'history',
     loadChildren: () => import('./additional-pages/history/history.module').then( m => m.HistoryPageModule)
+  },
+  {
+    path: 'dp-match',
+    loadChildren: () => import('./dp-match/dp-match.module').then( m => m.DpMatchPageModule)
   }
 
 
