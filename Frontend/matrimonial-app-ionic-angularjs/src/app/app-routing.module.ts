@@ -226,6 +226,10 @@ const routes: Routes = [
   {
     path: 'mutual-match',
     loadChildren: () => import('./mutual-match/mutual-match.module').then( m => m.MutualMatchPageModule)
+  },
+  {
+    path: 'verified-match',
+    loadChildren: () => import('./verified-match/verified-match.module').then( m => m.VerifiedMatchPageModule)
   }
 
 
