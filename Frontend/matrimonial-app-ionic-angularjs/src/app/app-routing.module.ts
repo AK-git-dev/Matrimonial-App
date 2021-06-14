@@ -238,6 +238,10 @@ const routes: Routes = [
   {
     path: 'looking',
     loadChildren: () => import('./looking/looking.module').then( m => m.LookingPageModule)
+  },
+  {
+    path: 'cache',
+    loadChildren: () => import('./additional-pages/cache/cache.module').then( m => m.CachePageModule)
   }
 
 

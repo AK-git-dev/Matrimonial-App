@@ -1,0 +1,55 @@
+<ion-content>
+  <ion-icon name="arrow-back-outline" class="back" size="large" [routerLink]="['/settings']" ></ion-icon>
+  <ion-label class="l1">Clear cache</ion-label>
+
+<div class="container">
+  <form action="post">
+    <ion-grid>
+<ion-item class="can" >
+  <ion-label ><h2>Select Time Range</h2></ion-label>
+  <ion-select interface="popover"value="all" class="Photo-select" >
+    <ion-select-option value="all">All Time</ion-select-option>
+    <ion-select-option value="7">Last 7 days</ion-select-option>
+    <ion-select-option value="15">Last 15 days</ion-select-option>
+    <ion-select-option value="30">Last 30 days</ion-select-option>
+
+  </ion-select>
+</ion-item>
+
+<ion-list>
+  <ion-item lines="none">
+    <ion-checkbox color="tertiary" checked slot="start" ></ion-checkbox>
+    <ion-label>History <p>Clear your history</p> </ion-label>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-checkbox color="tertiary" checked slot="start" ></ion-checkbox>
+    <ion-label>Cached images and files <p>Frees up 500MB </p> </ion-label>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-checkbox color="tertiary" checked slot="start" ></ion-checkbox>
+    <ion-label>Local and Session Storage <p>Clear sessoin</p> </ion-label>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-checkbox color="tertiary" checked slot="start" ></ion-checkbox>
+    <ion-label>Cookies <p>Frees up 12 KB</p> </ion-label>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-checkbox color="tertiary" checked slot="start" ></ion-checkbox>
+    <ion-label>Other data<p>Frees up 1GB</p> </ion-label>
+  </ion-item>
+  
+</ion-list>
+
+<ion-row>
+  <ion-button class="savebutton" shape="round" [routerLink]="['/settings']" >CLEAR DATA</ion-button>
+</ion-row>
+
+
+
+    </ion-grid>
+  </form>
+</div>
+</ion-content>
