@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuController,ModalController,PopoverController } from '@ionic/angular';
 import { PrivacySettingsPage } from '../additional-pages/privacy-settings/privacy-settings.page';
 import { HideProfilePage } from "../additional-pages/hide-profile/hide-profile.page";
@@ -19,7 +20,7 @@ export class SettingsPage implements OnInit {
   isDown: boolean = true;
   score: number = 20;
   id: string = 'H12345';
-  constructor(private modalController: ModalController,private menu: MenuController, private alertController: AlertController,private popoverController: PopoverController ) { }
+  constructor(private modalController: ModalController, private router: Router , private menu: MenuController, private alertController: AlertController,private popoverController: PopoverController ) { }
 
   ngOnInit() {
   }
@@ -85,5 +86,36 @@ export class SettingsPage implements OnInit {
         buttons: ['Pass','Rate it!','Ask Later']
     });
     await alert.present();
+  }
+
+  logout() {
+    this.presentAlert();
+   
+  }
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Logout',
+      subHeader: 'Do you want to logout?',
+      buttons: [
+        {
+        text: 'Yes',
+        handler: () => {
+          
+          this.popoverController.dismiss();
+          this.router.navigate(['/entry-slides']);
+        }
+      }, 
+      {
+        text: 'No',
+        handler:() => {
+          this.popoverController.dismiss();
+          console.log('dismiss');
+        } 
+      }
+    ]
+    });
+    await alert.present();
+    
   }
 }

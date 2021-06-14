@@ -3,7 +3,7 @@
     <ion-grid>
       <ion-row>
         <ion-col size="2">
-          <ion-icon name="arrow-back-outline" size="large" color="light" [routerLink]="['/home']"></ion-icon>
+          <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/home']"></ion-icon>
         </ion-col>
         <ion-col>
           <ion-title class="title1">Personal Details</ion-title>
@@ -40,11 +40,11 @@
           <ion-row>
             <ion-row>
               <ion-item class="item2">
-                <ion-item>
+             
                   <ion-label position="stacked">Mobile Number&nbsp;<span>&#42;</span></ion-label>
                   <ion-intl-tel-input id="mobile-number" name="mobile-number" [(ngModel)]="mobileNumber"
                     #mobileNumberControl="ngModel" ionIntlTelInputValid></ion-intl-tel-input>
-                </ion-item>
+                
               </ion-item>
             </ion-row>
             <ion-row>
@@ -117,7 +117,7 @@
 
           <ion-row>
             <ion-col>
-              <ion-button expand="full" shape="round" type="submit" class="btn1">Next
+              <ion-button expand="full" shape="round" type="submit" class="btn1" [routerLink]="['/ed-car']">Next &nbsp;
                 <ion-icon name="chevron-forward-circle-sharp"></ion-icon>
               </ion-button>
             </ion-col>

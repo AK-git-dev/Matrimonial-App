@@ -1,7 +1,11 @@
 
 <ion-content [fullscreen]="true">
-  <ion-label class="l1">Settings</ion-label>
-  <ion-label class="l2" (click)="dismiss()">Done</ion-label>
+ <ion-grid>
+   <ion-row>
+    <ion-label class="l1">Settings</ion-label>
+    <ion-label class="l2" (click)="dismiss()">Done</ion-label>
+   </ion-row>
+ </ion-grid>
   <div class="c1">
     <!-- <div> -->
     <ion-list>
@@ -38,7 +42,7 @@
             <ion-icon class="si5" slot="start"></ion-icon>
             <ion-label (click)="rate()" >Rate the app</ion-label>
           </ion-item>
-          <ion-item>
+          <ion-item (click)="logout()">
             <ion-icon class="si6" slot="start"></ion-icon>
             <ion-label>Log out</ion-label>
           </ion-item>
