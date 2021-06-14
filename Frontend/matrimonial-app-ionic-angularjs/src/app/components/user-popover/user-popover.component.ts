@@ -30,7 +30,7 @@ export class UserPopoverComponent implements OnInit {
         handler: () => {
           
           this.popover.dismiss();
-          this.router.navigate(['/home']);
+          this.router.navigate(['/entry-slides']);
         }
       }, 
       {

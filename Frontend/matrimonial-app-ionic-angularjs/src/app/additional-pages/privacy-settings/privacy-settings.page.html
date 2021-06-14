@@ -1,7 +1,7 @@
 
 <ion-content [fullscreen]="true">
 
-    <ion-icon name="close" class="back" size="large" [routerLink]="['/settings']"></ion-icon>
+    <ion-icon name="arrow-back-outline" class="back" size="large" (click)="dismiss()"></ion-icon>
     <ion-label class="l1">Privacy Settings</ion-label>
    
   
@@ -171,7 +171,7 @@
         </ion-list>
         </ion-radio-group>
       </ion-menu-toggle>
-
+<br><br>
      
           <ion-row>
             <ion-button class="savebutton" shape="round" [routerLink]="['/settings']" >SAVE</ion-button>
