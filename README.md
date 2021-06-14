@@ -10,14 +10,14 @@ connectycube -  https://developers.connectycube.com/cordova/
 
 https://admin.connectycube.com/signin
 
-Username - aashrayjain
-Password - 7389330515
+- Username - aashrayjain
+- Password - 7389330515
 
 ## ConnectyCube App Credentials
 
-APPLICATION ID - 4974
-AUTHORIZATION KEY - 4uK2wqdYd9nKunx
-AUTHORIZATION SECRET - Xu5K23tUUH3pdNu
+- APPLICATION ID - 4974
+- AUTHORIZATION KEY - 4uK2wqdYd9nKunx
+- AUTHORIZATION SECRET - Xu5K23tUUH3pdNu
 
 # UI/UX Utilities
 
