@@ -230,6 +230,14 @@ const routes: Routes = [
   {
     path: 'verified-match',
     loadChildren: () => import('./verified-match/verified-match.module').then( m => m.VerifiedMatchPageModule)
+  },
+  {
+    path: 'comp-match',
+    loadChildren: () => import('./comp-match/comp-match.module').then( m => m.CompMatchPageModule)
+  },
+  {
+    path: 'looking',
+    loadChildren: () => import('./looking/looking.module').then( m => m.LookingPageModule)
   }
 
 
