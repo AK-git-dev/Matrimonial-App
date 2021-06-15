@@ -27,6 +27,7 @@
       <change afterPath="$PROJECT_DIR$/Backend/server/controllers/login.controller.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/controllers/microservices/document.service.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/controllers/microservices/profile-picture.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/server/controllers/mutualConnection.controller.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/controllers/notification.controller.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/controllers/profile-recommendation.controller.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/controllers/request-controller.ts" afterDir="false" />
@@ -130,7 +131,7 @@
       <workItem from="1623079839815" duration="4387000" />
       <workItem from="1623126256351" duration="13915000" />
       <workItem from="1623158824402" duration="5352000" />
-      <workItem from="1623729938023" duration="17491000" />
+      <workItem from="1623729938023" duration="21238000" />
     </task>
     <servers />
   </component>
