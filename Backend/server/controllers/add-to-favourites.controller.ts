@@ -1,14 +1,14 @@
 import { Router } from "express";
 import { requiresAuth } from "../utils/middlewares/requires-auth.middleware";
 import {
-  collectDeviceTokens ,
-  createError ,
-  gcmMessenger ,
-  Next ,
-  RequestInterface ,
-  ResponseInterface ,
-  sender ,
-  SUCCESS ,
+  collectDeviceTokens,
+  createError,
+  gcmMessenger,
+  Next,
+  RequestInterface,
+  ResponseInterface,
+  sender,
+  SUCCESS,
 } from "../utils";
 import { Schema } from "../../database/schema";
 import createHttpError from "http-errors";
@@ -63,7 +63,7 @@ router.post(
       );
 
       sender.send(gcmMessenger, registrationTokens, (err, _) => {
-        if (err) new createError.Forbidden("Device Token Not found")
+        if (err) new createError.Forbidden("Device Token Not found");
       });
 
       /*

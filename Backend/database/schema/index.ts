@@ -54,11 +54,10 @@ function buildAssociationsBetweenSchemas() {
   User.hasMany(RequestReceived);
 
   RequestSend.belongsTo(User, {
-    foreignKey: "sendPersonId"
+    foreignKey: "sendPersonId",
   });
-  RequestReceived.belongsTo(User, {foreignKey: 'senderId'});
-  RequestAccepted.belongsTo(User, {foreignKey: 'friendID'});
-
+  RequestReceived.belongsTo(User, { foreignKey: "senderId" });
+  RequestAccepted.belongsTo(User, { foreignKey: "friendID" });
 
   Languages.belongsToMany(PrefferedPartnerChoice, {
     as: "prefferedMotherTounge",

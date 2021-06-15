@@ -14,9 +14,9 @@ import FileUploaderController from "./file-uploader.controller";
 import ProfileRecommendationController from "./profile-recommendation.controller";
 import UserFavoriteController from "./add-to-favourites.controller";
 import NotificationController from "./notification.controller";
-import JustJoinersController from './just-joinee.controller';
-import RequestController from './request-controller';
-import MutualMatchController from './mutualConnection.controller';
+import JustJoinersController from "./just-joinee.controller";
+import RequestController from "./request-controller";
+import MutualMatchController from "./mutualConnection.controller";
 
 const router = Router();
 
@@ -50,9 +50,9 @@ router.use("/auth", AuthController);
 router.use("/profile", CreateProfileController);
 router.use("/profiles-recommendations", ProfileRecommendationController);
 router.use("/users", UserController);
-router.use('/just-joiners', JustJoinersController);
-router.use('/request', RequestController);
-router.use('/mutual-matches', MutualMatchController);
+router.use("/just-joiners", JustJoinersController);
+router.use("/request", RequestController);
+router.use("/mutual-matches", MutualMatchController);
 router.use("/upload-service", FileUploaderController);
 router.use("/user/favorites/0", UserFavoriteController);
 router.use("/notifications", NotificationController);

@@ -40,7 +40,6 @@ router.get(
         androidDeviceToken.get("token")
       ) as string[];
 
-      
       // preparing notifications to be send
       gcmMessenger.addNotification({
         title: "New Match Found!",

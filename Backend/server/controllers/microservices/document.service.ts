@@ -41,7 +41,7 @@ function handleFileUpload(fileType: string) {
             )
         );
 
-     await Schema.UploadedDocument.findOrCreate({ where: { UserId } });
+      await Schema.UploadedDocument.findOrCreate({ where: { UserId } });
 
       // update
       await Schema.UploadedDocument.update(
