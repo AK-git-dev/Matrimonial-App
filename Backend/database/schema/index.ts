@@ -51,6 +51,10 @@ function buildAssociationsBetweenSchemas() {
   RelativeContact.hasOne(PrivacySetting);
   User.hasOne(MotherTongue);
 
+  RequestSend.belongsTo(User, {
+    foreignKey: "sendPersonId"
+  })
+
   Languages.belongsToMany(PrefferedPartnerChoice, {
     as: "prefferedMotherTounge",
     through: PrefferedPartnerLanguages,
