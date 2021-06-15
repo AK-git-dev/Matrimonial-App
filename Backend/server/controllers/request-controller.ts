@@ -1,8 +1,17 @@
 import {Router} from "express";
-import {createError , Next , RequestInterface , ResponseInterface , SUCCESS} from "../utils";
+import {
+    collectDeviceTokens ,
+    createError ,
+    gcmMessenger ,
+    Next ,
+    RequestInterface ,
+    ResponseInterface ,
+    sender ,
+    SUCCESS
+} from "../utils";
 import {requiresAuth} from "../utils/middlewares/requires-auth.middleware";
 import {Schema} from "../../database/schema";
-import {Model} from "sequelize";
+import {Model , Op} from "sequelize";
 
 const router = Router ();
 
@@ -52,7 +61,8 @@ router.get ('/pending/all' , requiresAuth , async (req: RequestInterface , res: 
 
         const pendingRequests: Model<any , any>[] = await Schema.RequestSend.findAll ({
             where :{UserId} ,
-            include :[{model :Schema.User, attributes: ["fullname", "age"]}]
+            include :[{model :Schema.User , attributes :["fullname" , "age"]}] ,
+            order :[['createdAt' , 'DESC']]
         });
         return res.status (202).send ({
             ...SUCCESS ,
@@ -65,6 +75,64 @@ router.get ('/pending/all' , requiresAuth , async (req: RequestInterface , res: 
         next (e);
     }
 });
+
+// [POST] : Request Accepted Endpoint
+router.post ('/accept/:friendID' , requiresAuth , async (req: RequestInterface , res: ResponseInterface , next: Next) => {
+    try {
+        const UserId: string = (req as any).userId;
+        const sendPersonId: string = req.params.friendID;
+
+        const resp = await Schema.RequestAccepted.findOrCreate ({where :{UserId , friendID :sendPersonId}});
+        if (resp === null)
+            new createError.NotAcceptable ("Request cannot be processed right now! Person has changed request policies")
+
+        // Sending Push Notification
+        gcmMessenger.addNotification ({
+            title :"Request Accepted" ,
+            body :"Voila! Your connection request has been accepted! Grow your interest!!" ,
+            icon :"ic_launcher" ,
+        });
+
+        const registrationTokens: string[] = await collectDeviceTokens (
+            UserId ,
+            sendPersonId
+        );
+
+        sender.send (gcmMessenger , registrationTokens , (err , _) => {
+            if (err) new createError.Forbidden ("Device Token Not found")
+        });
+
+        return res.status (202).send ({
+            ...SUCCESS ,
+            message :"Request has been accepted successfully!"
+        });
+
+    } catch (e) {
+        next (e);
+    }
+});
+
+
+router.get ('/accepted/all' , requiresAuth , async (req: RequestInterface , res: ResponseInterface , next: Next) => {
+    try {
+        const UserId: string = (req as any).userId;
+        const acceptedProfiles = await Schema.RequestAccepted.findAll ({
+            where :{UserId} , include :[
+                {model :Schema.User}
+            ]
+        });
+
+        return res.status (202).send ({
+            ...SUCCESS ,
+            message :"List of all accepted connection profiles" ,
+            acceptedProfiles ,
+            count :acceptedProfiles.length
+        });
+
+    } catch (e) {
+        next (e);
+    }
+})
 
 
 export default router;

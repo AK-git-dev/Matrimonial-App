@@ -1,45 +1,18 @@
 import { Router } from "express";
 import { requiresAuth } from "../utils/middlewares/requires-auth.middleware";
 import {
-  createError,
-  gcmMessenger,
-  Next,
-  RequestInterface,
-  ResponseInterface,
-  sender,
-  SUCCESS,
+  collectDeviceTokens ,
+  createError ,
+  gcmMessenger ,
+  Next ,
+  RequestInterface ,
+  ResponseInterface ,
+  sender ,
+  SUCCESS ,
 } from "../utils";
 import { Schema } from "../../database/schema";
 import createHttpError from "http-errors";
 import { Model, Op } from "sequelize";
-
-export async function collectDeviceTokens(
-  userId: string,
-  profileId: string
-): Promise<string[]> {
-  return new Promise(
-    async (
-      resolve: (value: string[] | PromiseLike<string[]>) => void,
-      reject
-    ) => {
-      try {
-        const userDevicesTokens: Model<any, any>[] =
-          await Schema.PushDevice.findAll({
-            where: { UserId: { [Op.in]: [userId, profileId] } },
-            attributes: ["token"],
-          });
-
-        const sanitizedToken: string[] = userDevicesTokens.map(
-          (userToken: Model<any, any>) => userToken.getDataValue("token")
-        ) as string[];
-
-        resolve(sanitizedToken);
-      } catch (error) {``
-        reject(error);
-      }
-    }
-  );
-}
 
 const router = Router();
 

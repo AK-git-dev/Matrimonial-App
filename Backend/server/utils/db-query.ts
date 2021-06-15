@@ -70,6 +70,10 @@ export const getAllUsersWithAllDetails = async () =>
             {
                 model :Schema.RequestReceived ,
                 include :[{model :Schema.User , attributes :["id" , "fullname" , "age" , "gender" , "martialStatus"]}]
+            },
+            {
+                model :Schema.RequestAccepted ,
+                include :[{model :Schema.User , attributes :["id" , "fullname" , "age" , "gender" , "martialStatus"]}]
             }
         ] ,
     });

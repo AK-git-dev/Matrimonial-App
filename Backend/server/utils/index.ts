@@ -6,7 +6,7 @@ import {
 } from "express-serve-static-core";
 import createHttpError from "http-errors";
 import {sign , verify} from "jsonwebtoken";
-import {Model} from "sequelize";
+import {Model , Op} from "sequelize";
 import {v4} from "uuid";
 import {TokenInterface} from "../models";
 import {createHmac} from "crypto";
@@ -15,6 +15,7 @@ import twilio from "twilio";
 import {join} from "path";
 
 import gcm from 'node-gcm';
+import {Schema} from "../../database/schema";
 
 environment.config ();
 
@@ -149,7 +150,7 @@ export function sendAuthenticatedResponseWhenVerificationCompletes(
         })
         .cookie ("isLoggedIn" , true , {
             expires :new Date (new Date ().getTime () + 3600 * 1000) ,
-        }).cookie ("RefreshTokenID" , true , {
+        }).cookie ("refreshTokenID" , true , {
             expires :new Date (new Date ().getTime () + 3600 * 1000) ,
         })
         .send ({
@@ -205,3 +206,32 @@ export async function generateOtpAndTokenHash(
 export const sender: gcm.Sender = new gcm.Sender (FCM_SERVER_KEY);
 // setting up messenger to send notification over client devcies
 export const gcmMessenger: gcm.Message = new gcm.Message ();
+
+// Getting collective Device tokens
+export async function collectDeviceTokens(
+    userId: string,
+    profileId: string
+): Promise<string[]> {
+    return new Promise(
+        async (
+            resolve: (value: string[] | PromiseLike<string[]>) => void,
+            reject
+        ) => {
+            try {
+                const userDevicesTokens: Model<any, any>[] =
+                    await Schema.PushDevice.findAll({
+                        where: { UserId: { [Op.in]: [userId, profileId] } },
+                        attributes: ["token"],
+                    });
+
+                const sanitizedToken: string[] = userDevicesTokens.map(
+                    (userToken: Model<any, any>) => userToken.getDataValue("token")
+                ) as string[];
+
+                resolve(sanitizedToken);
+            } catch (error) {``
+                reject(error);
+            }
+        }
+    );
+}
