@@ -18,6 +18,7 @@
       <change afterPath="$PROJECT_DIR$/Backend/database/schema/push-device.schema.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/database/schema/refreshToken.schema.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/database/schema/relative-contacts.schema.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/database/schema/requestRecived.schema.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/formatter.bat" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/resetDB.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Backend/server/controllers/add-to-favourites.controller.ts" afterDir="false" />
@@ -129,7 +130,7 @@
       <workItem from="1623079839815" duration="4387000" />
       <workItem from="1623126256351" duration="13915000" />
       <workItem from="1623158824402" duration="5352000" />
-      <workItem from="1623729938023" duration="10936000" />
+      <workItem from="1623729938023" duration="13525000" />
     </task>
     <servers />
   </component>

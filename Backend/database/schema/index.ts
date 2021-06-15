@@ -27,6 +27,7 @@ import PrefferedPartnerLanguages from "./prefferedPartner-languages.schema";
 import MotherTongue from "./motherTongue.schema";
 import LifestyleLanguage from "./lifestyle-language.schema";
 import PushDevice from "./push-device.schema";
+import RequestReceived from "./requestRecived.schema";
 
 /** Will configure the association Mappings (1:N) / (M:N) / (N:1)  */
 function buildAssociationsBetweenSchemas() {
@@ -50,10 +51,14 @@ function buildAssociationsBetweenSchemas() {
   User.hasOne(Caste);
   RelativeContact.hasOne(PrivacySetting);
   User.hasOne(MotherTongue);
+  User.hasMany(RequestReceived);
 
   RequestSend.belongsTo(User, {
     foreignKey: "sendPersonId"
-  })
+  });
+
+  RequestReceived.belongsTo(User, {foreignKey: 'senderId'});
+
 
   Languages.belongsToMany(PrefferedPartnerChoice, {
     as: "prefferedMotherTounge",
@@ -98,6 +103,7 @@ const Schema = {
   RelativeContact,
   PeopleWhoViewedYou,
   PushDevice,
+  RequestReceived,
   RefreshToken,
   FamilyDetails,
   Languages,
