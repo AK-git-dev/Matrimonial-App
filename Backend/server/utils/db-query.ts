@@ -20,6 +20,7 @@ export const paginate = async (
 // To Get The Details of All User and Related Information
 export const getAllUsersWithAllDetails = async () =>
   await Schema.User.findAll({
+    order: [["createdAt", "DESC"]],
     include: [
       { model: Schema.Education },
       { model: Schema.Address },
@@ -27,10 +28,7 @@ export const getAllUsersWithAllDetails = async () =>
       { model: Schema.MotherTongue },
       {
         model: Schema.LifeStyle,
-        include: [
-          { model: Schema.Hobby},
-          { model: Schema.LifestyleLanguage },
-        ],
+        include: [{ model: Schema.Hobby }, { model: Schema.LifestyleLanguage }],
       },
       { model: Schema.UploadedDocument },
       { model: Schema.Occupation },
@@ -45,14 +43,52 @@ export const getAllUsersWithAllDetails = async () =>
       { model: Schema.FamilyDetails },
       { model: Schema.ProfilPicture },
       { model: Schema.RelativeContact },
-      { model: Schema.FavouritePerson,
+      {
+        model: Schema.FavouritePerson,
         include: [
-          {model: Schema.User, as: 'personDeatils', attributes:['id', 'fullname', 'age', 'martialStatus'] }
-        ] },
-      { model: Schema.PersonWhoFavouritedHimself,
+          {
+            model: Schema.User,
+            as: "personDeatils",
+            attributes: ["id", "fullname", "age", "martialStatus"],
+          },
+        ],
+      },
+      {
+        model: Schema.PersonWhoFavouritedHimself,
         include: [
-          {model: Schema.User, as: 'details', attributes:['id', 'fullname', 'age', 'martialStatus'] }
-        ]
+          {
+            model: Schema.User,
+            as: "details",
+            attributes: ["id", "fullname", "age", "martialStatus", "gender"],
+          },
+        ],
+      },
+      {
+        model: Schema.RequestSend,
+        include: [
+          {
+            model: Schema.User,
+            attributes: ["id", "fullname", "age", "gender", "martialStatus"],
+          },
+        ],
+      },
+      {
+        model: Schema.RequestReceived,
+        include: [
+          {
+            model: Schema.User,
+            attributes: ["id", "fullname", "age", "gender", "martialStatus"],
+          },
+        ],
+      },
+      {
+        model: Schema.RequestAccepted,
+        include: [
+          {
+            model: Schema.User,
+            attributes: ["id", "fullname", "age", "gender", "martialStatus"],
+          },
+        ],
       },
     ],
   });

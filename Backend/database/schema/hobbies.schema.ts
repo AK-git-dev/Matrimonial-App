@@ -9,7 +9,7 @@ const Hobby = db.schema.define(
     id: {
       type: DataTypes.UUID,
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
     },
     hobby: {
       type: DataTypes.STRING(30),
@@ -18,19 +18,17 @@ const Hobby = db.schema.define(
     },
     LifeStyleId: {
       type: DataTypes.UUID,
-      allowNull : false,
+      allowNull: false,
       references: {
         model: LifeStyle,
-        key: 'id'
-      }
-    }
+        key: "id",
+      },
+    },
   },
   {
     freezeTableName: true,
     tableName: "Hobbies",
-    indexes: [
-      {fields: ['hobby']}
-    ],
+    indexes: [{ fields: ["hobby"] }],
     hooks: {
       beforeValidate: function (payload, options) {
         (payload as any).name = ((payload as any).name as string).toLowerCase();
