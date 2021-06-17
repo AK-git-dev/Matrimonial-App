@@ -22,13 +22,13 @@ export class SidebarComponent implements OnInit {
     this.menu.open('first');
   }
 
-  async presentModal() {
-    console.log('Inside modal')
-    const modal = await this.modalController.create({
-      component: SettingsPage,
-      cssClass: 'my-custom-class'
-    });
-    return await modal.present();
-  }
+  // async presentModal() {
+  //   console.log('Inside modal')
+  //   const modal = await this.modalController.create({
+  //     component: SettingsPage,
+  //     cssClass: 'my-custom-class'
+  //   });
+  //   return await modal.present();
+  // }
 
 }

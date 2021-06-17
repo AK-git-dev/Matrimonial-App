@@ -1,0 +1,72 @@
+
+*{
+    color: black;
+}
+.div1 {
+    background: #4c0890;
+    height: 100%;
+}
+.icon{
+    color: #ffffff;
+}
+.title1 {
+    font-size: 24px;
+    line-height: 28px;
+    background-color: #4c0890;
+    color: #ffffff;
+    padding-left: 0px;
+    padding-top: 10px;
+}
+
+
+.div2 {
+   
+    position: absolute;
+    background: #ffffff;
+    width: 100%;
+    height: auto;
+    bottom: 0px;
+    border-radius: 30px 30px 0px 0px;
+}
+.i1{
+    border-radius: 30px 30px 0px 0px;
+}
+.lab1{
+    color: #ffffff;
+}
+p{
+    color: red;
+}
+
+.img1{
+margin: 10px;
+width: 150px;
+height: 160px;
+
+background: #C4C4C4;
+border: 1px solid #000000;
+box-sizing: border-box;
+border-radius: 20px;
+background: url(../../assets/upload-photos.png);
+background-repeat: no-repeat;
+
+}
+
+.icon2{
+    margin: 40%;
+}
+
+
+
+.btn1 {
+    --background: none;
+    --background: #4c0890;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: none;
+    margin-left: auto;
+    margin-right: auto;
+
+    color: #fcfcfc;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

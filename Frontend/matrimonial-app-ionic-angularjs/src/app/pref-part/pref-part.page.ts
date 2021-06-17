@@ -41,7 +41,7 @@ export class PrefPartPage implements OnInit {
     // }
     // this.chatService.signUp(user);
     // this.chatService.createUserSession(user);
-    this.router.navigate(['/user-home']);
+    this.router.navigate(['/upload-photos']);
   }
 
   // async openPicker(numColums, numOptions, columnOptions) {

@@ -3,7 +3,7 @@
  <ion-grid>
    <ion-row>
     <ion-label class="l1">Settings</ion-label>
-    <ion-label class="l2" (click)="dismiss()">Done</ion-label>
+    <ion-label class="l2" [routerLink]="['/user-home']">Done</ion-label>
    </ion-row>
  </ion-grid>
   <div class="c1">
@@ -21,22 +21,22 @@
 
           <ion-item>
             <ion-icon class="si1" slot="start"></ion-icon>
-            <ion-label (click)="presentModal()">Privacy Settings </ion-label>
+            <ion-label  [routerLink]="['/privacy-settings']">Privacy Settings </ion-label>
             <!-- <ion-badge color="light">5</ion-badge> -->
           </ion-item>
           <ion-item>
             <ion-icon class="si2" slot="start"></ion-icon>
-            <ion-label (click)="presentModal2()">Notification Settings</ion-label>
+            <ion-label [routerLink]="['/notifications-settings']">Notification Settings</ion-label>
             <!-- <ion-badge color="light">15</ion-badge> -->
           </ion-item>
          
           <ion-item>
             <ion-icon class="si3" slot="start">  </ion-icon>
-            <ion-label (click)="presentModal4()">Hide Profile</ion-label>
+            <ion-label [routerLink]="['/hide-profile']">Hide Profile</ion-label>
           </ion-item>
           <ion-item>
             <ion-icon class="si4" slot="start"></ion-icon>
-            <ion-label (click)="onClick()">Delete Profile</ion-label>
+            <ion-label (click)=" onClick()">Delete Profile</ion-label>
           </ion-item>
           <ion-item>
             <ion-icon class="si5" slot="start"></ion-icon>

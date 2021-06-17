@@ -25,45 +25,45 @@ export class SettingsPage implements OnInit {
   ngOnInit() {
   }
 
-  dismiss() {
-    console.log('Dismiss modal')
-    this.modalController.dismiss({
-      'dismissed': true
-    });
-  }
-  async presentModal() {
-    console.log('Inside modal')
-    const modal = await this.modalController.create({
-      component: PrivacySettingsPage,
-      cssClass: 'my-custom-class',
+  // dismiss() {
+  //   console.log('Dismiss modal')
+  //   this.modalController.dismiss({
+  //     'dismissed': true
+  //   });
+  // }
+  // async presentModal() {
+  //   console.log('Inside modal')
+  //   const modal = await this.modalController.create({
+  //     component: PrivacySettingsPage,
+  //     cssClass: 'my-custom-class',
      
-      backdropDismiss: true
-    });
-    return await modal.present();
-  }
+  //     backdropDismiss: true
+  //   });
+  //   return await modal.present();
+  // }
 
-  async presentModal2() {
-    console.log('Inside modal')
-    const modal = await this.modalController.create({
-      component: NotificationsSettingsPage,
-      cssClass: 'my-custom-class',
+  // async presentModal2() {
+  //   console.log('Inside modal')
+  //   const modal = await this.modalController.create({
+  //     component: NotificationsSettingsPage,
+  //     cssClass: 'my-custom-class',
      
-      backdropDismiss: true
-    });
-    return await modal.present();
-  }
+  //     backdropDismiss: true
+  //   });
+  //   return await modal.present();
+  // }
 
  
-  async presentModal4() {
-    console.log('Inside modal')
-    const modal = await this.modalController.create({
-      component: HideProfilePage,
-      cssClass: 'my-custom-class',
+  // async presentModal4() {
+  //   console.log('Inside modal')
+  //   const modal = await this.modalController.create({
+  //     component: HideProfilePage,
+  //     cssClass: 'my-custom-class',
      
-      backdropDismiss: true
-    });
-    return await modal.present();
-  }
+  //     backdropDismiss: true
+  //   });
+  //   return await modal.present();
+  // }
 
 
 

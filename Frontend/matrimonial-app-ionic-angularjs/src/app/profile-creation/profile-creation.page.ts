@@ -6,10 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile-creation.page.scss'],
 })
 export class ProfileCreationPage implements OnInit {
-
-  constructor() { }
+ 
+  isHidden = false;
+ constructor() { }
 
   ngOnInit() {
+  }
+
+ changeStatus()  {
+    var status = document.getElementById("mariatlStatus") as HTMLInputElement ;
+    if (status.value == "NM") {
+       document.getElementById("any").style.visibility="hidden";
+      this.isHidden=true;
+    }
+    else {
+       document.getElementById("any").style.visibility="visible";
+      this.isHidden=false;
+    }
+
   }
 
 }

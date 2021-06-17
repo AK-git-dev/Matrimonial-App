@@ -5,7 +5,8 @@
       <ion-row>
         <ion-col sizeLg="10" sizeMd="10" sizeXs="12">  
     <div class="container">
-    <form action="" method="post">
+
+    <form action="" method="post" >
      <ion-grid>
       <ion-row>
         <ion-label class="name">Name</ion-label>
@@ -31,16 +32,57 @@
     <ion-row>
       <ion-label class="MS">Maritial Status</ion-label> 
     </ion-row>
-      
+      <!--------------------------------------------------------------- Select Maritial status ----------------------------------------------------------------------------->
     <ion-row>
-      <ion-select interface="popover" placeholder="--Select--" class="Maritial" >
-        <ion-select-option value="Never Married">Never Married</ion-select-option>
-        <ion-select-option value="Divorced">Divorced</ion-select-option>
-        <ion-select-option value="Seperated">Seperated</ion-select-option>
-        <ion-select-option value="Widowed">Widowed</ion-select-option>
+      <ion-select interface="popover"  class="Maritial" 
+      id="mariatlStatus" (onchange)="changeStatus()"  >
+        <ion-select-option value="NM">Never Married</ion-select-option>
+        <ion-select-option value="D">Divorced</ion-select-option>
+        <ion-select-option value="S">Seperated</ion-select-option>
+        <ion-select-option value="W">Widowed</ion-select-option>
       </ion-select>
     </ion-row>
-      
+
+   
+                                <div class="hide" id="any" ng-hide=isHidden>
+                                  <ion-row>
+                                    <ion-label>Any Children <p>If any</p>Mention</ion-label>
+
+                                  </ion-row>
+
+                                  <ion-row>
+                                    <ion-input id="Name1" type="name" placeholder="0"> </ion-input>
+
+                                  </ion-row>
+                                  <ion-row>
+                                    <ion-checkbox color="danger" checked></ion-checkbox>
+                                    <ion-label>Living together</ion-label>
+                                  </ion-row>
+
+                                  <ion-row>
+                                    <ion-label class="date">Date of 1st Married</ion-label>
+                                  </ion-row>
+
+                                  <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD/MMM/YYYY" min="1930-01-01" max="2002-12-31">
+                                  </ion-datetime>
+
+                                  <ion-row>
+                                    <ion-label class="date">Date of Divorced</ion-label>
+                                  </ion-row>
+
+                                  <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD/MMM/YYYY" min="1930-01-01" max="2002-12-31">
+                                  </ion-datetime>
+
+
+                                  <ion-row>
+                                    <ion-label>Reason of divorce</ion-label>
+                                  </ion-row>
+
+                                  <ion-row>
+                                    <ion-input id="Name1" type="name" class="caste" placeholder="Reason"> </ion-input>
+                                  </ion-row>
+                                </div>
+      <!------------------------------------------------------------------- End ---------------------------------------------------------------------------------->
     <ion-row>
       <ion-label class="Caste">Caste</ion-label>
     </ion-row>

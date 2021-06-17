@@ -242,6 +242,10 @@ const routes: Routes = [
   {
     path: 'cache',
     loadChildren: () => import('./additional-pages/cache/cache.module').then( m => m.CachePageModule)
+  },
+  {
+    path: 'upload-photos',
+    loadChildren: () => import('./upload-photos/upload-photos.module').then( m => m.UploadPhotosPageModule)
   }
 
 

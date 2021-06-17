@@ -1,0 +1,87 @@
+<ion-content [fullscreen]="true">
+  <div class="div1">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="2">
+          <ion-icon name="arrow-back-outline" size="large" class="icon" [routerLink]="['/pref-part']"></ion-icon>
+        </ion-col>
+        <ion-col>
+          <ion-title class="title1">Add Photos</ion-title>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="9" style="margin-top: 20px;">
+          <ion-progress-bar color="success" value="1" buffer="0.75"></ion-progress-bar>
+        </ion-col>
+        <ion-col style="margin-top: 10px;">
+          <ion-label class="lab1">
+            Step 4/4
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+
+<div class="div2">
+ <form action="" (ngSubmit)="submit()">
+  <ion-grid>
+    <ion-item lines="none"  class="i1" >
+      <ion-label> <h2>You can upload upto 6 Photos </h2> <p>First photo will become your Profile Photo</p></ion-label>
+      
+    </ion-item>
+  
+  <ion-row>
+    <ion-col>
+      <div class="img1">
+        <ion-icon class="icon2" name="add-circle-outline" size="large" ></ion-icon>
+      </div>
+     
+    </ion-col>
+    <ion-col>
+      <div class="img1">
+        <ion-icon class="icon2" name="add-circle-outline" size="large" ></ion-icon>
+      </div>
+    </ion-col>
+  </ion-row>
+    
+  <ion-row>
+    <ion-col>
+      <div class="img1">
+        <ion-icon class="icon2" name="add-circle-outline" size="large" ></ion-icon>
+      </div>
+     
+    </ion-col>
+    <ion-col>
+      <div class="img1">
+        <ion-icon class="icon2" name="add-circle-outline" size="large" ></ion-icon>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <div class="img1">
+        <ion-icon class="icon2" name="add-circle-outline" size="large" ></ion-icon>
+      </div>
+     
+    </ion-col>
+    <ion-col>
+      <div class="img1">
+        <ion-icon class="icon2" name="add-circle-outline" size="large" ></ion-icon>
+      </div>
+    </ion-col>
+  </ion-row>
+  <br>
+  <ion-row>
+    <ion-col>
+      <ion-button expand="full" shape="round" type="submit" class="btn1">Finish &nbsp;
+        <ion-icon name="chevron-forward-circle-sharp" class="icon" ></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+   </ion-grid>
+ </form>
+   </div>
+
+   
+</ion-content>

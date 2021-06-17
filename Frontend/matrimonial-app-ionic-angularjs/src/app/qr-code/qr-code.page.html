@@ -46,11 +46,7 @@
  </ion-row>
 
 
-  <ion-rw>
-    <ion-button extend="full" (click)="reset()" color="warning" *ngIf="scanResult" class="btn" shape="round">
-      <ion-icon slot="start" name="refresh"></ion-icon> Reset
-    </ion-button> 
-  </ion-rw>
+ 
 
   <ion-row>
     <video #video [hidden]="!scanActive" width="100%"></video>
@@ -62,6 +58,12 @@
     <ion-icon slot="start" name="refresh"></ion-icon> stop Canner
   </ion-button>
  </ion-row>
+
+ <ion-row>
+  <ion-button extend="full" (click)="reset()" color="warning" *ngIf="scanResult" class="btn" shape="round">
+    <ion-icon slot="start" name="refresh"></ion-icon> Reset
+  </ion-button> 
+</ion-row>
 
   <ion-card *ngIf="scanResult">
 <ion-card-head>
