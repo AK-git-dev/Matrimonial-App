@@ -142,6 +142,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/node-gcm@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@types/node-gcm/-/node-gcm-1.0.0.tgz#55485188f33c183723a24382b00bd179700a63f1"
+  integrity sha512-kOZzExQjxuKazkjMCSRR0vBzPnP3VySDzu186ETtlR2Pv01MlQV2eO151X9d9Rrn3uN6h2r4ehP0AGJ1q+DSCw==
+
 "@types/node@*", "@types/node@^15.6.0":
   version "15.12.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-15.12.1.tgz#9b60797dee1895383a725f828a869c86c6caa5c2"
@@ -1782,6 +1787,15 @@ node-fetch@^2.6.1:
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
   integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
 
+node-gcm@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/node-gcm/-/node-gcm-1.0.4.tgz#fdd6f96a5b0b61f8c891f46844cbd42c2520b3d3"
+  integrity sha512-g12XH5LoJQnNFK0LQcxcJlT44Zye6Vc8tVLCC0ou0OFRv4xn9QW+30Db0HHouWX5rrew62tgh6MiN5fmEGFAsA==
+  dependencies:
+    debug "^3.1.0"
+    lodash "^4.17.20"
+    request "^2.88.0"
+
 node-gyp-build@^4.2.0:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.2.3.tgz#ce6277f853835f718829efb47db20f3e4d9c4739"
@@ -2157,7 +2171,7 @@ registry-url@^5.0.0:
   dependencies:
     rc "^1.2.8"
 
-request@^2.87.0:
+request@^2.87.0, request@^2.88.0:
   version "2.88.2"
   resolved "https://registry.yarnpkg.com/request/-/request-2.88.2.tgz#d73c918731cb5a87da047e207234146f664d12b3"
   integrity sha512-MsvtOrfG9ZcrOwAW+Qi+F6HbD0CWXEh9ou77uOb7FM2WPhwT7smM833PzanhJLsgXjN89Ir6V2PczXNnMpwKhw==

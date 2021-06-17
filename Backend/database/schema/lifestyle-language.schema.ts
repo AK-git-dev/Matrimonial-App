@@ -2,7 +2,7 @@ import { db } from "../index";
 import { DataTypes } from "sequelize";
 import Languages from "./languages.schema";
 import LifeStyle from "./lifeStyle.schema";
-import {uuid} from "../../server/utils";
+import { uuid } from "../../server/utils";
 
 const LifestyleLanguage = db.schema.define(
   "lifestyleLanguages",
@@ -10,7 +10,7 @@ const LifestyleLanguage = db.schema.define(
     id: {
       type: DataTypes.UUID,
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
     },
     name: {
       type: DataTypes.STRING(80),
@@ -32,14 +32,12 @@ const LifestyleLanguage = db.schema.define(
   {
     freezeTableName: true,
     tableName: "lifestyleLanguages",
-    indexes: [
-      {fields: ['name']}
-    ],
+    indexes: [{ fields: ["name"] }],
     hooks: {
       beforeValidate(payload, options) {
         (payload as any).id = uuid();
-      }
-    }
+      },
+    },
   }
 );
 
