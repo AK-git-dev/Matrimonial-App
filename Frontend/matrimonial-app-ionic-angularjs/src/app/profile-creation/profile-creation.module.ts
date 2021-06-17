@@ -17,4 +17,5 @@ import { ProfileCreationPage } from './profile-creation.page';
   ],
   declarations: [ProfileCreationPage]
 })
-export class ProfileCreationPageModule {}
+
+export class ProfileCreationPageModule{}

@@ -34,8 +34,8 @@
     </ion-row>
       <!--------------------------------------------------------------- Select Maritial status ----------------------------------------------------------------------------->
     <ion-row>
-      <ion-select interface="popover"  class="Maritial" 
-      id="mariatlStatus" (onchange)="changeStatus()"  >
+      <ion-select interface="popover"  class="Maritial"
+      id="mariatlStatus" (ionChange)="changeStatus($event)"  >
         <ion-select-option value="NM">Never Married</ion-select-option>
         <ion-select-option value="D">Divorced</ion-select-option>
         <ion-select-option value="S">Seperated</ion-select-option>
@@ -43,8 +43,8 @@
       </ion-select>
     </ion-row>
 
-   
-                                <div class="hide" id="any" ng-hide=isHidden>
+
+                                <div [hidden]=isHidden>
                                   <ion-row>
                                     <ion-label>Any Children <p>If any</p>Mention</ion-label>
 
