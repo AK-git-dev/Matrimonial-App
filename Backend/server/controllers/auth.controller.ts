@@ -80,6 +80,7 @@ router.get(
       .clearCookie("refreshToken")
       .clearCookie("accessToken")
       .clearCookie("isLoggedIn")
+      .clearCookie("refreshTokenID")
       .send({
         ...SUCCESS,
         message: "You are now logged out successfully!",

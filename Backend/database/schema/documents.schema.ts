@@ -9,51 +9,51 @@ const UploadedDocument = db.schema.define(
   {
     id: { type: DataTypes.UUID, primaryKey: true, allowNull: false },
     aadharCard: {
-      type: DataTypes.STRING(70),
+      type: DataTypes.TEXT,
     },
     drivingLicense: {
-      type: DataTypes.STRING(70),
+      type: DataTypes.TEXT,
     },
     passport: {
-      type: DataTypes.STRING(70),
+      type: DataTypes.TEXT,
     },
     voterCard: {
-      type: DataTypes.STRING(70),
+      type: DataTypes.TEXT,
     },
     panCard: {
-      type: DataTypes.STRING(70),
+      type: DataTypes.TEXT,
     },
     graduateCertificate: {
-      type: DataTypes.STRING(70),
+      type: DataTypes.TEXT,
     },
     higherSecondaryCertificate: {
-      type: DataTypes.STRING(70),
+      type: DataTypes.TEXT,
     },
 
     secondaryCertificate: {
-      type: DataTypes.STRING(70),
+      type: DataTypes.TEXT,
     },
     diplomaCertificate: {
-      type: DataTypes.STRING(70),
+      type: DataTypes.TEXT,
     },
     appointmentLetter: {
-      type: DataTypes.STRING(70),
+      type: DataTypes.TEXT,
     },
     tradeLicense: {
-      type: DataTypes.STRING(70),
+      type: DataTypes.TEXT,
     },
     taxation: {
-      type: DataTypes.STRING(70),
+      type: DataTypes.TEXT,
     },
 
     shopAggrement: {
-      type: DataTypes.STRING(70),
+      type: DataTypes.TEXT,
     },
     bankPassbook: {
-      type: DataTypes.STRING(70),
+      type: DataTypes.TEXT,
     },
     salarySlip: {
-      type: DataTypes.STRING(70),
+      type: DataTypes.TEXT,
     },
   },
   {
