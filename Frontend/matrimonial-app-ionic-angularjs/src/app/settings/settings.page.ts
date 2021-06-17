@@ -71,6 +71,7 @@ export class SettingsPage implements OnInit {
   async onClick(){
     const alert = await this.alertController.create({
       header: 'Are you sure?',
+      cssClass: 'my-custom-class',
       message: 'Do you really want to delete these Account? This process cannot be undo',
       buttons: ['Disagree', 'Agree']
     });
@@ -82,6 +83,7 @@ export class SettingsPage implements OnInit {
     const alert = await this.alertController.create ({
       
        header: 'Rate Us...',
+       cssClass: 'my-custom-class',
         message: 'Hi, Take a minute to rate this app and help support to improve more new features.',
         buttons: ['Pass','Rate it!','Ask Later']
     });

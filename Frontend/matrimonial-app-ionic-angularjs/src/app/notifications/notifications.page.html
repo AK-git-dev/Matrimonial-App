@@ -1,13 +1,13 @@
-<ion-header>
-  <ion-icon name="arrow-back-outline" class="back" size="large" (click)="dismiss()"></ion-icon>
-  <h2 class="heading">Notifications</h2>
-</ion-header>
+
 <ion-content [fullscreen] = "true">
-  <ion-grid>
-    <ion-row>
-      <ion-col sizeLg="10" sizeMd="10" sizeXs="12">  
+  <ion-icon name="arrow-back-outline" class="back" size="large" [routerLink]="['/user-home']"></ion-icon>
+  <h2 class="heading">Notifications</h2>
+
+
+       
   <div class="container">
     <form action="">
+      
       <ion-list>
         <ion-item class="i1">
           <ion-label class="n1">Notification 1</ion-label>
@@ -26,12 +26,9 @@
         </ion-item>
       </ion-list>
 
-
-
     </form>
   </div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  
+
 </ion-content>
 

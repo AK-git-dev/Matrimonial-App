@@ -1,11 +1,17 @@
 .my-custom-class{
-    background-color: #fbf9f9;
+    color: #ffffff;
 }
 
 ion-content {
     --background: none;
     background-color: #4c0890;
     position: relative;
+}
+
+languageselect{
+    --background: none;
+--background: #FFFFFF;
+--placeholder-color: #FFFFFF;
 }
 
 .l1 {

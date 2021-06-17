@@ -1,10 +1,10 @@
 <ion-content [fullscreen]="true">
   <ion-title>
     <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/edit-profile']"></ion-icon>Profile Creation</ion-title>
-    <ion-grid>
-      <ion-row>
-        <ion-col sizeLg="10" sizeMd="10" sizeXs="12">  
-    <div class="container">
+   
+      
+   
+          <div class="container"  >
 
     <form action="" method="post" >
      <ion-grid>
@@ -35,7 +35,7 @@
       <!--------------------------------------------------------------- Select Maritial status ----------------------------------------------------------------------------->
     <ion-row>
       <ion-select interface="popover"  class="Maritial"
-      id="mariatlStatus" (ionChange)="changeStatus($event)"  >
+      id="mariatlStatus" (ionChange)="changeStatus($event)"  placeholder="-Select-" >
         <ion-select-option value="NM">Never Married</ion-select-option>
         <ion-select-option value="D">Divorced</ion-select-option>
         <ion-select-option value="S">Seperated</ion-select-option>
@@ -46,12 +46,17 @@
 
                                 <div [hidden]=isHidden>
                                   <ion-row>
-                                    <ion-label>Any Children <p>If any</p>Mention</ion-label>
+                                    <ion-label>Any Children (If any) Mention</ion-label> 
 
                                   </ion-row>
 
                                   <ion-row>
-                                    <ion-input id="Name1" type="name" placeholder="0"> </ion-input>
+                                    <ion-select interface="popover"  class="Maritial"Value="0">
+                                              <ion-select-option value="0">0</ion-select-option>
+                                              <ion-select-option value="1">1</ion-select-option>
+                                              <ion-select-option value="2">2</ion-select-option>
+                                              <ion-select-option value="3">3</ion-select-option>
+                                            </ion-select>
 
                                   </ion-row>
                                   <ion-row>
@@ -75,13 +80,25 @@
 
 
                                   <ion-row>
-                                    <ion-label>Reason of divorce</ion-label>
+                                    <ion-label>Reason of Divorce</ion-label>
                                   </ion-row>
 
                                   <ion-row>
                                     <ion-input id="Name1" type="name" class="caste" placeholder="Reason"> </ion-input>
                                   </ion-row>
+
+                                  <ion-row>
+                                    <ion-label>Reason of Death (If Death) </ion-label> <p></p>
+                                  </ion-row>
+
+                                  <ion-row>
+                                    <ion-input id="Name1" type="name" class="caste" placeholder="If Partner is Death"> </ion-input>
+                                  </ion-row>
+                                    <ion-item>
+
+                                    </ion-item>
                                 </div>
+                                
       <!------------------------------------------------------------------- End ---------------------------------------------------------------------------------->
     <ion-row>
       <ion-label class="Caste">Caste</ion-label>
@@ -136,7 +153,6 @@
      </ion-grid>
 </form>
   </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+       
+    
 </ion-content>

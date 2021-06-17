@@ -1,9 +1,7 @@
 <ion-content [fullscreen]="true">
   <ion-title>
     <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/edit-profile']"></ion-icon>LifeStyle</ion-title>
-    <ion-grid>
-      <ion-row>
-        <ion-col sizeLg="10" sizeMd="10" sizeXs="12">  
+    
     <div class="container">
     <form action="" method="post">
       <ion-grid>
@@ -53,18 +51,18 @@
 
      <ion-row>
       <ion-radio-group value = "Disability">
-        <ion-radio class = "Yes" slot="start" value="Yes"></ion-radio>
+        <ion-radio class = "Yes" slot="start" value="Yes" (click)="onClick($event)" ></ion-radio>
         <ion-label class = "Y">Yes</ion-label>
         
-      <ion-radio class = "No" slot="start" value="No"></ion-radio>
+      <ion-radio class = "No" slot="start" value="No"  (click)="onClick1($event)"></ion-radio>
       <ion-label class = "N">No</ion-label>
     </ion-radio-group>
      </ion-row>
 
-     <ion-row>
+     <ion-row [hidden]=isHidden>
       <ion-label class="If">If yes, Specify</ion-label> 
      </ion-row>
-     <ion-row>
+     <ion-row [hidden]=isHidden>
       <ion-input id="Name1" type="name" class="specify" placeholder = "Specify"> </ion-input>
      </ion-row>
   
@@ -120,7 +118,5 @@
       </ion-grid>
 </form>
   </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+    
     </ion-content>

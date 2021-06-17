@@ -15,17 +15,4 @@ export class TabsComponent implements OnInit {
 
   ngOnInit() {}
 
-  openFirst() {
-    this.menu.enable(true, 'first');
-    this.menu.open('first');
-  }
-
-  async presentModal() {
-    console.log('Inside modal')
-    const modal = await this.modalController.create({
-      component: NotificationsPage,
-      cssClass: 'my-custom-class'
-    });
-    return await modal.present();
-  }
 }

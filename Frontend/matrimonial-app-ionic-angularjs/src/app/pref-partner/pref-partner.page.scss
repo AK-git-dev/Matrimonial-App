@@ -34,91 +34,10 @@ ion-grid{
 ion-row{
     padding-top: 10px;
 }
-// ///////////////////////////////////////////////////////////age
 
-.min1 {
-    height: 21px;
-    text-align: left;
-    font-size: 18px;
-    line-height: 21px;
-    color: #000000;
-}
 
-.max2 {
-    padding-left: 112px;
-    text-align: end;
-    font-size: 18px;
-    line-height: 21px;
-    color: #000000;
-}
-
-.min{
-    width: 120px;
-// height: 24px;
-
-// width: 367px;
-height: 40px;
-
-background: #FEFAFA;
-border: 1px solid #4C0890;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-
-}
-
-.max{
-    margin-left: 90px;
-    width: 120px;
-height: 40px;
-background: #FEFAFA;
-border: 1px solid #4C0890;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-}
-
-// ///////////////////////////////////////////// heoght
-.min3{
-    height: 21px;
-    text-align: left;
-    font-size: 18px;
-line-height: 21px;
-color: #000000;
-}
-.max3{
-    padding-left: 112px;
-    text-align: end;
-    font-size: 18px;
-    line-height: 21px;
-    color: #000000;
-}
-
-.minheight{
-    width: 120px;
-    height: 40px;
-    background: #FEFAFA;
-    border: 1px solid #4C0890;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-}
-
-.maxheight{
-
-    margin-left: 90px;
-    width: 120px;
-    height: 40px;
-    background: #FEFAFA;
-    border: 1px solid #4C0890;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-}
-
-///////////////////////////////////////////// CAast
-
-.caste{
+// /////////////////////////////////////////// New CSS
+ion-label{
     height: 21px;
     text-align: left;
     font-size: 18px;
@@ -126,7 +45,7 @@ line-height: 21px;
 color: #000000;
 }
 
-.castselect{
+ion-select{
     width: 100%;
     height: 40px;
 background: #FEFAFA;
@@ -136,18 +55,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 10px;
 }
 
-// ///////////////////////////////////////////////////// Language
-
-
-.language{
-    height: 21px;
-    text-align: left;
-    font-size: 18px;
-line-height: 21px;
-color: #000000;
-}
-
-.languageselect{
+ion-input{
     width: 100%;
     height: 40px;
 background: #FEFAFA;
@@ -157,97 +65,6 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 10px;
 }
 
-// ////////////////////////////////////////////////// Salary
-
-.salary{
-    height: 21px;
-    text-align: left;
-    font-size: 18px;
-line-height: 21px;
-color: #000000;
-}
-
-.rup{
-    width: 120px;
-    height: 40px;
-    background: #FEFAFA;
-    border: 1px solid #4C0890;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-}
-
-.dol{
-    margin-left: 90px;
-    width: 120px;
-    height: 40px;
-    background: #FEFAFA;
-    border: 1px solid #4C0890;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-}
-
-// ///////////////////////////////////////////// MaritialStatus
-
-.MaritialStatus {
-    height: 21px;
-    text-align: left;
-    font-size: 18px;
-line-height: 21px;
-color: #000000;
-}
-
-.Status{
-    width: 100%;
-    height: 40px;
-    background: #FEFAFA;
-    border: 1px solid #4C0890;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-
-}
-// //////////////////////////////////// Occupation
-.occupation {
-    height: 21px;
-    text-align: left;
-    font-size: 18px;
-line-height: 21px;
-color: #000000;
-}
-
-.occup{
-   
-    width: 100%;
-    height: 40px;
-background: #FEFAFA;
-border: 1px solid #4C0890;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-}
-
-// /////////////////////////////////// Country & State
-
-.country {
-    height: 21px;
-    text-align: left;
-    font-size: 18px;
-line-height: 21px;
-color: #000000;
-}
-
-.countryselect{
-   
-    width: 100%;
-    height: 40px;
-background: #FEFAFA;
-border: 1px solid #4C0890;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-}
 
 
 // ////////////////////////////////////// Button
