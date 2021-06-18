@@ -26,6 +26,10 @@
       <ion-row>
         <ion-label class="label2">ID : {{ userId }}</ion-label>
       </ion-row>
+      <ion-row *ngIF="let com of lstcomments">  
+          {{allUSers}}
+        <p>  {{status}}</p>
+      </ion-row>
       <ion-row>
         <ion-icon class="verify"></ion-icon>&nbsp;
         <ion-label class="label3">Verified</ion-label>
@@ -66,7 +70,9 @@
           
           <!-- <ion-icon class="edit1"></ion-icon> -->
         </ion-item>
-  6
+  
+    
+
         <ion-card-content>
           <ion-label class="l27">Religion</ion-label>
           <br>
@@ -108,6 +114,8 @@
         <ion-card-content>
           This is content, without any paragraph or header tags,
           within an ion-card-content element.
+
+          
         </ion-card-content>
       </ion-card>
   
@@ -263,6 +271,8 @@
             <ion-label class="l24">Challenged</ion-label>
           </ion-card-content>
         </ion-card>
+
+       
         
       <!-- </ion-card-content> -->
       <!-- </ion-card> -->

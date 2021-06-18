@@ -21,6 +21,7 @@ import  { IonIntlTelInputModule } from 'ion-intl-tel-input';
 import { NgxOtpInputModule } from 'ngx-otp-input';
 import { OtpComponent } from './components/otp/otp.component';
 import {HttpClientModule } from '@angular/common/http';
+import { PersonalDetails } from "../app/services/PersonalDetails.service";
 
 @NgModule({
   declarations: [AppComponent, OtpComponent],
@@ -36,7 +37,8 @@ import {HttpClientModule } from '@angular/common/http';
                 Media, 
                 FileTransfer,
                 FileTransferObject,
-                Camera
+                Camera,
+                PersonalDetails
   ],
   bootstrap: [AppComponent],
 })
