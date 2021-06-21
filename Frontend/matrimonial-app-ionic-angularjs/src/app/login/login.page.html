@@ -1,71 +1,3 @@
-<!-- <ion-content [fullscreen]="true">
-  <ion-label>Login</ion-label>
- <div class="image">
-   <img src="../../assets/login.png" alt="Login Page">
- </div>
- 
- <div class="card">
-  <form action="" method="post">
-        <ion-grid>
-          <ion-row>
-            <ion-label class="number">Mobile Number</ion-label>
-          </ion-row>
-          
-          <ion-row>
-            <ion-select interface="popover" class="code">
-              <ion-select-option value="india">91</ion-select-option>
-              <ion-select-option value="Afghanistan">93</ion-select-option>
-              <ion-select-option value="japan">81</ion-select-option>
-              <ion-select-option value="australia">61</ion-select-option>
-              <ion-select-option value="brazil">55</ion-select-option>
-              <ion-select-option value="canada">1</ion-select-option>
-              <ion-select-option value="nepal">977</ion-select-option>
-            </ion-select>
-            <ion-input placeholder="Enter 10 digit number" class="number2" ></ion-input>
-          </ion-row>
-      
-        
-
-        <ion-row>
-          <ion-label class="OTP">Enter OTP</ion-label>
-        </ion-row>
-       <ion-row>
-        <ion-input class="d1" ></ion-input>
-        <ion-input class="d2" ></ion-input>
-        <ion-input class="d3" ></ion-input>
-        <ion-input class="d4" ></ion-input>
-        <ion-input class="d5" ></ion-input>
-        <ion-input class="d6" ></ion-input>
-       </ion-row>
-
-       <ion-row>
-        <ion-label class="resend">Did not get OTP?.<strong><u>Resend </u> </strong> </ion-label>
-       </ion-row>
-      
-    <div class="buttons">
-     <ion-row>
-      <ion-button (click)="clicksub()" color="primary" type="button" class="loginbutton" [routerLink] = "['/user-home']">
-        Login
-      </ion-button>
-     </ion-row>
-
-      <ion-row>
-        <ion-button class="emailbutton">
-          Email
-          </ion-button>&nbsp;&nbsp;
-  
-          <ion-button class="otpbutton" disabled>
-            OTP
-            </ion-button>
-      </ion-row>
-    </div>
-  
-        </ion-grid>
-      </form>
- </div>
-
-</ion-content> -->
-
 
 <ion-content [fullscreen]="true">
 
@@ -94,7 +26,7 @@
       <ion-button expand="full" shape="round" class="btn1" (click)="login()"
         [disabled]="mobileNumberControl.invalid && mobileNumberControl.touched">Send OTP</ion-button>
 
-      <ion-button expand="full" shape="round" class="btn1" (click)="loginEmail()">Login using Email</ion-button>
+      <ion-button expand="full" shape="round" class="btn1" [routerLink]="['/email-login']">Login using Email</ion-button>
 
       
     </form>

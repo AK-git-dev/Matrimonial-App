@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true">
+
+  <ion-icon class="image"></ion-icon>
+
+  <ion-label class="l1">Email Login</ion-label>
+
+  <div class="div1">
+    <form class="myform" (ngSubmit)="login()">
+      <ion-item>
+        <ion-label position="stacked">Email ID</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+
+ 
+
+
+      <ion-button expand="full" shape="round" class="btn1" (click)="login()">Send OTP</ion-button>
+
+      <ion-button expand="full" shape="round" class="btn1" [routerLink]="['/login']">Login using Mobile Number</ion-button>
+
+      
+    </form>
+  </div>
+
+</ion-content>

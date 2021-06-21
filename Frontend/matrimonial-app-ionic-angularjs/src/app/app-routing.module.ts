@@ -246,6 +246,10 @@ const routes: Routes = [
   {
     path: 'upload-photos',
     loadChildren: () => import('./upload-photos/upload-photos.module').then( m => m.UploadPhotosPageModule)
+  },
+  {
+    path: 'email-login',
+    loadChildren: () => import('./email-login/email-login.module').then( m => m.EmailLoginPageModule)
   }
 
 
