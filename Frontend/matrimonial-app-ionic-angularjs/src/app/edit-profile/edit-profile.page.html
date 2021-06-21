@@ -1,7 +1,7 @@
 <ion-content [fullscreen]="true">
   <!-- <div class="cont"> -->
 
-  <div class="c1">
+  <div class="c1" >
     <ion-grid>
       <ion-row>
         <ion-col size="10">
@@ -26,9 +26,9 @@
       <ion-row>
         <ion-label class="label2">ID : {{ userId }}</ion-label>
       </ion-row>
-      <ion-row *ngIF="let com of lstcomments">  
-          {{allUSers}}
-        <p>  {{status}}</p>
+      <ion-row ng-controller="let com of lstcomments">  
+          {{com}}
+    <ion-label>Ankit</ion-label>
       </ion-row>
       <ion-row>
         <ion-icon class="verify"></ion-icon>&nbsp;

@@ -14,7 +14,7 @@ export class PersonalDetails {
     getDetails(): Observable<any> {
         // let params1 = new HttpParams().set('userID',"1")
             
-        return this.httpclient.get("http://localhost:5000/api/users", );
+        return this.httpclient.get("http://localhost:5000/api/users?id=1", );
            
             // return this.httpclient.get("http://localhost:5000/api/users", {params:params1} );
     }
