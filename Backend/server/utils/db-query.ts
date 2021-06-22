@@ -93,6 +93,81 @@ export const getAllUsersWithAllDetails = async () =>
     ],
   });
 
+export const getUserDetailsById = async (userId: string) =>
+  await Schema.User.findByPk(userId, {
+    order: [["createdAt", "DESC"]],
+    include: [
+      { model: Schema.Education },
+      { model: Schema.Address },
+      { model: Schema.Caste },
+      { model: Schema.MotherTongue },
+      {
+        model: Schema.LifeStyle,
+        include: [{ model: Schema.Hobby }, { model: Schema.LifestyleLanguage }],
+      },
+      { model: Schema.UploadedDocument },
+      { model: Schema.Occupation },
+      {
+        model: Schema.PrefferedPartnerChoice,
+        include: [
+          {
+            model: Schema.PrefferedPartnerLanguages,
+          },
+        ],
+      },
+      { model: Schema.FamilyDetails },
+      { model: Schema.ProfilPicture },
+      { model: Schema.RelativeContact },
+      {
+        model: Schema.FavouritePerson,
+        include: [
+          {
+            model: Schema.User,
+            as: "personDeatils",
+            attributes: ["id", "fullname", "age", "martialStatus"],
+          },
+        ],
+      },
+      {
+        model: Schema.PersonWhoFavouritedHimself,
+        include: [
+          {
+            model: Schema.User,
+            as: "details",
+            attributes: ["id", "fullname", "age", "martialStatus", "gender"],
+          },
+        ],
+      },
+      {
+        model: Schema.RequestSend,
+        include: [
+          {
+            model: Schema.User,
+            attributes: ["id", "fullname", "age", "gender", "martialStatus"],
+          },
+        ],
+      },
+      {
+        model: Schema.RequestReceived,
+        include: [
+          {
+            model: Schema.User,
+            attributes: ["id", "fullname", "age", "gender", "martialStatus"],
+          },
+        ],
+      },
+      {
+        model: Schema.RequestAccepted,
+        include: [
+          {
+            model: Schema.User,
+            attributes: ["id", "fullname", "age", "gender", "martialStatus"],
+          },
+        ],
+      },
+    ],
+  });
+
 // Make Profile recommendations
 export const generateProfileRecommendationsList = async (
   UserId: string
@@ -109,22 +184,20 @@ export const generateProfileRecommendationsList = async (
   const martitialStatus = ppc.getDataValue("martitialStatus");
   const occupation = ppc.getDataValue("occupation");
 
-  const probableLists: Model<
-    any,
-    any
-  >[] = await Schema.PrefferedPartnerChoice.findAll({
-    where: {
-      minHeight: { [Op.gte]: minHeight },
-      maxHeight: { [Op.lte]: maxHeight },
-      minAge: { [Op.gte]: minAge },
-      maxAge: { [Op.lte]: maxAge },
-      occupation: { [Op.like]: `%${occupation}%` },
-      expectedSalary,
-      caste,
-      martitialStatus,
-    },
-    attributes: ["UserId"],
-  });
+  const probableLists: Model<any, any>[] =
+    await Schema.PrefferedPartnerChoice.findAll({
+      where: {
+        minHeight: { [Op.gte]: minHeight },
+        maxHeight: { [Op.lte]: maxHeight },
+        minAge: { [Op.gte]: minAge },
+        maxAge: { [Op.lte]: maxAge },
+        occupation: { [Op.like]: `%${occupation}%` },
+        expectedSalary,
+        caste,
+        martitialStatus,
+      },
+      attributes: ["UserId"],
+    });
 
   const userIds: string[] = probableLists.map((person) =>
     person.getDataValue("UserId")
