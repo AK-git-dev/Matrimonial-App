@@ -33,6 +33,18 @@
 .my-custom-class .popover-content {
   background: #4c0890;
 }
+ 
+// ///////////////////////// Dissable Scrollbar
+
+// ion-content {
+//   // overwrite inline styles
+//   --offset-bottom: auto!important;
+//   --overflow: hidden;
+//   overflow: auto;
+//   &::-webkit-scrollbar {
+//     display: none;
+//   }
+// }
 
 .swiper-pagination {
   bottom: 30px !important;

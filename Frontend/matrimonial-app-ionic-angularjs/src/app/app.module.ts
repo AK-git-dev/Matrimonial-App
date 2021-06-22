@@ -20,14 +20,16 @@ import { Camera } from '@ionic-native/camera/ngx';
 import  { IonIntlTelInputModule } from 'ion-intl-tel-input';
 import { NgxOtpInputModule } from 'ngx-otp-input';
 import { OtpComponent } from './components/otp/otp.component';
-
+import {HttpClientModule } from '@angular/common/http';
+import { PersonalDetails } from "../app/services/PersonalDetails.service";
 
 @NgModule({
   declarations: [AppComponent, OtpComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule,
+  imports: 
+  [BrowserModule, IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule,
     MatSelectModule,ReactiveFormsModule, NgxEmojiPickerModule.forRoot(), IonIntlTelInputModule, 
-    NgxOtpInputModule
+    NgxOtpInputModule, HttpClientModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, 
                 MediaCapture, 
@@ -35,7 +37,8 @@ import { OtpComponent } from './components/otp/otp.component';
                 Media, 
                 FileTransfer,
                 FileTransferObject,
-                Camera
+                Camera,
+                PersonalDetails
   ],
   bootstrap: [AppComponent],
 })

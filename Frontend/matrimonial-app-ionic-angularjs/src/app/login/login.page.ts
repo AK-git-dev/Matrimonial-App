@@ -52,18 +52,6 @@ export class LoginPage implements OnInit {
   }
 
   
-  // clicksub() {
-  //   console.log(this.exform.value);
-  //   this.exform.reset();
-  // }
-  // get code() {
-  //   return this.exform.get('codeno');
-  // }
-  // get phoneno() {
-  //   return this.exform.get('phoneno');
-  // }
-  // get otp() {
-  //   return this.exform.get('otp');
-  // }
+ 
 
 }
