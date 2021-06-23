@@ -24,7 +24,7 @@ export const getAllUsersWithAllDetails = async () =>
     include: [
       { model: Schema.Education },
       { model: Schema.Address },
-      { model: Schema.Caste },
+      { model: Schema.UserCaste, include: [{ model: Schema.Caste, attributes: ["caste", "subCaste"] }] },
       { model: Schema.MotherTongue },
       {
         model: Schema.LifeStyle,
@@ -99,7 +99,10 @@ export const getUserDetailsById = async (userId: string) =>
     include: [
       { model: Schema.Education },
       { model: Schema.Address },
-      { model: Schema.Caste },
+      {
+        model: Schema.UserCaste,
+        include: [{ model: Schema.Caste, attributes: ["caste", "subCaste"] }],
+      },
       { model: Schema.MotherTongue },
       {
         model: Schema.LifeStyle,

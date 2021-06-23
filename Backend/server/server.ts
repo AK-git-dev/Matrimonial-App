@@ -78,7 +78,7 @@ export class Server {
           `[ PID:${pid} ] 🚀 Server already started on http://localhost:${this.PORT}`
         )
       );
-      await feeder.feedPreConfiguedDataSets();
+      // await feeder.feedPreConfiguedDataSets();
       this.app.use("/api", APIController);
 
       this.errorHandlers();

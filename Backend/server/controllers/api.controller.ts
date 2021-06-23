@@ -1,5 +1,7 @@
 import { Router, static as st } from "express";
 import createHttpError from "http-errors";
+import { Schema } from "../../database/schema";
+import { feeder } from "../seeders";
 import {
   FileUploadFolderStaticServe,
   Next,
@@ -33,11 +35,18 @@ router.get(
   "/data",
   async (req: RequestInterface, res: ResponseInterface, next: Next) => {
     try {
+      await feeder.feedPreConfiguedDataSets();
+      
+      const allLanguages = await Schema.Languages.findAll();
+      const allCastes = await Schema.Caste.findAll();
+
       res.status(200).send({
         ...SUCCESS,
-        msg: "server is running",
+        msg: "All Data has been seeded!",
         ip: req.ip,
-        timestamp: Date.now(),
+        timestamp: Date(),
+        allLanguages,
+        allCastes,
       });
     } catch (error) {
       next(new createHttpError.InternalServerError(`Something went bad!`));
