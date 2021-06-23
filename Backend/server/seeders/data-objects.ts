@@ -1287,4 +1287,316 @@ const Castes: {
   { caste: "Yellapu", subCaste: [] },
 ];
 
-export const Feeder = { Languages, Castes };
+/** All Education Degress + Types */
+const Education: { type: string; degree: string[] }[] = [
+  {
+    type: "Engineering / Technology",
+    degree: [
+      "BE / BTech",
+      "BCA",
+      "BSc IT",
+      "B Arch",
+      "ME / Mtech",
+      "MS",
+      "MCA",
+      "MSc IT",
+      "M Arch",
+    ],
+  },
+  {
+    type: "Medicine",
+    degree: [
+      "MBBS",
+      "BDS",
+      "BPT",
+      "BPharm",
+      "BVSc",
+      "BSc Nursing",
+      "BAMS",
+      "BHMS",
+      "BUMS",
+      "MD / MS",
+      "MDS",
+      "MPT",
+      "Mpharm",
+      "MVSc",
+    ],
+  },
+
+  {
+    type: "Finance / Commerce",
+    degree: ["CA", "CFA", "CS", "ICWA", "BCom", "MCom"],
+  },
+  {
+    type: "Management",
+    degree: ["BBA", "MBA"],
+  },
+
+  {
+    type: "Law",
+    degree: ["LLB", "LLM"],
+  },
+
+  {
+    type: "Arts / Science/Other Degrees",
+    degree: [
+      "BA",
+      "BSc",
+      "BEd",
+      "BFA ",
+      "BMM",
+      "BDes/BFT",
+      "BSW",
+      "BPhil",
+      "MA",
+      "MSc",
+      "MEd",
+      "MFA",
+      "MMM",
+      "MDes/MFT",
+      "MSW",
+      "MPhil",
+    ],
+  },
+
+  {
+    type: "Doctorate",
+    degree: ["PhD"],
+  },
+  {
+    type: "Non-Graduate",
+    degree: ["Diploma", "High School", "Trade School"],
+  },
+  {
+    type: "Higher Secondary / Secondary",
+    degree: ["Higher Secondary / Secondary"],
+  },
+];
+
+/** All Occupations Lists */
+const Occupations = [
+  {
+    type: "Administration",
+    positions: [
+      "Admin Professional",
+      "Clerk",
+      "Operator / Technician",
+      "Secretary / Front Office",
+    ],
+  },
+  {
+    type: "Advertising",
+    positions: [
+      "Media & Entertainment	Actor / Model",
+      "Film / Entertainment Professional",
+      "Advertising / PR Professional",
+      "Event Management Professional",
+      "Journalist",
+      "Media Professional",
+    ],
+  },
+  {
+    type: "Agriculture",
+    positions: ["Farmer / Horticulturist"],
+  },
+  {
+    type: "Airlines",
+    positions: [
+      "Pilot",
+      "Air Hostess / Flight Attendent",
+      "Airline Professional",
+    ],
+  },
+  {
+    type: "Architecture",
+    positions: ["Architect", "Interior Designer"],
+  },
+  {
+    type: "BPO & Customer Service",
+    positions: [
+      "BPO / KPO / ITES Professional",
+      "Customer Service Professional",
+    ],
+  },
+  {
+    type: "Banking & Finance	Chartered Accountant",
+    positions: [
+      "Company Secretary",
+      "Auditor",
+      "Accounts / Finance Professional",
+      "Banking Professional",
+      "Financial Analyst / Planning",
+      "Investment Banker",
+      "Private Equity Professional",
+    ],
+  },
+  {
+    type: "Beauty & Fashion	Fashion Designer",
+    positions: [
+      "Beautician",
+      "Hair Stylist",
+      "Jewellery Designer",
+      "Designer",
+      "Makeup Artist",
+      "Tailor",
+    ],
+  },
+
+  { type: "Civil", positions: ["Services	IAS", "IPS", "IRS", "IES", "IFS"] },
+  {
+    type: "Corporate",
+    positions: [
+      "Analyst",
+      "Consultant",
+      "Corporate Communication",
+      "Corporate Planning",
+      "HR Professional",
+      "Marketing Professional",
+      "Operations Management",
+      "Sales / Business Development Professional",
+      "Subject Matter Expert",
+      "Senior Manager / Manager",
+      "Content Writer",
+    ],
+  },
+  {
+    type: "Defense",
+    positions: [
+      "Army",
+      "Navy ",
+      "Air Force",
+      "Paramilitary ",
+      "Defense Services",
+    ],
+  },
+  {
+    type: "Education & Training",
+    positons: [
+      "Professor / Lecturer",
+      "Teacher",
+      "Research Assistant",
+      "Librarian",
+      "Educational Professional",
+    ],
+  },
+  {
+    type: "Engineering",
+    positions: [
+      "Civil Engineer",
+      "Electronics / Telecom Engineer",
+      "Mechanical / Production Engineer",
+      "Quality Assurance Engineer - Non IT",
+      "Engineer - Non IT",
+      "Designer",
+      "Product Manager - Non IT",
+      "Project Manager - Non IT",
+    ],
+  },
+  {
+    type: "Hospitality",
+    positions: [
+      "Restaurant / Catering Professional",
+      "Chef / Cook",
+      "Hotel / Hospitality Professional",
+    ],
+  },
+  {
+    type: "IT",
+    positions: [
+      "Software 	Software Professional",
+      "Hardware Professional",
+      "Product Manager",
+      "Project Manager",
+      "Program Manager",
+      "Animator",
+      "Cyber / Network Security",
+      "UI / UX Designer",
+      "Web / Graphic Designer",
+      "Software Consultant",
+      "Data Analyst",
+      "Data Scientist",
+      "Network Engineer",
+      "Quality Assurance Engineer",
+    ],
+  },
+  {
+    type: "Legal",
+    positions: ["Lawyer", "Judge", "Legal Professional"],
+  },
+  {
+    type: "Law",
+    positions: ["Enforcement	Police"],
+  },
+  {
+    type: "Medical & Healthcare",
+    positions: [
+      "Doctor",
+      "Healthcare Professional",
+      "Paramedical Professional",
+      "Nurse",
+      "Pharmacist",
+      "Physiotherapist",
+      "Psychologist",
+      "Veterinary Doctor",
+      "Dentist",
+      "Surgeon",
+      "Therapist",
+      "Medical Transcriptionist",
+      "Dietician / Nutritionist",
+      "Lab Technician",
+    ],
+  },
+  {
+    type: "Merchant",
+    positions: ["Navy	Mariner", "Sailor", "Merchant Navy"],
+  },
+  {
+    type: "Scientist",
+    positions: ["Scientist / Researcher"],
+  },
+  {
+    type: "Top Management",
+    positions: [
+      "CXO",
+      "Director",
+      "Chairman",
+      "President",
+      "VP",
+      "AVP",
+      "GM",
+      "DGM",
+      "AGM",
+    ],
+  },
+  {
+    type: "Others",
+    positions: [
+      "Technician",
+      "Arts & Craftsman",
+      "Transportation / Logistic Professional",
+      "Agent / Broder / Trader",
+      "Contractor",
+      "Fitness Professional",
+      "Security Professional",
+      "Social Worker / Voluteer / NGO",
+      "Sports Person",
+      "Travel Professional",
+      "Singer ",
+      "Writer",
+      "Politician",
+      "Builder",
+      "Chemist",
+      "CNC Operator",
+      "Distributor",
+      "Driver",
+      "Freelancer",
+      "Mechanic",
+      "Medical Representative",
+      "Musician",
+      "Photo / Videographer",
+      "Surveyor",
+    ],
+  },
+];
+
+export const Feeder = { Languages, Castes, Education, Occupations };
