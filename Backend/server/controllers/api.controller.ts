@@ -20,6 +20,7 @@ import RequestController from "./request-controller";
 import CreateProfileController from "./update-profile.controller";
 import UserBasicDetailController from "./user-detail.controller";
 import UserController from "./users.controller";
+import UtilityController from "./utility.controller";
 
 const router = Router();
 
@@ -67,5 +68,6 @@ router.use("/mutual-matches", MutualMatchController);
 router.use("/upload-service", FileUploaderController);
 router.use("/user/favorites/0", UserFavoriteController);
 router.use("/notifications", NotificationController);
+router.use('/utility', UtilityController);
 
 export default router;
