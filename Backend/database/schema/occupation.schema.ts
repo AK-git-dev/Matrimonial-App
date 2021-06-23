@@ -15,6 +15,9 @@ const Occupation = db.schema.define(
     type: {
       type: DataTypes.STRING(100),
     },
+    position: {
+      type: DataTypes.STRING(100),
+    },
     currentCompanyName: {
       type: DataTypes.STRING(200),
     },

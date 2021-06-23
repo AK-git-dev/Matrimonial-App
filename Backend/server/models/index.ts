@@ -38,6 +38,7 @@ export interface AddressInterface {
 
 // Caste Interface
 export interface CasteInterface {
+  id: string;
   caste: string;
   subCaste: string;
 }

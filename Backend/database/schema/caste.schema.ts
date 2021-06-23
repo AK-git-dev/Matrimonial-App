@@ -9,11 +9,11 @@ const Caste = db.schema.define(
   {
     id: { type: DataTypes.UUID, primaryKey: true, allowNull: false },
     caste: {
-      type: DataTypes.STRING(30),
+      type: DataTypes.STRING(90),
       allowNull: false,
     },
     subCaste: {
-      type: DataTypes.STRING(30),
+      type: DataTypes.STRING(90),
     },
   },
   {

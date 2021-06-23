@@ -28,6 +28,7 @@ import MotherTongue from "./motherTongue.schema";
 import LifestyleLanguage from "./lifestyle-language.schema";
 import PushDevice from "./push-device.schema";
 import RequestReceived from "./requestRecived.schema";
+import UserCaste from "./user-caste.schema";
 
 /** Will configure the association Mappings (1:N) / (M:N) / (N:1)  */
 function buildAssociationsBetweenSchemas() {
@@ -48,10 +49,13 @@ function buildAssociationsBetweenSchemas() {
   User.hasMany(Message);
   User.hasMany(BlockedUsers);
   User.hasOne(UploadedDocument);
-  User.hasOne(Caste);
   RelativeContact.hasOne(PrivacySetting);
   User.hasOne(MotherTongue);
+  User.hasOne(UserCaste);
   User.hasMany(RequestReceived);
+
+  UserCaste.belongsTo(User);
+  UserCaste.belongsTo(Caste);
 
   RequestSend.belongsTo(User, {
     foreignKey: "sendPersonId",
@@ -94,6 +98,7 @@ const Schema = {
   LifestyleLanguage,
   TrustScore,
   Caste,
+  UserCaste,
   UploadedDocument,
   FavouritePerson,
   LifeStyle,

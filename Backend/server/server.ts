@@ -1,17 +1,18 @@
+import cookieParser from "cookie-parser";
 import cors from "cors";
 import express, { json, urlencoded } from "express";
+import fileUpload from "express-fileupload";
 import morgan from "morgan";
 import { cpus } from "os";
 import { pid } from "process";
 import { APIController } from "./controllers";
+import { feeder } from "./seeders";
 import {
   createError,
   Next,
   RequestInterface,
   ResponseInterface,
 } from "./utils";
-import cookieParser from "cookie-parser";
-import fileUpload from "express-fileupload";
 
 export class Server {
   private readonly PORT = 5000 || process.env.PORT;
@@ -77,6 +78,7 @@ export class Server {
           `[ PID:${pid} ] 🚀 Server already started on http://localhost:${this.PORT}`
         )
       );
+      // await feeder.feedPreConfiguedDataSets();
       this.app.use("/api", APIController);
 
       this.errorHandlers();

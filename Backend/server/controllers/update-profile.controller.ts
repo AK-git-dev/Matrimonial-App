@@ -35,7 +35,8 @@ router.patch(
       const userId = (req as any).userId;
       const phoneNumber = (req as any).phoneNumber;
 
-      const payload: CreateProfileInterface = req.body as CreateProfileInterface;
+      const payload: CreateProfileInterface =
+        req.body as CreateProfileInterface;
       const ageNow = (req as any).age;
       const updatedPayloadWithAge = { ...payload, age: ageNow };
 
@@ -112,15 +113,17 @@ router.post(
       // update address info if any
       // update caste information if any
       if (payload) {
-        const isCasteExists = await Schema.Caste.findOne({ where: { UserId } });
+        const isCasteExists = await Schema.Caste.findByPk(payload.id);
         if (isCasteExists === null) {
           // create and associate new caste to the user
-          const castePayload = { ...payload, UserId };
-          await Schema.Caste.create(castePayload);
+          new createError.BadRequest("Caste is not matching in our database!");
         } else {
           // update the caste information to the user
-          await isCasteExists.update({ ...payload });
-          console.log(`user caste information has been updated!`);
+          const newCaste = await Schema.UserCaste.findOrCreate({
+            where: { UserId, CasteId: payload.id },
+          });
+          (newCaste[0] as any).CasteId = payload.id;
+          await newCaste[0].save();
         }
 
         return res.status(200).send({
@@ -330,7 +333,8 @@ router.post(
   async (req: RequestInterface, res: ResponseInterface, next: Next) => {
     try {
       const UserId = (req as any).userId;
-      const payload: RelativeContactInterface[] = req.body as RelativeContactInterface[];
+      const payload: RelativeContactInterface[] =
+        req.body as RelativeContactInterface[];
 
       const totalUploadedContacts: number = await Schema.RelativeContact.count({
         where: { UserId },
@@ -367,7 +371,8 @@ router.post(
   async (req: RequestInterface, res: ResponseInterface, next: Next) => {
     try {
       const UserId = (req as any).userId;
-      const payload: FamilyDetailsInterface = req.body as FamilyDetailsInterface;
+      const payload: FamilyDetailsInterface =
+        req.body as FamilyDetailsInterface;
 
       if (payload) {
         const isFamilyDetailsExists = await Schema.FamilyDetails.findOne({
@@ -404,23 +409,19 @@ router.post(
     try {
       const UserId = (req as any).userId;
 
-      const payload: PrefferedPartnerInterface = req.body as PrefferedPartnerInterface;
+      const payload: PrefferedPartnerInterface =
+        req.body as PrefferedPartnerInterface;
 
       if (payload) {
-        const isPrefferedPartnerExists = await Schema.PrefferedPartnerChoice.findOne(
-          {
+        const isPrefferedPartnerExists =
+          await Schema.PrefferedPartnerChoice.findOne({
             where: { UserId },
-          }
-        );
+          });
 
         if (isPrefferedPartnerExists === null) {
           const prefferedPartnerPayload = { ...payload, UserId };
-          const ppc: Model<
-            any,
-            any
-          > = await Schema.PrefferedPartnerChoice.create(
-            prefferedPartnerPayload
-          );
+          const ppc: Model<any, any> =
+            await Schema.PrefferedPartnerChoice.create(prefferedPartnerPayload);
           const ppcId: string = ppc.getDataValue("id");
 
           if (payload.prefferedMotherTounge) {
