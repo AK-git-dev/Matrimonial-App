@@ -24,7 +24,10 @@ export const getAllUsersWithAllDetails = async () =>
     include: [
       { model: Schema.Education },
       { model: Schema.Address },
-      { model: Schema.UserCaste, include: [{ model: Schema.Caste, attributes: ["caste", "subCaste"] }] },
+      {
+        model: Schema.UserCaste,
+        include: [{ model: Schema.Caste, attributes: ["caste", "subCaste"] }],
+      },
       { model: Schema.MotherTongue },
       {
         model: Schema.LifeStyle,
@@ -182,7 +185,8 @@ export const generateProfileRecommendationsList = async (
   const maxHeight = ppc.getDataValue("maxHeight");
   const minAge = ppc.getDataValue("minAge");
   const maxAge = ppc.getDataValue("maxAge");
-  const expectedSalary = ppc.getDataValue("expectedSalary");
+  const expectedSalaryInINR = ppc.getDataValue("expectedSalaryInINR");
+  const expectedSalaryInDollar = ppc.getDataValue("expectedSalaryInDollar");
   const caste = ppc.getDataValue("caste");
   const martitialStatus = ppc.getDataValue("martitialStatus");
   const occupation = ppc.getDataValue("occupation");
@@ -195,7 +199,8 @@ export const generateProfileRecommendationsList = async (
         minAge: { [Op.gte]: minAge },
         maxAge: { [Op.lte]: maxAge },
         occupation: { [Op.like]: `%${occupation}%` },
-        expectedSalary,
+        expectedSalaryInINR: { [Op.like]: `${expectedSalaryInINR}` },
+        expectedSalaryInDollar: { [Op.like]: `${expectedSalaryInDollar}` },
         caste,
         martitialStatus,
       },
