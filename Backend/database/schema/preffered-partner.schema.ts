@@ -29,10 +29,10 @@ const PrefferedPartnerChoice = db.schema.define(
     },
 
     expectedSalaryInINR: {
-      type: DataTypes.STRING(10),
+      type: DataTypes.STRING(30),
     },
     expectedSalaryInDollar: {
-      type: DataTypes.STRING(10),
+      type: DataTypes.STRING(30),
     },
     caste: {
       type: DataTypes.STRING(30),
