@@ -40,11 +40,11 @@
           <ion-row>
             <ion-row>
               <ion-item class="item2">
-             
+
                   <ion-label position="stacked">Mobile Number&nbsp;<span>&#42;</span></ion-label>
                   <ion-intl-tel-input id="mobile-number" name="mobile-number" [(ngModel)]="mobileNumber"
                     #mobileNumberControl="ngModel" ionIntlTelInputValid></ion-intl-tel-input>
-                
+
               </ion-item>
             </ion-row>
             <ion-row>
@@ -110,14 +110,14 @@
 
           <ion-row>
             <ion-item lines="none" style="padding: 10px;">
-              <ion-checkbox color="danger"></ion-checkbox>&nbsp;&nbsp;&nbsp;
+              <ion-checkbox color="danger" checked={{checkedvalue}} (ionChange)="getvalue()"></ion-checkbox>&nbsp;&nbsp;&nbsp;
               <ion-label>No cast barrier for my matching</ion-label>
             </ion-item>
           </ion-row>
 
           <ion-row>
             <ion-col>
-              <ion-button expand="full" shape="round" type="submit" class="btn1" [routerLink]="['/ed-car']">Next &nbsp;
+              <ion-button expand="full" shape="round" type="submit" class="btn1"  (click)="submitreg()" [routerLink]="['/ed-car']">Next &nbsp;
                 <ion-icon name="chevron-forward-circle-sharp"></ion-icon>
               </ion-button>
             </ion-col>
