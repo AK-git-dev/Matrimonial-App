@@ -9,6 +9,7 @@ import { NgxOtpInputConfig } from 'ngx-otp-input';
   styleUrls: ['./otp.component.scss'],
 })
 export class OtpComponent implements OnInit {
+  static otp='';
 
 
   // Data passed in by componentProps
@@ -28,10 +29,10 @@ export class OtpComponent implements OnInit {
     }
   };
 
-  
+
 
   constructor(private modalController: ModalController, private router: Router) {
-    
+
   }
 
   ngOnInit() { }
@@ -47,7 +48,7 @@ export class OtpComponent implements OnInit {
     this.dismiss();
     if (this.path !== 'none') {
       this.router.navigate([this.path]);
-    } 
+    }
   }
 
 
@@ -57,6 +58,7 @@ export class OtpComponent implements OnInit {
 
   handleFillEvent(value: string): void {
     console.log(value);
+    OtpComponent.otp=value;
   }
 
 }

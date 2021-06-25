@@ -3,6 +3,9 @@ import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { OtpComponent } from '../components/otp/otp.component';
 import { ChatService } from '../services/chat.service';
+import { PersonalDetails } from '../services/PersonalDetails.service';
+import { HttpClient , HttpParams } from "@angular/common/http";
+import {HttpHeaders} from '@angular/common/http';
 
 @Component({
   selector: 'app-registration',
@@ -15,10 +18,14 @@ export class RegistrationPage implements OnInit {
   mobileNumber;
   gender = 'male'
   otpCounter;
-  flag = false
+  flag = false;
+  code='';
+  checkedvalue=false;
+  dob;
 
 
-  constructor(private router: Router, private modalController: ModalController, private chatService: ChatService) { }
+  constructor(private router: Router, private modalController: ModalController, private chatService: ChatService,
+    private service:PersonalDetails,private http: HttpClient) { }
 
   ngOnInit() {
     this.flag = false;
@@ -47,31 +54,83 @@ export class RegistrationPage implements OnInit {
       componentProps: {
         'path': 'none'
       }
-      
+
     });
     await modal.present();
     const { data } = await modal.onWillDismiss();
     console.log(data);
+    let phn = this.mobileNumber.internationalNumber.split(' ');
+    let phoneNumber=phn[0]+phn[1]+phn[2];
+    const us={
+      otpCode:OtpComponent.otp,
+
+      phoneNumber:phoneNumber
+    }
+    console.log(us);
+    const Httpheaders=new HttpHeaders({
+      'Content-Type': 'application/json',
+      'x-magic-token':this.code
+
+    });
+    this.http.post(`/api/auth/signup/account/verify/otp`,us,{headers:Httpheaders,withCredentials:true},
+    ).subscribe((msg)=>{
+      console.log(msg);
+    });
   }
 
   counter() {
+    let phn = this.mobileNumber.internationalNumber.split(' ');
+    console.log(phn[0]+phn[1]+phn[2]);
+    let phn1=phn[0]+phn[1]+phn[2];
+    this.service.sendotp(phn1).subscribe((msg)=>{
+      console.log(msg);
+    this.code=msg['xMagicToken'];
+
+    });
+
     this.otpCounter = 60;
     this.flag = true;
     this.stop();
   }
 
   stop() {
-    setTimeout(() => {    
-      this.otpCounter--;  
+    setTimeout(() => {
+      this.otpCounter--;
       console.log(this.otpCounter);
       if (this.otpCounter > 1) {
         this.stop();
-      } 
+      }
       if (this.otpCounter === 55) {
         this.presentModal();
       }
     }, 1000);
-    
+
   }
+  getvalue()
+  {
+    this.checkedvalue=!this.checkedvalue;
+    console.log(this.checkedvalue);
+  }
+  submitreg()
+  {
+    const userdet={
+    fullname: this.username,
+	  dateOfBirth:"1998-01-01",
+	gender: this.gender,
+	email: "",
+	martialStatus:"",
+	motherTongue: "Hindi",
+	isCasteBarrier: this.checkedvalue,
+	fathersName: "",
+	mothersName: ""
+    }
+    console.log(userdet);
+
+
+   this.service.basicdetails(userdet).subscribe((msg)=>{
+     console.log(msg);
+   })
+  }
+
 
 }
