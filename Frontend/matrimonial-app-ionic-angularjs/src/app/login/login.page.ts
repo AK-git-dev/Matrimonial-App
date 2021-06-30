@@ -18,7 +18,7 @@ export class LoginPage implements OnInit {
   isLoggedIn: boolean;
   globalResponse: Object;
 
-
+  access_token: string;
   constructor(private modalController: ModalController, private router: Router, private chatService: ChatService,
     private service:PersonalDetails,private http:HttpClient) { }
   // exform: FormGroup;
@@ -65,7 +65,7 @@ export class LoginPage implements OnInit {
     },
     () => {
       console.log(this.globalResponse);
-      this.service.storeToken(this.globalResponse.access_token);
+      this.service.storeToken(this.globalResponse);
       console.log("Sucessful");
       // this.alerts.push({
       //   id: 1,

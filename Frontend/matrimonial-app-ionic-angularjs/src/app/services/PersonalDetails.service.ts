@@ -7,7 +7,8 @@ import { map, filter, catchError, mergeMap } from "rxjs/operators";
 
 @Injectable()
 export class PersonalDetails {
-    getcommentsbyparameter() {
+    
+  getcommentsbyparameter() {
       throw new Error('Method not implemented.');
     }
     httpOptions: {headers: HttpHeaders}={
