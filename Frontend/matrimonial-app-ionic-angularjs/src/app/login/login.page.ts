@@ -7,6 +7,7 @@ import { PersonalDetails } from '../services/PersonalDetails.service';
 import {HttpHeaders} from '@angular/common/http';
 import { HttpClient , HttpParams } from "@angular/common/http";
 
+
 // import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-login',
@@ -14,6 +15,9 @@ import { HttpClient , HttpParams } from "@angular/common/http";
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  isLoggedIn: boolean;
+  globalResponse: Object;
+
 
   constructor(private modalController: ModalController, private router: Router, private chatService: ChatService,
     private service:PersonalDetails,private http:HttpClient) { }
@@ -39,18 +43,41 @@ export class LoginPage implements OnInit {
       full_name: 'Aashray Jain'
     }
     this.chatService.signUp(user);
+    this.isLoggedIn=false;
+    this.service.removeToken();
+    
     this.chatService.createUserSession(user);
     let phn = this.mobileNumber.internationalNumber.split(' ');
     console.log(phn[0]+phn[1]+phn[2]);
     let phn1=phn[0]+phn[1]+phn[2];
-    this.service.loginsendotp(phn1).subscribe((msg)=>{
-      console.log(msg);
-    this.code=msg['xMagicToken'];
+    this.service.loginsendotp(phn1).subscribe((result)=>{
+      this.globalResponse = result;
 
-    });
+    },
+    error => {
+      console.log(error.message);
+      console.log("Not define");
+      // this.alerts.push({
+      //   id: 2,
+      //   type: 'danger',
+      //   message: 'User not Exist, Please Rigistre the user'
+      // });
+    },
+    () => {
+      console.log(this.globalResponse);
+      this.service.storeToken(this.globalResponse.access_token);
+      console.log("Sucessful");
+      // this.alerts.push({
+      //   id: 1,
+      //   type: 'success',
+      //   message: 'Login successful'
+      // });
+      this.isLoggedIn = true;
+    }
+    );
     this.presentModal();
 
-
+    
   }
 
   async presentModal() {
@@ -81,6 +108,7 @@ export class LoginPage implements OnInit {
     ).subscribe((msg)=>{
       console.log(msg);
     });
+
   }
 
 

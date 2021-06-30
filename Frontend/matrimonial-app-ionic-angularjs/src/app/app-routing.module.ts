@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
+import { AuthGuardGuard } from "../app/auth-guard.guard";
 const routes: Routes = [
   {
     path: 'entry-slides',
@@ -60,7 +60,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'edit-profile',
+    path: 'edit-profile', canActivate: [AuthGuardGuard],
     loadChildren: () => import('./edit-profile/edit-profile.module').then(m => m.EditProfilePageModule)
   },
   {
@@ -195,7 +195,8 @@ const routes: Routes = [
   {
     path: 'entry-slides',
     loadChildren: () => import('./entry-slides/entry-slides.module').then(m => m.EntrySlidesPageModule)
-  },  {
+  },
+  {
     path: 'qr-code',
     loadChildren: () => import('./qr-code/qr-code.module').then( m => m.QrCodePageModule)
   },

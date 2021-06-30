@@ -6,7 +6,7 @@ import { ChatService } from '../services/chat.service';
 import { PersonalDetails } from '../services/PersonalDetails.service';
 import { HttpClient , HttpParams } from "@angular/common/http";
 import {HttpHeaders} from '@angular/common/http';
-
+import Cookies from 'js-cookie'
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.page.html',
@@ -72,7 +72,7 @@ export class RegistrationPage implements OnInit {
       'x-magic-token':this.code
 
     });
-    this.http.post(`/api/auth/signup/account/verify/otp`,us,{headers:Httpheaders,withCredentials:true},
+    this.http.post(`n/api/auth/signup/account/verify/otp`,us,{headers:Httpheaders,withCredentials:true},
     ).subscribe((msg)=>{
       console.log(msg);
     });
@@ -102,6 +102,7 @@ export class RegistrationPage implements OnInit {
       }
       if (this.otpCounter === 55) {
         this.presentModal();
+        this.flag = false;
       }
     }, 1000);
 
@@ -111,6 +112,8 @@ export class RegistrationPage implements OnInit {
     this.checkedvalue=!this.checkedvalue;
     console.log(this.checkedvalue);
   }
+  
+
   submitreg()
   {
     const userdet={
@@ -126,7 +129,7 @@ export class RegistrationPage implements OnInit {
     }
     console.log(userdet);
 
-
+    Cookies.get('isLogedIn')
    this.service.basicdetails(userdet).subscribe((msg)=>{
      console.log(msg);
    })
