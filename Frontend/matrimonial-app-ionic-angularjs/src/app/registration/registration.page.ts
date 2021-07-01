@@ -6,6 +6,7 @@ import { ChatService } from '../services/chat.service';
 import { PersonalDetails } from '../services/PersonalDetails.service';
 import { HttpClient , HttpParams } from "@angular/common/http";
 import {HttpHeaders} from '@angular/common/http';
+import {FormGroup,FormBuilder,FormControl, Validators } from '@angular/forms';
 import Cookies from 'js-cookie'
 @Component({
   selector: 'app-registration',
@@ -13,7 +14,7 @@ import Cookies from 'js-cookie'
   styleUrls: ['./registration.page.scss'],
 })
 export class RegistrationPage implements OnInit {
-
+  ngForm : FormGroup;
   username;
   mobileNumber;
   gender = 'male'
@@ -22,16 +23,33 @@ export class RegistrationPage implements OnInit {
   code='';
   checkedvalue=false;
   dob;
+  
 
 
   constructor(private router: Router, private modalController: ModalController, private chatService: ChatService,
-    private service:PersonalDetails,private http: HttpClient) { }
+    private service:PersonalDetails,private http: HttpClient , private formBuilder : FormBuilder) 
+    {
+      this.ngForm = this.formBuilder.group(
+      {
+        username : new FormControl('',Validators.compose([Validators.required])),
+        mobileNumber : new FormControl('',Validators.compose([Validators.required])),
+        gender : new FormControl('',Validators.compose([Validators.required])),
+      });
+    }
 
   ngOnInit() {
     this.flag = false;
   }
 
   submit() {
+    let me = this;
+    if (me.ngForm.valid){
+      alert('form is valid');
+      this.router.navigate(['/ed-car']);
+    }
+    else {
+      alert('empty fields');
+    }
     console.log('Submit');
     console.log(this.mobileNumber)
     let a = this.mobileNumber.nationalNumber.split(' ');
@@ -44,7 +62,7 @@ export class RegistrationPage implements OnInit {
     }
     this.chatService.signUp(user);
     this.chatService.createUserSession(user);
-    this.router.navigate(['/ed-car']);
+    
   }
 
   async presentModal() {
@@ -72,7 +90,7 @@ export class RegistrationPage implements OnInit {
       'x-magic-token':this.code
 
     });
-    this.http.post(`n/api/auth/signup/account/verify/otp`,us,{headers:Httpheaders,withCredentials:true},
+    this.http.post(`/api/auth/signup/account/verify/otp`,us,{headers:Httpheaders,withCredentials:true},
     ).subscribe((msg)=>{
       console.log(msg);
     });

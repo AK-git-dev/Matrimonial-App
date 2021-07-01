@@ -34,8 +34,8 @@
 
               <ion-item>
                 <ion-range dualKnobs="true" pin="true" min="18" max="40" step="1" snaps="true" color="primary">
-                  <ion-label slot="start">Min Age</ion-label>
-                  <ion-label slot="end">Max Age</ion-label>
+                  <ion-label slot="start" [(ngModel)] = "mAge">Min Age</ion-label>
+                  <ion-label slot="end" [(ngModel)] = "mxAge">Max Age</ion-label>
                 </ion-range>
               </ion-item>
             </ion-col>
@@ -44,7 +44,7 @@
           <ion-row style="margin: 10px;">
             <ion-col>
               <ion-label class="min3">Min Height *</ion-label> <br>
-              <ion-select interface="popover" placeholder="-Select-" class="minheight">
+              <ion-select interface="popover" placeholder="-Select-" class="minheight" [(ngModel)] = "mHeight">
                 <ion-select-option value="4'8">4'8</ion-select-option>
                 <ion-select-option value="4'9">4'9</ion-select-option>
                 <ion-select-option value="5'0">5'0 </ion-select-option>
@@ -70,7 +70,7 @@
 
             <ion-col>
               <ion-label class="max3">Max Height *</ion-label> <br>
-              <ion-select interface="popover" placeholder="-Select-" class="maxheight">
+              <ion-select interface="popover" placeholder="-Select-" class="maxheight" [(ngModel)] = "mxHeight">
                 <ion-select-option value="4'8">4'8</ion-select-option>
                 <ion-select-option value="4'9">4'9</ion-select-option>
                 <ion-select-option value="5'0">5'0 </ion-select-option>
@@ -106,7 +106,7 @@
           <ion-row style="margin: 10px;">
             <ion-col>
               
-              <ion-select interface="popover" placeholder="Rupees" class="sal">
+              <ion-select interface="popover" placeholder="Rupees" class="sal" [(ngModel)] = "Rupees">
                 <ion-select-option value="0 to 2">0 to 2 lakh</ion-select-option>
                 <ion-select-option value="3 to 4">3 to 4 lakh</ion-select-option>
                 <ion-select-option value="4 to 5">4 to 5 lakh</ion-select-option>
@@ -125,7 +125,7 @@
 
             <ion-col>
 
-              <ion-select interface="popover" placeholder="dollars" class="dol">
+              <ion-select interface="popover" placeholder="dollars" class="dol" [(ngModel)] = "Dollars">
                 <ion-select-option value="0 to 25000">$0 to $25000</ion-select-option>
                 <ion-select-option value="25000 to 45000">$25000 to $45000</ion-select-option>
                 <ion-select-option value="45000 to 60000">$45000 to $60000</ion-select-option>
@@ -141,7 +141,7 @@
           <ion-row style="margin: 10px;">
             <ion-col>
               <ion-label class="MaritialStatus">Maritial Status*</ion-label> <br>
-              <ion-select interface="popover" placeholder="Maritial Status" class="Status">
+              <ion-select interface="popover" placeholder="Maritial Status" class="Status" [(ngModel)] = "Status">
                 <ion-select-option value="Any">Any</ion-select-option>
                 <ion-select-option value="Never Married">Never Married</ion-select-option>
                 <ion-select-option value="Divorced">Divorced</ion-select-option>

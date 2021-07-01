@@ -26,7 +26,7 @@ export class PersonalDetails {
     }
 
     sendotp(phoneNumber){
-      return this.httpclient.post(`/api/auth/signup`+ '/token',
+      return this.httpclient.post(`/api/auth/signup`,
       {phoneNumber},{...this.httpOptions,withCredentials:true})
       .pipe(
         map(res => res),

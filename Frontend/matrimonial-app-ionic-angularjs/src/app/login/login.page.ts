@@ -6,6 +6,7 @@ import { ChatService } from '../services/chat.service';
 import { PersonalDetails } from '../services/PersonalDetails.service';
 import {HttpHeaders} from '@angular/common/http';
 import { HttpClient , HttpParams } from "@angular/common/http";
+import {FormGroup,FormBuilder,FormControl, Validators } from '@angular/forms';
 
 
 // import { FormGroup, FormControl, Validators } from '@angular/forms';
@@ -20,21 +21,20 @@ export class LoginPage implements OnInit {
 
   access_token: string;
   constructor(private modalController: ModalController, private router: Router, private chatService: ChatService,
-    private service:PersonalDetails,private http:HttpClient) { }
-  // exform: FormGroup;
+    private service:PersonalDetails,private http:HttpClient, private formBuilder : FormBuilder) { }
+  myform: FormGroup;
   mobileNumber;
   code;
 
   ngOnInit() {
 
-    // this.exform = new FormGroup({
-    //   'codeno' : new FormControl(null, Validators.required),
-    //   'phoneno' : new FormControl(null, [Validators.required, Validators.maxLength(10)]),
-    //   'otp' : new FormControl(null, [Validators.required, Validators.maxLength(6)])
-    // });
+     this.myform =  this.formBuilder.group({
+    mobileNumber : new FormControl('',Validators.compose([Validators.required])),
+    });
   }
 
   login() {
+    
     let user = {
       userId: 1,
       username: 'aashrayjain',

@@ -2,15 +2,27 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PickerController } from '@ionic/angular';
 import { ChatService } from '../services/chat.service';
-
+import {FormGroup,FormBuilder,FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-pref-part',
   templateUrl: './pref-part.page.html',
   styleUrls: ['./pref-part.page.scss'],
 })
 export class PrefPartPage implements OnInit {
-
-  constructor(private router: Router, private pickerController: PickerController, private chatService: ChatService) { }
+  ngForm : FormGroup;
+  constructor(private router: Router, private pickerController: PickerController, private chatService: ChatService, private formBuilder : FormBuilder) 
+  {
+    this.ngForm = this.formBuilder.group(
+      {
+        mAge : new FormControl('',Validators.compose([Validators.required])),
+        mxAge : new FormControl('',Validators.compose([Validators.required])),
+        mHeight : new FormControl('',Validators.compose([Validators.required])),
+        mcHeight : new FormControl('',Validators.compose([Validators.required])),
+        Rupees : new FormControl('',Validators.compose([Validators.required])),
+        Dollars : new FormControl('',Validators.compose([Validators.required])),
+        Status : new FormControl('',Validators.compose([Validators.required])),
+      });
+   }
 
   // multiColumnOptions = [
   //   [
@@ -32,6 +44,14 @@ export class PrefPartPage implements OnInit {
   // }
 
   submit() {
+    let me = this;
+    if (me.ngForm.valid){
+      alert('form is valid');
+      this.router.navigate(['/upload-photos']);
+    }
+    else {
+      alert('empty fields');
+    }
     // let user = {
     //   userId: 1,
     //   username: 'aashrayjain',
@@ -41,7 +61,7 @@ export class PrefPartPage implements OnInit {
     // }
     // this.chatService.signUp(user);
     // this.chatService.createUserSession(user);
-    this.router.navigate(['/upload-photos']);
+    
   }
 
   // async openPicker(numColums, numOptions, columnOptions) {
