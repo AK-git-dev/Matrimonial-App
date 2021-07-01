@@ -6,7 +6,7 @@ class Database {
   public schema: Sequelize;
   constructor() {
     // For MySQL Setup
-    this.schema = new Sequelize("matrimonialDB", "root", "1234", {
+    this.schema = new Sequelize("matrimonialDB", "root", "root", {
       dialect: "mysql",
       pool: {
         min: 5,
