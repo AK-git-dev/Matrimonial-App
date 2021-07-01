@@ -8,19 +8,21 @@ import { PersonalDetails } from "../app/services/PersonalDetails.service";
 })
 export class AuthGuardGuard implements CanActivate {
  
-  constructor(public auth: PersonalDetails, public router: Router ) {}
+  // constructor(public auth: PersonalDetails, public router: Router ) {}
  
-  canActivate(): boolean {
-    if(!this.auth.isAuthenticated()) {
-      console.log('You sre not authrised to view this page')
-    return false;
-    }
-    return true;
-  }
-    
-  //   route: ActivatedRouteSnapshot,
-  //   state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+  canActivate(
+  //   if(!this.auth.isAuthenticated()) {
+  //     console.log('You sre not authrised to view this page')
+  //   return false;
+  //   }
   //   return true;
   // }
+    
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+   return true;
+ 
+    }
+
+  }
   
-}

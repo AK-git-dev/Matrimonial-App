@@ -129,7 +129,7 @@ export class RegistrationPage implements OnInit {
     }
     console.log(userdet);
 
-    Cookies.get('isLogedIn')
+    // Cookies.get('isLogedIn')
    this.service.basicdetails(userdet).subscribe((msg)=>{
      console.log(msg);
    })
