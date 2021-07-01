@@ -72,7 +72,7 @@ export class RegistrationPage implements OnInit {
       'x-magic-token':this.code
 
     });
-    this.http.post(`n/api/auth/signup/account/verify/otp`,us,{headers:Httpheaders,withCredentials:true},
+    this.http.post(`/api/auth/signup/account/verify/otp`,us,{headers:Httpheaders,withCredentials:true},
     ).subscribe((msg)=>{
       console.log(msg);
     });
