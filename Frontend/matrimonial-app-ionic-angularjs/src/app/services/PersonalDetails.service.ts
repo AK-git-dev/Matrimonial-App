@@ -1,6 +1,5 @@
-
 import { Injectable } from '@angular/core';
-import { Observable } from "rxjs";
+import { Observable, throwError, pipe, of } from "rxjs";
 import { HttpClient , HttpParams } from "@angular/common/http";
 import { Post } from "../class/post";
 import {HttpHeaders} from '@angular/common/http';
@@ -8,27 +7,53 @@ import { map, filter, catchError, mergeMap } from "rxjs/operators";
 
 @Injectable()
 export class PersonalDetails {
-    getcommentsbyparameter() {
+    
+  getcommentsbyparameter() {
       throw new Error('Method not implemented.');
     }
     httpOptions: {headers: HttpHeaders}={
       // eslint-disable-next-line @typescript-eslint/naming-convention
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+     
     };
 
     constructor( private httpclient: HttpClient ) {}
 
-    getDetails(): Observable<any> {
+     getDetails(): Observable<any> {
         // let params1 = new HttpParams().set('userID',"1")
-
-        return this.httpclient.get("http://localhost:5000/api/users?id=1", );
-
-            // return this.httpclient.get("http://localhost:5000/api/users", {params:params1} );
+      return this.httpclient.get("http://localhost:5000/api/users?id=1", );
+           // return this.httpclient.get("http://localhost:5000/api/users", {params:params1} );
     }
 
     sendotp(phoneNumber){
       return this.httpclient.post(`/api/auth/signup`,
-      {phoneNumber},{...this.httpOptions,withCredentials:true});
+      {phoneNumber},{...this.httpOptions,withCredentials:true})
+      .pipe(
+        map(res => res),
+        catchError(this.errorHandler)
+      );
+    }
+    
+    public isAuthenticated(): boolean {
+      return this.getToken() != null;
+    }
+    storeToken(token: any) {
+      localStorage.setItem("token", token);
+    }
+    getToken() {
+      return localStorage.getItem("token");
+    }
+    removeToken() {
+      return localStorage.removeItem("token");
+    }
+    errorHandler(error: Response) {
+      console.log(error);
+      return throwError(error);
+    }
+
+    otpverify(User) {
+      return this.httpclient.patch(`/api/auth/login/otp/verify`,
+      User,{...this.httpOptions,withCredentials:true});
     }
 
     basicdetails(User){
