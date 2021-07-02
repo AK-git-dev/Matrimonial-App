@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   }
   ,{
-    path: 'login',
+    path: 'login', 
     loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
   },
   {
@@ -60,7 +60,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'edit-profile', canActivate: [AuthGuardGuard],
+    path: 'edit-profile', 
     loadChildren: () => import('./edit-profile/edit-profile.module').then(m => m.EditProfilePageModule)
   },
   {

@@ -7,7 +7,7 @@ import { ChatService } from '../services/chat.service';
 import { PersonalDetails } from '../services/PersonalDetails.service';
 import {HttpHeaders} from '@angular/common/http';
 import { HttpClient , HttpParams } from "@angular/common/http";
-
+import { AlertController } from '@ionic/angular';
 // import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-login',
@@ -15,9 +15,11 @@ import { HttpClient , HttpParams } from "@angular/common/http";
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  globalResponse: any;
+  isLoggedIn: boolean;
 
   constructor(private modalController: ModalController, private router: Router, private chatService: ChatService,
-    private service:PersonalDetails,private http:HttpClient) { }
+    private service:PersonalDetails,private http:HttpClient,private alertController: AlertController) { }
   // exform: FormGroup;
   mobileNumber;
   code;
@@ -47,20 +49,39 @@ export class LoginPage implements OnInit {
     this.service.loginsendotp(phn1).subscribe((msg)=>{
       console.log(msg);
     this.code=msg['xMagicToken'];
+    this.globalResponse = msg;
 
-    });
-    this.presentModal();
+    },
+    error => {
+      console.log(error.message);
+      this.numberErrorMsg();
+   },
+    () => {
+      console.log(this.globalResponse);
+      this.presentModal();
+    }
+    );
+    // this.presentModal();
 
 
   }
+// ////////////////////////////////////////////////////////////////////// Error msg
+async numberErrorMsg(){
+  const alert = await this.alertController.create({
+    header: 'Enter Number is not register',
+    cssClass: 'my-custom-class',
+    message: 'Please register your Number',
+    buttons: ['Exit']
+  });
+
+  await alert.present();
+}
 
   async presentModal() {
     const modal = await this.modalController.create({
       component: OtpComponent,
       cssClass: 'my-custom-class2',
-      componentProps: {
-        'path': '/user-home'
-      }
+     
     });
     await modal.present();
     const { data } = await modal.onWillDismiss();
@@ -69,7 +90,6 @@ export class LoginPage implements OnInit {
     let phoneNumber=phn[0]+phn[1]+phn[2];
     const us={
       otpCode:OtpComponent.otp,
-
       phoneNumber:phoneNumber
     }
     console.log(us);
@@ -81,8 +101,34 @@ export class LoginPage implements OnInit {
     this.http.post(`/api/auth/login/otp/verify`,us,{headers:Httpheaders,withCredentials:true},
     ).subscribe((msg)=>{
       console.log(msg);
-    });
+      this.globalResponse = msg;
+    },
+     error => {
+       console.log(error.message);
+      this.otpErrorMsg();
+    },
+     () => {
+       console.log(this.globalResponse);
+       this.router.navigate(['/user-home']);
+
+       this.isLoggedIn = true;
+     }
+    );
+   
   }
+
+  // ////////////////////////////////////////////////////////////////////// Error msg
+async otpErrorMsg(){
+  const alert = await this.alertController.create({
+    header: 'Invalid OTP',
+    cssClass: 'my-custom-class',
+    message: 'Please enter valid OTP',
+    buttons: ['Exit']
+  });
+
+  await alert.present();
+}
+
 
 
 
