@@ -26,14 +26,13 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
 
-    // this.exform = new FormGroup({
-    //   'codeno' : new FormControl(null, Validators.required),
-    //   'phoneno' : new FormControl(null, [Validators.required, Validators.maxLength(10)]),
-    //   'otp' : new FormControl(null, [Validators.required, Validators.maxLength(6)])
-    // });
+     this.myform =  this.formBuilder.group({
+    mobileNumber : new FormControl('',Validators.compose([Validators.required])),
+    });
   }
 
   login() {
+    
     let user = {
       userId: 1,
       username: 'aashrayjain',
