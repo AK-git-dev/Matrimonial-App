@@ -30,9 +30,16 @@
             <ion-col>
               <ion-item class="item1">
                 <ion-label position="floating">Name&nbsp;<span>&#42;</span></ion-label>
-                <ion-input type="text" placeholder="Ex: Aashray Jain" autofocus="true" required="true" name="name"
-                  inputmode="text" enterkeyhint="enter" [(ngModel)]="username" autocomplete="name" clearInput="true" color="success">
+                <ion-input type="text" placeholder="Ex: Aashray Jain" autofocus="true" required="true" name="name" 
+                  inputmode="text" enterkeyhint="enter" [(ngModel)]="username" #userNameControl="ngModel" autocomplete="name" clearInput="true" color="success">
                 </ion-input>
+                
+                <!-- <div *ngIf="(userNameControl.invalid && userNameControl.touched)" style="padding-left: 30px;">
+                  <ion-text color="damage" *ngIf="userNameControl.errors.required">
+                    <p class="ion-no-margin"><sub>User Name is required.</sub></p>
+                  </ion-text>
+                </div> -->
+
               </ion-item>
             </ion-col>
           </ion-row>
@@ -61,6 +68,26 @@
                   <p class="ion-no-margin">You'll receive OTP in {{ otpCounter }} <ion-spinner name="lines-small">
                     </ion-spinner>
                   </p>
+                </ion-text>
+              </div>
+
+              <div *ngIf="flag2" style="padding-left: 30px;">
+                <ion-text color="primary">
+                  <ion-row>
+                    <ion-icon name="alert-circle-outline" color="danger" size="large"></ion-icon> &nbsp; &nbsp;
+                  <p class="ion-no-margin" color="danger">Mobile Number not verify
+                  </p>
+                  </ion-row>
+                </ion-text>
+              </div>
+
+              <div *ngIf="flag3" style="padding-left: 30px;">
+                <ion-text color="primary">
+                  <ion-row>
+                    <ion-icon name="checkmark-outline" color="success" size="large"></ion-icon> &nbsp; &nbsp;
+                  <p class="ion-no-margin" color="success" >Verify Succefully
+                  </p>
+                  </ion-row>
                 </ion-text>
               </div>
 
@@ -99,7 +126,7 @@
               </ion-col>
               <ion-col>
                 <ion-item lines="none">
-                  <ion-label>Female&nbsp;<span>&#42;</span>
+                  <ion-label>Female &nbsp;<span>&#42;</span>
                   </ion-label>
                   <ion-radio slot="start" value="female" name="gender" color="success" item-left></ion-radio>
                 </ion-item>
@@ -117,8 +144,10 @@
 
           <ion-row>
             <ion-col>
-              <ion-button expand="full" shape="round" type="submit" class="btn1"  (click)="submitreg()" [routerLink]="['/ed-car']">Next &nbsp;
+              <ion-button expand="full" shape="round" type="submit" class="btn1"  (click)="submitreg()">Next &nbsp;
                 <ion-icon name="chevron-forward-circle-sharp"></ion-icon>
+
+                <!-- [disabled]="mobileNumberControl.invalid && mobileNumberControl.touched" -->
               </ion-button>
             </ion-col>
           </ion-row>
@@ -129,40 +158,3 @@
 
   </div>
 </ion-content>
-
-<!-- <ion-content [fullscreen]="true">
-  <ion-title>Personal Details</ion-title>
-  <ion-label>1/3</ion-label>
-  <ion-grid>
-    <ion-row>
-      <ion-col sizeLg="10" sizeMd="10" sizeXs="12">
-        <div class="container">
-          <form action="" method="post">
-            <ion-radio-group value="Gender">
-              <ion-radio class="male" slot="start" value="male"></ion-radio>
-              <ion-icon class="mname" name="man-outline"></ion-icon>
-              <ion-radio class="female" slot="start" value="female"></ion-radio>
-              <ion-icon class="fname" name="woman-outline"></ion-icon>
-            </ion-radio-group>
-            <ion-label class="name">Full Name*</ion-label> <br>
-            <ion-input id="Name1" type="name" class="name1"> </ion-input>
-
-            <ion-label class="number">Mobile Number*</ion-label> <br>
-            <ion-input id="Number2" type="number" class="number2"> </ion-input>
-            <ion-input id="Number1" type="number" class="number1"> </ion-input>
-
-            <ion-label class="Date">Date of Birth*</ion-label><br>
-            <ion-input id="Date1" type="date" class="date1"> </ion-input>
-
-
-
-            <ion-button (click)="onClick()" class="Nextbutton" [routerLink]="['/ed-car']">
-              Next
-            </ion-button>
-
-          </form>
-        </div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</ion-content> -->
