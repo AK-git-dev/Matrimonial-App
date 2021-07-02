@@ -7,7 +7,8 @@ import { PersonalDetails } from '../services/PersonalDetails.service';
 import { HttpClient , HttpParams } from "@angular/common/http";
 import {HttpHeaders} from '@angular/common/http';
 import {FormGroup,FormBuilder,FormControl, Validators } from '@angular/forms';
-import Cookies from 'js-cookie'
+import Cookies from 'js-cookie';
+import { AlertController } from '@ionic/angular';
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.page.html',
@@ -20,14 +21,19 @@ export class RegistrationPage implements OnInit {
   gender = 'male'
   otpCounter;
   flag = false;
+  flag2 =false;
+  flag3 = false;
   code='';
   checkedvalue=false;
   dob;
+  globalResponse: Object;
+  isLoggedIn: boolean;
+ 
   
 
 
   constructor(private router: Router, private modalController: ModalController, private chatService: ChatService,
-    private service:PersonalDetails,private http: HttpClient , private formBuilder : FormBuilder) 
+    private service:PersonalDetails,private http: HttpClient, private alertController: AlertController , private formBuilder : FormBuilder) 
     {
       this.ngForm = this.formBuilder.group(
       {
@@ -39,11 +45,13 @@ export class RegistrationPage implements OnInit {
 
   ngOnInit() {
     this.flag = false;
+    this.flag2 = false;
+    this.flag3 = false;
   }
 
   submit() {
     let me = this;
-    if (me.ngForm.valid){
+    if (me.ngForm.valid) {
       alert('form is valid');
       this.router.navigate(['/ed-car']);
     }
@@ -93,8 +101,33 @@ export class RegistrationPage implements OnInit {
     this.http.post(`/api/auth/signup/account/verify/otp`,us,{headers:Httpheaders,withCredentials:true},
     ).subscribe((msg)=>{
       console.log(msg);
+      this.globalResponse = msg;
+    },
+    error => {
+      console.log(error.message);
+     this.otpErrorMsg();
+     
+     this.flag2 = true;
+     this.flag3 = false;
+   },
+    () => {
+      console.log(this.globalResponse);
+      this.flag2 = false;
+      this.flag3 = true;
+      this.isLoggedIn = true;
     });
   }
+    // ////////////////////////////////////////////////////////////////////// Error msg
+async otpErrorMsg(){
+  const alert = await this.alertController.create({
+    header: 'Invalid OTP',
+    cssClass: 'my-custom-class',
+    message: 'Please enter valid OTP',
+    // buttons: ['Exit']
+  });
+
+  await alert.present();
+}
 
   counter() {
     let phn = this.mobileNumber.internationalNumber.split(' ');
@@ -109,6 +142,9 @@ export class RegistrationPage implements OnInit {
     this.otpCounter = 60;
     this.flag = true;
     this.stop();
+    this.flag2 = false;
+    this.flag3 = false;
+
   }
 
   stop() {
