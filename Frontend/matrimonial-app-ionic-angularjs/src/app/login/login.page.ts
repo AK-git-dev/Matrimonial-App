@@ -8,6 +8,7 @@ import { PersonalDetails } from '../services/PersonalDetails.service';
 import {HttpHeaders} from '@angular/common/http';
 import { HttpClient , HttpParams } from "@angular/common/http";
 import { AlertController } from '@ionic/angular';
+import { FormControl, Validators } from '@angular/forms';
 // import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-login',
@@ -17,6 +18,8 @@ import { AlertController } from '@ionic/angular';
 export class LoginPage implements OnInit {
   globalResponse: any;
   isLoggedIn: boolean;
+  formBuilder: any;
+  myform: any;
 
   constructor(private modalController: ModalController, private router: Router, private chatService: ChatService,
     private service:PersonalDetails,private http:HttpClient,private alertController: AlertController) { }
