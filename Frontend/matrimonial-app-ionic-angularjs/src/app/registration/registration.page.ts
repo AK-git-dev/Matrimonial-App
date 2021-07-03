@@ -105,8 +105,8 @@ export class RegistrationPage implements OnInit {
     },
     error => {
       console.log(error.message);
+      this.presentModal();
      this.otpErrorMsg();
-     
      this.flag2 = true;
      this.flag3 = false;
    },
@@ -136,15 +136,33 @@ async otpErrorMsg(){
     this.service.sendotp(phn1).subscribe((msg)=>{
       console.log(msg);
     this.code=msg['xMagicToken'];
+    this.globalResponse = msg;
+    },
+    error => {
+      console.log(error.message);
+    
+     this.numberError();
+   
+   },
+    () => {
+      console.log(this.globalResponse);
+      this.otpCounter = 60;
+      this.flag = true;
+      this.stop();
+      this.flag2 = false;
+      this.flag3 = false;
+    } );
 
+  }
+  async numberError(){
+    const alert = await this.alertController.create({
+      header: 'Number already exists',
+      cssClass: 'my-custom-class',
+      message: 'Number already register',
+      // buttons: ['Exit']
     });
-
-    this.otpCounter = 60;
-    this.flag = true;
-    this.stop();
-    this.flag2 = false;
-    this.flag3 = false;
-
+  
+    await alert.present();
   }
 
   stop() {
