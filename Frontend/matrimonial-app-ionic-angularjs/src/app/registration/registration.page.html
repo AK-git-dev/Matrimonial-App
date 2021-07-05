@@ -34,11 +34,11 @@
                   inputmode="text" enterkeyhint="enter" [(ngModel)]="username" #userNameControl="ngModel" autocomplete="name" clearInput="true" color="success">
                 </ion-input>
                 
-                <!-- <div *ngIf="(userNameControl.invalid && userNameControl.touched)" style="padding-left: 30px;">
+                <div *ngIf="(userNameControl.invalid && userNameControl.touched)" style="padding-left: 30px;">
                   <ion-text color="damage" *ngIf="userNameControl.errors.required">
                     <p class="ion-no-margin"><sub>User Name is required.</sub></p>
                   </ion-text>
-                </div> -->
+                </div>
 
               </ion-item>
             </ion-col>
@@ -144,10 +144,10 @@
 
           <ion-row>
             <ion-col>
-              <ion-button expand="full" shape="round" type="submit" class="btn1"  (click)="submitreg()">Next &nbsp;
+              <ion-button expand="full" shape="round" type="submit" class="btn1" (click)="submitreg()" [disabled]="mobileNumberControl.invalid && mobileNumberControl.touched ||userNameControl.invalid && userNameControl.touched" >Next &nbsp;
                 <ion-icon name="chevron-forward-circle-sharp"></ion-icon>
 
-                <!-- [disabled]="mobileNumberControl.invalid && mobileNumberControl.touched" -->
+                <!-- [disabled]="mobileNumberControl.invalid && mobileNumberControl.touched && userNameControl.invalid && userNameControl.touched && userNameControl.errors.required" -->
               </ion-button>
             </ion-col>
           </ion-row>

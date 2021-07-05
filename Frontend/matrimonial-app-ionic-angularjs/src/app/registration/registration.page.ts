@@ -35,12 +35,12 @@ export class RegistrationPage implements OnInit {
   constructor(private router: Router, private modalController: ModalController, private chatService: ChatService,
     private service:PersonalDetails,private http: HttpClient, private alertController: AlertController , private formBuilder : FormBuilder) 
     {
-      this.ngForm = this.formBuilder.group(
-      {
-        username : new FormControl('',Validators.compose([Validators.required])),
-        mobileNumber : new FormControl('',Validators.compose([Validators.required])),
-        gender : new FormControl('',Validators.compose([Validators.required])),
-      });
+      // this.ngForm = this.formBuilder.group(
+      // {
+      //   username : new FormControl('',Validators.compose([Validators.required])),
+      //   mobileNumber : new FormControl('',Validators.compose([Validators.required])),
+      //   gender : new FormControl('',Validators.compose([Validators.required])),
+      // });
     }
 
   ngOnInit() {
@@ -50,14 +50,15 @@ export class RegistrationPage implements OnInit {
   }
 
   submit() {
-    let me = this;
-    if (me.ngForm.valid) {
-      alert('form is valid');
-      this.router.navigate(['/ed-car']);
-    }
-    else {
-      alert('empty fields');
-    }
+    // let me = this;
+    // if (me.ngForm.valid) {
+    //   alert('form is valid');
+    //   this.router.navigate(['/ed-car']);
+    // }
+    // else {
+    //   alert('empty fields');
+    // }
+    this.router.navigate(['/ed-car']);
     console.log('Submit');
     console.log(this.mobileNumber)
     let a = this.mobileNumber.nationalNumber.split(' ');
@@ -170,6 +171,7 @@ async otpErrorMsg(){
 
   submitreg()
   {
+   
     const userdet={
     fullname: this.username,
 	  dateOfBirth:"1998-01-01",

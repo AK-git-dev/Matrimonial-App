@@ -45,8 +45,15 @@
                     <ion-item>
                       <ion-label position="floating">Highest Degree&nbsp;<span>&#42;</span></ion-label>
                       <ion-input type="text" placeholder="Ex: B.Tech" autofocus="true" required="true" name="name"
-                        inputmode="text" enterkeyhint="enter" autocomplete="name" color="success" [(ngModel)] = "Degree">
+                        inputmode="text" enterkeyhint="enter" autocomplete="name" color="success" [(ngModel)] = "Degree" #degreeContrpl = "ngModel">
                       </ion-input>
+
+                      <div *ngIf="(degreeControl.invalid && degreeControl.touched)" style="padding-left: 30px;">
+                        <ion-text color="damage" *ngIf="degreeControl.errors.required">
+                          <p class="ion-no-margin"><sub>Degree is required.</sub></p>
+                        </ion-text>
+                      </div>
+
                     </ion-item>
                   </ion-col>
                 </ion-item>
@@ -61,8 +68,15 @@
                       </ion-label>
                       <ion-input type="text" placeholder="Ex: B.Tech" autofocus="true" required="true"
                         name="education{{i}}" inputmode="text" enterkeyhint="enter" autocomplete="name" color="success"
-                        [(ngModel)]="educationArray[i].value">
+                        [(ngModel)]="educationArray[i].value" #educationControl = "ngModel">
                       </ion-input>
+                      
+                      <div *ngIf="(educationControl.invalid && educationControl.touched)" style="padding-left: 30px;">
+                        <ion-text color="damage" *ngIf="educationControl.errors.required">
+                          <p class="ion-no-margin"><sub>Education is required.</sub></p>
+                        </ion-text>
+                      </div>
+                    
                     </ion-item>
                   </ion-col>
                   <ion-col>
@@ -99,8 +113,13 @@
                     <ion-item>
                       <ion-label position="floating">Employed In&nbsp;<span>&#42;</span></ion-label>
                       <ion-input type="text" placeholder="Ex:" autofocus="true" required="true" name="employedIn"
-                        inputmode="text" enterkeyhint="enter" autocomplete="name" color="success" [(ngModel)] = "employedIn">
+                        inputmode="text" enterkeyhint="enter" autocomplete="name" color="success" [(ngModel)] = "employedIn" #employedControl = "ngModel">
                       </ion-input>
+                      <div *ngIf="(employedControl.invalid && employedControl.touched)" style="padding-left: 30px;">
+                        <ion-text color="damage" *ngIf="employedControl.errors.required">
+                          <p class="ion-no-margin"><sub>This field is required if none type null.</sub></p>
+                        </ion-text>
+                      </div>
                     </ion-item>
                   </ion-col>
                 </ion-item>
@@ -113,8 +132,13 @@
                     <ion-item>
                       <ion-label position="floating">Occupation&nbsp;<span>&#42;</span></ion-label>
                       <ion-input type="text" placeholder="Ex:" autofocus="true" required="true" name="employedIn1"
-                        inputmode="text" enterkeyhint="enter" autocomplete="name" color="success" [(ngModel)] = "employedIn1">
+                        inputmode="text" enterkeyhint="enter" autocomplete="name" color="success" [(ngModel)] = "employedIn1" #occupationControl = "ngModel">
                       </ion-input>
+                      <div *ngIf="(occupationControl.invalid && occupationControl.touched)" style="padding-left: 30px;">
+                        <ion-text color="damage" *ngIf="occupationControl.errors.required">
+                          <p class="ion-no-margin"><sub>Occupation is required if none type null.</sub></p>
+                        </ion-text>
+                      </div>
                     </ion-item>
                   </ion-col>
                 </ion-item>
@@ -127,8 +151,13 @@
                     <ion-item>
                       <ion-label position="floating">Income&nbsp;<span>&#42;</span></ion-label>
                       <ion-input type="text" placeholder="Ex:" autofocus="true" required="true" name="employedIn2"
-                        inputmode="text" enterkeyhint="enter" autocomplete="name" color="success" [(ngModel)] = "employedIn2">
+                        inputmode="text" enterkeyhint="enter" autocomplete="name" color="success" [(ngModel)] = "employedIn2" #incomeControl = "ngModel">
                       </ion-input>
+                      <div *ngIf="(incomeControl.invalid && incomeControl.touched)" style="padding-left: 30px;">
+                        <ion-text color="damage" *ngIf="incomeControl.errors.required">
+                          <p class="ion-no-margin"><sub>Field is required.</sub></p>
+                        </ion-text>
+                      </div>
                     </ion-item>
                   </ion-col>
                 </ion-item>
@@ -138,7 +167,7 @@
           </ion-row>
           <ion-row>
             <ion-col>
-              <ion-button expand="full" shape="round" type="submit" class="btn1">Next &nbsp;
+              <ion-button expand="full" shape="round" type="submit" class="btn1" [disabled] = "degreeControl.invalid && degreeControl.touched || educationControl.invalid && educationControl.touched|| employedControl.invalid && employedControl.touched || occupationControl.invalid && occupationControl.touched || incomeControl.invalid && incomeControl.touched">Next &nbsp;
                 <ion-icon name="chevron-forward-circle-sharp"  class="icon"></ion-icon>
               </ion-button>
             </ion-col>
