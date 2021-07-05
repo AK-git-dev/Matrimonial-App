@@ -8,7 +8,6 @@ import { PersonalDetails } from '../services/PersonalDetails.service';
 import {HttpHeaders} from '@angular/common/http';
 import { HttpClient , HttpParams } from "@angular/common/http";
 import { AlertController } from '@ionic/angular';
-import { FormControl, Validators } from '@angular/forms';
 // import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-login',
@@ -18,8 +17,6 @@ import { FormControl, Validators } from '@angular/forms';
 export class LoginPage implements OnInit {
   globalResponse: any;
   isLoggedIn: boolean;
-  formBuilder: any;
-  myform: any;
 
   constructor(private modalController: ModalController, private router: Router, private chatService: ChatService,
     private service:PersonalDetails,private http:HttpClient,private alertController: AlertController) { }
@@ -29,13 +26,14 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
 
-     this.myform =  this.formBuilder.group({
-    mobileNumber : new FormControl('',Validators.compose([Validators.required])),
-    });
+    // this.exform = new FormGroup({
+    //   'codeno' : new FormControl(null, Validators.required),
+    //   'phoneno' : new FormControl(null, [Validators.required, Validators.maxLength(10)]),
+    //   'otp' : new FormControl(null, [Validators.required, Validators.maxLength(6)])
+    // });
   }
 
   login() {
-    
     let user = {
       userId: 1,
       username: 'aashrayjain',
@@ -63,7 +61,7 @@ export class LoginPage implements OnInit {
       this.presentModal();
     }
     );
-    // this.presentModal();
+  
 
 
   }

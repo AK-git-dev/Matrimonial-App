@@ -19,11 +19,11 @@ export class PersonalDetails {
 
     constructor( private httpclient: HttpClient ) {}
 
-     getDetails(): Observable<any> {
-        // let params1 = new HttpParams().set('userID',"1")
-      return this.httpclient.get("http://localhost:5000/api/users?id=1", );
-           // return this.httpclient.get("http://localhost:5000/api/users", {params:params1} );
-    }
+    //  getDetails(): Observable<any> {
+    //     // let params1 = new HttpParams().set('userID',"1")
+    //   return this.httpclient.get("http://localhost:5000/api/users?id=1", );
+    //        // return this.httpclient.get("http://localhost:5000/api/users", {params:params1} );
+    // }
 
     sendotp(phoneNumber){
       return this.httpclient.post(`/api/auth/signup`,
@@ -85,6 +85,13 @@ export class PersonalDetails {
       return this.httpclient.post(`/api/auth/login/with-otp`,
       {phoneNumber},{...this.httpOptions,withCredentials:true});
 
+    }
+
+    // /////////////////////////////////////////////////// get user details
+
+    userDetails(): Observable<any> {
+      return this.httpclient.get(`/api/user/details`,{...this.httpOptions,withCredentials:true});
+     
     }
 
 
