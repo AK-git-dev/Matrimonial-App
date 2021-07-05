@@ -12,16 +12,16 @@ export class PrefPartPage implements OnInit {
   ngForm : FormGroup;
   constructor(private router: Router, private pickerController: PickerController, private chatService: ChatService, private formBuilder : FormBuilder) 
   {
-    this.ngForm = this.formBuilder.group(
-      {
-        mAge : new FormControl('',Validators.compose([Validators.required])),
-        mxAge : new FormControl('',Validators.compose([Validators.required])),
-        mHeight : new FormControl('',Validators.compose([Validators.required])),
-        mcHeight : new FormControl('',Validators.compose([Validators.required])),
-        Rupees : new FormControl('',Validators.compose([Validators.required])),
-        Dollars : new FormControl('',Validators.compose([Validators.required])),
-        Status : new FormControl('',Validators.compose([Validators.required])),
-      });
+    // this.ngForm = this.formBuilder.group(
+    //   {
+    //     mAge : new FormControl('',Validators.compose([Validators.required])),
+    //     mxAge : new FormControl('',Validators.compose([Validators.required])),
+    //     mHeight : new FormControl('',Validators.compose([Validators.required])),
+    //     mcHeight : new FormControl('',Validators.compose([Validators.required])),
+    //     Rupees : new FormControl('',Validators.compose([Validators.required])),
+    //     Dollars : new FormControl('',Validators.compose([Validators.required])),
+    //     Status : new FormControl('',Validators.compose([Validators.required])),
+    //   });
    }
 
   // multiColumnOptions = [
@@ -44,14 +44,15 @@ export class PrefPartPage implements OnInit {
   // }
 
   submit() {
-    let me = this;
-    if (me.ngForm.valid){
-      alert('form is valid');
-      this.router.navigate(['/upload-photos']);
-    }
-    else {
-      alert('empty fields');
-    }
+    // let me = this;
+    // if (me.ngForm.valid){
+    //   alert('form is valid');
+      
+    // }
+    // else {
+    //   alert('empty fields');
+    // }
+    this.router.navigate(['/upload-photos']);
     // let user = {
     //   userId: 1,
     //   username: 'aashrayjain',
