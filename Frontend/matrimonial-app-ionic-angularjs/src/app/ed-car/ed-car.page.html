@@ -45,7 +45,7 @@
                     <ion-item>
                       <ion-label position="floating">Highest Degree&nbsp;<span>&#42;</span></ion-label>
                       <ion-input type="text" placeholder="Ex: B.Tech" autofocus="true" required="true" name="name"
-                        inputmode="text" enterkeyhint="enter" autocomplete="name" color="success" [(ngModel)] = "Degree" #degreeContrpl = "ngModel">
+                        inputmode="text" enterkeyhint="enter" autocomplete="name" color="success" [(ngModel)] = "Degree" #degreeControl = "ngModel">
                       </ion-input>
 
                       <div *ngIf="(degreeControl.invalid && degreeControl.touched)" style="padding-left: 30px;">
@@ -71,12 +71,12 @@
                         [(ngModel)]="educationArray[i].value" #educationControl = "ngModel">
                       </ion-input>
                       
-                      <div *ngIf="(educationControl.invalid && educationControl.touched)" style="padding-left: 30px;">
+                      <!-- <div *ngIf="(educationControl.invalid && educationControl.touched)" style="padding-left: 30px;">
                         <ion-text color="damage" *ngIf="educationControl.errors.required">
                           <p class="ion-no-margin"><sub>Education is required.</sub></p>
                         </ion-text>
                       </div>
-                    
+                     -->
                     </ion-item>
                   </ion-col>
                   <ion-col>
@@ -167,7 +167,7 @@
           </ion-row>
           <ion-row>
             <ion-col>
-              <ion-button expand="full" shape="round" type="submit" class="btn1" [disabled] = "degreeControl.invalid && degreeControl.touched || educationControl.invalid && educationControl.touched|| employedControl.invalid && employedControl.touched || occupationControl.invalid && occupationControl.touched || incomeControl.invalid && incomeControl.touched">Next &nbsp;
+              <ion-button expand="full" shape="round" type="submit" class="btn1" [disabled] = "degreeControl.invalid && degreeControl.touched ||  employedControl.invalid && employedControl.touched || occupationControl.invalid && occupationControl.touched || incomeControl.invalid && incomeControl.touched">Next &nbsp;
                 <ion-icon name="chevron-forward-circle-sharp"  class="icon"></ion-icon>
               </ion-button>
             </ion-col>
