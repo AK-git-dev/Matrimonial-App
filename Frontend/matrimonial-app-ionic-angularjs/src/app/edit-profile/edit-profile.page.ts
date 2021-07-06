@@ -54,6 +54,7 @@ export class EditProfilePage implements OnInit {
 
         this.Educations=arrData[0].userDetails.Educations[0].degree;
         this.Occupation=arrData[0].userDetails.Occupation;
+        
        }
      );
 

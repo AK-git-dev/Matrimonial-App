@@ -9,6 +9,7 @@ import { PersonalDetails } from "../../services/PersonalDetails.service";
   styleUrls: ['./user-popover.component.scss'],
 })
 export class UserPopoverComponent implements OnInit {
+  globalResponse: any;
 
   constructor(private alertController: AlertController, private router: Router,
      private popover: PopoverController, private chatService: ChatService,
@@ -33,8 +34,19 @@ export class UserPopoverComponent implements OnInit {
         handler: () => {
           
           this.popover.dismiss();
-          this.personalDetails.logout();
-          this.router.navigate(['/entry-slides']);
+          this.personalDetails.logout().subscribe((msg)=>{
+            console.log(msg); 
+              this.globalResponse = msg;
+          },
+          error => {
+           console.log(error.message);
+        },
+         () => {
+           console.log(this.globalResponse);
+           this.router.navigate(['/entry-slides']);
+         }
+          )
+          //this.router.navigate(['/entry-slides']);
         }
       }, 
       {
