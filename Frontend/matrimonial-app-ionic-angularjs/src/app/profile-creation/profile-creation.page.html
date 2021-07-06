@@ -6,13 +6,13 @@
    
           <div class="container"  >
 
-    <form action="" method="post" >
+    <form #profileCreatiomForm="ngForm" (ngSubmit)="submit()" >
      <ion-grid>
       <ion-row>
         <ion-label class="name">Name</ion-label>
       </ion-row>
      <ion-row>
-      <ion-input id="Name1" type="name" class="n1" placeholder = "Name"> </ion-input>
+      <ion-input id="Name1" type="name" class="n1" placeholder = "Name" [(ngModel)]="name" [ngModelOptions]="{standalone: true}"> </ion-input>
      </ion-row>
 
      <ion-row>
@@ -146,7 +146,7 @@
      </ion-row>
 
       <ion-row>
-        <ion-button (click)="onClick()" shape="round" class="Submit" [routerLink]="['/edit-profile']">
+        <ion-button (click)="onClick()" shape="round" class="Submit">
           SAVE
         </ion-button>
       </ion-row>

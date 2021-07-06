@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController, PopoverController } from '@ionic/angular';
 import { ChatService } from 'src/app/services/chat.service';
-
+import { PersonalDetails } from "../../services/PersonalDetails.service";
 @Component({
   selector: 'app-user-popover',
   templateUrl: './user-popover.component.html',
@@ -10,13 +10,16 @@ import { ChatService } from 'src/app/services/chat.service';
 })
 export class UserPopoverComponent implements OnInit {
 
-  constructor(private alertController: AlertController, private router: Router, private popover: PopoverController, private chatService: ChatService) { }
+  constructor(private alertController: AlertController, private router: Router,
+     private popover: PopoverController, private chatService: ChatService,
+     private personalDetails: PersonalDetails) { }
 
   ngOnInit() {}
 
   logout() {
     this.presentAlert();
     this.chatService.logout();
+    
   }
 
   async presentAlert() {
@@ -30,6 +33,7 @@ export class UserPopoverComponent implements OnInit {
         handler: () => {
           
           this.popover.dismiss();
+          this.personalDetails.logout();
           this.router.navigate(['/entry-slides']);
         }
       }, 

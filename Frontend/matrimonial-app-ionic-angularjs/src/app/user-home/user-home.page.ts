@@ -3,6 +3,8 @@ import { IonInfiniteScroll, PopoverController } from '@ionic/angular';
 import { UserPopoverComponent } from '../components/user-popover/user-popover.component';
 import { ChatService } from '../services/chat.service';
 
+import { PersonalDetails } from "../services/PersonalDetails.service";
+
 @Component({
   selector: 'app-user-home',
   templateUrl: './user-home.page.html',
@@ -10,14 +12,25 @@ import { ChatService } from '../services/chat.service';
 })
 export class UserHomePage implements OnInit {
 
-  username: string = 'Aashray Jain'
+  username: string;
 
   @ViewChild(IonInfiniteScroll)
   infiniteScroll: IonInfiniteScroll;
 
-  constructor(private popoverController: PopoverController) { }
+  constructor(private popoverController: PopoverController, private personalDetails: PersonalDetails) { }
 
   ngOnInit() {
+    this.personalDetails.userDetail() //.pipe(map(userDetails => userDetails))
+    .subscribe
+    (
+      data =>
+      {
+       const arrData = [data];
+      //  console.log(arrData);
+       this.username=arrData[0].userDetails.fullname;
+      
+      }
+    );
     
   }
 
