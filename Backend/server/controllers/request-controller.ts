@@ -1,4 +1,6 @@
 import { Router } from "express";
+import { Model } from "sequelize";
+import { Schema } from "../../database/schema";
 import {
   collectDeviceTokens,
   createError,
@@ -10,8 +12,6 @@ import {
   SUCCESS,
 } from "../utils";
 import { requiresAuth } from "../utils/middlewares/requires-auth.middleware";
-import { Schema } from "../../database/schema";
-import { Model, Op } from "sequelize";
 
 const router = Router();
 
@@ -68,14 +68,12 @@ router.get(
     try {
       const UserId = (req as any).userId;
 
-      const pendingRequests: Model<
-        any,
-        any
-      >[] = await Schema.RequestSend.findAll({
-        where: { UserId },
-        include: [{ model: Schema.User, attributes: ["fullname", "age"] }],
-        order: [["createdAt", "DESC"]],
-      });
+      const pendingRequests: Model<any, any>[] =
+        await Schema.RequestSend.findAll({
+          where: { UserId },
+          include: [{ model: Schema.User, attributes: ["fullname", "age"] }],
+          order: [["createdAt", "DESC"]],
+        });
       return res.status(202).send({
         ...SUCCESS,
         message: "All pending requests",
@@ -108,8 +106,7 @@ router.post(
       // Sending Push Notification
       gcmMessenger.addNotification({
         title: "Request Accepted",
-        body:
-          "Voila! Your connection request has been accepted! Grow your interest!!",
+        body: "Voila! Your connection request has been accepted! Grow your interest!!",
         icon: "ic_launcher",
       });
 

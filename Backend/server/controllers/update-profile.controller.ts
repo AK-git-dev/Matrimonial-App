@@ -5,6 +5,7 @@ import {
   AddressInterface,
   CasteInterface,
   CreateProfileInterface,
+  EducationAndOccupationInterface,
   EducationInterface,
   FamilyDetailsInterface,
   LifestyleInterface,
@@ -52,6 +53,19 @@ router.patch(
           LanguageName: payload.motherTongue,
         });
       else await motherTongue.update({ LanguageName: payload.motherTongue });
+
+      const { address, city, country, district, zipCode }: AddressInterface =
+        payload.address;
+      let [addressObj, _] = await Schema.Address.findOrCreate({
+        where: { UserId: userId, address, city, country, district, zipCode },
+      });
+
+      (addressObj as any).address = address;
+      (addressObj as any).city = city;
+      (addressObj as any).country = country;
+      (addressObj as any).district = district;
+      (addressObj as any).zipCode = zipCode;
+      await addressObj.save();
 
       return res.status(200).send({
         ...SUCCESS,
@@ -260,6 +274,46 @@ router.post(
   }
 );
 
+// [POST] : ADD Education and Occupation in a single API Call
+router.post(
+  "/add-education-occupation-details",
+  requiresAuth,
+  async (req: RequestInterface, res: ResponseInterface, next: Next) => {
+    try {
+      const UserId: string = (req as any).userId;
+      const payload: EducationAndOccupationInterface =
+        req.body as EducationAndOccupationInterface;
+
+      if (!payload)
+        throw new createError.UnprocessableEntity(
+          "Data has not been correctly formatted! Try again!"
+        );
+
+      // addding educations details
+      if (payload.educationDetails) {
+        for (const education of payload.educationDetails) {
+          const educationPayload = { ...education, UserId };
+          await Schema.Education.create(educationPayload);
+        }
+      }
+
+      if (payload.occupationDetails) {
+        const occupationResp = await Schema.Occupation.findOrCreate({
+          where: { UserId, ...payload.occupationDetails },
+        });
+        await occupationResp[0].save();
+      }
+
+      return res.status(202).send({
+        ...SUCCESS,
+        message: "User education and occupation details has been saved!",
+      });
+    } catch (e) {
+      next(e);
+    }
+  }
+);
+
 // [POST] : Add Educational Qualification to the user
 router.post(
   "/add-education-details",
@@ -268,6 +322,11 @@ router.post(
     try {
       const UserId = (req as any).userId;
       const payload: EducationInterface[] = req.body as EducationInterface[];
+
+      if (!payload)
+        throw new createError.UnprocessableEntity(
+          "Data has not been correctly formatted! Try again!"
+        );
 
       if (payload) {
         for (const education of payload) {

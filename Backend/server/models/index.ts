@@ -1,6 +1,3 @@
-import { DataTypes } from "sequelize";
-import User from "../../database/schema/user.schema";
-
 type Gender = "Male" | "Female" | "Shemale";
 
 /** Generate OtpCode | Magic Code **/
@@ -63,6 +60,11 @@ export interface LifestyleInterface {
   descriptionOfDieseases: string;
 }
 
+export interface EducationAndOccupationInterface {
+  educationDetails: EducationInterface[];
+  occupationDetails: OccupationInterface;
+}
+
 export interface EducationInterface {
   type: string;
   degree: string;
@@ -83,6 +85,7 @@ export interface CreateProfileInterface {
   isCasteBarrier: boolean;
   fathersName: string;
   mothersName: string;
+  address: AddressInterface;
 }
 
 // Login With OTP Interface
