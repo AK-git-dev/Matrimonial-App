@@ -76,13 +76,13 @@
         <ion-card-content>
           <ion-label class="l27">Religion</ion-label>
           <br>
-          <ion-label class="l7">Height</ion-label>
+          <ion-label class="l7">Height</ion-label>: {{Height}}
           <br>
           <ion-label class="l28">Caste</ion-label>: {{UserCaste}}
           <br>
           <ion-label class="l29">Mother Tongue:</ion-label> {{ MotherTongue}}
           <br>
-          <ion-label class="l9">Country</ion-label>
+          <ion-label class="l9">Country</ion-label>: {{Country}}
         </ion-card-content>
       </ion-card>
   
@@ -131,7 +131,7 @@
           <br>
           <ion-label class="l12">Occupation</ion-label>: {{Occupation}}
           <br>
-          <ion-label class="l13">Income</ion-label>
+          <ion-label class="l13">Income</ion-label>: {{Income}}
         </ion-card-content>
       </ion-card>
   
@@ -143,11 +143,11 @@
         </ion-item>
   
         <ion-card-content>
-          <ion-label class="l21">Diet</ion-label>
+          <ion-label class="l21">Diet</ion-label>: {{Diet}}
           <br>
-          <ion-label class="l22">Smoke</ion-label>
+          <ion-label class="l22">Smoke</ion-label>: {{Smoke}}
           <br>
-          <ion-label class="l23">Drink</ion-label>
+          <ion-label class="l23">Drink</ion-label>: {{Drink}}
           <br>
           <ion-label class="l24">Challenged</ion-label>
 
@@ -162,17 +162,17 @@
         </ion-item>
   
         <ion-card-content>
-          <ion-label class="l30">Family Status</ion-label>
+          <ion-label class="l30">Family Status:</ion-label> <ion-label >{{familyStatus}}</ion-label>
           <br>
-          <ion-label class="l31">Father's Occupation</ion-label>
+          <ion-label class="l31">Father's Occupation:</ion-label> {{fatherOccupation}}
           <br>
-          <ion-label class="l32">Mother's Occupation</ion-label>
+          <ion-label class="l32">Mother's Occupation:</ion-label>{{ motherOccupation }}
           <br>
-          <ion-label class="l33">No. of Brother/Sister</ion-label>
+          <ion-label class="l33">No. of Brother/Sister: </ion-label>{{noOfBrothers}} Brothers & {{noOfSisters}} Sisters
           <br>
           <ion-label class="l34">Of Which Married</ion-label>
           <br>
-          <ion-label class="l35">Family Values</ion-label>
+          <ion-label class="l35">Family Values:</ion-label> {{ familyValues}}
           <br>
         </ion-card-content>
       </ion-card>
@@ -185,13 +185,13 @@
         </ion-item>
   
         <ion-card-content>
-          <ion-label class="l36">Email-Id</ion-label>
+          <ion-label class="l36">Email-Id:</ion-label>{{email}}
           <br>
-          <ion-label class="l37">Mobile Number</ion-label>
+          <ion-label class="l37">Mobile Number:</ion-label>{{phoneNumber}}
           <br>
-          <ion-label class="l38">Person1</ion-label>
+          <ion-label class="l38">Person1:</ion-label> {{personOneRelationship}} {{ personOnePhoneNumber}}
           <br>
-          <ion-label class="l39">Person2</ion-label>
+          <ion-label class="l39">Person2:</ion-label>{{personTwoRelationship}} {{personTwoPhoneNumber}}
         </ion-card-content>
       </ion-card>
     </div>
@@ -213,13 +213,13 @@
             </ion-item>  
           
             <ion-card-content>
-              <ion-label class="l7">Height</ion-label>
+              <ion-label class="l7">Height:</ion-label>{{minHeight}} - {{maxHeight}}
               <br>
-              <ion-label class="l8">Age</ion-label>
+              <ion-label class="l8">Age:</ion-label> {{minAge}} - {{maxAge}}
               <br>
-              <ion-label class="l9">Country</ion-label>
+              <ion-label class="l9">Country:</ion-label> {{country}}
               <br>
-              <ion-label class="l10">Maritial Status</ion-label>
+              <ion-label class="l10">Maritial Status:</ion-label> {{martitialStatus}}
 
         </ion-card-content>
         </ion-card>
@@ -234,9 +234,9 @@
           <ion-card-content>
             <ion-label class="l11">Education</ion-label>
             <br>
-            <ion-label class="l12">Occupation</ion-label>
+            <ion-label class="l12">Occupation:</ion-label>{{partnerOccupation}}
             <br>
-            <ion-label class="l13">Income</ion-label>
+            <ion-label class="l13">Income:</ion-label>INR {{partnerExpectedSalaryInINR}} and USD {{partnerExpectedSalaryInDollar}}
           </ion-card-content>
         </ion-card>
         
@@ -249,9 +249,9 @@
           <ion-card-content>
             <ion-label class="l17">Religion</ion-label>
             <br>
-            <ion-label class="l18">Caste</ion-label>
+            <ion-label class="l18">Caste:</ion-label> {{partnerCast}}
             <br>
-            <ion-label class="l19">Mother Tongue</ion-label>
+            <ion-label class="l19">Mother Tongue:</ion-label> {{ partnerLanguage}}
           </ion-card-content>
         </ion-card>
         

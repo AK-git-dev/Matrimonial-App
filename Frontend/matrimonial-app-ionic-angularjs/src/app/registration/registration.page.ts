@@ -183,7 +183,7 @@ async otpErrorMsg(){
 	  dateOfBirth:"1998-01-01",
 	gender: this.gender,
 	email: "",
-	martialStatus:"",
+	// martialStatus:"Single",
 	motherTongue: "Hindi",
 	isCasteBarrier: this.checkedvalue,
 	fathersName: "",
