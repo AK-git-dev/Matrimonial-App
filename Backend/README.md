@@ -276,9 +276,10 @@ _From Eagle's Eye:_ Database Schema Designed.
 
    ```bash
       PATCH /api/profile/update-info HTTP/1.1
+    Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4YjZkZDRiNy0yY2Q2LTQ1ZjctYmFhYy1hNTQxZmQ1MmQ4M2UiLCJwaG9uZU51bWJlciI6Iis5MTgwMTcyMDQ4NTUiLCJpYXQiOjE2MjU2Mzc0NTUsImV4cCI6MTYyNTcyMzg1NX0.fJL75yp0t_wvqCSy21sCv3KgBlJZi8DAKID4z2FZmNU; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4YjZkZDRiNy0yY2Q2LTQ1ZjctYmFhYy1hNTQxZmQ1MmQ4M2UiLCJwaG9uZU51bWJlciI6Iis5MTgwMTcyMDQ4NTUiLCJpYXQiOjE2MjU2Mzc0NTUsImV4cCI6MTYyNjI0MjI1NX0.iQolwzEJ7YKrmQwZ9wWOlrDY69-ZiRY6DgcsZruagMw; isLoggedIn=true; refreshTokenID=true
     Content-Type: application/json
     Host: localhost:5000
-    Content-Length: 245
+    Content-Length: 415
 
     {
       "fullname": "Sounish Nath",
@@ -289,7 +290,14 @@ _From Eagle's Eye:_ Database Schema Designed.
       "motherTongue": "Bengali",
       "isCasteBarrier": false,
       "fathersName": "Sudip Nath",
-      "mothersName": "Manisha Nath"
+      "mothersName": "Manisha Nath",
+      "address": {
+        "address": "H/o - 91, W/o - 11, Nischindipur2",
+        "city": "Ghatal2",
+        "district": "Paschim Medinipur22",
+        "country": "India",
+        "zipCode": "700124"
+      }
     }
    ```
 
@@ -623,6 +631,49 @@ _From Eagle's Eye:_ Database Schema Designed.
     ```bash
       GET /api/mutual-matches HTTP/1.1
       Host: localhost:5000
+    ```
+
+31. Add Education and Occupation in One API
+
+    ```bash
+      POST /api/profile/add-education-occupation-details HTTP/1.1
+    Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4YjZkZDRiNy0yY2Q2LTQ1ZjctYmFhYy1hNTQxZmQ1MmQ4M2UiLCJwaG9uZU51bWJlciI6Iis5MTgwMTcyMDQ4NTUiLCJpYXQiOjE2MjU2Mzc0NTUsImV4cCI6MTYyNTcyMzg1NX0.fJL75yp0t_wvqCSy21sCv3KgBlJZi8DAKID4z2FZmNU; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4YjZkZDRiNy0yY2Q2LTQ1ZjctYmFhYy1hNTQxZmQ1MmQ4M2UiLCJwaG9uZU51bWJlciI6Iis5MTgwMTcyMDQ4NTUiLCJpYXQiOjE2MjU2Mzc0NTUsImV4cCI6MTYyNjI0MjI1NX0.iQolwzEJ7YKrmQwZ9wWOlrDY69-ZiRY6DgcsZruagMw; isLoggedIn=true; refreshTokenID=true
+    Content-Type: application/json
+    Host: localhost:5000
+    Content-Length: 769
+
+    {
+      "educationDetails": [
+        {
+          "type": "Undergraduate",
+          "degree": "B.Tech",
+          "institutionName": "Brainware Group of Institutions",
+          "specializationIn": "Computer Science and Engineering",
+          "passoutYear": "2021"
+        },
+        {
+          "type": "Higher Secondary",
+          "degree": "WBHSE",
+          "institutionName": "Ghatal Vidyasagar High School",
+          "specializationIn": "Pure Science",
+          "passoutYear": "2017"
+        },
+        {
+          "type": "Secondary",
+          "degree": "WBBSE",
+          "institutionName": "Ghatal Vidyasagar High School",
+          "specializationIn": "All",
+          "passoutYear": "2015"
+        }
+      ],
+      "occupationDetails": {
+        "type": "Administration",
+        "position": "Admin Professional",
+        "currentCompanyName": "Tata Consultancy Services",
+        "salary": "7-8LPA",
+        "isSelfEmployeed": false
+      }
+    }
     ```
 
 ## Environment Variables
