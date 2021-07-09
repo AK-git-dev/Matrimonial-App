@@ -52,7 +52,7 @@ export class ContactPage implements OnInit {
 
 // -------------------- Persone 3
     console.warn(this.mobileNumber5);
-     c
+     
     //let c = this.mobileNumber2.nationalNumber.split(' ');
     let c = this.mobileNumber5.internationalNumber.split(' '); 
    const adddPhoneTh={
