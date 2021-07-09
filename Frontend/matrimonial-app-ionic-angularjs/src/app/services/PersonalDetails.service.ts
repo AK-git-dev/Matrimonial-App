@@ -113,4 +113,11 @@ export class PersonalDetails {
       User,{...this.httpOptions,withCredentials:true});
     }
 
+    //Add Contact
+    addContact(User)
+    {
+      return this.httpclient.post(`/api/profile/update-relative-contact-details`,
+      User,{...this.httpOptions,withCredentials:true});
+    }
+
 }

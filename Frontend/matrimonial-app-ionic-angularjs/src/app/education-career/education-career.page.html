@@ -4,32 +4,32 @@
     
     
     <div class="container">
-    <form action="" method="post">
+    <form #educationForm="ngForm" (ngSubmit)="submit()">
   
       <ion-row>
         <ion-label class="Hdegree">Highest Degree</ion-label> 
       </ion-row>
      <ion-row>
-      <ion-input id="Name1" type="name" class="Degree" placeholder = "Highest Degree *"> </ion-input>
+      <ion-input id="Name1" type="name" class="Degree" placeholder = "Highest Degree *"  [(ngModel)]="hdegree" [ngModelOptions]="{standalone: true}"> </ion-input>
      </ion-row>
 
       <ion-row>
         <ion-label class="PG">Post Grad Degree</ion-label>
       </ion-row> 
      <ion-row>
-      <ion-input id="Name1" type="name" class="Pgrad" placeholder = "Post Grad Degree"> </ion-input>
+      <ion-input id="Name1" type="name" class="Pgrad" placeholder = "Post Grad Degree"  [(ngModel)]="pgDegree" [ngModelOptions]="{standalone: true}"> </ion-input>
      </ion-row>
       
       <ion-row>
         <ion-label class="UG">Under Grad Degree</ion-label> 
       </ion-row>
-      <ion-row><ion-input id="Name1" type="name" class="Ugrad" placeholder = "Under Grad Degree"> </ion-input></ion-row>
+      <ion-row><ion-input id="Name1" type="name" class="Ugrad" placeholder = "Under Grad Degree"  [(ngModel)]="ugDegree" [ngModelOptions]="{standalone: true}"> </ion-input></ion-row>
 
       <ion-row>
         <ion-label class="Uname">University Name</ion-label> 
       </ion-row>
       <ion-row>
-        <ion-input id="Name1" type="name" class="uni" placeholder = "University Name"> </ion-input>
+        <ion-input id="Name1" type="name" class="uni" placeholder = "University Name" [(ngModel)]="uName" [ngModelOptions]="{standalone: true}"> </ion-input>
       </ion-row>
 
 
@@ -37,21 +37,21 @@
         <ion-label class="UGC">Under Grad College</ion-label> 
       </ion-row>
      <ion-row>
-      <ion-input id="Name1" type="name" class="col" placeholder = "Under Grad College"> </ion-input>
+      <ion-input id="Name1" type="name" class="col" placeholder = "Under Grad College"  [(ngModel)]="ugCollege" [ngModelOptions]="{standalone: true}"> </ion-input>
      </ion-row>
 
       <ion-row>
         <ion-label class="Sname">School Name</ion-label> 
       </ion-row>
      <ion-row>
-      <ion-input id="Name1" type="name" class="school" placeholder = "School Name"> </ion-input>
+      <ion-input id="Name1" type="name" class="school" placeholder = "School Name"  [(ngModel)]="schoolName" [ngModelOptions]="{standalone: true}"> </ion-input>
      </ion-row>
 
      <ion-row>
       <ion-label class="Employ">Employed In</ion-label> 
      </ion-row>
       <ion-row>
-        <ion-select interface="popover" placeholder="--Select--" class="Sector" >
+        <ion-select interface="popover" placeholder="--Select--" class="Sector"  [(ngModel)]="employeeIn" [ngModelOptions]="{standalone: true}">
           <ion-select-option value="Private Sector">Private Sector</ion-select-option>
           <ion-select-option value="Governement">Governement</ion-select-option>
           <ion-select-option value="Business/Entrepreneur">Business/Entrepreneur</ion-select-option>
@@ -62,14 +62,14 @@
         <ion-label class="Org">Occupation</ion-label> 
       </ion-row>
       <ion-row>
-        <ion-input id="Name1" type="name" class="Oname" placeholder = "Occupation"> </ion-input>
+        <ion-input id="Name1" type="name" class="Oname" placeholder = "Occupation"  [(ngModel)]="occupation" [ngModelOptions]="{standalone: true}"> </ion-input>
       </ion-row>
 
       <ion-row>
         <ion-label class="Occ">Organization Name</ion-label> 
       </ion-row>
       <ion-row>
-        <ion-input id="Name1" type="name" class="work" placeholder = "Organization Name"> </ion-input>
+        <ion-input id="Name1" type="name" class="work" placeholder = "Organization Name"  [(ngModel)]="org" [ngModelOptions]="{standalone: true}"> </ion-input>
       </ion-row>
 
       <ion-row>
@@ -77,7 +77,7 @@
       <ion-label class="Abroad">Are you Interested in Settling Abroad??</ion-label> 
       </ion-row>
       <ion-row>
-        <ion-select interface="popover" placeholder="--Select--" class="YN" >
+        <ion-select interface="popover" placeholder="--Select--" class="YN"  [(ngModel)]="abroad" [ngModelOptions]="{standalone: true}">
           <ion-select-option value="Yes">Yes</ion-select-option>
           <ion-select-option value="No">No</ion-select-option>
         </ion-select>
@@ -85,11 +85,12 @@
      
      
      <ion-row>
-      <ion-button (click)="onClick()" shape="round" class="Submit" [routerLink]="['/edit-profile']">
+      <ion-button (click)="onClick()" shape="round" class="Submit" >
         SAVE
       </ion-button>
      </ion-row>
 
+     <!-- [routerLink]="['/edit-profile']" -->
 
 </form>
      </div>

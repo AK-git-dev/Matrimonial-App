@@ -6,12 +6,12 @@
   <ion-grid>
     <ion-row>
       <ion-col sizeLg="10" sizeMd="10" sizeXs="12">  
-    <form action="">
+    <form #contactForm="ngForm" (ngSubmit)="submit()">
       <ion-item>
       <ion-label class="p3">Person 1</ion-label>
       </ion-item> <br>
     <ion-row>
-      <ion-select interface="popover" placeholder="Select Person" class="persons2" >
+      <ion-select interface="popover" placeholder="Select Person" class="persons2" [(ngModel)]="personOne" [ngModelOptions]="{standalone: true}" >
         <ion-select-option value="Self">Self</ion-select-option>
         <ion-select-option value="Father">Father</ion-select-option>
         <ion-select-option value="Mother">Mother</ion-select-option>
@@ -24,7 +24,7 @@
     <ion-row>
         <ion-label>Mobile Number 1*</ion-label>
         <ion-intl-tel-input id="mobile-number" name="mobile-number" [(ngModel)]="mobileNumber"
-          #mobileNumberControl="ngModel" ionIntlTelInputValid></ion-intl-tel-input>
+          #mobileNumberControl="ngModel" ionIntlTelInputValid ></ion-intl-tel-input>
 
       <div *ngIf="mobileNumberControl.invalid && mobileNumberControl.touched">
         <ion-text color="damage" *ngIf="mobileNumberControl.errors.required">
@@ -38,7 +38,7 @@
       
     <ion-row>
       <ion-label>Mobile Number 2</ion-label>
-      <ion-intl-tel-input id="mobile-number" name="mobile-number" [(ngModel)]="mobileNumber"
+      <ion-intl-tel-input id="mobile-number" name="mobile-number" [(ngModel)]="mobileNumber1"
         #mobileNumberControl="ngModel" ionIntlTelInputValid></ion-intl-tel-input>
 
     <div *ngIf="mobileNumberControl.invalid && mobileNumberControl.touched">
@@ -64,7 +64,7 @@
       <ion-radio-group value="Album">
       <ion-list [hidden]="isDown" lines="none" class="mylist2">
         <ion-row>
-          <ion-select interface="popover" placeholder="Select Person" class="persons2" >
+          <ion-select interface="popover" placeholder="Select Person" class="persons2" [(ngModel)]="personTwo" [ngModelOptions]="{standalone: true}">
             <ion-select-option value="Self">Self</ion-select-option>
             <ion-select-option value="Father">Father</ion-select-option>
             <ion-select-option value="Mother">Mother</ion-select-option>
@@ -76,7 +76,7 @@
         </ion-row>
         <ion-row>
             <ion-label>Mobile Number 1*</ion-label>
-            <ion-intl-tel-input id="mobile-number" name="mobile-number" [(ngModel)]="mobileNumber"
+            <ion-intl-tel-input id="mobile-number" name="mobile-number" [(ngModel)]="mobileNumber3" [ngModelOptions]="{standalone: true}"
               #mobileNumberControl="ngModel" ionIntlTelInputValid></ion-intl-tel-input>
     
           <div *ngIf="mobileNumberControl.invalid && mobileNumberControl.touched">
@@ -91,7 +91,7 @@
           
         <ion-row>
           <ion-label>Mobile Number 2</ion-label>
-          <ion-intl-tel-input id="mobile-number" name="mobile-number" [(ngModel)]="mobileNumber"
+          <ion-intl-tel-input id="mobile-number" name="mobile-number" [(ngModel)]="mobileNumber4" [ngModelOptions]="{standalone: true}"
             #mobileNumberControl="ngModel" ionIntlTelInputValid></ion-intl-tel-input>
     
         <div *ngIf="mobileNumberControl.invalid && mobileNumberControl.touched">
@@ -117,7 +117,7 @@
       <ion-radio-group value="Album">
       <ion-list [hidden]="isDown1" lines="none" class="mylist2">
         <ion-row>
-          <ion-select interface="popover" placeholder="Select Person" class="persons2" >
+          <ion-select interface="popover" placeholder="Select Person" class="persons4" [(ngModel)]="personThree" [ngModelOptions]="{standalone: true}" >
             <ion-select-option value="Self">Self</ion-select-option>
             <ion-select-option value="Father">Father</ion-select-option>
             <ion-select-option value="Mother">Mother</ion-select-option>
@@ -129,7 +129,7 @@
         </ion-row>
         <ion-row>
             <ion-label>Mobile Number 1*</ion-label>
-            <ion-intl-tel-input id="mobile-number" name="mobile-number" [(ngModel)]="mobileNumber"
+            <ion-intl-tel-input id="mobile-number" name="mobile-number" [(ngModel)]="mobileNumber5"
               #mobileNumberControl="ngModel" ionIntlTelInputValid></ion-intl-tel-input>
     
           <div *ngIf="mobileNumberControl.invalid && mobileNumberControl.touched">
@@ -144,7 +144,7 @@
           
         <ion-row>
           <ion-label>Mobile Number 2</ion-label>
-          <ion-intl-tel-input id="mobile-number" name="mobile-number" [(ngModel)]="mobileNumber"
+          <ion-intl-tel-input id="mobile-number" name="mobile-number" [(ngModel)]="mobileNumber6"
             #mobileNumberControl="ngModel" ionIntlTelInputValid></ion-intl-tel-input>
     
         <div *ngIf="mobileNumberControl.invalid && mobileNumberControl.touched">
@@ -167,7 +167,7 @@
 </ion-row> -->
   
 <ion-row>
-  <ion-button class="savebutton" shape="round" [routerLink]="['/user-home']" >SAVE</ion-button>
+  <ion-button class="savebutton" shape="round" (click)="onClick()">SAVE</ion-button>
 </ion-row>
 
 </form>

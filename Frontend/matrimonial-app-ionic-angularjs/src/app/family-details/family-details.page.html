@@ -5,7 +5,7 @@
 
   <div class="container">
     <ion-grid>
-    <form #educationForm="ngForm" (ngSubmit)="submit()">
+    <form #familyForm="ngForm" (ngSubmit)="submit()">
 
       <ion-row>
         <ion-label class="fname">Father Name *</ion-label>
@@ -131,7 +131,7 @@
       </ion-row>
           
       <ion-row>
-        <ion-button (click)="onClick()" class="Submit" shape="round" [routerLink]="['/user-home']">
+        <ion-button (click)="onClick()" class="Submit" shape="round">
           SAVE
         </ion-button>
       </ion-row>
