@@ -99,7 +99,12 @@ export class PersonalDetails {
 
     }
 
-
+    // Add Lifestyle
+    addLifestyle(User)
+    {
+      return this.httpclient.post(`/api/profile/update-lifestyle`,
+      User,{...this.httpOptions,withCredentials:true});
+    }
 
 
 }

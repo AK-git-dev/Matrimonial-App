@@ -3,27 +3,27 @@
     <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/edit-profile']"></ion-icon>LifeStyle</ion-title>
     
     <div class="container">
-    <form action="" method="post">
+    <form #lifestyleForm="ngForm" (ngSubmit)="submit()">
       <ion-grid>
         <ion-row>
           <ion-label class="Height">Height</ion-label> 
         </ion-row>
         <ion-row>
-          <ion-input id="Name1" type="name" class="height" placeholder = "Height*"> </ion-input>
+          <ion-input id="Name1" type="name" class="height" placeholder = "Height*" [(ngModel)]="height" [ngModelOptions]="{standalone: true}"> </ion-input>
         </ion-row>
 
         <ion-row>
           <ion-label class="Weight">Weight</ion-label> 
         </ion-row>
         <ion-row>
-          <ion-input id="Name1" type="name" class="weight" placeholder = "Weight"> </ion-input>
+          <ion-input id="Name1" type="name" class="weight" placeholder = "Weight" [(ngModel)]="weight" [ngModelOptions]="{standalone: true}"> </ion-input>
         </ion-row>
       
       <ion-row>
         <ion-label class="BT">Body Type</ion-label> 
       </ion-row>
       <ion-row>
-        <ion-select interface="popover" placeholder="--Select--" class="Body" >
+        <ion-select interface="popover" placeholder="--Select--" class="Body" [(ngModel)]="body" [ngModelOptions]="{standalone: true}" >
           <ion-select-option value="Slim">Slim</ion-select-option>
           <ion-select-option value="Athletic">Athletic</ion-select-option>
           <ion-select-option value="Average">Average</ion-select-option>
@@ -36,7 +36,7 @@
       <ion-label class="Complexion">Complexion</ion-label>
     <ion-row>
       </ion-row>
-      <ion-select interface="popover" placeholder="--Select--" class="comp" >
+      <ion-select interface="popover" placeholder="--Select--" class="comp" [(ngModel)]="comp" [ngModelOptions]="{standalone: true}" >
         <ion-select-option value="Very Fair">Very Fair</ion-select-option>
         <ion-select-option value="Fair">Fair</ion-select-option>
         <ion-select-option value="Wheatish">Wheatish</ion-select-option>
@@ -50,11 +50,11 @@
         </ion-row>
 
      <ion-row>
-      <ion-radio-group value = "Disability">
-        <ion-radio class = "Yes" slot="start" value="Yes" (click)="onClick($event)" ></ion-radio>
+      <ion-radio-group value = "Disability" [(ngModel)]="disability" [ngModelOptions]="{standalone: true}">
+        <ion-radio class = "Yes" slot="start" value=true (click)="onClick($event)" ></ion-radio>
         <ion-label class = "Y">Yes</ion-label>
         
-      <ion-radio class = "No" slot="start" value="No"  (click)="onClick1($event)"></ion-radio>
+      <ion-radio class = "No" slot="start" value=false (click)="onClick1($event)"></ion-radio>
       <ion-label class = "N">No</ion-label>
     </ion-radio-group>
      </ion-row>
@@ -63,15 +63,15 @@
       <ion-label class="If">If yes, Specify</ion-label> 
      </ion-row>
      <ion-row [hidden]=isHidden>
-      <ion-input id="Name1" type="name" class="specify" placeholder = "Specify"> </ion-input>
+      <ion-input id="Name1" type="name" class="specify" placeholder = "Specify" [(ngModel)]="discDisability" [ngModelOptions]="{standalone: true}"> </ion-input>
      </ion-row>
   
       <ion-row>
         <ion-label class="Smoking">Smoking Habits</ion-label>
       </ion-row>
       <ion-row>
-        <ion-select interface="popover" placeholder="--Select--" class="smoke" >
-          <ion-select-option value="Non-Smoker">Non-Smoker</ion-select-option>
+        <ion-select interface="popover" placeholder="--Select--" class="smoke" [(ngModel)]="smoking" [ngModelOptions]="{standalone: true}" >
+          <ion-select-option value="Non Smoker">Non-Smoker</ion-select-option>
           <ion-select-option value="Occasional">Occasional</ion-select-option>
           <ion-select-option value="Regular">Regular</ion-select-option>
         </ion-select>
@@ -81,8 +81,8 @@
         <ion-label class="Drinking">Drinking Habits</ion-label>
       </ion-row>
       <ion-row>
-        <ion-select interface="popover" placeholder="--Select--" class="Habits" >
-          <ion-select-option value="Non-Drinker">Non-Drinker</ion-select-option>
+        <ion-select interface="popover" placeholder="--Select--" class="Habits" [(ngModel)]="drinking" [ngModelOptions]="{standalone: true}" >
+          <ion-select-option value="Non drinker">Non-Drinker</ion-select-option>
           <ion-select-option value="Occasional">Occasional</ion-select-option>
           <ion-select-option value="Regular">Regular</ion-select-option>
         </ion-select>
@@ -92,26 +92,26 @@
         <ion-label class="Diet">Diet</ion-label> 
       </ion-row>
       <ion-row>
-        <ion-input id="Name1" type="name" class="diet" placeholder = "Diet"> </ion-input>
+        <ion-input id="Name1" type="name" class="diet" placeholder = "Diet" [(ngModel)]="diet" [ngModelOptions]="{standalone: true}"> </ion-input>
       </ion-row>
 
       <ion-row>
         <ion-label class="Hobbies">Hobbies</ion-label> 
       </ion-row>
       <ion-row>
-        <ion-input id="Name1" type="name" class="hobbies" placeholder = "Hobbies"> </ion-input>
+        <ion-input id="Name1" type="name" class="hobbies" placeholder = "Hobbies" [(ngModel)]="hobbies" [ngModelOptions]="{standalone: true}"> </ion-input>
       </ion-row>
 
       <ion-row>
         <ion-label class="Sports">Sports & Fitness</ion-label> 
       </ion-row>
       <ion-row>
-        <ion-input id="Name1" type="name" class="fitness" placeholder = "Sports & Fitness"> </ion-input>
+        <ion-input id="Name1" type="name" class="fitness" placeholder = "Sports & Fitness" [(ngModel)]="SnF" [ngModelOptions]="{standalone: true}"> </ion-input>
       </ion-row>
 
 
      <ion-row>
-      <ion-button (click)="onClick()" shape="round" class="Submit" [routerLink]="['/edit-profile']">
+      <ion-button (click)="onClick3()" shape="round" class="Submit">
         SAVE
       </ion-button>
      </ion-row>
