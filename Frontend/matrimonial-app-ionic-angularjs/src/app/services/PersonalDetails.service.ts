@@ -106,5 +106,11 @@ export class PersonalDetails {
       User,{...this.httpOptions,withCredentials:true});
     }
 
+    // Add Family Details
+    addFamilyDetails(User)
+    {
+      return this.httpclient.post(`/api/profile/update-family-details`,
+      User,{...this.httpOptions,withCredentials:true});
+    }
 
 }

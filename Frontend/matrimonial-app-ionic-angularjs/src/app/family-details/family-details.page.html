@@ -5,15 +5,21 @@
 
   <div class="container">
     <ion-grid>
-    <form action="" method="post">
-      <!-- <ion-label class="fname">Father Name *</ion-label> <br>
-      <ion-input id="Name1" type="name" class="fname1"> </ion-input> -->
+    <form #educationForm="ngForm" (ngSubmit)="submit()">
+
+      <ion-row>
+        <ion-label class="fname">Father Name *</ion-label>
+      
+      </ion-row>
+      <ion-row>
+        <ion-input id="Name1" type="name" class="fname1"  [(ngModel)]="fName" [ngModelOptions]="{standalone: true}"> </ion-input> 
+      </ion-row>
 
       <ion-row>
         <ion-label class="foccu">Father Occupation *</ion-label> 
       </ion-row>
       <ion-row>
-        <ion-select interface="popover" placeholder="Occupation" class="occu" >
+        <ion-select interface="popover" placeholder="Occupation" class="occu"  [(ngModel)]="fOccup" [ngModelOptions]="{standalone: true}" >
           <ion-select-option value="Service">Service</ion-select-option>
           <ion-select-option value="Business">Business</ion-select-option>
           <ion-select-option value="Retired">Retired</ion-select-option>
@@ -21,15 +27,19 @@
           <ion-select-option value="Expired">Expired</ion-select-option>
         </ion-select>
       </ion-row>
-<!-- 
-      <ion-label class="mname">Mother Name *</ion-label> 
-      <ion-input id="Name1" type="name" class="mname"> </ion-input> -->
+
+        <ion-row>
+          <ion-label class="mname">Mother Name *</ion-label> 
+        </ion-row>
+         <ion-row>
+          <ion-input id="Name1" type="name" class="mname"  [(ngModel)]="mName" [ngModelOptions]="{standalone: true}"> </ion-input> 
+        </ion-row>
 
       <ion-row>
         <ion-label class="moccu">Mothers Occupation *</ion-label> 
       </ion-row>
       <ion-row>
-        <ion-select interface="popover" placeholder="Occupation" class="occu1" >
+        <ion-select interface="popover" placeholder="Occupation" class="occu1"  [(ngModel)]="mOccup" [ngModelOptions]="{standalone: true}">
           <ion-select-option value="HouseWife">HouseWife</ion-select-option>
           <ion-select-option value="Service">Service</ion-select-option>
           <ion-select-option value="Business">Business</ion-select-option>
@@ -39,10 +49,10 @@
       </ion-row>
 
       <ion-row>
-        <ion-label class="Bro">No. Of Brothers *</ion-label> 
+        <ion-label class="Bro">No. Of Brothers </ion-label> 
       </ion-row>
       <ion-row>
-        <ion-select interface="popover" placeholder="--Select--" class="nbro" >
+        <ion-select interface="popover" placeholder="--Select--" class="nbro"  [(ngModel)]="noBrother" [ngModelOptions]="{standalone: true}">
           <ion-select-option value="0">0</ion-select-option>
           <ion-select-option value="1">1</ion-select-option>
           <ion-select-option value="2">2</ion-select-option>
@@ -52,10 +62,10 @@
       </ion-row>
 
       <ion-row>
-        <ion-label class="MBro">Of Which Married *</ion-label> 
+        <ion-label class="MBro">Of Which Married </ion-label> 
       </ion-row>
       <ion-row>
-        <ion-select interface="popover" placeholder="--Select--" class="Mbro1" >
+        <ion-select interface="popover" placeholder="--Select--" class="Mbro1"  [(ngModel)]="marriedBro" [ngModelOptions]="{standalone: true}">
           <ion-select-option value="0">0</ion-select-option>
           <ion-select-option value="1">1</ion-select-option>
           <ion-select-option value="2">2</ion-select-option>
@@ -65,10 +75,10 @@
       </ion-row>
 
       <ion-row>
-        <ion-label class="Sis">No. of Sisters *</ion-label> 
+        <ion-label class="Sis">No. of Sisters </ion-label> 
       </ion-row>
       <ion-row>
-        <ion-select interface="popover" placeholder="--Select--" class="nsis" >
+        <ion-select interface="popover" placeholder="--Select--" class="nsis"  [(ngModel)]="noSisters" [ngModelOptions]="{standalone: true}" >
           <ion-select-option value="0">0</ion-select-option>
           <ion-select-option value="1">1</ion-select-option>
           <ion-select-option value="2">2</ion-select-option>
@@ -78,10 +88,10 @@
       </ion-row>
 
       <ion-row>
-        <ion-label class="MSis">Of Which Married *</ion-label> 
+        <ion-label class="MSis">Of Which Married </ion-label> 
       </ion-row>
       <ion-row>
-        <ion-select interface="popover" placeholder="--Select--" class="Msis1" >
+        <ion-select interface="popover" placeholder="--Select--" class="Msis1"  [(ngModel)]="marriedSis" [ngModelOptions]="{standalone: true}" >
           <ion-select-option value="0">0</ion-select-option>
           <ion-select-option value="1">1</ion-select-option>
           <ion-select-option value="2">2</ion-select-option>
@@ -94,7 +104,7 @@
         <ion-label class="Fstat">Family Status *</ion-label> 
       </ion-row>
       <ion-row>
-        <ion-select interface="popover" placeholder="--Select--" class="stat" >
+        <ion-select interface="popover" placeholder="--Select--" class="stat"  [(ngModel)]="fStatus" [ngModelOptions]="{standalone: true}" >
           <ion-select-option value="Middle Class">Middle Class</ion-select-option>
           <ion-select-option value="Upper Middle Class">Upper Middle Class</ion-select-option>
           <ion-select-option value="Rich/Affluent">Rich/Affluent</ion-select-option>
@@ -105,16 +115,21 @@
         <ion-label class="Fval">Family Values *</ion-label> 
       </ion-row>
       <ion-row>
-        <ion-select interface="popover" placeholder="--Select--" class="val" >
+        <ion-select interface="popover" placeholder="--Select--" class="val"  [(ngModel)]="fValue" [ngModelOptions]="{standalone: true}" >
           <ion-select-option value="Orthodox">Orthodox</ion-select-option>
           <ion-select-option value="Traditional">Traditional</ion-select-option>
           <ion-select-option value="Liberal">Liberal</ion-select-option>
           <ion-select-option value="Moderate">Moderate</ion-select-option>
         </ion-select>
       </ion-row>
-<!-- 
-      <ion-label class="Origin">Ancestral Origin *</ion-label> 
-      <ion-input id="Name1" type="name" class="Aorigin"> </ion-input>       -->
+
+      <ion-row>
+        <ion-label class="Origin">Ancestral Origin </ion-label> 
+      </ion-row>
+      <ion-row>
+        <ion-input id="Name1" type="name" class="Aorigin"  [(ngModel)]="aOrigin" [ngModelOptions]="{standalone: true}" > </ion-input> 
+      </ion-row>
+          
       <ion-row>
         <ion-button (click)="onClick()" class="Submit" shape="round" [routerLink]="['/user-home']">
           SAVE
