@@ -33,7 +33,8 @@ export class ContactPage implements OnInit {
     console.warn(this.mobileNumber)
     //let a = this.mobileNumber.nationalNumber.split(' ');
    let a = this.mobileNumber.internationalNumber.split(' '); 
-    const addPhone={
+    
+   const addPhone={
       relationship: this.personOne,
       fullname: "",
       phoneNumber: a[0]+a[1]+a[2]
@@ -44,7 +45,8 @@ export class ContactPage implements OnInit {
      
      //let b = this.mobileNumber2.nationalNumber.split(' ');
      let b = this.mobileNumber3.internationalNumber.split(' '); 
-    const adddPhoneT={
+   
+     const adddPhoneT={
     relationship: this.personTwo,
     fullname: "",
     phoneNumber: b[0]+b[1]+b[2]
@@ -55,7 +57,8 @@ export class ContactPage implements OnInit {
      
     //let c = this.mobileNumber2.nationalNumber.split(' ');
     let c = this.mobileNumber5.internationalNumber.split(' '); 
-   const adddPhoneTh={
+  
+    const adddPhoneTh={
    relationship: this.personThree,
    fullname: "",
    phoneNumber: c[0]+b[1]+b[2]

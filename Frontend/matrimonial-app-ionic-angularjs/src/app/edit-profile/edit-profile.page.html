@@ -198,9 +198,10 @@
 
     <div *ngIf="segmentModel === 'looking'" style="height: 100%;">
       <!-- <ion-card> -->
-        <ion-item>
+        <ion-item >
           <ion-icon name="heart-sharp"></ion-icon>&nbsp;&nbsp;&nbsp;
-          <ion-label class="l6"><h2> Desired Partner </h2></ion-label>
+          <ion-label class="l6"  [routerLink]="['/pref-partner']"><h2> Desired Partner </h2></ion-label>
+          <ion-icon name="pencil-outline" size="large"></ion-icon>
           
         </ion-item>
         <!-- <ion-card-content> -->
@@ -209,7 +210,7 @@
             <ion-item>
               <ion-icon name="person-sharp"></ion-icon>&nbsp;&nbsp;
               <ion-label class="l15">Basic Details</ion-label>
-              <ion-icon name="pencil-outline" size="large"></ion-icon>
+              <!-- <ion-icon name="pencil-outline" size="large"></ion-icon> -->
             </ion-item>  
           
             <ion-card-content>
@@ -228,7 +229,7 @@
           <ion-item>
             <ion-icon name="school-sharp"></ion-icon>&nbsp;&nbsp;
             <ion-label class="l14">Education & Occupation</ion-label>
-            <ion-icon name="pencil-outline" size="large"></ion-icon>
+            <!-- <ion-icon name="pencil-outline" size="large"></ion-icon> -->
           </ion-item>  
         
           <ion-card-content>
@@ -244,7 +245,7 @@
           <ion-item>
             <ion-icon name="sparkles-sharp"></ion-icon>&nbsp;&nbsp;
             <ion-label class="l16">Religion</ion-label>
-            <ion-icon name="pencil-outline" size="large"></ion-icon>
+            <!-- <ion-icon name="pencil-outline" size="large"></ion-icon> -->
           </ion-item>  
           <ion-card-content>
             <ion-label class="l17">Religion</ion-label>
@@ -259,7 +260,7 @@
           <ion-item>
             <ion-icon name="restaurant-sharp"></ion-icon>&nbsp;&nbsp;
             <ion-label class="l20">LifeStyle</ion-label>
-            <ion-icon name="pencil-outline" size="large"></ion-icon>
+            <!-- <ion-icon name="pencil-outline" size="large"></ion-icon> -->
           </ion-item>  
           <ion-card-content>
             <ion-label class="l21">Diet</ion-label>

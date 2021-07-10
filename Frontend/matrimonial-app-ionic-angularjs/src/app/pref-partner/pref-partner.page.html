@@ -1,12 +1,11 @@
 <ion-content>
-<ion-heading>
+
   <ion-title>
-    <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/user-home']"></ion-icon>
+    <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/edit-profile']"></ion-icon>
     Preferred Partner
   </ion-title>
-</ion-heading>
 <div class="card">
-  <form action="" method="post">
+  <form #preferPartnerForm="ngForm" (ngSubmit)="submit()">
    <ion-grid>
    
     <ion-row>
@@ -21,7 +20,7 @@
   <ion-row>
     <ion-col>
      
-      <ion-select interface="popover" placeholder="-Select-" class="min" >
+      <ion-select interface="popover" placeholder="-Select-" class="min" [(ngModel)]="miAge" [ngModelOptions]="{standalone: true}" >
         <ion-select-option value="18">18</ion-select-option>
         <ion-select-option value="19">19</ion-select-option>
         <ion-select-option value="20">20 </ion-select-option>
@@ -50,7 +49,7 @@
     </ion-col>
 
     <ion-col>
-      <ion-select interface="popover" placeholder="-Select-" class="max" >
+      <ion-select interface="popover" placeholder="-Select-" class="max" [(ngModel)]="maAge" [ngModelOptions]="{standalone: true}" >
       <ion-select-option value="18">18</ion-select-option>
       <ion-select-option value="19">19</ion-select-option>
       <ion-select-option value="20">20 </ion-select-option>
@@ -91,7 +90,7 @@
 
    <ion-row>
    <ion-col>
-    <ion-select interface="popover" placeholder="-Select-" class="minheight" >
+    <ion-select interface="popover" placeholder="-Select-" class="minheight" [(ngModel)]="miHeight" [ngModelOptions]="{standalone: true}" >
       <ion-select-option value="4'8">4'8</ion-select-option>
       <ion-select-option value="4'9">4'9</ion-select-option>
       <ion-select-option value="5'0">5'0 </ion-select-option>
@@ -117,7 +116,7 @@
    </ion-col>
   
    <ion-col>
-    <ion-select interface="popover" placeholder="-Select-" class="maxheight" >
+    <ion-select interface="popover" placeholder="-Select-" class="maxheight" [(ngModel)]="maHeight" [ngModelOptions]="{standalone: true}" >
       <ion-select-option value="4'8">4'8</ion-select-option>
       <ion-select-option value="4'9">4'9</ion-select-option>
       <ion-select-option value="5'0">5'0 </ion-select-option>
@@ -147,7 +146,7 @@
     </ion-row>
 
     <ion-row>
-      <ion-select interface="popover" placeholder="Cast" class="castselect" >
+      <ion-select interface="popover" placeholder="Cast" class="castselect" [(ngModel)]="caste" [ngModelOptions]="{standalone: true}" >
         <ion-select-option value="sc">SC</ion-select-option>
         <ion-select-option value="st">ST</ion-select-option>
         <ion-select-option value="obc">OBC</ion-select-option>
@@ -160,7 +159,7 @@
       <ion-label class="language">Mother Tongue</ion-label>
     </ion-row>
     <ion-row>
-      <ion-select interface="popover" placeholder="Caste" class="languageselect" >
+      <ion-select interface="popover" placeholder="Caste" class="languageselect" [(ngModel)]="language" [ngModelOptions]="{standalone: true}" >
         <ion-select-option value="Hindi">Hindi</ion-select-option>
         <ion-select-option value="Bengali">Bengali</ion-select-option>
         <ion-select-option value="Marathi">Marathi</ion-select-option>
@@ -180,7 +179,7 @@
     </ion-row>
     <ion-row>
     <ion-col>
-      <ion-select interface="popover" placeholder="Rupees" class="rup" >
+      <ion-select interface="popover" placeholder="Rupees" class="rup" [(ngModel)]="salINR" [ngModelOptions]="{standalone: true}" >
         <ion-select-option value="0-2">0 to 2 lakh</ion-select-option>
         <ion-select-option value="3-4">3 to 4 lakh</ion-select-option>
         <ion-select-option value="4-5">4 to 5 lakh</ion-select-option>
@@ -197,7 +196,7 @@
       </ion-select>
     </ion-col>
      <ion-col>
-      <ion-select interface="popover" placeholder="Dollars" class="dol" >
+      <ion-select interface="popover" placeholder="Dollars" class="dol" [(ngModel)]="salUSD" [ngModelOptions]="{standalone: true}" >
         <ion-select-option value="0-25000">$0 to $25000</ion-select-option>
         <ion-select-option value="25000-45000">$25000 to $45000</ion-select-option>
         <ion-select-option value="45000-60000">$45000 to $60000</ion-select-option>
@@ -214,7 +213,7 @@
       <ion-label class="MaritialStatus">Maritial Status*</ion-label>
      </ion-row>
     <ion-row>
-      <ion-select interface="popover" placeholder="Maritial Status" class="Status" >
+      <ion-select interface="popover" placeholder="Maritial Status" class="Status" [(ngModel)]="status" [ngModelOptions]="{standalone: true}" >
         <ion-select-option value="Any">Any</ion-select-option>
         <ion-select-option value="Never Married">Never Married</ion-select-option>
         <ion-select-option value="Divorced">Divroced</ion-select-option>
@@ -227,14 +226,14 @@
       <ion-label class="occupation">Occupation</ion-label>
     </ion-row>
   <ion-row>
-    <ion-input class="occup" placeholder=" Ex.-Manager" ></ion-input>
+    <ion-input class="occup" placeholder=" Ex.-Manager" [(ngModel)]="occupation" [ngModelOptions]="{standalone: true}" ></ion-input>
   </ion-row>
 
   <ion-row>
     <ion-label class="country">Country & State</ion-label>
   </ion-row>
    <ion-row>
-    <ion-select interface="popover" value="India" class="countryselect" >
+    <ion-select interface="popover" value="India" class="countryselect" [(ngModel)]="country" [ngModelOptions]="{standalone: true}" >
       <ion-select-option value="America">America</ion-select-option>
       <ion-select-option value="Brazil">Brazil</ion-select-option>
       <ion-select-option value="Canada">Canada</ion-select-option>
@@ -252,7 +251,7 @@
 
     <!-- -->
     <div class="ion-text-center">
-      <ion-button (click)="onClick()" shape="round" class="save" [routerLink]="['/user-home']">
+      <ion-button (click)="onClick()" shape="round" class="save">
         SAVE
       </ion-button>
   
