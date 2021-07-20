@@ -13,15 +13,21 @@ import { Router } from '@angular/router';
 export class ProfileCreationPage implements OnInit {
 
   isHidden = true;
-name;
+  name;
   globalResponse: Object;
+  mStatus;
+  motherTongueLanguage: any;
+  Country: any;
+  State: any;
+  City: any;
+  residential: any;
   constructor(private service:PersonalDetails,private router: Router) { }
 
   ngOnInit() {
   }
 
  changeStatus(event){
-    if (event.target.value == "NM") {
+    if (event.target.value == "single") {
       this.isHidden=true;
     }
     else {
@@ -36,6 +42,13 @@ name;
     const userdet={
 
       fullname: this.name,
+      martialStatus:this.mStatus,
+      motherTongue:this.motherTongueLanguage,
+      //country:this.Country,
+      //state:this.State,
+     // city:this.City,
+      residebtialStatus:this.residential,
+
     }
     console.log(userdet);
     this.service.basicdetails(userdet).subscribe((msg)=>{
@@ -54,3 +67,4 @@ name;
   }
 
 }
+

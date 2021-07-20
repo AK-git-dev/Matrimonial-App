@@ -38,7 +38,9 @@ export class PrefPartnerPage implements OnInit {
 	maxAge: this.maAge,
 	expectedSalaryInINR: this.salINR,
 	expectedSalaryInDollar: this.salUSD,
+
 	salaryType: "INR",
+  
 	caste: this.caste,
 	occupation: this.occupation,
 	country: this.country,

@@ -57,6 +57,13 @@ export class PersonalDetails {
       User,{...this.httpOptions,withCredentials:true});
 
     }
+
+    //Add Education & Occupation in one
+    addEduOcc(User)
+    {
+      return this.httpclient.post('/api/profile/add-education-occupation-details',
+      User,{...this.httpOptions,withCredentials:true})
+    }
     // Add Education
     addeducation(User){
       return this.httpclient.post(`/api/profile/add-education-details`,

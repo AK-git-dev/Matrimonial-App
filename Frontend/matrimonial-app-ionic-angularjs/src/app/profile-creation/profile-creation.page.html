@@ -35,11 +35,11 @@
       <!--------------------------------------------------------------- Select Maritial status ----------------------------------------------------------------------------->
     <ion-row>
       <ion-select interface="popover"  class="Maritial"
-      id="mariatlStatus" (ionChange)="changeStatus($event)"  placeholder="-Select-" >
-        <ion-select-option value="NM">Never Married</ion-select-option>
-        <ion-select-option value="D">Divorced</ion-select-option>
-        <ion-select-option value="S">Seperated</ion-select-option>
-        <ion-select-option value="W">Widowed</ion-select-option>
+      id="mariatlStatus" (ionChange)="changeStatus($event)"  placeholder="-Select-" [(ngModel)]="mStatus" [ngModelOptions]="{standalone: true}" >
+        <ion-select-option value="single">Never Married</ion-select-option>
+        <ion-select-option value="Divorced">Divorced</ion-select-option>
+        <ion-select-option value="Seperated">Seperated</ion-select-option>
+        <ion-select-option value="Widowed">Widowed</ion-select-option>
       </ion-select>
     </ion-row>
 
@@ -113,21 +113,21 @@
   </ion-row>
       
   <ion-row>
-    <ion-input id="Name1" type="name" class="Tongue" placeholder = "Mother Tongue"> </ion-input>
+    <ion-input id="Name1" type="name" class="Tongue" placeholder = "Mother Tongue" [(ngModel)]="motherTongueLanguage" [ngModelOptions]="{standalone: true}" > </ion-input>
   </ion-row>
 
       <ion-row>
         <ion-label class="Country">Country</ion-label>
       </ion-row>
      <ion-row>
-      <ion-input id="Name1" type="name" class="country" placeholder = "Country"> </ion-input>
+      <ion-input id="Name1" type="name" class="country" placeholder = "Country"  [(ngModel)]="Country" [ngModelOptions]="{standalone: true}"> </ion-input>
      </ion-row>
 
       <ion-row>
         <ion-label class="State">State</ion-label>
       </ion-row>
       <ion-row>
-        <ion-input id="Name1" type="name" class="state" placeholder = "State"> </ion-input>
+        <ion-input id="Name1" type="name" class="state" placeholder = "State" [(ngModel)]="State" [ngModelOptions]="{standalone: true}"> </ion-input>
       </ion-row>
      
 
@@ -135,14 +135,14 @@
       <ion-label class="City">City</ion-label>
      </ion-row>
      <ion-row>
-      <ion-input id="Name1" type="name" class="city" placeholder = "City"> </ion-input>
+      <ion-input id="Name1" type="name" class="city" placeholder = "City" [(ngModel)]="City" [ngModelOptions]="{standalone: true}"> </ion-input>
      </ion-row>
 
      <ion-row>
       <ion-label class="Status">Residential Status</ion-label>
      </ion-row>
      <ion-row>
-      <ion-input id="Name1" type="name" class="status" placeholder = "status"> </ion-input>
+      <ion-input id="Name1" type="name" class="status" placeholder = "status"[(ngModel)]="residential" [ngModelOptions]="{standalone: true}"> </ion-input>
      </ion-row>
 
       <ion-row>
