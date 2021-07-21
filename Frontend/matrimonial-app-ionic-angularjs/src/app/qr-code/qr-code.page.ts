@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { LoadingController, Platform, ToastController } from '@ionic/angular';
 import jsQR from "jsqr";
+import { PersonalDetails } from "../services/PersonalDetails.service";
 
 @Component({
   selector: 'app-qr-code',
@@ -10,9 +11,9 @@ import jsQR from "jsqr";
 })
 export class QrCodePage implements OnInit {
 
-
+  username;
 // //////////////////////////////////////////////// QR Input value
-  value = 'http://localhost:8100/edit-profile';
+ value;
 
 // ////////////////////////////////////////////// end
   scanActive = false;
@@ -28,19 +29,31 @@ canvasElement: any;
 canvasContext: any;
 
 loading: HTMLIonLoadingElement;
+
   constructor(private activatedRoute: ActivatedRoute, private tostCtrl: ToastController, 
-     private loadingController: LoadingController,private plt: Platform
+     private loadingController: LoadingController,private plt: Platform, private personalDetails: PersonalDetails 
      ) {
 
        const isInStanaloneMode = () =>
        'standalone' in window.navigator && window.navigator['standalone'];
        
        if(this.plt.is('ios') && isInStanaloneMode()) {
-         console.log('I am a an iOS PWA!');
+        //  console.log('I am a an iOS PWA!');
        }
       }
 
   ngOnInit() {
+
+    this.personalDetails.userDetail().subscribe(
+      data => {
+        const arrData = [data];
+
+        this.username=arrData[0].userDetails?.fullname;
+
+      this.value = this.username;
+      }
+    );
+
     
   }
 
