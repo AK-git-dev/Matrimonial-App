@@ -1,5 +1,21 @@
-<ion-content [fullscreen]="true">
-  <ion-icon name="arrow-back-outline" size="large" [routerLink]="[path]"></ion-icon>
+<div class="header ion-padding">
+  <div class="info">
+    <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/chat-list']"></ion-icon>
+    <ion-avatar class="avat">
+      <img src="../../assets/user_home/avatar.svg">
+    </ion-avatar>
+    <span class="details">
+      <h1>{{username}}</h1>
+      <!-- <h4 class="l2">Last seen {{ time }}</h4> -->
+    </span>
+    <!-- <ion-icon class="btn1" name="ellipsis-vertical" size="large" (click)="presentPopover($event)"></ion-icon> -->
+    <h3 style="color: white;">AC</h3>&nbsp;&nbsp;
+    <h3 style="color: white;" (click)="videoCall()">VC</h3>
+  </div>
+</div>
+
+<ion-content #scrollElement [scrollEvents]="true">
+  <!-- <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/chat-list']"></ion-icon>
   <ion-avatar class="avat">
     <img src="../../assets/user_home/avatar.svg">
     <img src="../../assets/Ellipse 104.png" class="badge">
@@ -10,28 +26,72 @@
     <ion-button class="btn1" (click)="presentPopover($event)">
       <ion-icon name="ellipsis-vertical" size="large"></ion-icon>
     </ion-button>
-  </ion-buttons>
+  </ion-buttons> -->
 
+  <div class="chat">
+    <ion-grid>
+        <ion-row *ngFor="let message of obarray|async; let i = index">
+          <!-- <ion-col>
+            <div>
+              {{message.message}}
+            </div>
+          </ion-col> -->
+          <ion-col size="9"  class="message"
+            [offset]="message.sender_id === loginuser ? 3 : 0"
+            [ngClass]="{ 'my-message': message.sender_id, 'other-message': message.recipient_id }">
+            <br>
+            <span>{{ message.message }}</span>
 
-  <div class="c1">
+          </ion-col>
+          <ion-col *ngIf="message.sender_id === loginuser">
+            <div class="ion-text-right" *ngIf="message.status==='sent'">sent</div>
+            <div class="ion-text-right" *ngIf="message.status==='delivered'">delivered</div>
+            <div class="ion-text-right" *ngIf="message.status==='read'">read</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="ion-text-left" *ngIf="typing">typing...</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
 
-    <ion-button (ionFocus)="startRecording()" (ionBlur)="stopRecording()">
+</ion-content>
+
+    <ion-footer >
+      <ion-toolbar >
+        <ion-row class="ion-align-items-center">
+          <ion-col size="9.7">
+            <!-- <ion-input placeholder="Type a message...."></ion-input> -->
+          <ion-textarea rows="1" autofocus placeholder="Type a message...." [(ngModel)]="message" class="message-input"
+          (ionChange)="ionip($event)"></ion-textarea>
+          </ion-col>
+          <ion-col size="2">
+            <ion-button color="#feacac" class="send-button" (click)="send()">
+              <ion-icon style="font-size: 25px;" name="send-sharp" ></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-toolbar>
+    </ion-footer>
+
+    <!-- <ion-button (ionFocus)="startRecording()" (ionBlur)="stopRecording()">
       <ion-icon name="mic-outline"></ion-icon>
-    </ion-button>
+    </ion-button> -->
 
     <!-- <div> -->
-    <ion-item class="chat1">
-      <ion-textarea [(ngModel)]="message"></ion-textarea>
-
-
+    <!-- <ion-item class="chat1">
+      <ion-textarea cols="4" [(ngModel)]="message"></ion-textarea>
     </ion-item>
+
     <ion-button class="btn2" fill="clear" icon-only (click)="toggled = !toggled" [(emojiPickerIf)]="toggled"
       [emojiPickerDirection]="'top'" (emojiPickerSelect)="handleSelection($event)">
       <ion-icon name="md-happy" size="large"></ion-icon>
-    </ion-button>
-    <!-- </div> --> 
+    </ion-button> -->
+    <!-- </div> -->
 
 
 
-  </div>
-</ion-content>
+
+
