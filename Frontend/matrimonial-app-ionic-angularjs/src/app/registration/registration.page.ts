@@ -162,7 +162,7 @@ async otpErrorMsg(){
   stop() {
     setTimeout(() => {
       this.otpCounter--;
-      console.log(this.otpCounter);
+      //console.log(this.otpCounter);
       if (this.otpCounter > 1) {
         this.stop();
       }
