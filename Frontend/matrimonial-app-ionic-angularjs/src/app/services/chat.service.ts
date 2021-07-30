@@ -1,3 +1,10 @@
+/* eslint-disable prefer-arrow/prefer-arrow-functions */
+/* eslint-disable @typescript-eslint/semi */
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable @typescript-eslint/dot-notation */
+/* eslint-disable @typescript-eslint/no-shadow */
+/* eslint-disable @typescript-eslint/quotes */
+/* eslint-disable @typescript-eslint/naming-convention */
 import { Injectable } from '@angular/core';
 import { User } from '../user';
 
@@ -11,8 +18,12 @@ export class ChatService {
 
   user: User;
 
-  constructor() { }
+  constructor() {
 
+  }
+
+
+  //called in app component
   initialize() {
     console.log(this.ConnectyCube);
     const CREDENTIALS = {
@@ -20,10 +31,20 @@ export class ChatService {
       authKey: "4uK2wqdYd9nKunx",
       authSecret: "Xu5K23tUUH3pdNu"
     };
+    const CONFIG = {
+      debug: { mode: 1 }, // enable DEBUG mode (mode 0 is logs off, mode 1 -> console.log())
+      chat: {
+        streamManagement: {
+          enable: true
+        }
+      }
+    };
 
-    this.ConnectyCube.init(CREDENTIALS);
+
+    this.ConnectyCube.init(CREDENTIALS,CONFIG);
   }
 
+  //called in app.component
   createSessionApplication() {
     this.ConnectyCube.createSession()
       .then((session) => {
@@ -41,21 +62,22 @@ export class ChatService {
 
     this.ConnectyCube.createSession(userCredentials)
       .then((session) => {
-        console.log('User session ceated');
-        console.log(session);
+        // console.log('User session ceated');
+        console.log('session',session);
         sessionStorage.setItem('user_session', session);
       })
       .catch((error) => {
-        console.log(error)
+        console.log(error);
       });
   }
+
 
   signUp(user) {
     const userProfile = {
       login: user.username,
       password: user.password,
+      full_name: user.full_name,
       email: user.email,
-      full_name: user.username,
       phone: user.phone
     };
 
@@ -63,26 +85,35 @@ export class ChatService {
       .signup(userProfile)
       .then((user) => {
         console.log('User signed in');
-        console.log(user);
-        this.user = new User();
-        this.user.setUser(user);
-        console.log(this.user.getUser());
+        console.log(user.id);
+        // this.user = new User();
+        // this.user.setUser(user);
+        // console.log(this.user.getUser());
       })
       .catch((error) => {
         console.log(error);
       });
   }
 
+  login(userCredentials ){
+    this.ConnectyCube.login(userCredentials )
+    .then((user) => {
+    })
+    .catch((error) =>{
+      console.log(error);
+    });
+  }
+
   logout() {
     this.ConnectyCube.destroySession(() => {
-      console.log('User session over')
-      sessionStorage.removeItem('user_session')
+      console.log('User session over');
+      sessionStorage.removeItem('user_session');
     }).catch((error) => { });
 
   }
 
   getUserByLogin(username, callback) {
-    const searchParams = { login: username };
+    const searchParams = { full_name: username };
 
     this.ConnectyCube.users
       .get(searchParams)
@@ -96,25 +127,19 @@ export class ChatService {
       });
   }
 
-  connectToChat() {
-    const userCredentials = {
-      userId: this.user.getUser().user.id,
-      password: '7389330512'
-    };
-
-    console.log(this.user.getUser().user.id);
-
-    this.ConnectyCube.chat.connect(userCredentials).then(() => {
+  connectToChat(userCredentials) {
+    this.ConnectyCube.chat.connect(userCredentials)
+    .then(() => {
       console.log('Connected to chat');
     }).catch((error) => {
       console.log(error);
     });
   }
 
-  isConnected() {
-    const isConnected = this.ConnectyCube.chat.isConnected;
-    return isConnected;
-  }
+  // isConnected() {
+  //   const isConnected = this.ConnectyCube.chat.isConnected;
+  //   return isConnected;
+  // }
 
   disconnect() {
     this.ConnectyCube.chat.disconnect();
@@ -130,27 +155,46 @@ export class ChatService {
     this.ConnectyCube.chat.dialog
       .create(params)
       .then((dialog) => {
-        console.log(dialog)
+        sessionStorage.setItem('dialog._id', dialog._id);
+        //console.log(sessionStorage.getItem(dialog._id));
+        //console.log('dialog',dialog);
       })
       .catch((error) => {
-        console.log(error)
+        console.log(error);
       });
   }
 
-  getAllDialog() {
-    const filters = {};
+  // getAllDialog() {
+  //   const params = {
+  //     chat_dialog_id: sessionStorage.getItem('dialog._id'),
+  //     sort_desc: "date_sent[lt]",
+  //     limit: 1000,
+  //     skip: 0,
+  //   };
 
-    this.ConnectyCube.chat.dialog
-      .list(filters)
-      .then((result) => { 
-        console.log(result)
-      })
-      .catch((error) => {
-        console.log(error)
-       });
+  //   this.ConnectyCube.chat.message
+  //     .list(params)
+  //     .then((messages) => {
+  //       console.log('list',messages)
+  //       return messages;
+  //     })
+  //     .catch((error) => {});
+  // }
+
+  async sendReceiveChat(occupantId,msg){
+    const opponentId = occupantId;
+    const message = {
+      type: 'chat',
+      body: msg,
+      extension: {
+        save_to_history: 1,
+        dialog_id: sessionStorage.getItem('dialog._id'),
+        date_sent: Math.floor(Date.now() / 1000)
+      },
+      markable: 1
+    };
+    message['id'] = this.ConnectyCube.chat.send(opponentId, message);
+    return message['id'];
   }
-
-  
-
 
 }

@@ -1,10 +1,15 @@
+/* eslint-disable @typescript-eslint/quotes */
+/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable quote-props */
+/* eslint-disable @typescript-eslint/naming-convention */
+/* eslint-disable prefer-const */
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { OtpComponent } from '../components/otp/otp.component';
 import { ChatService } from '../services/chat.service';
 import { PersonalDetails } from '../services/PersonalDetails.service';
-import { HttpClient , HttpParams } from "@angular/common/http";
+import { HttpClient , HttpParams } from '@angular/common/http';
 import {HttpHeaders} from '@angular/common/http';
 import {FormGroup,FormBuilder,FormControl, Validators } from '@angular/forms';
 import Cookies from 'js-cookie';
@@ -15,10 +20,10 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./registration.page.scss'],
 })
 export class RegistrationPage implements OnInit {
-  ngForm : FormGroup;
+  ngForm: FormGroup;
   username;
   mobileNumber;
-  gender = 'male'
+  gender = 'male';
   otpCounter;
   flag = false;
   flag2 =false;
@@ -28,14 +33,14 @@ export class RegistrationPage implements OnInit {
   dob;
   globalResponse: Object;
   isLoggedIn: boolean;
- 
-  
+
+
 
 
   constructor(private router: Router, private modalController: ModalController, private chatService: ChatService,
-    private service:PersonalDetails,private http: HttpClient, private alertController: AlertController , private formBuilder : FormBuilder) 
+    private service: PersonalDetails,private http: HttpClient, private alertController: AlertController , private formBuilder: FormBuilder)
     {
-      
+
     }
 
   ngOnInit() {
@@ -45,21 +50,20 @@ export class RegistrationPage implements OnInit {
   }
 
   submit() {
- 
-   
-    console.log('Submit');
-    console.log(this.mobileNumber)
-    let a = this.mobileNumber.nationalNumber.split(' ');
-    console.log(a);
+    let a: String = this.mobileNumber.nationalNumber;
+    let name: String = this.username;
     let user = {
-      username: this.username,
-      password: '7389330512',
-      phone: a[0] + a[1],
-      full_name: 'Aashray Jain'
-    }
+      username: name.toLowerCase().split(' ').join(''),
+      password: a.slice(1,a.length),
+      email: a.slice(1,a.length).split(' ').join('')+'@gmail.com',
+      // eslint-disable-next-line radix
+      phone: parseInt(a.slice(1,a.length).split(' ').join('')),
+      full_name: this.username
+    };
     this.chatService.signUp(user);
     this.chatService.createUserSession(user);
-    
+    this.router.navigate(['/ed-car']);
+
   }
 
   async presentModal() {
@@ -79,8 +83,8 @@ export class RegistrationPage implements OnInit {
     const us={
       otpCode:OtpComponent.otp,
 
-      phoneNumber:phoneNumber
-    }
+      phoneNumber
+    };
     console.log(us);
     const Httpheaders=new HttpHeaders({
       'Content-Type': 'application/json',
@@ -124,14 +128,15 @@ async otpErrorMsg(){
     let phn1=phn[0]+phn[1]+phn[2];
     this.service.sendotp(phn1).subscribe((msg)=>{
       console.log(msg);
+    // eslint-disable-next-line @typescript-eslint/dot-notation
     this.code=msg['xMagicToken'];
     this.globalResponse = msg;
     },
     error => {
       console.log(error.message);
-    
+
      this.numberError();
-   
+
    },
     () => {
       console.log(this.globalResponse);
@@ -150,7 +155,7 @@ async otpErrorMsg(){
       message: 'Number already register',
       // buttons: ['Exit']
     });
-  
+
     await alert.present();
   }
 
@@ -173,14 +178,14 @@ async otpErrorMsg(){
     this.checkedvalue=!this.checkedvalue;
     console.log(this.checkedvalue);
   }
-  
+
 
   submitreg()
   {
-   
+
     const userdet={
     fullname: this.username,
-	  dateOfBirth:"1998-01-01",
+	  dateOfBirth: "1998-01-01",
 	gender: this.gender,
 	email: "",
 	// martialStatus:"Single",
@@ -188,7 +193,7 @@ async otpErrorMsg(){
 	isCasteBarrier: this.checkedvalue,
 	fathersName: "",
 	mothersName: ""
-    }
+    };
     console.log(userdet);
 
     // Cookies.get('isLogedIn')
@@ -203,7 +208,7 @@ async otpErrorMsg(){
     console.log(this.globalResponse);
     this.router.navigate(['/ed-car']);
   }
-   
+
    );
   }
 

@@ -1,4 +1,10 @@
-
+/* eslint-disable radix */
+/* eslint-disable @typescript-eslint/dot-notation */
+/* eslint-disable @typescript-eslint/quotes */
+/* eslint-disable @typescript-eslint/member-ordering */
+/* eslint-disable quote-props */
+/* eslint-disable @typescript-eslint/naming-convention */
+/* eslint-disable prefer-const */
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
@@ -15,11 +21,13 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  ConnectyCube = window["ConnectyCube"];
+  static userId;
   globalResponse: any;
   isLoggedIn: boolean;
 
   constructor(private modalController: ModalController, private router: Router, private chatService: ChatService,
-    private service:PersonalDetails,private http:HttpClient,private alertController: AlertController) { }
+    private service: PersonalDetails,private http: HttpClient,private alertController: AlertController) { }
   // exform: FormGroup;
   mobileNumber;
   code;
@@ -34,15 +42,18 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    let user = {
-      userId: 1,
-      username: 'aashrayjain',
-      password: '7389330512',
-      phone: '7389330511',
-      full_name: 'Aashray Jain'
-    }
-    this.chatService.signUp(user);
-    this.chatService.createUserSession(user);
+    let a = this.mobileNumber.nationalNumber;
+    let phoneNo = a.slice(1,a.length).split(' ').join('');
+
+    const searchParams = { email: phoneNo+'@gmail.com' };
+    this.ConnectyCube.users
+      .get(searchParams)
+      .then((result) => {
+        LoginPage.userId = result.user.id;
+        this.chatService.login({login:result.user.login,password:a.slice(1,a.length)});
+        this.chatService.connectToChat({userId:result.user.id,password:a.slice(1,a.length)});
+      })
+      .catch((error) => {console.log(error);});
     let phn = this.mobileNumber.internationalNumber.split(' ');
     console.log(phn[0]+phn[1]+phn[2]);
     let phn1=phn[0]+phn[1]+phn[2];
@@ -61,7 +72,7 @@ export class LoginPage implements OnInit {
       this.presentModal();
     }
     );
-  
+
 
 
   }
@@ -81,7 +92,7 @@ async numberErrorMsg(){
     const modal = await this.modalController.create({
       component: OtpComponent,
       cssClass: 'my-custom-class2',
-     
+
     });
     await modal.present();
     const { data } = await modal.onWillDismiss();
@@ -90,8 +101,8 @@ async numberErrorMsg(){
     let phoneNumber=phn[0]+phn[1]+phn[2];
     const us={
       otpCode:OtpComponent.otp,
-      phoneNumber:phoneNumber
-    }
+      phoneNumber
+    };
     console.log(us);
     const Httpheaders=new HttpHeaders({
       'Content-Type': 'application/json',
@@ -114,7 +125,7 @@ async numberErrorMsg(){
        this.isLoggedIn = true;
      }
     );
-   
+
   }
 
   // ////////////////////////////////////////////////////////////////////// Error msg
