@@ -5,7 +5,7 @@ import { PrivacySettingsPage } from '../additional-pages/privacy-settings/privac
 import { HideProfilePage } from "../additional-pages/hide-profile/hide-profile.page";
 import { NotificationsSettingsPage } from "../additional-pages/notifications-settings/notifications-settings.page";
 
-
+import { PersonalDetails } from "../services/PersonalDetails.service";
 import { AlertController } from '@ionic/angular';
 // window.alertController = alertController;
 
@@ -16,57 +16,14 @@ import { AlertController } from '@ionic/angular';
 })
 export class SettingsPage implements OnInit {
 
-
+  globalResponse: any;
   isDown: boolean = true;
   score: number = 20;
   id: string = 'H12345';
-  constructor(private modalController: ModalController, private router: Router , private menu: MenuController, private alertController: AlertController,private popoverController: PopoverController ) { }
+  constructor(private modalController: ModalController, private router: Router, private personalDetails: PersonalDetails  , private menu: MenuController, private alertController: AlertController,private popoverController: PopoverController ) { }
 
   ngOnInit() {
   }
-
-  // dismiss() {
-  //   console.log('Dismiss modal')
-  //   this.modalController.dismiss({
-  //     'dismissed': true
-  //   });
-  // }
-  // async presentModal() {
-  //   console.log('Inside modal')
-  //   const modal = await this.modalController.create({
-  //     component: PrivacySettingsPage,
-  //     cssClass: 'my-custom-class',
-     
-  //     backdropDismiss: true
-  //   });
-  //   return await modal.present();
-  // }
-
-  // async presentModal2() {
-  //   console.log('Inside modal')
-  //   const modal = await this.modalController.create({
-  //     component: NotificationsSettingsPage,
-  //     cssClass: 'my-custom-class',
-     
-  //     backdropDismiss: true
-  //   });
-  //   return await modal.present();
-  // }
-
- 
-  // async presentModal4() {
-  //   console.log('Inside modal')
-  //   const modal = await this.modalController.create({
-  //     component: HideProfilePage,
-  //     cssClass: 'my-custom-class',
-     
-  //     backdropDismiss: true
-  //   });
-  //   return await modal.present();
-  // }
-
-
-
 
   async onClick(){
     const alert = await this.alertController.create({
@@ -105,7 +62,18 @@ export class SettingsPage implements OnInit {
         handler: () => {
           
           this.popoverController.dismiss();
-          this.router.navigate(['/entry-slides']);
+          this.personalDetails.logout().subscribe((msg)=>{
+            this.alertMsg();
+              this.globalResponse = msg;
+          },
+          error => {
+           console.log(error.message);
+        },
+         () => {
+           console.log(this.globalResponse);
+           this.router.navigate(['/entry-slides']);
+         }
+          )
         }
       }, 
       {
@@ -117,7 +85,17 @@ export class SettingsPage implements OnInit {
       }
     ]
     });
+    
     await alert.present();
     
   }
+  async alertMsg(){
+    const alert = await this.alertController.create({
+      header: 'Logout successfully',
+      cssClass: 'my-custom-class',
+      message: 'Thank you',
+    });
+    await alert.present();
+  }
+
 }

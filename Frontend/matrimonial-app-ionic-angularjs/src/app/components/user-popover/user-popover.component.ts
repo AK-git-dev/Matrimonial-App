@@ -35,7 +35,7 @@ export class UserPopoverComponent implements OnInit {
           
           this.popover.dismiss();
           this.personalDetails.logout().subscribe((msg)=>{
-            console.log(msg); 
+            this.alertMsg();
               this.globalResponse = msg;
           },
           error => {
@@ -46,7 +46,7 @@ export class UserPopoverComponent implements OnInit {
            this.router.navigate(['/entry-slides']);
          }
           )
-          //this.router.navigate(['/entry-slides']);
+          
         }
       }, 
       {
@@ -64,6 +64,14 @@ export class UserPopoverComponent implements OnInit {
   viewProfile() {
     this.popover.dismiss();
     this.router.navigate(['/edit-profile']);
+  }
+  async alertMsg(){
+    const alert = await this.alertController.create({
+      header: 'Logout successfully',
+      cssClass: 'my-custom-class',
+      message: 'Thank you',
+    });
+    await alert.present();
   }
 
 }
