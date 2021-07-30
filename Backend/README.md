@@ -676,6 +676,37 @@ _From Eagle's Eye:_ Database Schema Designed.
     }
     ```
 
+
+32. Get All Languages List (Dropdown Selects)
+
+    ```bash
+      GET /api/utility/languages HTTP/1.1
+      Host: localhost:5000
+    ```
+
+
+33. Get All Languages List (Dropdown Selects)
+
+    ```bash
+      GET /api/utility/castes-subcastes HTTP/1.1
+      Host: localhost:5000
+    ```
+
+34. Get List of Educations (Dropdown Selects)
+
+    ```bash
+      GET /api/utility/education-types HTTP/1.1
+      Host: localhost:5000
+    ```
+
+35. Get List of Occupations (Dropdown Selects)
+
+    ```bash
+      GET /api/utility/ocupations-positions HTTP/1.1
+      Host: localhost:5000
+    ```
+
+
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
